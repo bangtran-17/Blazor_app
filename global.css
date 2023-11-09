@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-palatino-linotype: "Palatino Linotype";
+  --font-be-vietnam-pro: "Be Vietnam Pro";
+  --font-barlow: Barlow;
+  --font-poppins: Poppins;
+  --font-pattaya: Pattaya;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-xs: 12px;
+  --font-size-base: 16px;
+  --font-size-mid: 17px;
+  --font-size-mini: 15px;
+  --font-size-5xl: 24px;
+  --font-size-13xl: 32px;
+  --font-size-21xl: 40px;
+  --font-size-36xl: 55px;
+  --font-size-8xl: 27px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --color-white1: #fff;
+  --color-oldlace: #fff6ea;
+  --color-black: #000;
+  --color-gray-300: #898989;
+  --color-text: #252829;
+  --color-gray-100: #121619;
+  --color-gray-200: rgba(0, 0, 0, 0.65);
+  --primary-color: #c6487d;
+  --color-saddlebrown: #583101;
+  --color-antiquewhite: #ffedd8;
+  --color-sandybrown: #d8ad5d;
+  --color-darkgray-100: #b0b0b0;
+  --color-whitesmoke: #f5f6f8;
+  --color-mediumslateblue: #3252df;
+  --color-gainsboro: #e5e5e5;
+  --color-lightgray: #d3d6dc;
+  --color-darkslateblue: #152c5b;
+
+  /* Gaps */
+  --gap-mini: 15px;
+  --gap-5xs: 8px;
+
+  /* Paddings */
+  --padding-mini: 15px;
+  --padding-xl: 20px;
+  --padding-base: 16px;
+  --padding-5xl: 24px;
+
+  /* Border radiuses */
+  --br-34xl: 53px;
+  --br-12xs-5: 0.5px;
+  --br-5xs: 8px;
+  --br-59xl: 78px;
+  --br-2xs: 11px;
+  --br-9xs: 4px;
+}
