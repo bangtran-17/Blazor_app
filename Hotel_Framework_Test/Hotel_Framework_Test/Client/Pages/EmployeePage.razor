@@ -1,0 +1,55 @@
+﻿@page "/employee"
+@* @using Hotel_Framework_Test.Shared *@
+<PageTitle>Bootstrap</PageTitle>
+@inject IEmployeeService EmployeeService
+@inject NavigationManager NavigationManager
+
+<h3>QUẢN LÝ NHÂN VIÊN</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">MÃ NHÂN VIÊN</th>
+            <th scope="col">TÊN NHÂN VIÊN</th>
+            <th scope="col">SĐT</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in EmployeeService.Employees)
+        {
+            <tr>
+                <th scope="row">1</th>
+                <td>@employee.EId</td>
+                <td>@employee.EFirstName</td>
+                <td>@employee.EContactNumber</td>
+                <td>
+                    <button class="btn btn-primary"
+                            @onclick="(() => ShowEmployee(employee.EId))">
+                        <i class="oi oi-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+        }
+        <tr>
+            <th scope="row">1</th>
+            <td>maNV</td>
+            <td>tenNV</td>
+            <td>.sdtNV</td>
+            <td><button class="btn btn-primary">Click</button></td>
+        </tr>
+    </tbody>
+</table>
+
+@code {
+    // don't need to wait until everythings is rendered
+    protected override async Task OnInitializedAsync()
+    {
+        await EmployeeService.GetEmployees();
+    }
+    void ShowEmployee(int id)
+    {
+        NavigationManager.NavigateTo($"employee/{id}");
+    }
+}

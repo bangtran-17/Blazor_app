@@ -1,0 +1,275 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Server\\Hotel_Framework_Test.Server.csproj": {}
+  },
+  "projects": {
+    "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Client\\Hotel_Framework_Test.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Client\\Hotel_Framework_Test.Client.csproj",
+        "projectName": "Hotel_Framework_Test.Client",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Client\\Hotel_Framework_Test.Client.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj": {
+                "projectPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Server\\Hotel_Framework_Test.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Server\\Hotel_Framework_Test.Server.csproj",
+        "projectName": "Hotel_Framework_Test.Server",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Server\\Hotel_Framework_Test.Server.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Client\\Hotel_Framework_Test.Client.csproj": {
+                "projectPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Client\\Hotel_Framework_Test.Client.csproj"
+              },
+              "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj": {
+                "projectPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj",
+        "projectName": "Hotel_Framework_Test.Shared",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\Hotel_Framework_Test.Shared.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Hotel_Framework_Test\\Hotel_Framework_Test\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
