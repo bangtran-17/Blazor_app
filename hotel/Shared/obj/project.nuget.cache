@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w5SziiagDMzMUk4z5Kr6CVP2hsTPiOjtACA6PFGmdVH+cXZC8e3cdbOaGQE0TdxHh4NaJPFFe6/orVAD+nbUsQ==",
+  "dgSpecHash": "2ikVvYHKMFUadbjCbpHvfj93VH+krdS+h0oPGlCCDA7PKeUCkf1wTcbP7cfIu9ikzrCrBWDFFIkzLfAcDaqtTQ==",
   "success": true,
-  "projectFilePath": "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj",
+  "projectFilePath": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj": {}
+    "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj": {}
   },
   "projects": {
-    "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj": {
+    "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj",
-        "projectName": "hotel.Shared",
-        "projectPath": "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj",
+        "projectUniqueName": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
+        "projectName": "Hotel.Shared",
+        "projectPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Blazor_app\\hotel\\Shared\\obj\\",
+        "outputPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

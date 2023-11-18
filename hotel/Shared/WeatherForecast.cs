@@ -1,4 +1,4 @@
-namespace hotel.Shared
+namespace Hotel.Shared
 {
 	public class WeatherForecast
 	{

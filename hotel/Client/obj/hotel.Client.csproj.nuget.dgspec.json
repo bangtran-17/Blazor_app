@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test\\Blazor_app\\hotel\\Client\\hotel.Client.csproj": {}
+    "D:\\bang\\Đồ án\\Hotel\\Client\\Hotel.Client.csproj": {}
   },
   "projects": {
-    "D:\\test\\Blazor_app\\hotel\\Client\\hotel.Client.csproj": {
+    "D:\\bang\\Đồ án\\Hotel\\Client\\Hotel.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Blazor_app\\hotel\\Client\\hotel.Client.csproj",
-        "projectName": "hotel.Client",
-        "projectPath": "D:\\test\\Blazor_app\\hotel\\Client\\hotel.Client.csproj",
+        "projectUniqueName": "D:\\bang\\Đồ án\\Hotel\\Client\\Hotel.Client.csproj",
+        "projectName": "Hotel.Client",
+        "projectPath": "D:\\bang\\Đồ án\\Hotel\\Client\\Hotel.Client.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Blazor_app\\hotel\\Client\\obj\\",
+        "outputPath": "D:\\bang\\Đồ án\\Hotel\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj": {
-                "projectPath": "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj"
+              "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj": {
+                "projectPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj"
               }
             }
           }
@@ -44,6 +44,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -52,6 +60,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -85,14 +101,14 @@
         }
       }
     },
-    "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj": {
+    "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj",
-        "projectName": "hotel.Shared",
-        "projectPath": "D:\\test\\Blazor_app\\hotel\\Shared\\hotel.Shared.csproj",
+        "projectUniqueName": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
+        "projectName": "Hotel.Shared",
+        "projectPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\Blazor_app\\hotel\\Shared\\obj\\",
+        "outputPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

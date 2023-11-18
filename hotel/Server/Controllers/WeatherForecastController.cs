@@ -1,7 +1,7 @@
-using hotel.Shared;
+using Hotel.Shared;
 using Microsoft.AspNetCore.Mvc;
 
-namespace hotel.Server.Controllers
+namespace Hotel.Server.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
