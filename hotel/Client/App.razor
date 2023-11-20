@@ -1,8 +1,44 @@
-﻿﻿@using Microsoft.AspNetCore.Components.Authorization;
+﻿@inject NavigationManager NavigationManager
+
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        @if (IsAdminRoute(routeData))
+        {
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(HomePageLayout)" />
+        }
+        else
+        {
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        }
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    bool IsAdminRoute(RouteData routeData)
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        return uri.AbsolutePath.StartsWith("/admin", StringComparison.OrdinalIgnoreCase);
+    }
+}
+
+
+
+
+
+
+@* ﻿@using Microsoft.AspNetCore.Components.Authorization;
 <Router AppAssembly="@typeof(App).Assembly">
 
     <Found Context="routeData">
-        <AuthorizeRouteView RouteData="@routeData" />
+        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
     </Found>
     <NotFound>
         <CascadingAuthenticationState>
@@ -30,4 +66,4 @@
             Console.WriteLine("User is NOT authenticated.");
         }
     }
-}
+} *@
