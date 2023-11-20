@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <header>
+        <img src="/img/Logo_Horizontal.png" alt="Logo" />
+        <div class="chip">
+            <img src="/img/user.png" alt="Person" width="96" height="96">
+            <span>Xin chào, Hoàng Gia Lộc</span>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="row">
+            <NavMenuAdmin />
+            <div class="d-flex flex-column flex-shrink-0 col-9" style="display: inline-block">
+            @Body
+            </div>
+            <!--------------- Methods --------------->
+        </div>
+    </main>
+</div>

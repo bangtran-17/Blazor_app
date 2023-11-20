@@ -1,4 +1,4 @@
-@page "/admin/customer"
+﻿@* @page "/admin/employeees"
 
 @using Hotel.Shared
 
@@ -171,12 +171,6 @@
                             </td>
                         </tr>
                     }
-                        <tr>
-                            <td>0001</td>
-                            <td>Hoàng Gia Lộc</td>
-                            <td>0329110250</td>
-                            <td>001</td>
-                        </tr>
                     </table>
                 </div>
                 <!----------------------------------------------------------------------------------->
@@ -204,6 +198,7 @@
     }
     void ShowEmployee(int id)
     {
-        NavigationManager.NavigateTo($"employee/{id}");
+        NavigationManager.NavigateTo($"admin/employee/{id}");
     }
 }
+ *@

@@ -1,0 +1,43 @@
+﻿@* @page "/admin/employee"
+@page "/admin/employee/{id:int}"
+
+
+@using Hotel.Shared
+
+@inject IEmployeeService EmployeeService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản Lý Nhân Viên</PageTitle>
+
+@if(Id is null)
+{
+    <PageTitle>Create a new Employee</PageTitle>
+    <h3>Create a new Employee</h3>
+    <div>Somethings</div>
+}
+else
+{
+    <PageTitle>Edit Employee @employee.EEmail</PageTitle>
+    <h3>Edit Employee @employee.EEmail</h3>
+    <div>Somethings</div>
+}
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    Employee? employee = new Employee { EEmail = "New Employee" };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await EmployeeService.GetEmployeeById((int)Id);
+            if (result is not null)
+                employee = result;
+            else
+                NavigationManager.NavigateTo("/admin/employee");
+        }
+    }
+}
+ *@

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj": {}
+    "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {}
   },
   "projects": {
-    "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj": {
+    "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
         "projectName": "Hotel.Shared",
-        "projectPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\Hotel.Shared.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\bang\\Đồ án\\Hotel\\Shared\\obj\\",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
