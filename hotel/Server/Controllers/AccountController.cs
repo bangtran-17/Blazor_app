@@ -34,4 +34,3 @@ namespace Hotel.Server.Controllers
         }
     }
 }
-

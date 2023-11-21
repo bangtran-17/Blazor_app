@@ -17,8 +17,8 @@
         <ValidationSummary />
         <h3 class="text-dark">Bạn chưa có tài khoản ?, <a href="/register" class="text-blue-500">Đăng ký</a></h3>
         <div class="form-group mt-10">
-            <label for="email" class="text-dark font-bold">Email:</label><br>
-			<InputText type="email" name="Email" id="Email" class="form-control focus:shadow-outline " @bind-Value="loginModel.Email" />
+            <label for="email" class="text-dark font-bold">Tên tài khoản:</label><br>
+			<InputText type="text" name="Email" id="Email" class="form-control focus:shadow-outline " @bind-Value="loginModel.Email" />
             <ValidationMessage For="@(() => loginModel.Email)" />
         </div>
         <div class="form-group mt-10">

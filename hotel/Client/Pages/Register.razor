@@ -15,7 +15,8 @@
 <div class="container ">
     <EditForm class="form mt-5 login m-auto" Model="RegisterModel" OnValidSubmit="HandleRegistration">
    <DataAnnotationsValidator />
-            <ValidationSummary />
+            @* ValidationSummary dùng để hiển thị tất cả loại thông báo lỗi tại một vị trí *@
+            @* <ValidationSummary /> *@
         <h3 class="text-dark">Bạn đã có tài khoản ?, <a href="/login" class="text-blue-500">Đăng nhập</a></h3>
         <div class="form-group mt-2">
           <label for="name" class="-dark font-bold">Tên tài khoản:</label><br>  
