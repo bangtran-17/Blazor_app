@@ -588,3 +588,4 @@ D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\refint\Hotel
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\Hotel.Server.pdb
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\Hotel.Server.genruntimeconfig.cache
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\ref\Hotel.Server.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\BlazorBootstrap.dll

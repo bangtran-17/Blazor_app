@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zhLWKSsC/MCYbnye+zqVxlix7s5FGGRFwVp4AFDVXMnC4+kHF26bYbVMKBNIZqR7tvL+hOP2B+AZajcgMfsBRg==",
+  "dgSpecHash": "DHI3Xu/JKI3EnEvg19+POq1FWt/lChaH11vr7Et8QrEQljA3cjh/TEYEO0MykVQMZPFaiMdJNxGYtD6Uhc6szA==",
   "success": true,
   "projectFilePath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Locc\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Locc\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Locc\\.nuget\\packages\\blazor.bootstrap\\1.10.4\\blazor.bootstrap.1.10.4.nupkg.sha512",
     "C:\\Users\\Locc\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\Locc\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Locc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

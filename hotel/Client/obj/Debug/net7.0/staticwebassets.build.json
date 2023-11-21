@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iIP/0blX68d8yjLR1kl3MCu/76cAQP2CducDCoowVUU=",
+  "Hash": "R9FvFKuTRKfp8RCsq14upYctyvCWdTjksr07UVUqUCg=",
   "Source": "Hotel.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -8337,6 +8337,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\faviconn.png",
+      "SourceId": "Hotel.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "faviconn.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faviconn.png"
     },
     {
       "Identity": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\icon-192.png",

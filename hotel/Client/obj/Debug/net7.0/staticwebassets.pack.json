@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\faviconn.png",
+      "PackagePath": "staticwebassets\\faviconn.png"
+    },
+    {
       "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },

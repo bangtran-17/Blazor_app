@@ -46,6 +46,24 @@
           }
         }
       },
+      "Blazor.Bootstrap/1.10.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.11"
+        },
+        "compile": {
+          "lib/net6.0/BlazorBootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorBootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazor.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Bootstrap.props": {}
+        }
+      },
       "Blazored.LocalStorage/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -4487,6 +4505,28 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Blazor.Bootstrap/1.10.4": {
+      "sha512": "7KlphOeiYEfYcKENw9ojR9PpkXpYCVthMaJJB3Dhww15Ud1EUooWm2wDgP+otbMctidLU8f965tcusVnLRYWpA==",
+      "type": "package",
+      "path": "blazor.bootstrap/1.10.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "128X128.png",
+        "README.md",
+        "blazor.bootstrap.1.10.4.nupkg.sha512",
+        "blazor.bootstrap.nuspec",
+        "build/Blazor.Bootstrap.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazor.Bootstrap.props",
+        "buildTransitive/Blazor.Bootstrap.props",
+        "lib/net6.0/BlazorBootstrap.dll",
+        "staticwebassets/Blazor.Bootstrap.bundle.scp.css",
+        "staticwebassets/blazor.bootstrap.css",
+        "staticwebassets/blazor.bootstrap.js",
+        "staticwebassets/icon/128X128.png"
       ]
     },
     "Blazored.LocalStorage/4.4.0": {
@@ -12786,6 +12826,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Blazor.Bootstrap >= 1.10.4",
       "Hotel.Client >= 1.0.0",
       "Hotel.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.0",
@@ -12848,6 +12889,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Blazor.Bootstrap": {
+            "target": "Package",
+            "version": "[1.10.4, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[7.0.0, )"

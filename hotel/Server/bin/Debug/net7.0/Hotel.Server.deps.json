@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Hotel.Server/1.0.0": {
         "dependencies": {
+          "Blazor.Bootstrap": "1.10.4",
           "Hotel.Client": "1.0.0",
           "Hotel.Shared": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.0",
@@ -58,6 +59,17 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.6.0.0",
             "fileVersion": "1.600.22.20503"
+          }
+        }
+      },
+      "Blazor.Bootstrap/1.10.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.13"
+        },
+        "runtime": {
+          "lib/net6.0/BlazorBootstrap.dll": {
+            "assemblyVersion": "1.10.4.0",
+            "fileVersion": "1.10.4.0"
           }
         }
       },
@@ -2860,6 +2872,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "Blazor.Bootstrap/1.10.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7KlphOeiYEfYcKENw9ojR9PpkXpYCVthMaJJB3Dhww15Ud1EUooWm2wDgP+otbMctidLU8f965tcusVnLRYWpA==",
+      "path": "blazor.bootstrap/1.10.4",
+      "hashPath": "blazor.bootstrap.1.10.4.nupkg.sha512"
     },
     "Blazored.LocalStorage/4.4.0": {
       "type": "package",
