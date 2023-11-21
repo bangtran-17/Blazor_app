@@ -11,6 +11,8 @@
 <div class="row container">
     <textarea class="tim col-6 mt-4 ml-4" placeholder="Tìm kiếm"></textarea>
     <div class="col-6 row mt-4">
+        <div class="sua col-4 d-inline-block w-2"></div>
+        <button class="w-20" @onclick="NavigateBack">Quay lại</button>
         <div class="them col-4 d-inline-block w-2"></div>
         <button class="w-20" @onclick="AddEmployee">Thêm</button>
         <div class="xoa col-4 d-inline-block w-2"></div>
@@ -88,7 +90,12 @@
 
     void AddEmployee()
     {
-        
+
         NavigationManager.NavigateTo("admin/employee");
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("admin");
     }
 }

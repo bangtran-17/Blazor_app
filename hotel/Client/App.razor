@@ -10,7 +10,7 @@
         }
         else
         {
-            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            <AuthorizeRouteView RouteData="@routeData"  />
         }
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
@@ -48,4 +48,5 @@
         var uri = new Uri(NavigationManager.Uri);
         return uri.AbsolutePath.StartsWith("/admin", StringComparison.OrdinalIgnoreCase);
     }
+    @* DefaultLayout="@typeof(MainLayout)" *@
 }

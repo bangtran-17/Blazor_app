@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R9FvFKuTRKfp8RCsq14upYctyvCWdTjksr07UVUqUCg=",
+  "Hash": "saqbNPWX+Oy5XObi95iVL1msj02E3MQccOZCwEUhGnY=",
   "Source": "Hotel.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -8128,25 +8128,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\global.css"
-    },
-    {
-      "Identity": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\index.css",
-      "SourceId": "Hotel.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/index.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
       "Identity": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",

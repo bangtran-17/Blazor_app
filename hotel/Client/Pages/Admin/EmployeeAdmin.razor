@@ -9,6 +9,8 @@
 
 <PageTitle>Quản Lý Nhân Viên</PageTitle>
 
+<button class="btn btn-primary" @onclick="NavigateBack">Quay lại</button>
+
 @if (Id is null)
 {
     <PageTitle>Create a new Employee</PageTitle>
@@ -92,5 +94,10 @@ else
     async Task DeleteEmployee()
     {
         await EmployeeService.DeleteEmployee(employee.EId);
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/admin/employees");
     }
 }
