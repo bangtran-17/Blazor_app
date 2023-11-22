@@ -6,6 +6,7 @@ namespace Hotel.Server.Services.EmployeeService
     {
         Task<List<Employee>> GetEmployees();
         Task<Employee?> GetEmployeeById(int EmployeeId);
+        Task<Employee?> GetEmployeeByFName(string fname);
         Task<Employee> CreateEmployee(Employee Employee);
         Task<Employee?> UpdateEmployee(int EmployeeId, Employee Employee);
         Task<bool> DeleteEmployee(int EmployeeId);

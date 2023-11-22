@@ -1,7 +1,7 @@
 {
   "entryAssembly": "Hotel.Client",
   "resources": {
-    "hash": "sha256-2/maAGQeBjotZ1/CJl9G2BXvYQsYVKnWZJM6lEZZc30=",
+    "hash": "sha256-ycZr6L10QCdx8XWYZkzxGn3TUSSMnil70eJieWW92tk=",
     "runtime": {
       "dotnet.7.0.14.crnyordbtj.js": "sha256-YWGUknGRzP/fgO6YjvCJKPVQNZAPEd6ll+rHfQEIW+I=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -210,11 +210,11 @@
       "netstandard.dll": "sha256-TztlSRjADgiEABbiAMdWZpHrUVd8wnRtQRAvlwmRP/4=",
       "System.Private.CoreLib.dll": "sha256-BAhrZ8Zg3cJKQipxdzqQo+9jtPkOkRx1ou3oIhDohtk=",
       "Hotel.Shared.dll": "sha256-zUOb0p60Bu4Ggmr6YUalblKVhzjaU3BTU5P4myn0Nk4=",
-      "Hotel.Client.dll": "sha256-JQ2C5OglNEDcbBpLyxvrk5D1LD6tzZq1PUNEbIdstiE="
+      "Hotel.Client.dll": "sha256-vXw9RrdR8mPWsZakNBcf1CcV3adg2qB2HgNIBy4XIng="
     },
     "pdb": {
       "Hotel.Shared.pdb": "sha256-ALBtR507ttaIblWzHHFODUlqtKlj4eeeXdJ+KMtrckk=",
-      "Hotel.Client.pdb": "sha256-cRMjIZ+sBxmC2qNEn2PpwX8KYRMA1QDtClrJ0nCKceU="
+      "Hotel.Client.pdb": "sha256-JE9RY7hce4MTAyh3M3/J45YQqUI/ZIBVyOZYx2krMmg="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

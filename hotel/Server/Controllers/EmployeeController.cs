@@ -33,6 +33,12 @@ namespace Hotel.Server.Controllers
             return await _EmployeeService.GetEmployeeById(id);
         }
 
+        [HttpGet("name/{fname}")]
+        public async Task<Employee?> GetEmployeeByFName(string fname)
+        {
+            return await _EmployeeService.GetEmployeeByFName(fname);
+        }
+
         [HttpPost]
         public async Task<Employee?> CreateEmployee(Employee Employee)
         {

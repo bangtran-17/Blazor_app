@@ -37,13 +37,16 @@ namespace Hotel.Server.Services.EmployeeService
 
             return true;
         }
-
         public async Task<Employee?> GetEmployeeById(int EmployeeId)
         {
             var dbEmployee = await _context.Employees.FindAsync(EmployeeId);
             return dbEmployee;
         }
-
+        public async Task<Employee?> GetEmployeeByFName(string fname)
+        {
+            var dbEmployee = await _context.Employees.FirstOrDefaultAsync(e => e.EFirstName == fname);
+            return dbEmployee;
+        }
         public async Task<List<Employee>> GetEmployees()
         {
             return await _context.Employees.ToListAsync();

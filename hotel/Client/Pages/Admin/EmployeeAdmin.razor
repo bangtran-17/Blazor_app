@@ -1,6 +1,6 @@
 ﻿@page "/admin/employee"
 @page "/admin/employee/{id:int}"
-
+@page "/admin/employee/{fname}"
 
 @using Hotel.Shared
 
@@ -49,6 +49,18 @@ else
 </EditForm>
 
 
+@* <EditForm>
+    <div>
+        <label for="firstName">First Name</label>
+        <input id="firstName" class="form-control" />
+    </div>
+</EditForm> *@
+
+<label>Search for department:</label>
+@* <input @bind="search" @bind:event="onchange" @onchange="HandleInputChange" class="form form-control col-2" /> *@
+<input @onchange="HandleInputChange" class="form form-control col-2" />
+<label>@displayValue</label>
+
 
 
 
@@ -57,6 +69,8 @@ else
 @code {
     [Parameter]
     public int? Id { get; set; }
+    [ParameterAttribute]
+    public string? Fname { get; set; }
 
     string btnText = string.Empty;
 
@@ -69,9 +83,10 @@ else
 
     protected override async Task OnParametersSetAsync()
     {
-        if (Id is not null)
+        if (Fname is not null)
         {
-            var result = await EmployeeService.GetEmployeeById((int)Id);
+            // var result = await EmployeeService.GetEmployeeById((int)Id);
+            var result = await EmployeeService.GetEmployeeByFName(Fname);
             if (result is not null)
                 employee = result;
             else
@@ -100,4 +115,15 @@ else
     {
         NavigationManager.NavigateTo("/admin/employees");
     }
+
+    public string search { get; set; }
+
+    private string displayValue;
+
+    private void HandleInputChange(ChangeEventArgs e)
+    {
+        // Thực hiện các xử lý hoặc biến đổi giá trị tùy theo nhu cầu
+        displayValue = $"You entered: {e.Value}";
+    }
+
 }

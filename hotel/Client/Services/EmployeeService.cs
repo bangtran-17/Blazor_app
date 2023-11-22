@@ -33,6 +33,16 @@ namespace Hotel.Client.Services
             _navigationManger.NavigateTo("admin/employees");
         }
 
+        public async Task<Employee?> GetEmployeeByFName(string fname)
+        {
+            var result = await _http.GetAsync($"api/Employee/name/{fname}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<Employee>();
+            }
+            return null;
+        }
+
         public async Task<Employee?> GetEmployeeById(int id)
         {
             var result = await _http.GetAsync($"api/Employee/{id}");
