@@ -55,8 +55,11 @@ namespace Hotel.Server.Services.EmployeeService
             if (dbEmployee != null)
             {
                 dbEmployee.EId = Employee.EId;
+                dbEmployee.EFirstName = Employee.EFirstName;
                 dbEmployee.ELastName = Employee.ELastName;
                 dbEmployee.EContactNumber = Employee.EContactNumber;
+                dbEmployee.EEmail = Employee.EEmail;
+                dbEmployee.EAddress = Employee.EAddress;
 
                 await _context.SaveChangesAsync();
             }
