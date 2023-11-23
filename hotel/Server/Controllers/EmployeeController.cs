@@ -34,7 +34,7 @@ namespace Hotel.Server.Controllers
         }
 
         [HttpGet("name/{fname}")]
-        public async Task<Employee?> GetEmployeeByFName(string fname)
+        public async Task<List<Employee>> GetEmployeeByFName(string fname)
         {
             return await _EmployeeService.GetEmployeeByFName(fname);
         }

@@ -42,11 +42,36 @@ namespace Hotel.Server.Services.EmployeeService
             var dbEmployee = await _context.Employees.FindAsync(EmployeeId);
             return dbEmployee;
         }
-        public async Task<Employee?> GetEmployeeByFName(string fname)
+        public async Task<List<Employee>> GetEmployeeByFName(string fname)
         {
-            var dbEmployee = await _context.Employees.FirstOrDefaultAsync(e => e.EFirstName == fname);
+            //var dbEmployee = await _context.Employees.FirstOrDefaultAsync(e => e.EFirstName == fname);
+            var dbEmployee = await _context.Employees
+                    .Where(e =>
+                        EF.Functions.Like(e.EFirstName, $"%{fname}%") ||
+                        EF.Functions.Like(e.ELastName, $"%{fname}%") ||
+                        EF.Functions.Like(e.EDesignation, $"%{fname}%") ||
+                        EF.Functions.Like(e.EContactNumber, $"%{fname}%") ||
+                        EF.Functions.Like(e.EEmail, $"%{fname}%") ||
+                        EF.Functions.Like(e.EAddress, $"%{fname}%"))
+                    .ToListAsync();
             return dbEmployee;
         }
+        //public async Task<List<Employee>> SearchEmployees(string searchText)
+        //{
+        //    var result = await _context.Employees
+        //        .Where(e =>
+        //            EF.Functions.Like(e.EFirstName, $"%{searchText}%") ||
+        //            EF.Functions.Like(e.ELastName, $"%{searchText}%") ||
+        //            EF.Functions.Like(e.EDesignation, $"%{searchText}%") ||
+        //            EF.Functions.Like(e.EContactNumber, $"%{searchText}%") ||
+        //            EF.Functions.Like(e.EEmail, $"%{searchText}%") ||
+        //            EF.Functions.Like(e.EAddress, $"%{searchText}%"))
+        //        .ToListAsync();
+
+        //    return result;
+        //}
+
+
         public async Task<List<Employee>> GetEmployees()
         {
             return await _context.Employees.ToListAsync();
