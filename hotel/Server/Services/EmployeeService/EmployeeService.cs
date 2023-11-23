@@ -11,7 +11,6 @@ namespace Hotel.Server.Services.EmployeeService
     public class EmployeeService : IEmployeeService
     {
         private readonly MyDbContext _context;
-
         public EmployeeService(MyDbContext context)
         {
             _context = context;
