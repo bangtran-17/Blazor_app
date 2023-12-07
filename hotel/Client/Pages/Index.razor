@@ -1,5 +1,9 @@
 ﻿@page "/"
-
+@using Hotel.Shared.Models
+@using Hotel.Shared.CommonFiles
+@inject ILocalStorageService localStorage
+@inject IJSRuntime jsRuntime
+@inject NavigationManager navigationManager
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,6 +49,7 @@
          <Authorized>
          <button class="rectangle-parent">
           <div class="group-child"></div>
+        
           <b class="ng-k"><a href="/logout">Đăng xuất</a>
               </b>
         </button>
@@ -221,8 +226,8 @@
         <div class="rectangle-container">
           <div class="rectangle-div"></div>
           <img class="group-icon" alt="" src="./public/group-12999.svg" />
-
-          <button class="group-button">
+                <EditForm Model="BookingModel" OnValidSubmit="SaveInitialData">
+          <button type="submit" class="group-button">
             <div class="group-child1"></div>
             <div class="t-phng-group">
               <div class="t-phng1">ĐẶT PHÒNG</div>
@@ -242,20 +247,23 @@
 
             <div class="ngy-tr-phng-parent">
               <div class="ngy-tr-phng">Ngày trả phòng</div>
-              <input class="june" placeholder="22/07/2023" type="date" />
+                            <InputDate min="@DateTime.Now.ToString("dd/MM/yyyy")" @bind-Value="BookingModel.BCheckoutDate"
+                                       class="form-control june" style="margin-right:10px" />
             </div>
           </div>
           <div class="group-parent">
             <div class="s-lng-khch-parent">
               <div class="s-lng-khch">Số lượng khách</div>
-              <input class="june" placeholder="03" type="number" min="1" />
+              <input @bind-value="BookingModel.BAmount" class="june" placeholder="03" type="number" min="1" />
             </div>
             <img class="user-fill-icon" alt="" src="./public/user-fill.svg" />
-          </div>
+					</div>
+			
           <div class="group-container">
             <div class="ngy-nhn-phng-parent">
               <div class="ngy-nhn-phng">Ngày nhận phòng</div>
-              <input class="june" placeholder="12/07/2023" type="date" />
+                            <InputDate min="@DateTime.Now.ToString("dd/MM/yyyy")" @bind-Value="BookingModel.BCheckingDate" 
+                                       class="form-control june" style="margin-right:10px" />
             </div>
             <img
               class="export-fill-icon1"
@@ -263,6 +271,7 @@
               src="./public/export-fill1.svg"
             />
           </div>
+          </EditForm>
         </div>
         <div id="dch-v-ca-khch-sn-parent">
           <div class="dch-v-ca">DỊCH VỤ CỦA KHÁCH SẠN</div>
@@ -634,5 +643,25 @@
         }
       </script>
     </div>
+   
   </body>
 </html>
+
+
+@code{
+    public Hotel.Shared.Models.Booking BookingModel { get; set; } = new Hotel.Shared.Models.Booking();
+    private async Task SaveInitialData()
+    {
+        try
+        {
+            await localStorage.SetItemAsync(SD.Local_InitialBooking, BookingModel);
+            navigationManager.NavigateTo("booking", true);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+
+
+}   

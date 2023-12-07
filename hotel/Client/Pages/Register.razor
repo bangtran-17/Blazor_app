@@ -16,7 +16,7 @@
     <EditForm class="form mt-5 login m-auto" Model="RegisterModel" OnValidSubmit="HandleRegistration">
    <DataAnnotationsValidator />
             @* ValidationSummary dùng để hiển thị tất cả loại thông báo lỗi tại một vị trí *@
-            @* <ValidationSummary /> *@
+             <ValidationSummary /> 
         <h3 class="text-dark">Bạn đã có tài khoản ?, <a href="/login" class="text-blue-500">Đăng nhập</a></h3>
         <div class="form-group mt-2">
           <label for="name" class="-dark font-bold">Tên tài khoản:</label><br>  
@@ -59,7 +59,7 @@
         var result = await AuthService.Register(RegisterModel);
 
        
-            NavigationManager.NavigateTo("/login");
+        NavigationManager.NavigateTo("/login");
         
      
     }

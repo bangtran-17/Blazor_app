@@ -465,7 +465,7 @@ body {
     width: 237px;
 }
 
-.june {
+::deep .june {
     border: 0;
     font-weight: 500;
     font-family: var(--font-poppins);

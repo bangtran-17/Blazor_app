@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Hotel.Server.Services.DepartmentService;
+using Hotel.Server.Services.RoomtypeService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,13 +19,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<MyDbContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Employee
 builder.Services.AddHttpClient<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-// Department
-builder.Services.AddHttpClient<IDepartmentService, DepartmentService>();
-builder.Services.AddScoped<IDepartmentService, DepartmentService>();
-
+builder.Services.AddScoped<IRoomTypeService, RoomtypeService>();
 
 
 builder.Services.AddDefaultIdentity<IdentityUser>()
