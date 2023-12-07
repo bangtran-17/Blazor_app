@@ -31,15 +31,15 @@ public partial class Booking
 
     public virtual Employee? EIdNavigation { get; set; }
 
-    public virtual ICollection<Feedback> Feedbacks { get; } = new List<Feedback>();
+    public virtual ICollection<Feedback>? Feedbacks { get; } = new List<Feedback>();
 
     public virtual Guest? GIdNavigation { get; set; }
 
     public virtual Hotel1? HIdNavigation { get; set; }
 
-    public virtual ICollection<Payment> Payments { get; } = new List<Payment>();
+    public virtual ICollection<Payment>? Payments { get; } = new List<Payment>();
 
-    public virtual ICollection<Servicesbooked> Servicesbookeds { get; } = new List<Servicesbooked>();
+    public virtual ICollection<Servicesbooked>? Servicesbookeds { get; } = new List<Servicesbooked>();
 
-    public virtual ICollection<Room> RIds { get; } = new List<Room>();
+    public virtual ICollection<Room>? RIds { get; } = new List<Room>();
 }

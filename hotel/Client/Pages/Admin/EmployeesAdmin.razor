@@ -42,11 +42,11 @@
 
     <table id="myTable">
         <tr class="header">
-            <th style="width:20%;">MÃ</th>
-            <th style="width:20%;">TÊN KHÁCH HÀNG</th>
-            <th style="width:20%;">SĐT</th>
-            <th style="width:20%;">Email</th>
-            <th style="width:20%;"></th>
+            <th style="width:25%;">MÃ</th>
+            <th style="width:25%;">TÊN KHÁCH HÀNG</th>
+            <th style="width:25%;">SĐT KHÁCH HÀNG</th>
+            <th style="width:25%;">MÃ ĐẶT PHÒNG</th>
+            <th style="width:25%;"></th>
         </tr>
         @foreach (var employee in EmployeeService.Employees)
         {
@@ -56,7 +56,7 @@
                 <td>@employee.EContactNumber</td>
                 <td>@employee.EEmail</td>
                 <td>
-                    <button class="btn btn-primary" @onclick="(() => ShowEmployee(employee.EId))">Click</button>
+                    <button class="btn btn-primary" @onclick="(() => ShowEmployee(employee.EFirstName))">Click</button>
                 </td>
             </tr>
         }

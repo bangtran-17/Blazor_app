@@ -9,6 +9,7 @@ namespace Hotel.Server.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
+
         private readonly UserManager<IdentityUser> _userManager;
 
         public AccountController(UserManager<IdentityUser> userManager)

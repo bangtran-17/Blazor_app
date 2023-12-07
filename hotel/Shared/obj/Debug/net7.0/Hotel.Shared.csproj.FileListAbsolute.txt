@@ -21,3 +21,14 @@ D:\Visual Studio Code\HK 5\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Shared\obj\Debug\net7.0\refint\Hotel.Shared.dll
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.pdb
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Shared\obj\Debug\net7.0\ref\Hotel.Shared.dll
+D:\bang\Blazor_app\hotel\Shared\bin\Debug\net7.0\Hotel.Shared.deps.json
+D:\bang\Blazor_app\hotel\Shared\bin\Debug\net7.0\Hotel.Shared.dll
+D:\bang\Blazor_app\hotel\Shared\bin\Debug\net7.0\Hotel.Shared.pdb
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.AssemblyInfoInputs.cache
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.AssemblyInfo.cs
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.csproj.CoreCompileInputs.cache
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.dll
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\refint\Hotel.Shared.dll
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\Hotel.Shared.pdb
+D:\bang\Blazor_app\hotel\Shared\obj\Debug\net7.0\ref\Hotel.Shared.dll

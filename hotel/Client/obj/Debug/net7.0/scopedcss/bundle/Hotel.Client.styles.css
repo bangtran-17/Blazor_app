@@ -1,3 +1,5 @@
+@import '_content/Blazored.Modal/Blazored.Modal.bundle.scp.css';
+
 /* /Pages/Admin/EmployeesAdmin.razor.rz.scp.css */
 *[b-10jmqm4e4q],
 [b-10jmqm4e4q]::after,
@@ -1510,7 +1512,7 @@ body[b-rgesfdydqm] {
     width: 237px;
 }
 
-.june[b-rgesfdydqm] {
+[b-rgesfdydqm] .june {
     border: 0;
     font-weight: 500;
     font-family: var(--font-poppins);

@@ -1,6 +1,6 @@
 ﻿@page "/admin/employee"
 @page "/admin/employee/{id:int}"
-@* @page "/admin/employee/{fname}" *@
+@page "/admin/employee/{fname}"
 
 @using Hotel.Shared
 
@@ -83,10 +83,10 @@ else
 
     protected override async Task OnParametersSetAsync()
     {
-        if (Id is not null)
+        if (Fname is not null)
         {
-            var result = await EmployeeService.GetEmployeeById((int)Id);
-            // var result = await EmployeeService.GetEmployeeByFName(Fname);
+            // var result = await EmployeeService.GetEmployeeById((int)Id);
+            var result = await EmployeeService.GetEmployeeByFName(Fname);
             if (result is not null)
                 employee = result;
             else

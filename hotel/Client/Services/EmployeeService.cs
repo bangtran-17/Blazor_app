@@ -1,4 +1,6 @@
-﻿using Hotel.Shared.Models;
+﻿
+using Hotel.Client;
+using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
@@ -31,9 +33,9 @@ namespace Hotel.Client.Services
             _navigationManger.NavigateTo("admin/employees");
         }
 
-        public async Task<Employee?> SearchEmployees(string searchText)
+        public async Task<Employee?> GetEmployeeByFName(string fname)
         {
-            var result = await _http.GetAsync($"api/Employee/search/{searchText}");
+            var result = await _http.GetAsync($"api/Employee/name/{fname}");
             if (result.StatusCode == HttpStatusCode.OK)
             {
                 return await result.Content.ReadFromJsonAsync<Employee>();
@@ -44,7 +46,7 @@ namespace Hotel.Client.Services
         public async Task<Employee?> GetEmployeeById(int id)
         {
             var result = await _http.GetAsync($"api/Employee/{id}");
-            if (result.StatusCode == HttpStatusCode.OK)
+            if (result.StatusCode == HttpStatusCode.OK) 
             {
                 return await result.Content.ReadFromJsonAsync<Employee>();
             }

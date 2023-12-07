@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = Hotel.Shared
-build_property.ProjectDir = D:\Visual Studio Code\HK 5\Blazor_app\hotel\Shared\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\bang\Blazor_app\Hotel\Shared\
