@@ -9,57 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Hotel.Server
 build_property.RootNamespace = Hotel.Server
-build_property.ProjectDir = D:\bang\Blazor_app\Hotel\Server\
+build_property.ProjectDir = D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\bang\Blazor_app\Hotel\Server
+build_property.MSBuildProjectDirectory = D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/bang/Blazor_app/Hotel/Server/Pages/Error.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Bookings/Create.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Bookings/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Bookings/Delete.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Bookings/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Bookings/Details.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Bookings/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Bookings/Edit.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Bookings/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Bookings/Index.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Bookings/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Employees/Create.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Employees/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Employees/Delete.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Employees/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Employees/Details.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Employees/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Employees/Edit.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Employees/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Employees/Index.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Employees/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Blazor_app/Hotel/Server/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Server/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
