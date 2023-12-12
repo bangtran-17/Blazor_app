@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Hotel.Server.Services.RoomtypeService;
 using Hotel.Server.Services.DepartmentService;
+using Hotel.Server.Services.BookingService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,11 @@ builder.Services.AddScoped<IRoomTypeService, RoomtypeService>();
 //Department
 builder.Services.AddHttpClient<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+
+//Booking
+builder.Services.AddHttpClient<IBookingService, BookingService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+
 
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();

@@ -42,7 +42,24 @@ namespace Hotel.Server.Services.BookingService
             var dbBooking = await _context.Bookings.FindAsync(BookingId);
             return dbBooking;
         }
-       
+        public async Task<Booking?> UpdateBooking(int BId, Booking booking)
+        {
+            var dbEmployee = await _context.Bookings.FindAsync(BId);
+            if (dbEmployee != null)
+            {
+                dbEmployee.BId = booking.BId;
+                dbEmployee.BCheckingDate = booking.BCheckingDate;
+                dbEmployee.BCheckoutDate = booking.BCheckoutDate;
+                dbEmployee.BAmount = booking.BAmount;
+                dbEmployee.BStatus = booking.BStatus;
+
+
+                await _context.SaveChangesAsync();
+            }
+
+            return dbEmployee;
+        }
+
         //public async Task<List<Booking>> SearchBookings(string searchText)
         //{
         //    var result = await _context.Bookings

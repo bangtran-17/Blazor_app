@@ -24,13 +24,13 @@ namespace Hotel.Client.Services
         public async Task CreateRoomtype(Roomtype Roomtype)
         {
             await _http.PostAsJsonAsync("api/Roomtype", Roomtype);
-            _navigationManger.NavigateTo("admin/Roomtypes");
+
         }
 
         public async Task DeleteRoomtype(int id)
         {
             var result = await _http.DeleteAsync($"api/Roomtype/{id}");
-            _navigationManger.NavigateTo("admin/Roomtypes");
+
         }
 
 
@@ -54,7 +54,7 @@ namespace Hotel.Client.Services
         public async Task UpdateRoomtype(int id, Roomtype Roomtype)
         {
             await _http.PutAsJsonAsync($"api/Roomtype/{id}", Roomtype);
-            _navigationManger.NavigateTo("admin/Roomtypes");
+
         }
     }
 }
