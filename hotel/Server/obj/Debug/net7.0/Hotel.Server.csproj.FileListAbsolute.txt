@@ -886,3 +886,4 @@ D:\bang\Blazor_app\hotel\Server\obj\Debug\net7.0\Hotel.Server.genruntimeconfig.c
 D:\bang\Blazor_app\hotel\Server\obj\Debug\net7.0\ref\Hotel.Server.dll
 D:\bang\Blazor_app\hotel\Server\bin\Debug\net7.0\Blazored.Modal.dll
 D:\bang\Blazor_app\Hotel\Server\obj\Debug\net7.0\Hotel.Server.MvcApplicationPartsAssemblyInfo.cs
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Blazored.Modal.dll

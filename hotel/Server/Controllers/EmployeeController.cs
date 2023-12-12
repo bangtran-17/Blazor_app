@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using Hotel.Shared.Models;
 using Hotel.Server.Services.EmployeeService;
 
@@ -33,10 +27,10 @@ namespace Hotel.Server.Controllers
             return await _EmployeeService.GetEmployeeById(id);
         }
 
-        [HttpGet("name/{fname}")]
-        public async Task<List<Employee>> GetEmployeeByFName(string fname)
+        [HttpGet("search/{searchText}")]
+        public async Task<List<Employee>> GetEmployeeByFName(string searchText)
         {
-            return await _EmployeeService.GetEmployeeByFName(fname);
+            return await _EmployeeService.GetEmployeeByFName(searchText);
         }
 
         [HttpPost]

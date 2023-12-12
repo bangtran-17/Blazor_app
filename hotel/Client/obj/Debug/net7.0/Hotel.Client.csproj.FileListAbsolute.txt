@@ -2623,3 +2623,7 @@ D:\bang\Blazor_app\Hotel\Client\obj\Debug\net7.0\build-gz\HaSQqzTc.gz
 D:\bang\Blazor_app\Hotel\Client\obj\Debug\net7.0\build-gz\L8DSRuwm.gz
 D:\bang\Blazor_app\Hotel\Client\obj\Debug\net7.0\build-gz\Vw+syhd4.gz
 D:\bang\Blazor_app\Hotel\Client\obj\Debug\net7.0\build-gz\kEULHyHo.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Modal.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Modal.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Blazored.Modal.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\5nmm6cmiy7.gz

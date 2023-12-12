@@ -33,9 +33,9 @@ namespace Hotel.Client.Services
             _navigationManger.NavigateTo("admin/employees");
         }
 
-        public async Task<Employee?> GetEmployeeByFName(string fname)
+        public async Task<Employee?> SearchEmployees(string searchText)
         {
-            var result = await _http.GetAsync($"api/Employee/name/{fname}");
+            var result = await _http.GetAsync($"api/Employee/search/{searchText}");
             if (result.StatusCode == HttpStatusCode.OK)
             {
                 return await result.Content.ReadFromJsonAsync<Employee>();
