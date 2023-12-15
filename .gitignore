@@ -6,5 +6,8 @@
 /hotel/.vs
 /hotel/Server/appsettings.json
 /hotel/Server/obj/Debug
+/hotel/Server/bin/Debug
+
 /hotel/Client/obj/Debug
+
 /hotel/Shared/obj/Debug
