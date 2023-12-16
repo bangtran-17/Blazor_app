@@ -10,11 +10,11 @@ using Microsoft.IdentityModel.Tokens;
 using Hotel.Server.Services.RoomtypeService;
 using Hotel.Server.Services.DepartmentService;
 using Hotel.Server.Services.BookingService;
+using Hotel.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -35,6 +35,10 @@ builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 //Booking
 builder.Services.AddHttpClient<IBookingService, BookingService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
+
+//Guest
+builder.Services.AddHttpClient<IGuestService, GuestService>();
+builder.Services.AddScoped<IGuestService, GuestService>();
 
 
 builder.Services.AddDefaultIdentity<IdentityUser>()
