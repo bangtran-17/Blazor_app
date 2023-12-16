@@ -37,9 +37,9 @@ element.style {
     width: 280px;
 }
 
-/*div {
+div {
     display: block;
-}*/
+}
 
     div.container {
         text-align: center;
@@ -83,7 +83,7 @@ main {
 
 .text-black {
     color: #000000 !important;
-    /* padding-left: 5px;  
+    /* padding-left: 5px;
     padding-right: 5px; */
 }
 
@@ -207,7 +207,7 @@ svg {
     vertical-align: middle;
     overflow-clip-margin: content-box;
     overflow: hidden;
-    padding-left: 5px;  
+    padding-left: 5px;
     padding-right: 5px;
 } */
 

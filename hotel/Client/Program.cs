@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Hotel.Client.Utility;
 using Hotel.Client.Services;
 using Blazored.Modal;
+using Hotel.Client.Services.DepartmentService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -18,6 +19,8 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IRoomtypeService, RoomtypeService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IGuestService, GuestService>();
 builder.Services.AddBlazoredModal();
 
 
