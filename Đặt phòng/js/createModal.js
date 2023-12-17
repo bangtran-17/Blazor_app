@@ -43,6 +43,7 @@ export default function createModal(){
         opacity: 0;
         pointer-events: none;
         transition: opacity 250ms ease-in-out;
+        z-index: 3;
       }
       
       .modal-container.active {
