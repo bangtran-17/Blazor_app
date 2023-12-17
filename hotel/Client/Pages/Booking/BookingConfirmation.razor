@@ -1,0 +1,50 @@
+﻿@page "/success-payment"
+@using Hotel.Shared.CommonFiles
+@inject ILocalStorageService localStorage
+@inject IPaymentService roomOrderDetailsService
+
+
+<div class="container">
+    <div class="row mt-4 pt-4">
+        <div class="col-10 offset-1 text-center">
+            <h2 class="text-warning">Booking Confirmed</h2>
+            <p>Thank you for purchasing a room at Hidden Villa. Order number: @OrderId</p>
+            <p>Your check-in date is @Checkin.ToString() and check-out date is @Checkout.ToString()</p>
+        </div>
+        <div class="col-8 offset-2 mb-1">
+            <img src="/images/confirmation.jpg" width="100%" style="border-radius:30px;" />
+        </div>
+
+    </div>
+</div>
+
+@code {
+    private bool IsPaymentComplete = false;
+    private int OrderId { get; set; }
+    private Payment? Cost { get; set; }
+    private DateTime? Checkin { get; set; }
+    private DateTime? Checkout { get; set; }
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var orderDetails = await localStorage.GetItemAsync<Booking>(SD.Local_RoomOrderDetails);
+
+        
+
+        OrderId = orderDetails.BId;
+        Cost = await roomOrderDetailsService.GetCostById(orderDetails.BId);
+        Checkin = orderDetails.BCheckoutDate;
+        Checkout = orderDetails.BCheckoutDate;
+
+        var FinalRoomOrderDetails = await roomOrderDetailsService.PaymentSuccessful(orderDetails);
+        if (FinalRoomOrderDetails.BStatus == SD.Status_Booked)
+        {
+            await localStorage.RemoveItemAsync(SD.Local_RoomOrderDetails);
+            await localStorage.RemoveItemAsync(SD.Local_InitialBooking);
+
+            IsPaymentComplete = true;
+        }
+    }
+}
