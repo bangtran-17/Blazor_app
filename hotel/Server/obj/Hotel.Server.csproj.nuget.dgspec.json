@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj": {}
+    "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj": {}
   },
   "projects": {
-    "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
+    "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
         "projectName": "Hotel.Client",
-        "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\obj\\",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
-                "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
+              "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
+                "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
               }
             }
           }
@@ -65,6 +65,24 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )",
+              "autoReferenced": true
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -92,7 +110,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.12, 7.0.12]"
+              "version": "[7.0.14, 7.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -100,7 +118,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -109,17 +127,17 @@
         }
       }
     },
-    "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj": {
+    "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
         "projectName": "Hotel.Server",
-        "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\obj\\",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -133,11 +151,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
-                "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj"
+              "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
+                "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj"
               },
-              "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
-                "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
+              "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
+                "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
               }
             }
           }
@@ -238,21 +256,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
+    "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
+        "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
         "projectName": "Hotel.Shared",
-        "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\obj\\",
+        "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
+        "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -299,7 +317,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
