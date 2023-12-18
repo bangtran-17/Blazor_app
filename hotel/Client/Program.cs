@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Hotel.Client.Utility;
 using Hotel.Client.Services;
 using Blazored.Modal;
+using Hotel.Client.Services.DepartmentService;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -22,6 +23,8 @@ builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
 builder.Services.AddScoped<IGuestService, GuestService>();
 builder.Services.AddScoped<IRoomImgService, RoomImgService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IGuestService, GuestService>();
 builder.Services.AddBlazoredModal();
 
 

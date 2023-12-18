@@ -28,9 +28,9 @@ namespace Hotel.Server.Controllers
         }
 
         [HttpGet("search/{searchText}")]
-        public async Task<List<Employee>> GetEmployeeByFName(string searchText)
+        public async Task<List<Employee>> SearchEmployees(string searchText)
         {
-            return await _EmployeeService.GetEmployeeByFName(searchText);
+            return await _EmployeeService.SearchEmployees(searchText);
         }
 
         [HttpPost]
