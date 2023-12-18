@@ -6,7 +6,7 @@
 <PageTitle>Quản lý khách hàng</PageTitle>
 
 <div class="row container">
-    <textarea class="tim col-6 mt-4 ml-4" placeholder="Tìm kiếm"></textarea>
+    <input @oninput="SearchGuests" class="tim col-6 mt-4 ml-4" placeholder="Tìm kiếm">
     <div class="col-6 row mt-4">
         <div class="sua col-4 d-inline-block w-2"></div>
         <button class="w-20" @onclick="NavigateBack">Quay lại</button>
@@ -17,7 +17,7 @@
     </div>
 </div>
 <!-------------------------------------------------------------------->
-<div class="row container">
+@* <div class="row container">
     <div class="sort mt-4 ml-4">
         <div class="ngay col-3 d-inline-block w-2"></div>
         <span class="w-21">Hôm nay</span>
@@ -32,7 +32,7 @@
         <span class="w-21">Loại khách<i class="fa-solid fa-angle-down"></i></span>
         <span><input class="chn-ngy" type="date" /></span>
     </div>
-</div>
+</div> *@
 <!---------------------------------------------------------------------------------->
 <div class="row container d-flex flex-column flex-shrink-0 col-9">
     @* <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> *@
@@ -45,7 +45,27 @@
             <th style="width:20%;">Email</th>
             <th style="width:20%;"></th>
         </tr>
-        @foreach (var guest in GuestService.Guests)
+        @{
+            var guestsToDisplay = GuestsSearched.Any() ? GuestsSearched : GuestService.Guests;
+            var pageSize = 10;
+            // var currentPage = 1;
+
+            if (currentPage > 1)
+            {
+                guestsToDisplay = guestsToDisplay
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+            }
+            else
+            {
+                guestsToDisplay = guestsToDisplay
+                .Take(pageSize)
+                .ToList();
+            }
+
+        }
+        @foreach (var guest in guestsToDisplay)
         {
             <tr>
                 <td>@guest.GId</td>
@@ -60,7 +80,13 @@
     </table>
 </div>
 <!----------------------------------------------------------------------------------->
-<div class="row ">
+<div>
+    <button @onclick="(() => ChangePage(-1))" disabled="@(currentPage == 1)">Previous</button>
+    <span>Page @currentPage</span>
+    @* <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= employeesToDisplay.Count)">Next</button> *@
+    <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= Math.Max(GuestService.Guests.Count,GuestsSearched.Count))">Next</button>
+</div>
+@* <div class="row ">
     <div class="pagination">
         <a href="#">&laquo;</a>
         <a class="active" href="#">1</a>
@@ -71,10 +97,14 @@
         <a href="#">6</a>
         <a href="#">&raquo;</a>
     </div>
-</div>
+</div> *@
 
 
 @code {
+    List<Guest> GuestsSearched = new List<Guest>();
+
+    private int currentPage = 1;
+
     // don't need to wait until everythings is rendered
     protected override async Task OnInitializedAsync()
     {
@@ -95,9 +125,29 @@
     {
         NavigationManager.NavigateTo("admin");
     }
+
+    async Task SearchGuests(ChangeEventArgs e)
+    {
+        // displayValue = $"You entered: {e.Value}";
+
+        if (string.IsNullOrWhiteSpace(e.Value.ToString()))
+        {
+            GuestsSearched.Clear(); // Clear the search results if the input is empty
+        }
+        else
+        {
+            GuestsSearched = await GuestService.SearchGuests(e.Value.ToString());
+        }
+
+        StateHasChanged(); // Ensure the UI is updated
+    }
+
+    void ChangePage(int change)
+    {
+        currentPage += change;
+        StateHasChanged();
+    }
 }
 
 
-@code {
 
-}

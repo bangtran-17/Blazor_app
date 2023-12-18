@@ -44,7 +44,7 @@
     <table id="myTable">
         <tr class="header">
             <th style="width:20%;">MÃ</th>
-            <th style="width:20%;">TÊN KHÁCH HÀNG</th>
+            <th style="width:20%;">TÊN NHÂN VIÊN</th>
             <th style="width:20%;">SĐT</th>
             <th style="width:20%;">Email</th>
             <th style="width:20%;"></th>
@@ -90,7 +90,7 @@
     @* <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= employeesToDisplay.Count)">Next</button> *@
     <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= Math.Max(EmployeeService.Employees.Count,EmployeesSearched.Count))">Next</button>
 </div>
-<div class="row ">
+@* <div class="row">
     <div class="pagination">
         <a href="#">&laquo;</a>
         <a class="active" href="#">1</a>
@@ -101,7 +101,7 @@
         <a href="#">6</a>
         <a href="#">&raquo;</a>
     </div>
-</div>
+</div> *@
 
 
 @code {
@@ -119,12 +119,7 @@
         NavigationManager.NavigateTo($"admin/employee/{id}");
     }
 
-    void ShowEmployee(string fname)
-    {
-        NavigationManager.NavigateTo($"admin/employee/{fname}");
-    }
-
-    void AddEmployee()
+   void AddEmployee()
     {
 
         NavigationManager.NavigateTo("admin/employee");
@@ -135,12 +130,6 @@
         NavigationManager.NavigateTo("admin");
     }
 
-    // private string displayValue;
-    // async void SearchEmployees(ChangeEventArgs e)
-    // {
-    //     displayValue = $"You entered: {e.Value}";
-    //     EmployeesSearched = await EmployeeService.SearchEmployees(e.Value.ToString());
-    // }
     async Task SearchEmployees(ChangeEventArgs e)
     {
         // displayValue = $"You entered: {e.Value}";

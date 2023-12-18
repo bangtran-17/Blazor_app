@@ -8,8 +8,8 @@ namespace Hotel.Client.Services
 		List<Guest> Guests { get; set; }
 		Task GetGuests();
 		Task<Guest?> GetGuestById(int id);
-		Task<Guest?> SearchGuests(string searchText);
-		Task CreateGuest(Guest Guest);
+        Task<List<Guest?>> SearchGuests(string searchText);
+        Task CreateGuest(Guest Guest);
 		Task UpdateGuest(int id, Guest Guest);
 		Task DeleteGuest(int id);
 
