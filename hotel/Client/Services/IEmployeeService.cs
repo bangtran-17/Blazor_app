@@ -8,7 +8,7 @@ namespace Hotel.Client.Services
         List<Employee> Employees { get; set; }
         Task GetEmployees();
         Task<Employee?> GetEmployeeById(int id);
-        Task<Employee?> SearchEmployees(string searchText);
+        Task<List<Employee?>> SearchEmployees(string searchText);
         Task CreateEmployee(Employee Employee);
         Task UpdateEmployee(int id, Employee Employee);
         Task DeleteEmployee(int id);
