@@ -21,7 +21,7 @@ namespace Hotel.Client.Services
 
 		public List<Guest> Guests { get; set; } = new List<Guest>();
 
-		public async Task CreateGuest(Guest Guest)
+		public async Task CreateGuest(Guest? Guest)
 		{
 			await _http.PostAsJsonAsync("api/Guest", Guest);
 			_navigationManger.NavigateTo("admin/Guests");

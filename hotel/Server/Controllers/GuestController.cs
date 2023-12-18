@@ -1,6 +1,8 @@
 ﻿using Hotel.Server.Services;
 using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
+using Hotel.Shared.Models;
+using Hotel.Server.Services.GuestService;
 
 namespace Hotel.Server.Controllers
 {
@@ -9,9 +11,10 @@ namespace Hotel.Server.Controllers
     public class GuestController : ControllerBase
     {
         private readonly IGuestService _GuestService;
-        public GuestController(IGuestService guestService)
+
+        public GuestController(IGuestService GuestService)
         {
-            _GuestService = guestService;
+            _GuestService = GuestService;
         }
 
         [HttpGet]
@@ -33,7 +36,7 @@ namespace Hotel.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<Guest?> CreateGuest(Guest Guest)
+        public async Task<Guest?> CreateGuest(Guest? Guest)
         {
             return await _GuestService.CreateGuest(Guest);
         }

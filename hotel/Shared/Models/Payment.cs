@@ -12,6 +12,7 @@ public partial class Payment
     public string? PType { get; set; }
 
     public DateTime? PDatCoc { get; set; }
+    public DateTime? PaidDate { get; set; }
 
     public decimal? PAmout { get; set; }
 

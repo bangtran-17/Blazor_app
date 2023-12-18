@@ -81,5 +81,6 @@ namespace Hotel.Client.Utility
             }
             return Convert.FromBase64String(base64);
         }
+
     }
 }

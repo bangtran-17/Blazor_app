@@ -20,4 +20,5 @@ public partial class Roomtype
     public decimal? RArea { get; set; }
 
     public virtual ICollection<Room> Rooms { get; } = new List<Room>();
+    public virtual ICollection<RoomImg> RoomImgs { get; set; } = new List<RoomImg>();
 }
