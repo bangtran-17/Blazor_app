@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Hotel.Shared.Models;
 
 namespace Hotel.Shared.Models;
 
@@ -15,7 +16,7 @@ public partial class Room
 
     public string? Status { get; set; }
 
-    public virtual Roomtype? Rt { get; set; }
+    public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
-    public virtual ICollection<Booking> BIds { get; } = new List<Booking>();
+    public virtual Roomtype? Rt { get; set; }=new Roomtype();
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 
 namespace Hotel.Shared.Models;
@@ -27,19 +29,24 @@ public partial class Booking
 
     public string? BStatus { get; set; }
 
-    public virtual Discount? DIdNavigation { get; set; }
+    public int? Rid { get; set; }
+    public decimal? BCost { get; set; }
 
-    public virtual Employee? EIdNavigation { get; set; }
+    public string? StripeSessionId { get; set; }
 
-    public virtual ICollection<Feedback>? Feedbacks { get; } = new List<Feedback>();
+    public virtual Discount? DIdNavigation { get; set; }=new Discount();
 
-    public virtual Guest? GIdNavigation { get; set; }
+    public virtual Employee? EIdNavigation { get; set; }=new Employee();
 
-    public virtual Hotel1? HIdNavigation { get; set; }
+    public virtual ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
 
-    public virtual ICollection<Payment>? Payments { get; } = new List<Payment>();
+    public virtual Guest? GIdNavigation { get; set; }=new Guest();
 
-    public virtual ICollection<Servicesbooked>? Servicesbookeds { get; } = new List<Servicesbooked>();
+    public virtual Hotel1? HIdNavigation { get; set; } = null;
 
-    public virtual ICollection<Room>? RIds { get; } = new List<Room>();
+    public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
+
+    public virtual Room? RidNavigation { get; set; }= new Room();
+
+    public virtual ICollection<Servicesbooked> Servicesbookeds { get; set; } = new List<Servicesbooked>();
 }

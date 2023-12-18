@@ -7,7 +7,7 @@ namespace Hotel.Client.Services
         List<Roomtype> Roomtypes { get; set; }
         Task GetRoomtypes();
         Task<Roomtype?> GetRoomtypeById(int id);
-   
+        
         Task CreateRoomtype(Roomtype Roomtype);
         Task UpdateRoomtype(int id, Roomtype Roomtype);
         Task DeleteRoomtype(int id);

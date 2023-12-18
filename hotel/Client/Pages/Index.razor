@@ -4,6 +4,7 @@
 @inject ILocalStorageService localStorage
 @inject IJSRuntime jsRuntime
 @inject NavigationManager navigationManager
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -654,6 +655,7 @@
     {
         try
         {
+           
             await localStorage.SetItemAsync(SD.Local_InitialBooking, BookingModel);
             navigationManager.NavigateTo("booking", true);
         }

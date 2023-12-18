@@ -27,6 +27,7 @@ namespace Hotel.Server.Controllers
         public async Task<List<Booking>> GetBookings()
         {
             return await _BookingService.GetBookings();
+           
         }
         [HttpPost]
         public async Task<Booking?> CreateBooking(Booking booking)

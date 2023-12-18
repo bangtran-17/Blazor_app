@@ -2,7 +2,7 @@
 @inject IAuthService AuthService
 @inject NavigationManager NavigationManager
 @page "/register"
-
+@inject IGuestService GuestService
 @if(ShowErrors)
 {
     <div class="alert alert-danger" role="alert">
@@ -51,14 +51,15 @@
     private RegisterModel RegisterModel = new RegisterModel();
     private bool ShowErrors;
     private IEnumerable<string>? Errors;
-
+    private Guest? guest { get; set; } = new Guest();
     private async Task HandleRegistration()
     {
+        guest.GAccount = RegisterModel.UserName;
         ShowErrors = false;
 
         var result = await AuthService.Register(RegisterModel);
+       await GuestService.CreateGuest(guest);
 
-       
         NavigationManager.NavigateTo("/login");
         
      

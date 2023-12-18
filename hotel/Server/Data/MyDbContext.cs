@@ -51,6 +51,7 @@ public partial class MyDbContext : DbContext
     public virtual DbSet<Salary> Salaries { get; set; }
 
     public virtual DbSet<Service> Services { get; set; }
+    public virtual DbSet<RoomImg> RoomImgs { get; set; }
 
     public virtual DbSet<Servicesbooked> Servicesbookeds { get; set; }
 
@@ -136,9 +137,15 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("BOOKING");
 
-            entity.Property(e => e.BId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("B_ID");
+            entity.HasIndex(e => e.DId, "IX_BOOKING_D_ID");
+
+            entity.HasIndex(e => e.EId, "IX_BOOKING_E_ID");
+
+            entity.HasIndex(e => e.GId, "IX_BOOKING_G_ID");
+
+            entity.HasIndex(e => e.HId, "IX_BOOKING_H_ID");
+
+            entity.Property(e => e.BId).HasColumnName("B_ID");
             entity.Property(e => e.BAmount)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("B_Amount");
@@ -153,8 +160,10 @@ public partial class MyDbContext : DbContext
                 .HasColumnName("B_DATE");
             entity.Property(e => e.BStatus)
                 .HasMaxLength(50)
-                .IsUnicode(true)
                 .HasColumnName("B_Status");
+            entity.Property(e => e.BCost)
+              .HasColumnType("decimal(18, 2)")
+              .HasColumnName("B_Cost");
             entity.Property(e => e.BStayDuration).HasColumnName("B_StayDuration");
             entity.Property(e => e.DId).HasColumnName("D_ID");
             entity.Property(e => e.EId).HasColumnName("E_ID");
@@ -176,6 +185,10 @@ public partial class MyDbContext : DbContext
             entity.HasOne(d => d.HIdNavigation).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.HId)
                 .HasConstraintName("FK__BOOKING__H_ID__72C60C4A");
+
+            entity.HasOne(d => d.RidNavigation).WithMany(p => p.Bookings)
+                .HasForeignKey(d => d.Rid)
+                .HasConstraintName("FK__BOOKING__Rid__01142BA1");
         });
 
         modelBuilder.Entity<Department>(entity =>
@@ -400,6 +413,9 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.PDatCoc)
                 .HasColumnType("date")
                 .HasColumnName("P_DatCoc");
+            entity.Property(e => e.PaidDate)
+               .HasColumnType("datetime")
+               .HasColumnName("PaidDAte");
             entity.Property(e => e.PStatus)
                 .HasMaxLength(50)
                 .IsUnicode(true)
@@ -417,48 +433,43 @@ public partial class MyDbContext : DbContext
                 .HasConstraintName("FK__PAYMENT__B_ID__02084FDA");
         });
 
+
         modelBuilder.Entity<Room>(entity =>
         {
             entity.HasKey(e => e.RId).HasName("PK__ROOM__DE152E89CDA1DB90");
 
             entity.ToTable("ROOM");
 
-            entity.Property(e => e.RId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("R_ID");
+            entity.HasIndex(e => e.RtId, "IX_ROOM_RT_ID");
+
+            entity.Property(e => e.RId).HasColumnName("R_ID");
             entity.Property(e => e.RAvailable)
                 .HasMaxLength(10)
-                .IsUnicode(true)
                 .HasColumnName("R_Available");
             entity.Property(e => e.RNumber)
                 .HasMaxLength(50)
-                .IsUnicode(true)
                 .HasColumnName("R_Number");
             entity.Property(e => e.RtId).HasColumnName("RT_ID");
-            entity.Property(e => e.Status)
-                .HasMaxLength(50)
-                .IsUnicode(true);
+            entity.Property(e => e.Status).HasMaxLength(50);
 
             entity.HasOne(d => d.Rt).WithMany(p => p.Rooms)
                 .HasForeignKey(d => d.RtId)
                 .HasConstraintName("FK__ROOM__RT_ID__68487DD7");
+        });
 
-            entity.HasMany(d => d.BIds).WithMany(p => p.RIds)
-                .UsingEntity<Dictionary<string, object>>(
-                    "Roombooked",
-                    r => r.HasOne<Booking>().WithMany()
-                        .HasForeignKey("BId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__ROOMBOOKED__B_ID__797309D9"),
-                    l => l.HasOne<Room>().WithMany()
-                        .HasForeignKey("RId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__ROOMBOOKED__R_ID__787EE5A0"),
-                    j =>
-                    {
-                        j.HasKey("RId", "BId").HasName("PK__ROOMBOOK__AAA740774ECA924A");
-                        j.ToTable("ROOMBOOKED");
-                    });
+
+        modelBuilder.Entity<RoomImg>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RoomImg__3214EC076EFE77A3");
+
+            entity.ToTable("RoomImg");
+
+            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.ImgUrl).HasColumnName("ImgURL");
+
+            entity.HasOne(d => d.Room).WithMany(p => p.RoomImgs)
+                .HasForeignKey(d => d.RoomId)
+                .HasConstraintName("FK__RoomImg__RoomId__160F4887");
         });
 
         modelBuilder.Entity<Roomtype>(entity =>
