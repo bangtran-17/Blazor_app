@@ -4,7 +4,7 @@ namespace Hotel.Client.Services
 {
     public interface IPaymentService
     {
-        List<Payment> Payment { get; set; }
+        List<Payment> Payments { get; set; }
         public Task<Booking> PaymentSuccessful(Booking details);
         public  Task GetPayments();
         public Task CreatePayment(Payment Payment);

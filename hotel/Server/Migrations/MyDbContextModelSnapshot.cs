@@ -240,13 +240,16 @@ namespace Hotel.Server.Migrations
                         .HasColumnType("date")
                         .HasColumnName("B_CheckoutDate");
 
+                    b.Property<decimal?>("BCost")
+                        .HasColumnType("decimal(18, 2)")
+                        .HasColumnName("B_Cost");
+
                     b.Property<DateTime?>("BDate")
                         .HasColumnType("date")
                         .HasColumnName("B_DATE");
 
                     b.Property<string>("BStatus")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("B_Status");
 
@@ -270,16 +273,24 @@ namespace Hotel.Server.Migrations
                         .HasColumnType("int")
                         .HasColumnName("H_ID");
 
+                    b.Property<int?>("Rid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StripeSessionId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("BId")
                         .HasName("PK__BOOKING__4B26EFE62E59BE7A");
 
-                    b.HasIndex("DId");
+                    b.HasIndex("Rid");
 
-                    b.HasIndex("EId");
+                    b.HasIndex(new[] { "DId" }, "IX_BOOKING_D_ID");
 
-                    b.HasIndex("GId");
+                    b.HasIndex(new[] { "EId" }, "IX_BOOKING_E_ID");
 
-                    b.HasIndex("HId");
+                    b.HasIndex(new[] { "GId" }, "IX_BOOKING_G_ID");
+
+                    b.HasIndex(new[] { "HId" }, "IX_BOOKING_H_ID");
 
                     b.ToTable("BOOKING", (string)null);
                 });
@@ -622,6 +633,10 @@ namespace Hotel.Server.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("P_Type");
 
+                    b.Property<DateTime?>("PaidDate")
+                        .HasColumnType("datetime")
+                        .HasColumnName("PaidDate");
+
                     b.Property<string>("Status")
                         .HasMaxLength(50)
                         .IsUnicode(true)
@@ -646,13 +661,11 @@ namespace Hotel.Server.Migrations
 
                     b.Property<string>("RAvailable")
                         .HasMaxLength(10)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(10)")
                         .HasColumnName("R_Available");
 
                     b.Property<string>("RNumber")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("R_Number");
 
@@ -662,15 +675,34 @@ namespace Hotel.Server.Migrations
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("RId")
                         .HasName("PK__ROOM__DE152E89CDA1DB90");
 
-                    b.HasIndex("RtId");
+                    b.HasIndex(new[] { "RtId" }, "IX_ROOM_RT_ID");
 
                     b.ToTable("ROOM", (string)null);
+                });
+
+            modelBuilder.Entity("Hotel.Shared.Models.RoomImg", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ImgURL");
+
+                    b.Property<int?>("RoomId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id")
+                        .HasName("PK__RoomImg__3214EC076EFE77A3");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("RoomImg", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Shared.Models.Roomtype", b =>
@@ -810,22 +842,6 @@ namespace Hotel.Server.Migrations
                     b.ToTable("SERVICESBOOKED", (string)null);
                 });
 
-            modelBuilder.Entity("Roombooked", b =>
-                {
-                    b.Property<int>("RId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BId")
-                        .HasColumnType("int");
-
-                    b.HasKey("RId", "BId")
-                        .HasName("PK__ROOMBOOK__AAA740774ECA924A");
-
-                    b.HasIndex("BId");
-
-                    b.ToTable("ROOMBOOKED", (string)null);
-                });
-
             modelBuilder.Entity("AspNetUserRole", b =>
                 {
                     b.HasOne("Hotel.Shared.Models.AspNetRole", null)
@@ -907,6 +923,11 @@ namespace Hotel.Server.Migrations
                         .HasForeignKey("HId")
                         .HasConstraintName("FK__BOOKING__H_ID__72C60C4A");
 
+                    b.HasOne("Hotel.Shared.Models.Room", "RidNavigation")
+                        .WithMany("Bookings")
+                        .HasForeignKey("Rid")
+                        .HasConstraintName("FK__BOOKING__Rid__01142BA1");
+
                     b.Navigation("DIdNavigation");
 
                     b.Navigation("EIdNavigation");
@@ -914,6 +935,8 @@ namespace Hotel.Server.Migrations
                     b.Navigation("GIdNavigation");
 
                     b.Navigation("HIdNavigation");
+
+                    b.Navigation("RidNavigation");
                 });
 
             modelBuilder.Entity("Hotel.Shared.Models.Employee", b =>
@@ -970,6 +993,16 @@ namespace Hotel.Server.Migrations
                     b.Navigation("Rt");
                 });
 
+            modelBuilder.Entity("Hotel.Shared.Models.RoomImg", b =>
+                {
+                    b.HasOne("Hotel.Shared.Models.Roomtype", "Room")
+                        .WithMany("RoomImgs")
+                        .HasForeignKey("RoomId")
+                        .HasConstraintName("FK__RoomImg__RoomId__160F4887");
+
+                    b.Navigation("Room");
+                });
+
             modelBuilder.Entity("Hotel.Shared.Models.Salary", b =>
                 {
                     b.HasOne("Hotel.Shared.Models.Employee", "EIdNavigation")
@@ -997,21 +1030,6 @@ namespace Hotel.Server.Migrations
                     b.Navigation("BIdNavigation");
 
                     b.Navigation("SIdNavigation");
-                });
-
-            modelBuilder.Entity("Roombooked", b =>
-                {
-                    b.HasOne("Hotel.Shared.Models.Booking", null)
-                        .WithMany()
-                        .HasForeignKey("BId")
-                        .IsRequired()
-                        .HasConstraintName("FK__ROOMBOOKED__B_ID__797309D9");
-
-                    b.HasOne("Hotel.Shared.Models.Room", null)
-                        .WithMany()
-                        .HasForeignKey("RId")
-                        .IsRequired()
-                        .HasConstraintName("FK__ROOMBOOKED__R_ID__787EE5A0");
                 });
 
             modelBuilder.Entity("Hotel.Shared.Models.AspNetRole", b =>
@@ -1068,8 +1086,15 @@ namespace Hotel.Server.Migrations
                     b.Navigation("Employees");
                 });
 
+            modelBuilder.Entity("Hotel.Shared.Models.Room", b =>
+                {
+                    b.Navigation("Bookings");
+                });
+
             modelBuilder.Entity("Hotel.Shared.Models.Roomtype", b =>
                 {
+                    b.Navigation("RoomImgs");
+
                     b.Navigation("Rooms");
                 });
 

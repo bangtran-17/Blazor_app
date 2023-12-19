@@ -2,7 +2,7 @@
 using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Hotel.Shared.Models;
-using Hotel.Server.Services.GuestService;
+using Hotel.Server.Services;
 
 namespace Hotel.Server.Controllers
 {

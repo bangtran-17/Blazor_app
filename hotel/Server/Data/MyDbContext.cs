@@ -415,7 +415,7 @@ public partial class MyDbContext : DbContext
                 .HasColumnName("P_DatCoc");
             entity.Property(e => e.PaidDate)
                .HasColumnType("datetime")
-               .HasColumnName("PaidDAte");
+               .HasColumnName("PaidDate");
             entity.Property(e => e.PStatus)
                 .HasMaxLength(50)
                 .IsUnicode(true)

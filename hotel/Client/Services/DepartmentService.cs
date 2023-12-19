@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
 
-namespace Hotel.Client.Services.DepartmentService
+namespace Hotel.Client.Services
 {
     public class DepartmentService : IDepartmentService
     {
@@ -48,20 +48,20 @@ namespace Hotel.Client.Services.DepartmentService
             }
         }
 
-        public async Task<Department?> SearchDepartments(string searchText)
+        public async Task<List<Department?>> SearchDepartments(string searchText)
         {
             var result = await _http.GetAsync($"api/Department/search/{searchText}");
             if (result.StatusCode == HttpStatusCode.OK)
             {
-                return await result.Content.ReadFromJsonAsync<Department>();
+                return await result.Content.ReadFromJsonAsync<List<Department?>>();
             }
             return null;
         }
 
         public async Task UpdateDepartment(int id, Department Employee)
         {
-            await _http.PutAsJsonAsync($"api/Employee/{id}", Employee);
-            _navigationManger.NavigateTo("admin/employees");
+            await _http.PutAsJsonAsync($"api/Department/{id}", Employee);
+            _navigationManger.NavigateTo("admin/departments");
         }
     }
 }

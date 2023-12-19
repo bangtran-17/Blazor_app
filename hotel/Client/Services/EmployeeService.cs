@@ -1,5 +1,4 @@
-﻿
-using Hotel.Client;
+﻿using Hotel.Client;
 using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System.Net;

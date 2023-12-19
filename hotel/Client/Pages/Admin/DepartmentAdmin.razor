@@ -1,0 +1,106 @@
+﻿@page "/admin/department"
+@page "/admin/department/{id:int}"
+
+@using Hotel.Shared
+
+@inject IDepartmentService DepartmentService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản Lý Nhân Viên</PageTitle>
+
+<button class="btn btn-primary" @onclick="NavigateBack">Quay lại</button>
+
+@if (Id is null)
+{
+    <PageTitle>Create a new Department</PageTitle>
+    <h3>Create a new Department</h3>
+    <br />
+}
+else
+{
+    <PageTitle>Edit Department @department.DeName</PageTitle>
+    <h3>Edit Department @department.DeName</h3>
+    <br />
+
+}
+
+<EditForm Model="department" OnSubmit="HandleSubmit">
+    <div>
+        <label for="name">TÊN PHÒNG BAN</label>
+        <InputText id="firstName" @bind-Value="department.DeName" class="form-control" />
+    </div>
+    <div>
+        <label for="description">MÔ TẢ</label>
+        <InputTextArea id="lastName" @bind-Value="department.DeDescription" class="form-control" />
+    </div>
+    <div>
+        <label for="contactNumber">LƯƠNG KHỞI ĐIỂM</label>
+        <InputNumber id="contactNumber" @bind-Value="department.DeInitialSalary" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">@btnText</button>
+
+    <button class="btn btn-danger" @onclick="DeleteDepartment">Delete</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    [ParameterAttribute]
+    public string? Fname { get; set; }
+
+    string btnText = string.Empty;
+
+    Department? department = new Department { };
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Lưu" : "Cập nhật";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await DepartmentService.GetDepartmentById((int)Id);
+            // var result = await DepartmentService.GetDepartmentByFName(Fname);
+            if (result is not null)
+                department = result;
+            else
+                NavigationManager.NavigateTo("/admin/department");
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id is null)
+        {
+            await DepartmentService.CreateDepartment(department);
+        }
+        else
+        {
+            await DepartmentService.UpdateDepartment((int)Id, department);
+        }
+    }
+
+    async Task DeleteDepartment()
+    {
+        await DepartmentService.DeleteDepartment(department.DeId);
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/admin/departments");
+    }
+
+    public string search { get; set; }
+
+    private string displayValue;
+
+    private void HandleInputChange(ChangeEventArgs e)
+    {
+        // Thực hiện các xử lý hoặc biến đổi giá trị tùy theo nhu cầu
+        displayValue = $"You entered: {e.Value}";
+    }
+
+}

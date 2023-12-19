@@ -1,0 +1,154 @@
+﻿@page "/admin/payments"
+
+@using Hotel.Shared
+
+@inject IPaymentService PaymentService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản lý phòng ban</PageTitle>
+
+
+<div class="row container">
+    <input @oninput="SearchPayments" type="text" class="tim col-6 mt-4 ml-4" placeholder="Tìm kiếm">
+
+    <div class="col-6 row mt-4">
+        <div class="sua col-4 d-inline-block w-2"></div>
+        <button class="w-20" @onclick="NavigateBack">Quay lại</button>
+    </div>
+</div>
+<!-------------------------------------------------------------------->
+@* <div class="row container">
+    <div class="sort mt-4 ml-4">
+        <div class="ngay col-3 d-inline-block w-2"></div>
+        <span class="w-21">Hôm nay</span>
+
+        <div class="thang col-3 d-inline-block w-2"></div>
+        <span class="w-21">Trong tuần</span>
+
+        <div class="nam col-3 d-inline-block w-2"></div>
+        <span class="w-21">Trong tháng</span>
+
+        <div class="select-input col-3 d-inline-block w-2"></div>
+        <span class="w-21">Loại khách<i class="fa-solid fa-angle-down"></i></span>
+        <span><input class="chn-ngy" type="date" /></span>
+    </div>
+</div> *@
+<!---------------------------------------------------------------------------------->
+<div class="row container d-flex flex-column flex-shrink-0 col-9">
+    @* <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> *@
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:14.286%;">MÃ</th>
+            <th style="width:14.286%;">TRẠNG THÁI</th>
+            <th style="width:14.286%;">HTTT</th>
+            <th style="width:14.286%;">THỜI GIAN</th>
+            <th style="width:14.286%;">TỔNG TIỀN</th>
+            <th style="width:14.286%;">MÃ ĐẶT PHÒNG</th>
+            <th style="width:14.286%;"></th>
+        </tr>
+        @{
+            var paymentsToDisplay = PaymentsSearched.Any() ? PaymentsSearched : PaymentService.Payments;
+            var pageSize = 10;
+            // var currentPage = 1;
+
+            if (currentPage > 1)
+            {
+                paymentsToDisplay = paymentsToDisplay
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+            }
+            else
+            {
+                paymentsToDisplay = paymentsToDisplay
+                .Take(pageSize)
+                .ToList();
+            }
+
+        }
+        @foreach (var payment in paymentsToDisplay)
+        {
+            <tr>
+                <td>@payment.PId</td>
+                <td>@payment.PStatus</td>
+                <td>@payment.PType</td>
+                <td>@payment.PaidDate</td>
+                <td>@payment.PAmout</td>
+                <td>@payment.BId</td>
+                <td>
+                    <button class="btn btn-primary" @onclick="(() => ShowPayment(payment.PId))">Click</button>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<!----------------------------------------------------------------------------------->
+<div>
+    <button @onclick="(() => ChangePage(-1))" disabled="@(currentPage == 1)">Previous</button>
+    <span>Page @currentPage</span>
+    @* <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= paymentsToDisplay.Count)">Next</button> *@
+    <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= Math.Max(PaymentService.Payments.Count,PaymentsSearched.Count))">Next</button>
+</div>
+@* <div class="row">
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+    </div>
+</div> *@
+
+
+@code {
+    List<Payment> PaymentsSearched = new List<Payment>();
+
+    private int currentPage = 1;
+
+    // don't need to wait until everythings is rendered
+    protected override async Task OnInitializedAsync()
+    {
+        await PaymentService.GetPayments();
+    }
+    void ShowPayment(int id)
+    {
+        NavigationManager.NavigateTo($"admin/payment/{id}");
+    }
+
+    void AddPayment()
+    {
+
+        NavigationManager.NavigateTo("admin/payment");
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("admin");
+    }
+
+    async Task SearchPayments(ChangeEventArgs e)
+    {
+        // displayValue = $"You entered: {e.Value}";
+
+        if (string.IsNullOrWhiteSpace(e.Value.ToString()))
+        {
+            PaymentsSearched.Clear(); // Clear the search results if the input is empty
+        }
+        else
+        {
+            // PaymentsSearched = await PaymentService.SearchPayments(e.Value.ToString());
+        }
+
+        StateHasChanged(); // Ensure the UI is updated
+    }
+
+    void ChangePage(int change)
+    {
+        currentPage += change;
+        StateHasChanged();
+    }
+}

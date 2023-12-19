@@ -168,7 +168,7 @@
                     HotelBooking.orderDetails.BCheckoutDate = roomInitialInfo.BCheckoutDate;
                     HotelBooking.orderDetails.BAmount = NoOfNights;
                     HotelBooking.orderDetails.BCost = roomInitialInfo.BCost;
-                    HotelBooking.orderDetails.GIdNavigation = await GuestService.GetGuestByFName(user);
+                    // HotelBooking.orderDetails.GIdNavigation = await GuestService.SearchGuests(user);
                     HotelBooking.orderDetails.GId = HotelBooking.orderDetails.GIdNavigation.GId;
 
                 }
