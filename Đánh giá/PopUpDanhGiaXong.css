@@ -1,0 +1,31 @@
+.thank-you-card-pop-up-1 {
+  position: relative;
+  width: 800px;
+  height: 264px;
+  object-fit: cover;
+  z-index: 0;
+}
+.close-round-fill-icon {
+  position: absolute;
+  margin: 0 !important;
+  top: 8px;
+  left: 762px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 1;
+}
+.pop-up-danh-gia-xong {
+  position: relative;
+  background-color: var(--color-white1);
+  height: 264px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  max-width: 90%;
+  max-height: 90%;
+}

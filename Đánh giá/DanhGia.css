@@ -1,0 +1,452 @@
+.header-logged-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--background);
+  box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  width: 1500px;
+  height: 101px;
+}
+.ch-logo-vng-12,
+.logo-ko-ch-k-nn-1 {
+  position: relative;
+  width: 132px;
+  height: 83px;
+  object-fit: cover;
+}
+.ch-logo-vng-12 {
+  width: 201px;
+  height: 54px;
+}
+.logo-ko-ch-k-nn-1-parent {
+  position: absolute;
+  top: 11px;
+  left: 580px;
+  width: 340px;
+  height: 83px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  cursor: pointer;
+}
+.profiletab-child {
+  position: absolute;
+  top: 7px;
+  left: 193px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+.qun-l-trng,
+.xin-cho-hong {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-size: var(--text-sm-medium-size);
+  font-family: var(--font-be-vietnam-pro);
+  color: var(--black);
+  text-align: right;
+}
+.qun-l-trng {
+  top: 25px;
+  left: 77px;
+  font-size: var(--montserrat-medium-12-size);
+  letter-spacing: 0.02em;
+  font-family: var(--font-be-vietnam);
+  color: var(--color-goldenrod);
+}
+.plant-icon {
+  position: absolute;
+  top: 28px;
+  left: 170px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.profiletab {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-white1);
+  position: absolute;
+  top: 26px;
+  left: 1243px;
+  border-radius: var(--br-6xl);
+  box-shadow: 0 4px 4px rgba(218, 218, 218, 0.25);
+  width: 235px;
+  height: 50px;
+}
+.frame2,
+.nh-gi-thumbnail-1 {
+  align-self: stretch;
+  position: relative;
+  height: 101px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.nh-gi-thumbnail-1 {
+  max-width: 100%;
+  height: 477px;
+  object-fit: cover;
+}
+.frame1 {
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 var(--padding-13xl);
+  box-sizing: border-box;
+}
+.header {
+  align-self: stretch;
+}
+.div6,
+.frame4,
+.top {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  width: 750px;
+  height: 84px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.div6,
+.frame4 {
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame4 {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 762px;
+  overflow: hidden;
+  align-items: flex-end;
+  justify-content: center;
+}
+.nh-gi-v {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.chn-thnh-cm {
+  margin: 0;
+}
+.chn-thnh-cm-container1 {
+  width: 100%;
+}
+.chn-thnh-cm-container,
+.left {
+  display: flex;
+  align-items: center;
+}
+.chn-thnh-cm-container {
+  position: relative;
+  line-height: 20px;
+  width: 747px;
+  height: 167px;
+  flex-shrink: 0;
+}
+.left {
+  width: 746px;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: justify;
+  font-size: var(--text-sm-medium-size);
+  color: var(--black);
+}
+.divider {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid var(--gray-200);
+  box-sizing: border-box;
+  height: 1px;
+}
+.frame5,
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.title {
+  flex: 1;
+  width: 759px;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.frame5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 804px;
+  overflow: hidden;
+  align-items: flex-end;
+  padding: 0 19px;
+  box-sizing: border-box;
+}
+.frame,
+.frame3 {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frame3 {
+  position: relative;
+  width: 785px;
+  height: 220px;
+}
+.frame {
+  align-self: stretch;
+  height: 854px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame-inner {
+  max-height: 100%;
+  width: 534px;
+  object-fit: cover;
+  mix-blend-mode: normal;
+}
+.regal-suite {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+}
+
+.div7 {
+  position: relative;
+  line-height: 110%;
+  font-weight: 500;
+}
+
+.input1 {
+  border: 0;
+  outline: 0;
+  font-family: var(--font-be-vietnam-pro);
+  font-size: var(--text-base-regular-size);
+  background-color: transparent;
+  position: relative;
+  line-height: 128.57%;
+  color: var(--black);
+  text-align: left;
+  display: inline-block;
+  width: 411px;
+}
+.regal-suite-parent {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.frame-wrapper1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.button {
+  position: relative;
+  width: 420px;
+  height: 48px;
+}
+.frame-parent {
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.frame-child1,
+.frame-parent,
+.frame10,
+.frame9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 413px;
+}
+.frame10,
+.frame9 {
+  height: 222px;
+  overflow: hidden;
+}
+.frame9 {
+  left: 122px;
+  width: 1288px;
+  height: 210px;
+}
+.frame8 {
+  position: relative;
+  width: 526px;
+  height: 193px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.button2 {
+  position: relative;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  font-family: var(--font-be-vietnam-pro);
+  color: var(--blackish-green);
+  text-align: left;
+  touch-action: manipulation;
+}
+.style-layer {
+  align-self: stretch;
+  border-radius: var(--br-9xs);
+  background-color: var(--primary);
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-base);
+  box-sizing: border-box;
+}
+.button1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 413px;
+  height: 51px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.danh-gia,
+.frame6,
+.frame7 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.frame7 {
+  width: 504px;
+  height: 259px;
+  flex-shrink: 0;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 44px 0 0;
+  box-sizing: border-box;
+}
+.danh-gia,
+.frame6 {
+  align-items: center;
+}
+.frame6 {
+  align-self: stretch;
+  height: 733px;
+  flex-shrink: 0;
+  justify-content: center;
+  gap: 21px;
+  text-align: left;
+  font-size: var(--font-size-7xl);
+  color: var(--black);
+}
+.danh-gia {
+  position: relative;
+  background-color: var(--color-white1);
+  width: 100%;
+  height: 1587px;
+  justify-content: space-between;
+  text-align: center;
+  font-size: var(--text-2xl-medium-size);
+  color: var(--color-saddlebrown);
+  font-family: var(--font-be-vietnam-pro);
+}
+.thank-you-card-pop-up-1 {
+  position: relative;
+  width: 800px;
+  height: 264px;
+  object-fit: cover;
+  z-index: 0;
+}
+.close-round-fill-icon {
+  position: absolute;
+  margin: 0 !important;
+  top: 8px;
+  left: 762px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 1;
+}
+.pop-up-danh-gia-xong {
+  position: relative;
+  background-color: var(--color-white1);
+  height: 264px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-99px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+canvas#confetti {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  pointer-events: none;
+}
