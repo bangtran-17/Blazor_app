@@ -450,3 +450,7 @@ canvas#confetti {
   z-index: 1000;
   pointer-events: none;
 }
+
+.canvas-wrap {
+  background: url(https://dl.dropboxusercontent.com/u/3465596/stark-wolf.png) no-repeat;
+ }
