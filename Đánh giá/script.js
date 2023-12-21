@@ -78,3 +78,12 @@ function init() {
 }
 
 setInterval(init, 30);
+
+$('.container').on('mouseover', function(){
+  $('.bauble').addClass('light');
+  $('.star1').addClass('star1-light');
+})
+
+$('.container').on('mouseout', function(){
+  $('.bauble').removeClass('light');
+})
