@@ -7,6 +7,7 @@
     <link rel="icon" href="public/favicon.ico" />
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./ChiTitPhng.css" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
@@ -45,6 +46,7 @@
     />
   </head>
   <body>
+    <canvas id="canvas2"></canvas>
     <div class="chi-tit-phng">
       <div class="frame">
         <div class="frame1">
@@ -62,12 +64,6 @@
                 src="./public/logo-ko-ch-k-n-1@2x.png"
               />
             </div>
-            <div class="frame3">
-              <div class="trang-ch-parent">
-                <div class="trang-ch1">TRANG CHỦ</div>
-                <div class="t-phng2">ĐẶT PHÒNG</div>
-              </div>
-            </div>
           </div>
           <button class="profiletab">
             <div class="xin-cho-hong">Xin chào, Hoàng Gia Lộc</div>
@@ -83,22 +79,22 @@
           </button>
         </div>
         <div class="frame-parent">
-          <div class="trang-ch-group">
+          <button class="trang-ch-group">
             <div class="trang-ch2">Trang chủ</div>
             <img
               class="dashiconsarrow-up-alt2"
               alt=""
               src="./public/dashiconsarrowupalt2@2x.png"
             />
-          </div>
-          <div class="suites-parent">
+          </button>
+          <button class="suites-parent">
             <div class="suites3">Suites</div>
             <img
               class="dashiconsarrow-up-alt2"
               alt=""
               src="./public/dashiconsarrowupalt21@2x.png"
             />
-          </div>
+          </button>
           <div class="line-parent1">
             <div class="frame-inner"></div>
             <div class="regal-suite">Regal Suite</div>
@@ -460,7 +456,7 @@
               class="inner"
               src="https://geckodigital.co/vt/Atlantis/?ss=0&startactions=lookat(7.15%2C36.61%2C120%2C0%2C0)%3B&fbclid=IwAR1AQZOPsiANVo66WI8mBwagrRuAZmFon5ir-ATKiIAVujLvu9UlOiMsd7c"
             >
-            </iframe>
+            </iframe>      
           </div>
           <div class="frame16">
             <div class="reviews">
@@ -470,79 +466,7 @@
 
                   <div class="div8">5.0</div>
                 </div>
-              </div>
-              <div class="ratings">
-                <div class="column">
-                  <div class="review-category">
-                    <div class="label">Sạch sẽ</div>
-                    <div class="bar-parent">
-                      <div class="bar">
-                        <div class="bar1">
-                          <div class="div9">000000000000000000000000000</div>
-                        </div>
-                      </div>
-                      <div class="div10">5.0</div>
-                    </div>
-                  </div>
-                  <div class="review-category">
-                    <div class="label">Nhân viên</div>
-                    <div class="bar-parent">
-                      <div class="bar">
-                        <div class="bar1">
-                          <div class="div9">000000000000000000000000000</div>
-                        </div>
-                      </div>
-                      <div class="div10">5.0</div>
-                    </div>
-                  </div>
-                  <div class="review-category">
-                    <div class="label">Check-in, Check-out</div>
-                    <div class="bar-parent">
-                      <div class="bar">
-                        <div class="bar1">
-                          <div class="div9">000000000000000000000000000</div>
-                        </div>
-                      </div>
-                      <div class="div10">5.0</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="review-category">
-                    <div class="label">Tiện nghi</div>
-                    <div class="bar-parent">
-                      <div class="bar">
-                        <div class="bar1">
-                          <div class="div9">000000000000000000000000000</div>
-                        </div>
-                      </div>
-                      <div class="div10">5.0</div>
-                    </div>
-                  </div>
-                  <div class="review-category">
-                    <div class="label">Địa điểm</div>
-                    <div class="bar-parent">
-                      <div class="bar">
-                        <div class="bar1">
-                          <div class="div9">0000000000000000</div>
-                        </div>
-                      </div>
-                      <div class="div10">4.9</div>
-                    </div>
-                  </div>
-                  <div class="review-category">
-                    <div class="label">Giá trị</div>
-                    <div class="bar-parent">
-                      <div class="bar">
-                        <div class="bar1">
-                          <div class="div9">0000000000000</div>
-                        </div>
-                      </div>
-                      <div class="div10">4.7</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </div>         
               <div class="comments">
                 <div class="row3">
                   <div class="airbnb-comment">
@@ -816,12 +740,13 @@
                     gian quy định sẽ không được hủy.
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+         </div>
 
     <script>
       var groupContainer = document.getElementById("groupContainer");
@@ -831,5 +756,7 @@
         });
       }
       </script>
+          <script src="script.js"></script>
+      
   </body>
 </html>
