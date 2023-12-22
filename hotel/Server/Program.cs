@@ -31,6 +31,7 @@ builder.Services.AddCors(options =>
     {
         builder.AllowAnyOrigin()
                .AllowAnyMethod()
+               .SetIsOriginAllowed((host) => true) // Cho phep tat ca cac origin
                .AllowAnyHeader();
     });
 });

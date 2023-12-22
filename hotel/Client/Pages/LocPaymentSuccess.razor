@@ -1,0 +1,75 @@
+﻿@page "/payment-success"
+@* Ngân hàng	NCB
+Số thẻ	9704198526191432198
+Tên chủ thẻ	NGUYEN VAN A
+Ngày phát hành	07/15
+Mật khẩu OTP	123456 *@
+@using Microsoft.AspNetCore.SignalR.Client
+
+@inject IVnPayService VnPayService
+@inject NavigationManager NavigationManager
+@inject IHubClient HubClient
+
+<h3>LocPayment</h3>
+
+<button @onclick="MakePayment">Test thanh toán</button>
+<div>
+    @* <p>Payment Status: PaymentResponse.VnPayResponseCode </p> *@
+    @{
+        @if (PaymentResponse != null)
+        {
+            <p>Payment Status: @PaymentResponse.VnPayResponseCode</p>
+        }
+        else
+        {
+            <p>Payment Status: Waiting for payment</p>
+        }
+    }
+</div>
+
+
+@code {
+    private HubConnection? hubConnection;
+
+    Payment payment = new Payment()
+    {
+        PAmout = 20000,
+        BId = 1
+    };
+    PaymentResponseModel? PaymentResponse;
+
+    async void MakePayment()
+    {
+        string paymentUrl = await VnPayService.CreatePaymentUrl(payment);
+        NavigationManager.NavigateTo(paymentUrl);
+    }
+    // ---------------------------------------
+    private string paymentStatus = "Waiting for payment...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/paymentHub"))
+            .Build();
+        // hubConnection.
+        hubConnection.On<PaymentResponseModel>("BroadcastMessage", (PaymentResponseModel) =>
+        {
+            PaymentResponse = PaymentResponseModel;
+            NavigationManager.NavigateTo("/payment");
+            InvokeAsync(StateHasChanged);
+        });
+
+
+
+        await hubConnection.StartAsync();
+    }
+
+    private void OnPaymentResponse(PaymentResponseModel paymentResponse)
+    {
+        paymentStatus = $"Received payment response: {paymentResponse.Success}";
+        NavigationManager.NavigateTo("/payment");
+        StateHasChanged();
+    }
+
+
+}

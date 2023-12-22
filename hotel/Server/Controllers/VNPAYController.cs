@@ -1,29 +1,32 @@
 ﻿using Hotel.Server.Services.VNPAY;
 using Hotel.Server.SignalR;
 using Hotel.Shared.Models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using NuGet.Packaging.Signing;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Reflection;
-using System.Security.AccessControl;
+using Microsoft.AspNetCore.SignalR.Client;
+using Microsoft.AspNet.SignalR.Hubs;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using NuGet.Protocol;
+
 
 namespace Hotel.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
     [ApiController]
     public class VNPAYController : ControllerBase
     {
         private readonly IVnPayService _vnPayService;
-        private IHubContext<SignalrHub, IHubClient> _signalrHub;
+        private IHubContext<SignalrHub> _hubContext;
 
-        public VNPAYController(IVnPayService vnPayService, IHubContext<SignalrHub, IHubClient> signalrHub)
+
+        public VNPAYController(IVnPayService vnPayService, IHubContext<SignalrHub> hubContext)
         {
-            _signalrHub = signalrHub;
+            _hubContext = hubContext;
             _vnPayService = vnPayService;
         }
+
+
         [HttpPost("CreatePaymentUrl")]
         public IActionResult CreatePaymentUrl(Payment model)
         {
@@ -33,15 +36,23 @@ namespace Hotel.Server.Controllers
         }
 
         [HttpGet("PaymentCallback")]
-        public IActionResult PaymentCallback()
+        public async Task<IActionResult> PaymentCallback()
         {
             var response = _vnPayService.PaymentExecute(Request.Query);
-            // Send the response to connected clients
-            _signalrHub.Clients.All.BroadcastMessage(response);
-            //_signalrHub.Clients.All.SendAsync("ReceivePaymentCallback", response);
 
+            //var hubConnection = new HubConnectionBuilder()
+            //    .WithUrl("https://localhost:7192/paymentHub")
+            //    .Build();
 
-            return Ok(response);
+            //await hubConnection.StartAsync();
+
+            //await hubConnection.SendAsync("SendPaymentResponse", response);
+
+            await _hubContext.Clients.All.SendAsync("BroadcastMessage", response);
+
+            //return Ok(response);
+            return Redirect("/payment");
+            //return true;
         }
     }
 }
