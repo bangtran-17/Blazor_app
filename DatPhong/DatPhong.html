@@ -70,7 +70,7 @@
         </div>
 
         <!------------------------------------------------------- content --------------------------------------------->
-        <div class="css-1dbjc4n r-1ihkh82" style="height: 600px;">
+        <div class="css-1dbjc4n r-1ihkh82" style="height: 100vh;position: relative;">
             <div class="css-1dbjc4n r-1kihuf0 r-18u37iz r-16y2uox r-1wtj0ep r-15g7tld r-11c0sde r-nib5yn r-184en5c">
                 <!-----------------------------sidebar-------------------------------->
                 <div class="css-1dbjc4n r-cvk9hz">
@@ -343,60 +343,63 @@
                     </div>
                 </div>
             </div>
-            <div class="css-1dbjc4n" data-testid="StandarizedOTPFlow"></div>
-        </div>
-        <div class="css-1dbjc4n"></div>
-        <div id="popUpThngTinTPhngD" class="popup-overlay" style="display: none;" >
-            <div class="pop-up-thng-tin-t-phng-d">
-              <div class="thng-tin-phng">Thông tin phòng</div>
-              <div class="thng-tin-khch">THÔNG TIN KHÁCH</div>
-              <div class="thng-tin-t">THÔNG TIN ĐẶT PHÒNG</div>
-              <div class="s-phng-loi-container">
-                <p class="s-phng">Số phòng</p>
-                <p class="s-phng">Loại phòng</p>
-                <p class="s-phng">Số ngày</p>
-                <p class="s-phng">Thuế</p>
-              </div>
-              <div class="tng-cng">Tổng cộng</div>
-              <div class="suite-3-nights-container">
-                <p class="s-phng">402</p>
-                <p class="s-phng">Suite</p>
-                <p class="s-phng">3 Nights (100.000 x 3 = 300.000 VNĐ)</p>
-                <p class="s-phng">100.000 VNĐ</p>
-              </div>
-              <div class="h-v-tn-container">
-                <p class="s-phng">Họ và tên</p>
-                <p class="s-phng">Email</p>
-                <p class="s-phng">Số điện thoại</p>
-              </div>
-              <div class="ngy-t-phng-container">
-                <p class="s-phng">Ngày đặt phòng</p>
-                <p class="s-phng">Ngày Check-in</p>
-                <p class="s-phng">Ngày Check-out</p>
-              </div>
-              <div class="john-smith-johnsmithgmailcom-container">
-                <p class="s-phng">John smith</p>
-                <p class="s-phng">johnsmith@gmail.com</p>
-                <p class="s-phng">+225 698698966</p>
-              </div>
-              <div class="div">
-                <p class="s-phng">20/10/2023</p>
-                <p class="s-phng">23/10/2023</p>
-                <p class="s-phng">26/10/2023</p>
-              </div>
-              <b class="vn1">400.000 VNĐ</b>
-              <div class="line"></div>
-              <img class="image-14-icon" alt="" src="/DoAn/images/backgrounđatphong.png" />
-      
-              <button class="close-round-fill" id="popupcloseRoundFill">
-                <img class="subtract-icon" alt="" src="/DoAn/images/closebutton.png" />
-              </button>
-              <button class="nh-gi" id="popupnhGi">
-                <div class="nh-gi-child"></div>
-                <div class="nh-gi1">ĐÁNH GIÁ</div>
-              </button>
+            <div class="css-1dbjc4n" data-testid="StandarizedOTPFlow"></div> 
+            <div class="css-1dbjc4n" style="position: absolute; z-index: 10;width: 100vw; ">
+            <div id="popUpThngTinTPhngD" class="popup-overlay" style="display: none; " >
+                <div class="pop-up-thng-tin-t-phng-d" style="height: 100vh;">
+                  <div class="thng-tin-phng">Thông tin phòng</div>
+                  <div class="thng-tin-khch">THÔNG TIN KHÁCH</div>
+                  <div class="thng-tin-t">THÔNG TIN ĐẶT PHÒNG</div>
+                  <div class="s-phng-loi-container">
+                    <p class="s-phng">Số phòng</p>
+                    <p class="s-phng">Loại phòng</p>
+                    <p class="s-phng">Số ngày</p>
+                    <p class="s-phng">Thuế</p>
+                  </div>
+                  <div class="tng-cng">Tổng cộng</div>
+                  <div class="suite-3-nights-container">
+                    <p class="s-phng">402</p>
+                    <p class="s-phng">Suite</p>
+                    <p class="s-phng">3 Nights (100.000 x 3 = 300.000 VNĐ)</p>
+                    <p class="s-phng">100.000 VNĐ</p>
+                  </div>
+                  <div class="h-v-tn-container">
+                    <p class="s-phng">Họ và tên</p>
+                    <p class="s-phng">Email</p>
+                    <p class="s-phng">Số điện thoại</p>
+                  </div>
+                  <div class="ngy-t-phng-container">
+                    <p class="s-phng">Ngày đặt phòng</p>
+                    <p class="s-phng">Ngày Check-in</p>
+                    <p class="s-phng">Ngày Check-out</p>
+                  </div>
+                  <div class="john-smith-johnsmithgmailcom-container">
+                    <p class="s-phng">John smith</p>
+                    <p class="s-phng">johnsmith@gmail.com</p>
+                    <p class="s-phng">+225 698698966</p>
+                  </div>
+                  <div class="div">
+                    <p class="s-phng">20/10/2023</p>
+                    <p class="s-phng">23/10/2023</p>
+                    <p class="s-phng">26/10/2023</p>
+                  </div>
+                  <b class="vn1">400.000 VNĐ</b>
+                  <div class="line"></div>
+                  <img class="image-14-icon" alt="" src="/DoAn/images/backgrounđatphong.png" />
+          
+                  <button class="close-round-fill" id="popupcloseRoundFill">
+                    <img class="subtract-icon" alt="" src="/DoAn/images/closebutton.png" />
+                  </button>
+                  <button class="nh-gi" id="popupnhGi">
+                    <div class="nh-gi-child"></div>
+                    <div class="nh-gi1">ĐÁNH GIÁ</div>
+                  </button>
+                </div>
             </div>
         </div>
+        </div>
+       
+       
     </div>
 </body>
 
