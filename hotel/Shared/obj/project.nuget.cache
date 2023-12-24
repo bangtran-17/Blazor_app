@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ehi5dFeDmZjHvhdA0lhMwD4PdW1FHr9R5D++RhAWQASmsSC3Gx9/6L2gM7Y0tGkRH6kWhTSdcq0XRkZS66qJhg==",
+  "success": true,
+  "projectFilePath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

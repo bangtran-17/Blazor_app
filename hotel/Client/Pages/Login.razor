@@ -1,0 +1,81 @@
+﻿@page "/login"
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+@layout AuthLayout
+
+
+@if (ShowErrors)
+{
+    <div class="alert alert-danger" role="alert">
+        <p>@Error</p>
+    </div>
+}
+
+<div class="container ">
+    <EditForm class="form mt-5 login m-auto" Model="loginModel" OnValidSubmit="HandleLogin">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <h3 class="text-dark">Bạn chưa có tài khoản ?, <a href="/register" class="text-blue-500">Đăng ký</a></h3>
+        <div class="form-group mt-10">
+            <label for="email" class="text-dark font-bold">Tên tài khoản:</label><br>
+			<InputText type="text" name="Email" id="Email" class="input1 form-control focus:shadow-outline " @bind-Value="loginModel.Email" />
+            <ValidationMessage For="@(() => loginModel.Email)" />
+        </div>
+        <div class="form-group mt-10">
+            <label for="password" class="text-dark font-bold">Password:</label><br>
+            <InputText type="password" name="password" id="password" class="input1 form-control focus:shadow-outline input1" @bind-Value="loginModel.Password" />
+            <ValidationMessage For="@(() => loginModel.Password)" />
+        </div>
+        <div class="form-group">
+            <label for="remember-me" class="text-dark w-100 flex flex-row justify-between">
+                <div>
+                    <input class="text-2xl mt-6" type="radio" name="radio" id="radio1"> <p class="tem">Nhớ tài khoản</p>
+                </div>
+                <a href="" class="forget pt-6 ">Quên mật khẩu</a>
+            </label><br>
+			<input  type="submit" name="submit" class="input2 btn focus:border-white mt-10" value="Đăng nhập">
+        </div>
+    </EditForm>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("input[type='radio']").on('click', function () {
+            var $radio = $(this);
+            // Check if the radio button is already selected
+            if ($radio.data('waschecked') == true) {
+                // Deselect it
+                $radio.prop('checked', false);
+                $radio.data('waschecked', false);
+            }
+            else {
+                $radio.prop('checked', true);
+                $radio.data('waschecked', true);
+            }
+        });
+    });
+</script>
+@code {
+
+    private LoginModel loginModel = new LoginModel();
+    private bool ShowErrors;
+    private string Error = "";
+
+    private async Task HandleLogin()
+    {
+        ShowErrors = false;
+
+        var result = await AuthService.Login(loginModel);
+
+        if (result.Successful)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            Error = result.Error!;
+            ShowErrors = true;
+        }
+    }
+
+}
