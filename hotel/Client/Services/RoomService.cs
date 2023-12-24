@@ -4,6 +4,8 @@ using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 
 namespace Hotel.Client.Services
@@ -53,11 +55,18 @@ namespace Hotel.Client.Services
             return null;
         }
 
-        public async Task GetRooms()
+        public async Task<List<Room>> GetRooms()
         {
-            var result = await _http.GetFromJsonAsync<List<Room>>("api/Room");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetFromJsonAsync<List<Room>>("api/Room", options);
             if (result is not null)
                 Rooms = result;
+            return Rooms;
         }
 
         public async Task UpdateRoom(int id, Room Room)

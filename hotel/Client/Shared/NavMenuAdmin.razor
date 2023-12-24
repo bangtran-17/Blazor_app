@@ -1,44 +1,44 @@
 ﻿<div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-pink col-3" style="height: 100vh">
     <a href=""></a>
     <ul class="nav nav-pills flex-column mb-auto">
-        <li>
-            <a href="/admin" class="nav-link text-black">
+        <li class="nav-item">
+            <a href="/admin" class="nav-link @(currentPage == "admin" ? "active" : "text-black")" @onclick="SetAdminPage">
                 <i class="fa-solid fa-house fa-sm me-2" style="color: #000000"></i>
                 <span>TRANG CHỦ</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="/admin/guests" class="nav-link active" aria-current="page">
+            <a href="/admin/guests" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" aria-current="page" @onclick="SetGuestsPage">
                 <i class="fa-solid fa-users fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ KHÁCH HÀNG</span>
             </a>
         </li>
         <li>
-            <a href="/admin/employees" class="nav-link text-black">
+            <a href="/admin/employees" class="nav-link @(currentPage == "employees" ? "active" : "text-black")" @onclick="SetEmployeesPage">
                 <i class="fa-solid fa-user fa-lg me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ NHÂN VIÊN</span>
             </a>
         </li>
         <li>
-            <a href="/admin/payments" class="nav-link text-black">
+            <a href="/admin/payments" class="nav-link @(currentPage == "payments" ? "active" : "text-black")" @onclick="SetPaymentsPage">
                 <i class="fa-solid fa-file-invoice fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ HÓA ĐƠN</span>
             </a>
         </li>
         <li>
-            <a href="/admin" class="nav-link text-black">
+            <a href="/admin" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" @onclick="SetGuestsPage">
                 <i class="fa-solid fa-door-open fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ PHÒNG</span>
             </a>
         </li>
         <li>
-            <a href="/admin" class="nav-link text-black">
+            <a href="/admin" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" @onclick="SetGuestsPage">
                 <i class="fa-solid fa-pen fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ ĐẶT PHÒNG</span>
             </a>
         </li>
         <li>
-            <a href="/admin/departments" class="nav-link text-black">
+            <a href="/admin/departments" class="nav-link @(currentPage == "departments" ? "active" : "text-black")" @onclick="SetDepartmentsPage">
                 <i class="fa-solid fa-pen fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ PHÒNG BAN</span>
             </a>
@@ -53,3 +53,40 @@
         </li>
     </ul>
 </div>
+
+@code{
+    string currentPage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        SetCurrentPage("admin");
+    }
+
+    void SetCurrentPage(String page)
+    {
+        currentPage = page;
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    void SetAdminPage()
+    {
+        SetCurrentPage("admin");
+    }
+    void SetGuestsPage()
+    {
+        SetCurrentPage("guests");
+    }
+    void SetEmployeesPage()
+    {
+        SetCurrentPage("employees");
+    }
+    void SetPaymentsPage()
+    {
+        SetCurrentPage("payments");
+    }
+    void SetDepartmentsPage()
+    {
+        SetCurrentPage("departments");
+    }
+}

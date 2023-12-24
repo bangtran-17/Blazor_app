@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 namespace Hotel.Client.Services
 {
     public class RoomImgService : IRoomImgService
@@ -33,11 +34,18 @@ namespace Hotel.Client.Services
             return null;
         }
 
-        public async Task GetRoomImgs()
+        public async Task<List<RoomImg>> GetRoomImgs()
         {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
             var result = await _http.GetFromJsonAsync<List<RoomImg>>("api/RoomImg");
             if (result is not null)
                 RoomImgs = result;
+            return RoomImgs;
         }
 
     
