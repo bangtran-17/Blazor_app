@@ -14,7 +14,7 @@ namespace Hotel.Client.Services
 {
     public class PaymentService:IPaymentService
     {
-        public List<Payment?> Payment { get; set; } = new List<Payment>();
+        public List<Payment?> Payments { get; set; } = new List<Payment>();
      
 
         private readonly HttpClient _http;
@@ -46,11 +46,12 @@ namespace Hotel.Client.Services
             }
         }
 
-        public async Task GetPayments()
+        public async Task<List<Payment>> GetPayments()
         {
             var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get");
             if (result is not null)
-                Payment = result;
+                Payments = result;
+            return result;
         }
 
         public async Task CreatePayment(Payment Payment)

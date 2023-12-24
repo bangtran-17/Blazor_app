@@ -53,7 +53,6 @@ public partial class MyDbContext : DbContext
     public virtual DbSet<Salary> Salaries { get; set; }
 
     public virtual DbSet<Service> Services { get; set; }
-    public virtual DbSet<RoomImg> RoomImgs { get; set; }
 
     public virtual DbSet<Servicesbooked> Servicesbookeds { get; set; }
 

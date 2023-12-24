@@ -33,8 +33,6 @@ public partial class Booking
     public int? Rid { get; set; }
     public decimal? BCost { get; set; }
 
-    public int? Rid { get; set; }
-
     public string? StripeSessionId { get; set; }
 
     public virtual Discount? DIdNavigation { get; set; }

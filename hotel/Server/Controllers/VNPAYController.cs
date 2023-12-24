@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.SignalR.Client;
-using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using NuGet.Protocol;
 

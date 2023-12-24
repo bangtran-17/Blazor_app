@@ -100,18 +100,6 @@ else
         }
     }
 
-    async Task HandleSubmit()
-    {
-        if (Id is null)
-        {
-            await EmployeeService.CreateEmployee(employee);
-        }
-        else
-        {
-            await EmployeeService.UpdateEmployee((int)Id, employee);
-        }
-    }
-
     async Task DeleteEmployee()
     {
         await EmployeeService.DeleteEmployee(employee.EId);
