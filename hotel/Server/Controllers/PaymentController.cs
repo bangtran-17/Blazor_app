@@ -32,10 +32,10 @@ namespace Hotel.Server.Controllers
         {
             return await _repository.UpdatePayment(id, payment);
         }
-        [HttpPost("{Bid}")]
-        public async Task<Payment?> Create(Payment payment,int Bid)
+        [HttpPost]
+        public async Task<Payment?> Create(Payment payment)
         {
-            return await _repository.CreatePayment(payment,Bid);
+            return await _repository.CreatePayment(payment);
         }
         [HttpPost]
         public async Task<IActionResult> PaymentSuccessful([FromBody] Booking details)

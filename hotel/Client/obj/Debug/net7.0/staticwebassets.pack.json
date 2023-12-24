@@ -13,6 +13,38 @@
       "PackagePath": "staticwebassets\\Hotel.Client.styles.css"
     },
     {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\Grand-Atlantis-Jacuzzi.png",
+      "PackagePath": "staticwebassets\\Grand\\Grand-Atlantis-Jacuzzi.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantis-Interior-LivingRoom.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantis-Interior-LivingRoom.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BedroomWithAView.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-BedroomWithAView.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BedroomWithBalcony.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-BedroomWithBalcony.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-DiningRoom.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-DiningRoom.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-EntranceWithFishFountain.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-EntranceWithFishFountain.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png",
+      "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png"
+    },
+    {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -69,6 +101,10 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\data\\galleries.json",
+      "PackagePath": "staticwebassets\\data\\galleries.json"
+    },
+    {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
@@ -107,6 +143,26 @@
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\StripePayment.js",
+      "PackagePath": "staticwebassets\\js\\StripePayment.js"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\common.js",
+      "PackagePath": "staticwebassets\\js\\common.js"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\createModal.js",
+      "PackagePath": "staticwebassets\\js\\createModal.js"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\galleryApp.js",
+      "PackagePath": "staticwebassets\\js\\galleryApp.js"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\script1.js",
+      "PackagePath": "staticwebassets\\js\\script1.js"
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\-icon-chevron-down.svg",
@@ -153,6 +209,14 @@
       "PackagePath": "staticwebassets\\public\\chevron-right.svg"
     },
     {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\edit-fill@2x.png",
+      "PackagePath": "staticwebassets\\public\\edit-fill@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ellipse-1@2x.png",
+      "PackagePath": "staticwebassets\\public\\ellipse-1@2x.png"
+    },
+    {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\export-fill.svg",
       "PackagePath": "staticwebassets\\public\\export-fill.svg"
     },
@@ -161,8 +225,16 @@
       "PackagePath": "staticwebassets\\public\\export-fill1.svg"
     },
     {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\eye-fill@2x.png",
+      "PackagePath": "staticwebassets\\public\\eye-fill@2x.png"
+    },
+    {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\facebook-black.svg",
       "PackagePath": "staticwebassets\\public\\facebook-black.svg"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\favicon.ico",
+      "PackagePath": "staticwebassets\\public\\favicon.ico"
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-12999.svg",
@@ -179,6 +251,10 @@
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-13038.svg",
       "PackagePath": "staticwebassets\\public\\group-13038.svg"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\home-fill@2x.png",
+      "PackagePath": "staticwebassets\\public\\home-fill@2x.png"
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\iconsdocumentsversion2@2x.png",
@@ -253,8 +329,20 @@
       "PackagePath": "staticwebassets\\public\\phone-black.svg"
     },
     {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\plant@2x.png",
+      "PackagePath": "staticwebassets\\public\\plant@2x.png"
+    },
+    {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\rectangle-11@2x.png",
       "PackagePath": "staticwebassets\\public\\rectangle-11@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\rectangle-3@2x.png",
+      "PackagePath": "staticwebassets\\public\\rectangle-3@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\search@2x.png",
+      "PackagePath": "staticwebassets\\public\\search@2x.png"
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\star-1.svg",
@@ -263,6 +351,10 @@
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\user-fill.svg",
       "PackagePath": "staticwebassets\\public\\user-fill.svg"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\user-fill2@2x.png",
+      "PackagePath": "staticwebassets\\public\\user-fill2@2x.png"
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector-3.svg",

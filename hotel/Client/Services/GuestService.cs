@@ -21,10 +21,10 @@ namespace Hotel.Client.Services
 
 		public List<Guest> Guests { get; set; } = new List<Guest>();
 
-		public async Task CreateGuest(Guest Guest)
+		public async Task CreateGuest(Guest? Guest)
 		{
 			await _http.PostAsJsonAsync("api/Guest", Guest);
-			_navigationManger.NavigateTo("admin/Guests");
+		
 		}
 
 		public async Task DeleteGuest(int id)
@@ -33,9 +33,9 @@ namespace Hotel.Client.Services
 			_navigationManger.NavigateTo("admin/Guests");
 		}
 
-		public async Task<Guest?> GetGuestByFName(string fname)
+		public async Task<Guest?> SearchGuests(string searchText)
 		{
-			var result = await _http.GetAsync($"api/Guest/name/{fname}");
+			var result = await _http.GetAsync($"api/Guest/name/{searchText}");
 			if (result.StatusCode == HttpStatusCode.OK)
 			{
 				return await result.Content.ReadFromJsonAsync<Guest>();

@@ -34,7 +34,7 @@
       "Microsoft.IdentityModel.JsonWebTokens.dll": "sha256-ZceT+VyXrVMCCQx7ghNz4BXbpCkOZwHTSkPikk1tYfg=",
       "Microsoft.IdentityModel.Logging.dll": "sha256-MX2ViCKbkayByAv6btVsWu9pMBgAoABlDWtVVQli8es=",
       "Microsoft.IdentityModel.Tokens.dll": "sha256-kci9vmm4cxzxjfLH7gBsdkuSD95idJws2K27ijmaMqg=",
-      "Microsoft.JSInterop.dll": "sha256-4w31cVs8ZqmiTjPhXLdOP9nJt6goHkYVV9L8Nz+27\/g=",
+      "Microsoft.JSInterop.dll": "sha256-tDUEq1bRgkbwPRKdclDqQy6f2l2zgHm+84KImibIOF8=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-4xrroXQy8wvhJmgbErz8Uld\/3YoAZEjglOS6GfJz+JQ=",
       "Newtonsoft.Json.dll": "sha256-IsZJ91\/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
       "System.IdentityModel.Tokens.Jwt.dll": "sha256-6UnGv5ruxREG0Pk32MuWFOFjcqcvYNuinJcJaBXPnRA=",
@@ -207,15 +207,15 @@
       "mscorlib.dll": "sha256-8OmdVHzoN7xteY5ehp0L8R17I9QxFkH2lUVHFuslE0s=",
       "netstandard.dll": "sha256-urq+e2ZQXxmOWMRxTR92529HnUVu6+kyVnfF6SoLad8=",
       "System.Private.CoreLib.dll": "sha256-ixnF\/wVKLHZM1N0lfJufpZ41EC2LvvyiSqdW43h3Xew=",
-      "Hotel.Shared.dll": "sha256-OFevtwCMw9GIcwg6oxTYq5mrWT7Pxf338+SB8WYNPec=",
-      "Hotel.Client.dll": "sha256-nXCCVeuRF9bc4TVQu3XJFo4fMNZXO7J5LoJqHbBY\/kk="
+      "Hotel.Shared.dll": "sha256-xZNuLgWNXhkyOaknQom+8NLWxmU+OVGOOemZvvmcKEY=",
+      "Hotel.Client.dll": "sha256-bzkZ\/080rEbMwns88BwpcsejB1ZpkSiAYzDj9AZiDBo="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Hotel.Shared.pdb": "sha256-aGYoULcynq1XK4nt+fDS8Bkotxkf+0+2eElZGSPnSIw=",
-      "Hotel.Client.pdb": "sha256-jQXU2GDU6FNL5b0csN5QwXHGSGX9wwzbl6n82ysSyNE="
+      "Hotel.Shared.pdb": "sha256-v+Jdy4StdsihZjzqV\/O0GQBdycHGFDKjOQxG1Zvu0C8=",
+      "Hotel.Client.pdb": "sha256-gS1rXMJxizSyYxlcICxBN3WealZCaISFuPe58mXL4bk="
     },
     "runtime": {
       "dotnet.7.0.12.qv6dtk3h05.js": "sha256-cPJgWy8SjMaYFeimGkYy23ls+rDZVmoC\/eMoHpqRc+4=",

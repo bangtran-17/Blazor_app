@@ -1,7 +1,6 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Hotel.Shared.Models;
 
 namespace Hotel.Shared.Models;
 
@@ -29,8 +28,9 @@ public partial class Booking
 
     public string? BStatus { get; set; }
 
-    public int? Rid { get; set; }
     public decimal? BCost { get; set; }
+
+    public int? Rid { get; set; }
 
     public string? StripeSessionId { get; set; }
 

@@ -2229,7 +2229,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/7.0.13": {
+      "Microsoft.JSInterop/7.0.14": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
@@ -4510,6 +4510,7 @@
           "Hotel.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.13",
+          "Microsoft.JSInterop": "7.0.14",
           "Newtonsoft.Json": "13.0.3",
           "System.IdentityModel.Tokens.Jwt": "7.0.3",
           "System.Text.Json": "7.0.4"
@@ -7706,10 +7707,10 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.JSInterop/7.0.13": {
-      "sha512": "h+6J4rDJborkPb6O2Akoa+0khTTIsuYGo3NpTASglgE7ihBxkyE9FiHJAo1KmHJwh35ubosHpZ4iDc93lEwcHQ==",
+    "Microsoft.JSInterop/7.0.14": {
+      "sha512": "5+YxHnaDo5p+o+4FeQAitO/Sehr/hOo9a+psA2PT+hdup0OpKjuLuXTqqlrC96Yl57/Y1N24GeY8x/RrJ+k5MQ==",
       "type": "package",
-      "path": "microsoft.jsinterop/7.0.13",
+      "path": "microsoft.jsinterop/7.0.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7717,7 +7718,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.JSInterop.dll",
         "lib/net7.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.7.0.13.nupkg.sha512",
+        "microsoft.jsinterop.7.0.14.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -13044,19 +13045,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Locc\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
+      "projectUniqueName": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
       "projectName": "Hotel.Server",
-      "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
-      "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\obj\\",
+      "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13070,11 +13071,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
-              "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj"
+            "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
+              "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj"
             },
-            "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
-              "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
+            "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
+              "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
             }
           }
         }
@@ -13175,7 +13176,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

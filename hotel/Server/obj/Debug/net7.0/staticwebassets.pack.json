@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\wwwroot\\js\\common.js",
+      "PackagePath": "staticwebassets\\js\\common.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Hotel.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Hotel.Server.props",
+      "PackagePath": "build\\Hotel.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Hotel.Server.props",
+      "PackagePath": "buildMultiTargeting\\Hotel.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Hotel.Server.props",
+      "PackagePath": "buildTransitive\\Hotel.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -18,7 +18,7 @@ namespace Hotel.Server.Services.EmployeeService
         }
 
         public async Task<Employee> CreateEmployee(Employee Employee)
-        {
+        {       
             _context.Add(Employee);
             await _context.SaveChangesAsync();
             return Employee;
@@ -42,7 +42,7 @@ namespace Hotel.Server.Services.EmployeeService
             var dbEmployee = await _context.Employees.FindAsync(EmployeeId);
             return dbEmployee;
         }
-        public async Task<List<Employee>> GetEmployeeByFName(string fname)
+        public async Task<List<Employee>> SearchEmployees(string fname)
         {
             //var dbEmployee = await _context.Employees.FirstOrDefaultAsync(e => e.EFirstName == fname);
             var dbEmployee = await _context.Employees

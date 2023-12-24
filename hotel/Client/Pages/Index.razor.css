@@ -81,6 +81,10 @@ body {
     }
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
 .carousel-inner {
     position: absolute;
     top: 20px;
@@ -121,13 +125,14 @@ body {
     height: 46px;
 }
 
-.ng-nhp {
+ .ng-nhp {
     position: absolute;
     top: 13px;
     left: 22px;
     font-size: var(--font-size-base);
     letter-spacing: 0.06em;
     font-family: var(--font-be-vietnam-pro);
+    text-decoration:none;
     color: var(--color-white1);
     text-align: left;
 }

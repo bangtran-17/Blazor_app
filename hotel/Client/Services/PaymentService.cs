@@ -52,9 +52,9 @@ namespace Hotel.Client.Services
                 Payment = result;
         }
 
-        public async Task CreatePayment(Payment Payment, int Bid)
+        public async Task CreatePayment(Payment Payment)
         {
-            await _http.PostAsJsonAsync($"api/Payment/create/{Bid}", Payment);
+            await _http.PostAsJsonAsync($"api/Payment/create", Payment);
         }
 
         public async Task UpdatePayment(int id, Payment payment)

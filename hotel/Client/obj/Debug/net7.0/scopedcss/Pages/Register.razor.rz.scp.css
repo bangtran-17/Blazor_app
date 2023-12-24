@@ -15,15 +15,15 @@ i[b-rtg0jerfj1] {
     height: 593px;
 }
 
-input[type=email][b-rtg0jerfj1],
-input[type=password][b-rtg0jerfj1],
-input[type=text][b-rtg0jerfj1] {
+[b-rtg0jerfj1] input[type=email],
+[b-rtg0jerfj1] input[type=password],
+[b-rtg0jerfj1] input[type=text] {
     border-radius: 30px;
     height: 70px;
     border: 2px solid #789ADE;
 }
 
-input[type=submit][b-rtg0jerfj1] {
+[b-rtg0jerfj1] input[type=submit] {
     color: white;
     background-color: #8699DA;
     width: 100%;

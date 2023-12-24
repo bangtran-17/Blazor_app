@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hotel.Server.Services;
 using Hotel.Shared.Models;
-using Hotel.Server.Services.GuestService;
+using Microsoft.AspNetCore.Mvc;
+using Hotel.Shared.Models;
+using Hotel.Server.Services;
 
 namespace Hotel.Server.Controllers
 {
@@ -28,13 +30,13 @@ namespace Hotel.Server.Controllers
         }
 
         [HttpGet("search/{searchText}")]
-        public async Task<List<Guest>> GetGuestByFName(string searchText)
+        public async Task<List<Guest>> SearchGuests(string searchText)
         {
-            return await _GuestService.GetGuestByFName(searchText);
+            return await _GuestService.SearchGuests(searchText);
         }
 
         [HttpPost]
-        public async Task<Guest?> CreateGuest(Guest Guest)
+        public async Task<Guest?> CreateGuest(Guest? Guest)
         {
             return await _GuestService.CreateGuest(Guest);
         }

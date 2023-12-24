@@ -717,7 +717,7 @@
           "Microsoft.AspNetCore.Components": "7.0.14",
           "Microsoft.AspNetCore.Components.Forms": "7.0.13",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.JSInterop": "7.0.13",
+          "Microsoft.JSInterop": "7.0.14",
           "System.IO.Pipelines": "7.0.0"
         },
         "runtime": {
@@ -1669,17 +1669,17 @@
           }
         }
       },
-      "Microsoft.JSInterop/7.0.13": {
+      "Microsoft.JSInterop/7.0.14": {
         "runtime": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.1323.52007"
+            "fileVersion": "7.0.1423.52316"
           }
         }
       },
       "Microsoft.JSInterop.WebAssembly/7.0.13": {
         "dependencies": {
-          "Microsoft.JSInterop": "7.0.13"
+          "Microsoft.JSInterop": "7.0.14"
         },
         "runtime": {
           "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll": {
@@ -2887,6 +2887,7 @@
           "Hotel.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.13",
+          "Microsoft.JSInterop": "7.0.14",
           "Newtonsoft.Json": "13.0.3",
           "System.IdentityModel.Tokens.Jwt": "7.0.3",
           "System.Text.Json": "7.0.4"
@@ -3793,12 +3794,12 @@
       "path": "microsoft.identitymodel.tokens/7.0.3",
       "hashPath": "microsoft.identitymodel.tokens.7.0.3.nupkg.sha512"
     },
-    "Microsoft.JSInterop/7.0.13": {
+    "Microsoft.JSInterop/7.0.14": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-h+6J4rDJborkPb6O2Akoa+0khTTIsuYGo3NpTASglgE7ihBxkyE9FiHJAo1KmHJwh35ubosHpZ4iDc93lEwcHQ==",
-      "path": "microsoft.jsinterop/7.0.13",
-      "hashPath": "microsoft.jsinterop.7.0.13.nupkg.sha512"
+      "sha512": "sha512-5+YxHnaDo5p+o+4FeQAitO/Sehr/hOo9a+psA2PT+hdup0OpKjuLuXTqqlrC96Yl57/Y1N24GeY8x/RrJ+k5MQ==",
+      "path": "microsoft.jsinterop/7.0.14",
+      "hashPath": "microsoft.jsinterop.7.0.14.nupkg.sha512"
     },
     "Microsoft.JSInterop.WebAssembly/7.0.13": {
       "type": "package",

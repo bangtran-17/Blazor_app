@@ -1,0 +1,116 @@
+﻿@page "/admin/guest"
+@page "/admin/Guest/{id:int}"
+
+@using Hotel.Shared
+
+@inject IGuestService GuestService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản Lý Nhân Viên</PageTitle>
+
+<button class="btn btn-primary" @onclick="NavigateBack">Quay lại</button>
+
+@if (Id is null)
+{
+    <PageTitle>Create a new Guest</PageTitle>
+    <h3>Create a new Guest</h3>
+    <br />
+}
+else
+{
+    <PageTitle>Edit Guest @guest.GFirstName</PageTitle>
+    <h3>Edit Guest @guest.GFirstName</h3>
+    <br />
+
+}
+
+<EditForm Model="guest" OnSubmit="HandleSubmit">
+    <div>
+        <label for="firstName">First Name</label>
+        <InputText id="firstName" @bind-Value="guest.GFirstName" class="form-control" />
+    </div>
+    <div>
+        <label for="lastName">Last Name</label>
+        <InputText id="lastName" @bind-Value="guest.GLastName" class="form-control" />
+    </div>
+    <div>
+        <label for="contactNumber">Số điện thoại</label>
+        <InputText id="contactNumber" @bind-Value="guest.GSdt" class="form-control" />
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <InputText id="email" @bind-Value="guest.GEmail" class="form-control" />
+    </div>
+    <div>
+        <label for="identityNumber">CCCD</label>
+        <InputText id="email" @bind-Value="guest.GEmail" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">@btnText</button>
+
+    <button class="btn btn-danger" @onclick="DeleteGuest">Delete</button>
+</EditForm>
+
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    [ParameterAttribute]
+    public string? Fname { get; set; }
+
+    string btnText = string.Empty;
+
+    Guest? guest = new Guest { };
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Lưu" : "Cập nhật";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await GuestService.GetGuestById((int)Id);
+            // var result = await GuestService.GetGuestById((int)Id);
+            // var result = await GuestService.GetGuestByFName(Fname);
+            if (result is not null)
+                guest = result;
+            else
+                NavigationManager.NavigateTo("/admin/guest");
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id is null)
+        {
+            await GuestService.CreateGuest(guest);
+        }
+        else
+        {
+            await GuestService.UpdateGuest((int)Id, guest);
+        }
+    }
+
+    async Task DeleteGuest()
+    {
+        await GuestService.DeleteGuest(guest.GId);
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/admin/guests");
+    }
+
+    public string search { get; set; }
+
+    private string displayValue;
+
+    private void HandleInputChange(ChangeEventArgs e)
+    {
+        // Thực hiện các xử lý hoặc biến đổi giá trị tùy theo nhu cầu
+        displayValue = $"You entered: {e.Value}";
+    }
+
+}

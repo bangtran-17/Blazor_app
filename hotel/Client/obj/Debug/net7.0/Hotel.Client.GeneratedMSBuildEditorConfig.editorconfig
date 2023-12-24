@@ -28,12 +28,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRW1wbG95ZWVBZG1pbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXgucmF6b3I=
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/GuestAdmin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cR3Vlc3RBZG1pbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/NhanVienAdmin.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmhhblZpZW5BZG1pbi5yYXpvcg==
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/SearchComponent.razor]
@@ -44,12 +44,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xCb29raW5nQ29uZmlybWF0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/BookingPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xCb29raW5nUGFnZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/RoomDetail.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xSb29tRGV0YWlsLnJhem9y
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/Roomdetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xSb29tZGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Counter.razor]
@@ -80,9 +76,13 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRW1wbG95ZWVzQWRtaW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-10jmqm4e4q
 
-[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/NhanViensAdmin.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmhhblZpZW5zQWRtaW4ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-zx7eqovkst
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/GuestsAdmin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cR3Vlc3RzQWRtaW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-58upsmxqdb
+
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/BookingPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xCb29raW5nUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-3bc39ipq7b
 
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/EmployeeView.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVWaWV3LnJhem9y

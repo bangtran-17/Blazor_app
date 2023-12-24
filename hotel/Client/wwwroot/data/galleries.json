@@ -1,0 +1,31 @@
+[
+    {
+      "name" : "Grand",
+      "images" : [
+        {
+            "src": "./Grand/Grand-Atlantis-Jacuzzi.png"
+          },
+          {
+            "src": "./Grand/GrandAtlantis-Interior-LivingRoom.png"
+          },
+          {
+            "src": "./Grand/GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png"
+          },
+          {
+            "src": "./Grand/GrandAtlantisSuite-Interior-BedroomWithAView.png"
+          },
+          {
+            "src": "./Grand/GrandAtlantisSuite-Interior-BedroomWithBalcony.png"
+          },
+          {
+            "src": "./Grand/GrandAtlantisSuite-Interior-DiningRoom.png"
+          },
+          {
+            "src": "./Grand/GrandAtlantisSuite-Interior-EntranceWithFishFountain.png"
+        },
+        {
+          "src": "./Grand/GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png"
+        }
+      ]
+    }
+]

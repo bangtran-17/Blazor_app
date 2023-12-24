@@ -9,17 +9,32 @@ using Hotel.Server.Services.RoomtypeService;
 using Hotel.Server.Services.DepartmentService;
 using Hotel.Server.Services.BookingService;
 using Hotel.Server.Services.PayMent;
-using Hotel.Server.Services.GuestService;
+using Hotel.Server.Services.RoomImg;
+using Hotel.Server.Services;
+using Hotel.Server.Services.Rooms;
+using Hotel.Server.Services.Stripe;
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<MyDbContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigin", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .SetIsOriginAllowed((host) => true) // Cho phep tat ca cac origin
+               .AllowAnyHeader();
+    });
+});
 
 // Employee3
 builder.Services.AddHttpClient<IEmployeeService, EmployeeService>();
@@ -37,14 +52,29 @@ builder.Services.AddHttpClient<IBookingService, BookingService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 
 //Payment
-//builder.Services.AddHttpClient<IPaymentService, PaymentService>();
-//builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddHttpClient<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+
 //Guest
 builder.Services.AddHttpClient<IGuestService, GuestService>();
 builder.Services.AddScoped<IGuestService, GuestService>();
 
+//Roomimg
+builder.Services.AddHttpClient<IRoomImgService, RoomImgService>();
+builder.Services.AddScoped<IRoomImgService, RoomImgService>();
+
+//Room
+builder.Services.AddHttpClient<IRoomService, RoomService>();
+builder.Services.AddScoped<IRoomService, RoomService>();
+
+//Room
+builder.Services.AddHttpClient<IStripePaymentService, StripePaymentService>();
+builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+});
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -62,6 +92,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             };
         });
 builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -90,5 +121,7 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+app.UseCors("AllowOrigin");
 
 app.Run();

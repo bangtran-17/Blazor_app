@@ -21,10 +21,10 @@ namespace Hotel.Server.Services.PayMent
             _context = context;
         }
 
-        public async Task<Payment?> CreatePayment(Payment Payment, int Bid)
+        public async Task<Payment?> CreatePayment(Payment Payment)
         { 
             //var bookingID = _context.Bookings.Where(p => p.BId == Bid).FirstOrDefault().BId;
-            Payment.BId = Bid;
+      
             _context.Add(Payment);
             await _context.SaveChangesAsync();
             return Payment;
