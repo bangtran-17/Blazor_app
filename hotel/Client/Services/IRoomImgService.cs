@@ -6,8 +6,8 @@ namespace Hotel.Client.Services
     {
         List<RoomImg?> RoomImgs { get; set; }
         //List<Payment> Payment { get; set; }
-        Task<List<RoomImg>> GetRoomImgs();
-        Task<RoomImg?> GetRoomImgById(int? RtId);
+        Task<List<RoomImg?>> GetRoomImgs();
+     /*   Task<RoomImg?> GetRoomImgById(int? RtId)*/
 
 
 

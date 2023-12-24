@@ -5,7 +5,7 @@ namespace Hotel.Client.Services
     public interface IRoomtypeService
     {
         List<Roomtype> Roomtypes { get; set; }
-        Task GetRoomtypes();
+        Task<List<Roomtype>> GetRoomtypes();
         Task<Roomtype?> GetRoomtypeById(int id);
         
         Task CreateRoomtype(Roomtype Roomtype);

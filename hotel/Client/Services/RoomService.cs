@@ -4,9 +4,8 @@ using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
-using System.Text.Json.Serialization;
 using System.Text.Json;
-
+using System.Text.Json.Serialization;
 
 namespace Hotel.Client.Services
 {
@@ -35,22 +34,33 @@ namespace Hotel.Client.Services
             _navigationManger.NavigateTo("admin/Rooms");
         }
 
-        public async Task<Room?> GetRoomByFName(string fname)
+        public async Task<List<Room>> GetRoomByFName(string fname)
         {
-            var result = await _http.GetAsync($"api/Room/name/{fname}");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+            var result = await _http.GetAsync($"api/Room/search/{fname}");
             if (result.StatusCode == HttpStatusCode.OK)
             {
-                return await result.Content.ReadFromJsonAsync<Room>();
+                return  await result.Content.ReadFromJsonAsync<List<Room>>(options);
+               
             }
             return null;
         }
 
         public async Task<Room?> GetRoomById(int id)
         {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
             var result = await _http.GetAsync($"api/Room/{id}");
             if (result.StatusCode == HttpStatusCode.OK)
             {
-                return await result.Content.ReadFromJsonAsync<Room>();
+                return await result.Content.ReadFromJsonAsync<Room>(options);
             }
             return null;
         }
@@ -62,8 +72,7 @@ namespace Hotel.Client.Services
                 ReferenceHandler = ReferenceHandler.Preserve,
                 PropertyNameCaseInsensitive = true
             };
-
-            var result = await _http.GetFromJsonAsync<List<Room>>("api/Room", options);
+            var result = await _http.GetFromJsonAsync<List<Room>>("api/Room",options);
             if (result is not null)
                 Rooms = result;
             return Rooms;

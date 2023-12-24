@@ -18,7 +18,7 @@ namespace Hotel.Server.Services.EmployeeService
         }
 
         public async Task<Employee> CreateEmployee(Employee Employee)
-        {
+        {       
             _context.Add(Employee);
             await _context.SaveChangesAsync();
             return Employee;

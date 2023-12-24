@@ -119,7 +119,12 @@
         NavigationManager.NavigateTo($"admin/employee/{id}");
     }
 
-   void AddEmployee()
+    void ShowEmployee(string fname)
+    {
+        NavigationManager.NavigateTo($"admin/employee/{fname}");
+    }
+
+    void AddEmployee()
     {
 
         NavigationManager.NavigateTo("admin/employee");
@@ -130,6 +135,12 @@
         NavigationManager.NavigateTo("admin");
     }
 
+    // private string displayValue;
+    // async void SearchEmployees(ChangeEventArgs e)
+    // {
+    //     displayValue = $"You entered: {e.Value}";
+    //     EmployeesSearched = await EmployeeService.SearchEmployees(e.Value.ToString());
+    // }
     async Task SearchEmployees(ChangeEventArgs e)
     {
         // displayValue = $"You entered: {e.Value}";

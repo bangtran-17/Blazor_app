@@ -35,6 +35,7 @@
           "buildMultiTargeting/Blazored.Modal.props": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNet.SignalR.Core/2.4.3": {
         "type": "package",
         "dependencies": {
@@ -52,6 +53,8 @@
           }
         }
       },
+=======
+>>>>>>> origin/Loc
       "Microsoft.AspNetCore.Authorization/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -175,6 +178,7 @@
           "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Connections.Abstractions/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -226,6 +230,8 @@
           }
         }
       },
+=======
+>>>>>>> origin/Loc
       "Microsoft.AspNetCore.Metadata/7.0.14": {
         "type": "package",
         "compile": {
@@ -652,7 +658,11 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.JSInterop/7.0.13": {
+=======
+      "Microsoft.JSInterop/7.0.14": {
+>>>>>>> origin/Loc
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
@@ -681,6 +691,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.NET.ILLink.Analyzers/7.0.100-1.23211.1": {
         "type": "package",
         "build": {
@@ -733,6 +744,8 @@
           }
         }
       },
+=======
+>>>>>>> origin/Loc
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -746,6 +759,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Owin/1.0.0": {
         "type": "package",
         "compile": {
@@ -755,6 +769,8 @@
           "lib/net40/Owin.dll": {}
         }
       },
+=======
+>>>>>>> origin/Loc
       "System.IdentityModel.Tokens.Jwt/7.0.3": {
         "type": "package",
         "dependencies": {
@@ -829,6 +845,7 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+<<<<<<< HEAD
       "System.Threading.Channels/7.0.0": {
         "type": "package",
         "compile": {
@@ -855,6 +872,18 @@
           "bin/placeholder/Hotel.Shared.dll": {}
         },
         "runtime": {
+=======
+      "Hotel.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Hotel.Shared.dll": {}
+        },
+        "runtime": {
+>>>>>>> origin/Loc
           "bin/placeholder/Hotel.Shared.dll": {}
         }
       }
@@ -893,6 +922,7 @@
           "buildMultiTargeting/Blazored.Modal.props": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNet.SignalR.Core/2.4.3": {
         "type": "package",
         "dependencies": {
@@ -910,6 +940,8 @@
           }
         }
       },
+=======
+>>>>>>> origin/Loc
       "Microsoft.AspNetCore.Authorization/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -1033,6 +1065,7 @@
           "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Connections.Abstractions/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -1084,6 +1117,8 @@
           }
         }
       },
+=======
+>>>>>>> origin/Loc
       "Microsoft.AspNetCore.Metadata/7.0.14": {
         "type": "package",
         "compile": {
@@ -1510,7 +1545,11 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.JSInterop/7.0.13": {
+=======
+      "Microsoft.JSInterop/7.0.14": {
+>>>>>>> origin/Loc
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
@@ -1539,6 +1578,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.NET.ILLink.Analyzers/7.0.100-1.23211.1": {
         "type": "package",
         "build": {
@@ -1591,6 +1631,8 @@
           }
         }
       },
+=======
+>>>>>>> origin/Loc
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -1604,6 +1646,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Owin/1.0.0": {
         "type": "package",
         "compile": {
@@ -1613,6 +1656,8 @@
           "lib/net40/Owin.dll": {}
         }
       },
+=======
+>>>>>>> origin/Loc
       "System.IdentityModel.Tokens.Jwt/7.0.3": {
         "type": "package",
         "dependencies": {
@@ -1681,6 +1726,7 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+<<<<<<< HEAD
       "System.Threading.Channels/7.0.0": {
         "type": "package",
         "compile": {
@@ -1707,6 +1753,18 @@
           "bin/placeholder/Hotel.Shared.dll": {}
         },
         "runtime": {
+=======
+      "Hotel.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Hotel.Shared.dll": {}
+        },
+        "runtime": {
+>>>>>>> origin/Loc
           "bin/placeholder/Hotel.Shared.dll": {}
         }
       }
@@ -1746,6 +1804,7 @@
         "staticwebassets/BlazoredModal.razor.js"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.AspNet.SignalR.Core/2.4.3": {
       "sha512": "zxvv9HhsUa3nfyC7rIwFxHVcGffyQrjqNUO6pBKLyv3eFigkEy3N+6KbbSedzIyCfthglTbvU+m4sg8tawRlvA==",
       "type": "package",
@@ -1761,6 +1820,8 @@
         "packageIcon.png"
       ]
     },
+=======
+>>>>>>> origin/Loc
     "Microsoft.AspNetCore.Authorization/7.0.14": {
       "sha512": "F4uM+ZIljMV2hF+LC4qRjswLsG21EO5pH07j9ec0H2eXFHlNoC1qIagHxgoQA2spkImqrBgIhWDog6VRQODTNw==",
       "type": "package",
@@ -2011,6 +2072,7 @@
         "tools/x86/aspnetcorev2_inprocess.dll"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.Connections.Abstractions/7.0.14": {
       "sha512": "bWr25f/6Yb63JfJY7R3cR/FBTlz/kiWeKJ1xpkBO1yUDO/HWtoftikieXt4cW9aC55sf/AlodC4okr39t6PWIg==",
       "type": "package",
@@ -2075,6 +2137,11 @@
     "Microsoft.AspNetCore.Metadata/7.0.14": {
       "sha512": "c5QBvWR294bUxA5bePGHjO6y2/hK3yF6WCGH+FVMnG5kjpD1pfgBmgnQUmpxkL34Ql26jlWUyfu/7rsBu4nJtw==",
       "type": "package",
+=======
+    "Microsoft.AspNetCore.Metadata/7.0.14": {
+      "sha512": "c5QBvWR294bUxA5bePGHjO6y2/hK3yF6WCGH+FVMnG5kjpD1pfgBmgnQUmpxkL34Ql26jlWUyfu/7rsBu4nJtw==",
+      "type": "package",
+>>>>>>> origin/Loc
       "path": "microsoft.aspnetcore.metadata/7.0.14",
       "files": [
         ".nupkg.metadata",
@@ -2621,6 +2688,7 @@
     },
     "Microsoft.IdentityModel.Abstractions/7.0.3": {
       "sha512": "cfPUWdjigLIRIJSKz3uaZxShgf86RVDXHC1VEEchj1gnY25akwPYpbrfSoIGDCqA9UmOMdlctq411+2pAViFow==",
+<<<<<<< HEAD
       "type": "package",
       "path": "microsoft.identitymodel.abstractions/7.0.3",
       "files": [
@@ -2713,8 +2781,102 @@
     },
     "Microsoft.JSInterop/7.0.13": {
       "sha512": "h+6J4rDJborkPb6O2Akoa+0khTTIsuYGo3NpTASglgE7ihBxkyE9FiHJAo1KmHJwh35ubosHpZ4iDc93lEwcHQ==",
+=======
+>>>>>>> origin/Loc
       "type": "package",
-      "path": "microsoft.jsinterop/7.0.13",
+      "path": "microsoft.identitymodel.abstractions/7.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net462/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net462/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.7.0.3.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/7.0.3": {
+      "sha512": "vxjHVZbMKD3rVdbvKhzAW+7UiFrYToUVm3AGmYfKSOAwyhdLl/ELX1KZr+FaLyyS5VReIzWRWJfbOuHM9i6ywg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net462/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net462/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net472/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net472/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "microsoft.identitymodel.jsonwebtokens.7.0.3.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Logging/7.0.3": {
+      "sha512": "b6GbGO+2LOTBEccHhqoJsOsmemG4A/MY+8H0wK/ewRhiG+DCYwEnucog1cSArPIY55zcn+XdZl0YEiUHkpDISQ==",
+      "type": "package",
+      "path": "microsoft.identitymodel.logging/7.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.Logging.dll",
+        "lib/net461/Microsoft.IdentityModel.Logging.xml",
+        "lib/net462/Microsoft.IdentityModel.Logging.dll",
+        "lib/net462/Microsoft.IdentityModel.Logging.xml",
+        "lib/net472/Microsoft.IdentityModel.Logging.dll",
+        "lib/net472/Microsoft.IdentityModel.Logging.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Logging.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
+        "microsoft.identitymodel.logging.7.0.3.nupkg.sha512",
+        "microsoft.identitymodel.logging.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Tokens/7.0.3": {
+      "sha512": "wB+LlbDjhnJ98DULjmFepqf9eEMh/sDs6S6hFh68iNRHmwollwhxk+nbSSfpA5+j+FbRyNskoaY4JsY1iCOKCg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.tokens/7.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net461/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net462/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net462/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net472/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net472/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Tokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
+        "microsoft.identitymodel.tokens.7.0.3.nupkg.sha512",
+        "microsoft.identitymodel.tokens.nuspec"
+      ]
+    },
+    "Microsoft.JSInterop/7.0.14": {
+      "sha512": "5+YxHnaDo5p+o+4FeQAitO/Sehr/hOo9a+psA2PT+hdup0OpKjuLuXTqqlrC96Yl57/Y1N24GeY8x/RrJ+k5MQ==",
+      "type": "package",
+      "path": "microsoft.jsinterop/7.0.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2722,7 +2884,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.JSInterop.dll",
         "lib/net7.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.7.0.13.nupkg.sha512",
+        "microsoft.jsinterop.7.0.14.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -2741,6 +2903,7 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.NET.ILLink.Analyzers/7.0.100-1.23211.1": {
       "sha512": "0GvbEgDGcUQA9KuWcQU1WwYHXt1tBzNr1Nls/M57rM7NA/AndFwCaCEoJpJkmxRY7xLlPDBnmGp8h5+FNqUngg==",
       "type": "package",
@@ -2884,6 +3047,8 @@
         "microsoft.owin.security.nuspec"
       ]
     },
+=======
+>>>>>>> origin/Loc
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -2914,6 +3079,7 @@
         "packageIcon.png"
       ]
     },
+<<<<<<< HEAD
     "Owin/1.0.0": {
       "sha512": "OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
       "type": "package",
@@ -2926,6 +3092,8 @@
         "owin.nuspec"
       ]
     },
+=======
+>>>>>>> origin/Loc
     "System.IdentityModel.Tokens.Jwt/7.0.3": {
       "sha512": "caEe+OpQNYNiyZb+DJpUVROXoVySWBahko2ooNfUcllxa9ZQUM8CgM/mDjP6AoFn6cQU9xMmG+jivXWub8cbGg==",
       "type": "package",
@@ -3078,6 +3246,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Threading.Channels/7.0.0": {
       "sha512": "qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
       "type": "package",
@@ -3107,6 +3276,8 @@
         "useSharedDesignerContext.txt"
       ]
     },
+=======
+>>>>>>> origin/Loc
     "Hotel.Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/Hotel.Shared.csproj",
@@ -3118,6 +3289,7 @@
       "Blazored.LocalStorage >= 4.4.0",
       "Blazored.Modal >= 7.1.0",
       "Hotel.Shared >= 1.0.0",
+<<<<<<< HEAD
       "Microsoft.AspNet.SignalR.Core >= 2.4.3",
       "Microsoft.AspNetCore.Components.Authorization >= 7.0.14",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.13",
@@ -3128,6 +3300,12 @@
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23211.1",
       "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23211.1",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.0",
+=======
+      "Microsoft.AspNetCore.Components.Authorization >= 7.0.14",
+      "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.13",
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.13",
+      "Microsoft.JSInterop >= 7.0.14",
+>>>>>>> origin/Loc
       "Newtonsoft.Json >= 13.0.3",
       "System.IdentityModel.Tokens.Jwt >= 7.0.3",
       "System.Text.Json >= 7.0.4"
@@ -3139,11 +3317,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
       "projectName": "Hotel.Client",
       "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
       "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
       "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\obj\\",
+=======
+      "projectUniqueName": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
+      "projectName": "Hotel.Client",
+      "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\obj\\",
+>>>>>>> origin/Loc
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3160,8 +3346,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+<<<<<<< HEAD
             "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
               "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
+=======
+            "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
+              "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
+>>>>>>> origin/Loc
             }
           }
         }
@@ -3184,10 +3375,13 @@
             "target": "Package",
             "version": "[7.1.0, )"
           },
+<<<<<<< HEAD
           "Microsoft.AspNet.SignalR.Core": {
             "target": "Package",
             "version": "[2.4.3, )"
           },
+=======
+>>>>>>> origin/Loc
           "Microsoft.AspNetCore.Components.Authorization": {
             "target": "Package",
             "version": "[7.0.14, )"
@@ -3201,6 +3395,7 @@
             "target": "Package",
             "version": "[7.0.13, )"
           },
+<<<<<<< HEAD
           "Microsoft.AspNetCore.SignalR.Client": {
             "target": "Package",
             "version": "[7.0.14, )"
@@ -3231,6 +3426,12 @@
             "version": "[8.0.0, )",
             "autoReferenced": true
           },
+=======
+          "Microsoft.JSInterop": {
+            "target": "Package",
+            "version": "[7.0.14, )"
+          },
+>>>>>>> origin/Loc
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"

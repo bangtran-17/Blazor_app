@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using Hotel.Shared.Models;
 
 namespace Hotel.Shared.Models;
 
@@ -32,21 +33,23 @@ public partial class Booking
     public int? Rid { get; set; }
     public decimal? BCost { get; set; }
 
+    public int? Rid { get; set; }
+
     public string? StripeSessionId { get; set; }
 
-    public virtual Discount? DIdNavigation { get; set; }=new Discount();
+    public virtual Discount? DIdNavigation { get; set; }
 
-    public virtual Employee? EIdNavigation { get; set; }=new Employee();
+    public virtual Employee? EIdNavigation { get; set; }
 
     public virtual ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
 
-    public virtual Guest? GIdNavigation { get; set; }=new Guest();
+    public virtual Guest? GIdNavigation { get; set; }
 
-    public virtual Hotel1? HIdNavigation { get; set; } = null;
+    public virtual Hotel1? HIdNavigation { get; set; }
 
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
-    public virtual Room? RidNavigation { get; set; }= new Room();
+    public virtual Room? RidNavigation { get; set; }
 
     public virtual ICollection<Servicesbooked> Servicesbookeds { get; set; } = new List<Servicesbooked>();
 }

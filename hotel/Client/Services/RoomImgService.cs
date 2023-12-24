@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+
 namespace Hotel.Client.Services
 {
     public class RoomImgService : IRoomImgService
@@ -24,30 +25,34 @@ namespace Hotel.Client.Services
 
         public List<RoomImg?> RoomImgs { get; set; } = new List<RoomImg?>();
 
-        public async Task<RoomImg?> GetRoomImgById(int? RtId)
-        {
-            var result = await _http.GetAsync($"api/RoomImg/{RtId}");
-            if (result.StatusCode == HttpStatusCode.OK)
-            {
-                return await result.Content.ReadFromJsonAsync<RoomImg>();
-            }
-            return null;
-        }
+        //public async Task<RoomImg?> GetRoomImgById(int? RtId)
+        //{
+        //    var options = new JsonSerializerOptions()
+        //    {
+        //        ReferenceHandler = ReferenceHandler.Preserve,
+        //        PropertyNameCaseInsensitive = true
+        //    };
+        //    var result = await _http.GetAsync($"api/RoomImg/{RtId}");
+        //    if (result.StatusCode == HttpStatusCode.OK)
+        //    {
+        //        return await result.Content.ReadFromJsonAsync<RoomImg>(options);
+        //    }
+        //    return null;
+        //}
 
-        public async Task<List<RoomImg>> GetRoomImgs()
+        public async Task<List<RoomImg?>> GetRoomImgs()
         {
             var options = new JsonSerializerOptions()
             {
                 ReferenceHandler = ReferenceHandler.Preserve,
                 PropertyNameCaseInsensitive = true
             };
-
-            var result = await _http.GetFromJsonAsync<List<RoomImg>>("api/RoomImg");
+            var result = await _http.GetFromJsonAsync<List<RoomImg>>("api/RoomImg",options);
             if (result is not null)
                 RoomImgs = result;
             return RoomImgs;
         }
-
+       
     
 
 

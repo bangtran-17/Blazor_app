@@ -19,6 +19,8 @@ namespace Hotel.Server.Services.Rooms
 
         public async Task<Room> CreateRoom(Room? Room)
         {
+            Room.RAvailable = "yes";
+             
             _context.Add(Room);
             await _context.SaveChangesAsync();
             return Room;
@@ -50,7 +52,11 @@ namespace Hotel.Server.Services.Rooms
                         EF.Functions.Like(e.RAvailable, $"%{fname}%") ||
                         EF.Functions.Like(e.RNumber, $"%{fname}%") ||
                         EF.Functions.Like(e.Status, $"%{fname}%") ||
-                        EF.Functions.Like(e.Rt.RtName, $"%{fname}%"))
+                        EF.Functions.Like(e.Rt.RtName, $"%{fname}%")||
+                        EF.Functions.Like(e.RtId.ToString(), $"%{fname}%")
+
+                        )
+                    
                     .ToListAsync();
             return dbRoom;
         }

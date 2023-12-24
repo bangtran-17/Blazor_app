@@ -34,7 +34,7 @@ namespace Hotel.Server.Migrations
 
                     b.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
 
-                    b.ToTable("AspNetUserRole");
+                    b.ToTable("AspNetUserRole", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Shared.Models.AspNetRole", b =>
@@ -274,7 +274,8 @@ namespace Hotel.Server.Migrations
                         .HasColumnName("H_ID");
 
                     b.Property<int?>("Rid")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Rid");
 
                     b.Property<string>("StripeSessionId")
                         .HasColumnType("nvarchar(max)");
@@ -291,6 +292,8 @@ namespace Hotel.Server.Migrations
                     b.HasIndex(new[] { "GId" }, "IX_BOOKING_G_ID");
 
                     b.HasIndex(new[] { "HId" }, "IX_BOOKING_H_ID");
+
+                    b.HasIndex(new[] { "Rid" }, "IX_BOOKING_Rid");
 
                     b.ToTable("BOOKING", (string)null);
                 });
@@ -429,9 +432,9 @@ namespace Hotel.Server.Migrations
                     b.HasKey("EId")
                         .HasName("PK__EMPLOYEE__D730AF543A07B3C3");
 
-                    b.HasIndex("DeId");
+                    b.HasIndex(new[] { "DeId" }, "IX_EMPLOYEE_DE_ID");
 
-                    b.HasIndex("HId");
+                    b.HasIndex(new[] { "HId" }, "IX_EMPLOYEE_H_ID");
 
                     b.ToTable("EMPLOYEE", (string)null);
                 });
@@ -474,9 +477,9 @@ namespace Hotel.Server.Migrations
                     b.HasKey("FId")
                         .HasName("PK__FEEDBACK__2C6EC7C379E7FF2F");
 
-                    b.HasIndex("BId");
+                    b.HasIndex(new[] { "BId" }, "IX_FEEDBACK_B_ID");
 
-                    b.HasIndex("GId");
+                    b.HasIndex(new[] { "GId" }, "IX_FEEDBACK_G_ID");
 
                     b.ToTable("FEEDBACK", (string)null);
                 });
@@ -634,8 +637,7 @@ namespace Hotel.Server.Migrations
                         .HasColumnName("P_Type");
 
                     b.Property<DateTime?>("PaidDate")
-                        .HasColumnType("datetime")
-                        .HasColumnName("PaidDate");
+                        .HasColumnType("datetime");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -645,7 +647,7 @@ namespace Hotel.Server.Migrations
                     b.HasKey("PId")
                         .HasName("PK__PAYMENT__A3420A77DE9AEC7C");
 
-                    b.HasIndex("BId");
+                    b.HasIndex(new[] { "BId" }, "IX_PAYMENT_B_ID");
 
                     b.ToTable("PAYMENT", (string)null);
                 });
@@ -700,7 +702,7 @@ namespace Hotel.Server.Migrations
                     b.HasKey("Id")
                         .HasName("PK__RoomImg__3214EC076EFE77A3");
 
-                    b.HasIndex("RoomId");
+                    b.HasIndex(new[] { "RoomId" }, "IX_RoomImg_RoomId");
 
                     b.ToTable("RoomImg", (string)null);
                 });
@@ -731,18 +733,21 @@ namespace Hotel.Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RtName")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("RT_NAME");
 
                     b.Property<string>("RtSmokeFriendly")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(10)
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(10)")
                         .HasColumnName("RT_SmokeFriendly");
 
                     b.Property<string>("Status")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
@@ -782,7 +787,7 @@ namespace Hotel.Server.Migrations
                     b.HasKey("SalaryId")
                         .HasName("PK__SALARY__D64E0E24600A4D58");
 
-                    b.HasIndex("EId");
+                    b.HasIndex(new[] { "EId" }, "IX_SALARY_E_ID");
 
                     b.ToTable("SALARY", (string)null);
                 });
@@ -840,7 +845,7 @@ namespace Hotel.Server.Migrations
                     b.HasKey("SId", "BId")
                         .HasName("PK__SERVICES__D76D9F93DCA2E309");
 
-                    b.HasIndex("BId");
+                    b.HasIndex(new[] { "BId" }, "IX_SERVICESBOOKED_B_ID");
 
                     b.ToTable("SERVICESBOOKED", (string)null);
                 });

@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+
 namespace Hotel.Client.Services
 {
     public class BookingService : IBookingService
@@ -28,10 +30,10 @@ namespace Hotel.Client.Services
 
         public async Task CreateBooking(Booking Booking)
         {
-            await _http.PostAsJsonAsync("api/Booking", Booking);
+           await _http.PostAsJsonAsync("api/Booking", Booking);
 
         }
-
+         
         public async Task DeleteBooking(int id)
         {
             var result = await _http.DeleteAsync($"api/Booking/{id}");
@@ -48,15 +50,22 @@ namespace Hotel.Client.Services
             return null;
         }
 
-        public async Task GetBookings()
+        public async Task<List<Booking>> GetBookings()
         {
-            var result = await _http.GetFromJsonAsync<List<Booking>>("api/Booking");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+            var result = await _http.GetFromJsonAsync<List<Booking>>("api/Booking",options);
             if (result is not null)
                 Bookings = result;
+            return Bookings;
         }
 
         public async Task<int?> GetCostById(int id)
         {
+
             var result = await _http.GetAsync($"api/Booking/payment/{id}");
             if (result.StatusCode == HttpStatusCode.OK)
             {

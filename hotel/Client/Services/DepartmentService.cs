@@ -60,7 +60,7 @@ namespace Hotel.Client.Services
         public async Task<List<Department?>> SearchDepartments(string searchText)
         {
             var options = new JsonSerializerOptions()
-            {
+        {
                 ReferenceHandler = ReferenceHandler.Preserve,
                 PropertyNameCaseInsensitive = true
             };

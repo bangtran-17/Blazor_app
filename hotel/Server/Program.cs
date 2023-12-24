@@ -11,6 +11,23 @@ using Hotel.Server.Services.BookingService;
 using Hotel.Server.Services.PayMent;
 using Hotel.Server.Services.RoomImg;
 using Hotel.Server.Services;
+using Hotel.Server.Services.Rooms;
+using Hotel.Server.Services.Stripe;
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
+using System.Text;
+using Hotel.Server.Data;
+using Hotel.Server.Services.EmployeeService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Hotel.Server.Services.RoomtypeService;
+using Hotel.Server.Services.DepartmentService;
+using Hotel.Server.Services.BookingService;
+using Hotel.Server.Services.PayMent;
+using Hotel.Server.Services.RoomImg;
+using Hotel.Server.Services;
 using Hotel.Server.Services.VNPAY;
 using Hotel.Server.SignalR;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -65,6 +82,59 @@ builder.Services.AddScoped<IRoomService, RoomService>();
 //Department
 builder.Services.AddHttpClient<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+
+//RoomType
+builder.Services.AddScoped<IRoomTypeService, RoomtypeService>();
+
+//Department
+builder.Services.AddHttpClient<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+
+//Booking
+builder.Services.AddHttpClient<IBookingService, BookingService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+
+//Payment
+builder.Services.AddHttpClient<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+
+//Guest
+builder.Services.AddHttpClient<IGuestService, GuestService>();
+builder.Services.AddScoped<IGuestService, GuestService>();
+
+//Roomimg
+builder.Services.AddHttpClient<IRoomImgService, RoomImgService>();
+builder.Services.AddScoped<IRoomImgService, RoomImgService>();
+
+//Room
+builder.Services.AddHttpClient<IRoomService, RoomService>();
+builder.Services.AddScoped<IRoomService, RoomService>();
+
+//Room
+builder.Services.AddHttpClient<IStripePaymentService, StripePaymentService>();
+builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+});
+builder.Services.AddDefaultIdentity<IdentityUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = builder.Configuration["JwtIssuer"],
+                ValidAudience = builder.Configuration["JwtAudience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSecurityKey"]!))
+            };
+        });
+builder.Services.AddSwaggerGen();
 
 //Booking
 builder.Services.AddHttpClient<IBookingService, BookingService>();
@@ -130,6 +200,8 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+app.UseCors("AllowOrigin");
 
 // VNPAY
 app.UseCors("AllowOrigin");
