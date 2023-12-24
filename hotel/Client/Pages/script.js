@@ -32,7 +32,7 @@ function drawFlakes() {
 
 var angle = 0;
 function moveFlakes() {
-  xangle += 0.01;
+  angle += 0.01;
   for (var i = 0; i < numberFlakes; i++) {
     var f = flakes[i];
     // cos and sin for moving diagonally

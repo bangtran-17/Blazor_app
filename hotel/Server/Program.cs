@@ -11,10 +11,12 @@ using Hotel.Server.Services.BookingService;
 using Hotel.Server.Services.PayMent;
 using Hotel.Server.Services.RoomImg;
 using Hotel.Server.Services;
-using Hotel.Server.Services.Rooms;
-using Hotel.Server.Services.Stripe;
-using Microsoft.AspNetCore.Mvc;
+using Hotel.Server.Services.VNPAY;
+using Hotel.Server.SignalR;
+using Microsoft.AspNetCore.ResponseCompression;
+using Hotel.Server.Hubs;
 using System.Text.Json.Serialization;
+using Hotel.Server.Services.Rooms;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +26,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<MyDbContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+// VNPAY
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin", builder =>
@@ -35,6 +37,19 @@ builder.Services.AddCors(options =>
                .AllowAnyHeader();
     });
 });
+// EndVNPAY
+builder.Services.AddSignalR();
+builder.Services.AddResponseCompression(opts =>
+{
+    opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
+          new[] { "application/octet-stream" });
+});
+//builder.Services.AddSignalRCore();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+});
 
 // Employee3
 builder.Services.AddHttpClient<IEmployeeService, EmployeeService>();
@@ -42,6 +57,10 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 //RoomType
 builder.Services.AddScoped<IRoomTypeService, RoomtypeService>();
+
+//Room
+builder.Services.AddHttpClient<IRoomService, RoomService>();
+builder.Services.AddScoped<IRoomService, RoomService>();
 
 //Department
 builder.Services.AddHttpClient<IDepartmentService, DepartmentService>();
@@ -63,18 +82,9 @@ builder.Services.AddScoped<IGuestService, GuestService>();
 builder.Services.AddHttpClient<IRoomImgService, RoomImgService>();
 builder.Services.AddScoped<IRoomImgService, RoomImgService>();
 
-//Room
-builder.Services.AddHttpClient<IRoomService, RoomService>();
-builder.Services.AddScoped<IRoomService, RoomService>();
+//VNPAY
+builder.Services.AddScoped<IVnPayService, VnPayService>();
 
-//Room
-builder.Services.AddHttpClient<IStripePaymentService, StripePaymentService>();
-builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
-
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-});
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -92,7 +102,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             };
         });
 builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -122,6 +131,23 @@ app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
 
+// VNPAY
 app.UseCors("AllowOrigin");
+// End VNPAY
+
+//app.UseSignalR(routes =>
+//{
+//    routes.MapHub<SignalrHub>("/signalr");
+//});
+app.UseResponseCompression();
+//app.MapBlazorHub();
+//app.MapHub<ChatHub>("/chathub");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<SignalrHub>("/paymentHub");
+    endpoints.MapHub<ChatHub>("/chathub");
+    // Other endpoints...
+});
+
 
 app.Run();

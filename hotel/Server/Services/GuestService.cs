@@ -51,7 +51,8 @@ namespace Hotel.Server.Services
                     EF.Functions.Like(e.GLastName, $"%{searchText}%") ||
                     EF.Functions.Like(e.GSdt, $"%{searchText}%") ||
                     EF.Functions.Like(e.GEmail, $"%{searchText}%") ||
-                    EF.Functions.Like(e.GCccd, $"%{searchText}%"))
+                    EF.Functions.Like(e.GCccd, $"%{searchText}%") ||
+                    EF.Functions.Like(e.GAccount, $"%{searchText}%"))
                 .ToListAsync();
 
             return dbGuest;

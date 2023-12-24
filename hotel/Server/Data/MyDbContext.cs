@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Hotel.Shared.Models;
+
 namespace Hotel.Server.Data;
 
 public partial class MyDbContext : DbContext
@@ -45,19 +46,17 @@ public partial class MyDbContext : DbContext
 
     public virtual DbSet<Room> Rooms { get; set; }
 
-    public virtual DbSet<RoomImg> RoomImgs { get; set; }
-
     public virtual DbSet<Roomtype> Roomtypes { get; set; }
 
     public virtual DbSet<Salary> Salaries { get; set; }
 
     public virtual DbSet<Service> Services { get; set; }
+    public virtual DbSet<RoomImg> RoomImgs { get; set; }
 
     public virtual DbSet<Servicesbooked> Servicesbookeds { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=Bang;Database=Hotel1;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("name=DefaultConnection");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -99,7 +98,6 @@ public partial class MyDbContext : DbContext
                     j =>
                     {
                         j.HasKey("UserId", "RoleId");
-                        j.ToTable("AspNetUserRole");
                         j.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
                     });
         });
@@ -147,8 +145,6 @@ public partial class MyDbContext : DbContext
 
             entity.HasIndex(e => e.HId, "IX_BOOKING_H_ID");
 
-            entity.HasIndex(e => e.Rid, "IX_BOOKING_Rid");
-
             entity.Property(e => e.BId).HasColumnName("B_ID");
             entity.Property(e => e.BAmount)
                 .HasColumnType("decimal(18, 2)")
@@ -159,22 +155,20 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.BCheckoutDate)
                 .HasColumnType("date")
                 .HasColumnName("B_CheckoutDate");
-            entity.Property(e => e.BCost)
-                .HasColumnType("decimal(18, 2)")
-                .HasColumnName("B_Cost");
             entity.Property(e => e.BDate)
                 .HasColumnType("date")
                 .HasColumnName("B_DATE");
             entity.Property(e => e.BStatus)
                 .HasMaxLength(50)
                 .HasColumnName("B_Status");
+            entity.Property(e => e.BCost)
+              .HasColumnType("decimal(18, 2)")
+              .HasColumnName("B_Cost");
             entity.Property(e => e.BStayDuration).HasColumnName("B_StayDuration");
             entity.Property(e => e.DId).HasColumnName("D_ID");
             entity.Property(e => e.EId).HasColumnName("E_ID");
             entity.Property(e => e.GId).HasColumnName("G_ID");
             entity.Property(e => e.HId).HasColumnName("H_ID");
-            entity.Property(e => e.Rid).HasColumnName("Rid");
-
 
             entity.HasOne(d => d.DIdNavigation).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.DId)
@@ -203,15 +197,22 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("DEPARTMENT");
 
-            entity.Property(e => e.DeId).HasColumnName("DE_ID");
-            entity.Property(e => e.DeDescription).HasColumnName("DE_Description");
+            entity.Property(e => e.DeId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("DE_ID");
+            entity.Property(e => e.DeDescription)
+                .IsUnicode(true)
+                .HasColumnName("DE_Description");
             entity.Property(e => e.DeInitialSalary)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("DE_InitialSalary");
             entity.Property(e => e.DeName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("DE_Name");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
         });
 
         modelBuilder.Entity<Discount>(entity =>
@@ -220,15 +221,22 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("DISCOUNT");
 
-            entity.Property(e => e.DId).HasColumnName("D_ID");
-            entity.Property(e => e.DDescription).HasColumnName("D_Description");
+            entity.Property(e => e.DId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("D_ID");
+            entity.Property(e => e.DDescription)
+                .IsUnicode(true)
+                .HasColumnName("D_Description");
             entity.Property(e => e.DName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("D_Name");
             entity.Property(e => e.DRate)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("D_Rate");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
         });
 
         modelBuilder.Entity<Employee>(entity =>
@@ -237,33 +245,40 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("EMPLOYEE");
 
-            entity.HasIndex(e => e.DeId, "IX_EMPLOYEE_DE_ID");
-
-            entity.HasIndex(e => e.HId, "IX_EMPLOYEE_H_ID");
-
-            entity.Property(e => e.EId).HasColumnName("E_ID");
+            entity.Property(e => e.EId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("E_ID");
             entity.Property(e => e.DeId).HasColumnName("DE_ID");
-            entity.Property(e => e.EAddress).HasColumnName("E_Address");
+            entity.Property(e => e.EAddress)
+                .IsUnicode(true)
+                .HasColumnName("E_Address");
             entity.Property(e => e.EContactNumber)
                 .HasMaxLength(20)
+                .IsUnicode(true)
                 .HasColumnName("E_ContactNumber");
             entity.Property(e => e.EDesignation)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("E_Designation");
             entity.Property(e => e.EEmail)
                 .HasMaxLength(255)
+                .IsUnicode(true)
                 .HasColumnName("E_Email");
             entity.Property(e => e.EFirstName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("E_FirstName");
             entity.Property(e => e.EJoinDate)
                 .HasColumnType("date")
                 .HasColumnName("E_JoinDate");
             entity.Property(e => e.ELastName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("E_LastName");
             entity.Property(e => e.HId).HasColumnName("H_ID");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
 
             entity.HasOne(d => d.De).WithMany(p => p.Employees)
                 .HasForeignKey(d => d.DeId)
@@ -280,19 +295,21 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("FEEDBACK");
 
-            entity.HasIndex(e => e.BId, "IX_FEEDBACK_B_ID");
-
-            entity.HasIndex(e => e.GId, "IX_FEEDBACK_G_ID");
-
-            entity.Property(e => e.FId).HasColumnName("F_ID");
+            entity.Property(e => e.FId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("F_ID");
             entity.Property(e => e.BId).HasColumnName("B_ID");
             entity.Property(e => e.FDate)
                 .HasColumnType("date")
                 .HasColumnName("F_Date");
-            entity.Property(e => e.FDescription).HasColumnName("F_Description");
+            entity.Property(e => e.FDescription)
+                .IsUnicode(true)
+                .HasColumnName("F_Description");
             entity.Property(e => e.FRate).HasColumnName("F_Rate");
             entity.Property(e => e.GId).HasColumnName("G_ID");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
 
             entity.HasOne(d => d.BIdNavigation).WithMany(p => p.Feedbacks)
                 .HasForeignKey(d => d.BId)
@@ -309,26 +326,36 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("GUEST");
 
-            entity.Property(e => e.GId).HasColumnName("G_ID");
+            entity.Property(e => e.GId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("G_ID");
             entity.Property(e => e.GAccount)
                 .HasMaxLength(255)
+                .IsUnicode(true)
                 .HasColumnName("G_Account");
             entity.Property(e => e.GCccd)
                 .HasMaxLength(20)
+                .IsUnicode(true)
                 .HasColumnName("G_CCCD");
             entity.Property(e => e.GEmail)
                 .HasMaxLength(255)
+                .IsUnicode(true)
                 .HasColumnName("G_Email");
             entity.Property(e => e.GFirstName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("G_FirstName");
             entity.Property(e => e.GLastName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("G_LastName");
             entity.Property(e => e.GSdt)
                 .HasMaxLength(20)
+                .IsUnicode(true)
                 .HasColumnName("G_SDT");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
         });
 
         modelBuilder.Entity<Hotel1>(entity =>
@@ -337,25 +364,36 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("HOTEL");
 
-            entity.Property(e => e.HId).HasColumnName("H_ID");
-            entity.Property(e => e.HAddress).HasColumnName("H_Address");
-            entity.Property(e => e.HDescription).HasColumnName("H_Description");
+            entity.Property(e => e.HId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("H_ID");
+            entity.Property(e => e.HAddress)
+                .IsUnicode(true)
+                .HasColumnName("H_Address");
+            entity.Property(e => e.HDescription)
+                .IsUnicode(true)
+                .HasColumnName("H_Description");
             entity.Property(e => e.HEmail)
                 .HasMaxLength(255)
+                .IsUnicode(true)
                 .HasColumnName("H_Email");
             entity.Property(e => e.HFloorCount).HasColumnName("H_FloorCount");
             entity.Property(e => e.HName)
                 .HasMaxLength(255)
+                .IsUnicode(true)
                 .HasColumnName("H_Name");
             entity.Property(e => e.HSdt)
                 .HasMaxLength(20)
+                .IsUnicode(true)
                 .HasColumnName("H_SDT");
             entity.Property(e => e.HTotalRoom).HasColumnName("H_TotalRoom");
             entity.Property(e => e.HWebsite)
                 .HasMaxLength(255)
+                .IsUnicode(true)
                 .HasColumnName("H_Website");
             entity.Property(e => e.HZip)
                 .HasMaxLength(20)
+                .IsUnicode(true)
                 .HasColumnName("H_ZIP");
         });
 
@@ -365,9 +403,9 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("PAYMENT");
 
-            entity.HasIndex(e => e.BId, "IX_PAYMENT_B_ID");
-
-            entity.Property(e => e.PId).HasColumnName("P_ID");
+            entity.Property(e => e.PId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("P_ID");
             entity.Property(e => e.BId).HasColumnName("B_ID");
             entity.Property(e => e.PAmout)
                 .HasColumnType("decimal(18, 2)")
@@ -375,19 +413,26 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.PDatCoc)
                 .HasColumnType("date")
                 .HasColumnName("P_DatCoc");
+            entity.Property(e => e.PaidDate)
+               .HasColumnType("datetime")
+               .HasColumnName("PaidDate");
             entity.Property(e => e.PStatus)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("P_Status");
             entity.Property(e => e.PType)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("P_Type");
-            entity.Property(e => e.PaidDate).HasColumnType("datetime");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
 
             entity.HasOne(d => d.BIdNavigation).WithMany(p => p.Payments)
                 .HasForeignKey(d => d.BId)
                 .HasConstraintName("FK__PAYMENT__B_ID__02084FDA");
         });
+
 
         modelBuilder.Entity<Room>(entity =>
         {
@@ -412,13 +457,12 @@ public partial class MyDbContext : DbContext
                 .HasConstraintName("FK__ROOM__RT_ID__68487DD7");
         });
 
+
         modelBuilder.Entity<RoomImg>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__RoomImg__3214EC076EFE77A3");
 
             entity.ToTable("RoomImg");
-
-            entity.HasIndex(e => e.RoomId, "IX_RoomImg_RoomId");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.ImgUrl).HasColumnName("ImgURL");
@@ -434,7 +478,9 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("ROOMTYPE");
 
-            entity.Property(e => e.RtId).HasColumnName("RT_ID");
+            entity.Property(e => e.RtId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("RT_ID");
             entity.Property(e => e.RArea)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("R_Area");
@@ -442,26 +488,19 @@ public partial class MyDbContext : DbContext
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("RT_Cost");
             entity.Property(e => e.RtDes)
-                .HasDefaultValueSql("(N'')")
-                .HasColumnName("RT_DES")
-            .HasColumnType("nvarchar(max)");
-            entity.Property(e => e.RtDes1)
-              .HasDefaultValueSql("(N'')")
-              .HasColumnName("RtDes1")
-          .HasColumnType("nvarchar(max)");
+                .IsUnicode(true)
+                .HasColumnName("RT_DES");
             entity.Property(e => e.RtName)
                 .HasMaxLength(50)
-                .HasDefaultValueSql("(N'')")
-                .HasColumnName("RT_NAME")
-             .HasColumnType("nvarchar(50)");
+                .IsUnicode(true)
+                .HasColumnName("RT_NAME");
             entity.Property(e => e.RtSmokeFriendly)
                 .HasMaxLength(10)
-                .HasDefaultValueSql("(N'')")
-                .HasColumnName("RT_SmokeFriendly")
-             .HasColumnType("nvarchar(10)");
+                .IsUnicode(true)
+                .HasColumnName("RT_SmokeFriendly");
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
-                .HasDefaultValueSql("(N'')");
+                .IsUnicode(true);
         });
 
         modelBuilder.Entity<Salary>(entity =>
@@ -470,9 +509,9 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("SALARY");
 
-            entity.HasIndex(e => e.EId, "IX_SALARY_E_ID");
-
-            entity.Property(e => e.SalaryId).HasColumnName("Salary_ID");
+            entity.Property(e => e.SalaryId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("Salary_ID");
             entity.Property(e => e.EId).HasColumnName("E_ID");
             entity.Property(e => e.Salary1)
                 .HasColumnType("decimal(18, 2)")
@@ -480,7 +519,9 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.SalaryDate)
                 .HasColumnType("date")
                 .HasColumnName("Salary_Date");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
 
             entity.HasOne(d => d.EIdNavigation).WithMany(p => p.Salaries)
                 .HasForeignKey(d => d.EId)
@@ -493,15 +534,22 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("SERVICES");
 
-            entity.Property(e => e.SId).HasColumnName("S_ID");
+            entity.Property(e => e.SId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("S_ID");
             entity.Property(e => e.SCost)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("S_Cost");
-            entity.Property(e => e.SDescription).HasColumnName("S_Description");
+            entity.Property(e => e.SDescription)
+                .IsUnicode(true)
+                .HasColumnName("S_Description");
             entity.Property(e => e.SName)
                 .HasMaxLength(50)
+                .IsUnicode(true)
                 .HasColumnName("S_Name");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
         });
 
         modelBuilder.Entity<Servicesbooked>(entity =>
@@ -510,11 +558,11 @@ public partial class MyDbContext : DbContext
 
             entity.ToTable("SERVICESBOOKED");
 
-            entity.HasIndex(e => e.BId, "IX_SERVICESBOOKED_B_ID");
-
             entity.Property(e => e.SId).HasColumnName("S_ID");
             entity.Property(e => e.BId).HasColumnName("B_ID");
-            entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(true);
 
             entity.HasOne(d => d.BIdNavigation).WithMany(p => p.Servicesbookeds)
                 .HasForeignKey(d => d.BId)

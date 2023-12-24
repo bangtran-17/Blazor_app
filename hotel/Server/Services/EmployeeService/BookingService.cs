@@ -19,13 +19,10 @@ namespace Hotel.Server.Services.BookingService
 
         public async Task<Booking> CreateBooking(Booking Booking)
         {
-           
+            Booking.GId = 1;
             _context.Add(Booking);
             await _context.SaveChangesAsync();
-            
-
             return Booking;
-
         }
 
         public async Task<bool> DeleteBooking(int BookingId)

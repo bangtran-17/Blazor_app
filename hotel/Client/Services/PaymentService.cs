@@ -1,6 +1,4 @@
 ﻿using Hotel.Shared.Models;
-
-using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
@@ -9,11 +7,12 @@ using Newtonsoft.Json;
 
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 namespace Hotel.Client.Services
 {
-    public class PaymentService:IPaymentService
+    public class PaymentService : IPaymentService
     {
-        public List<Payment?> Payment { get; set; } = new List<Payment>();
+        public List<Payment?> Payments { get; set; } = new List<Payment>();
      
 
         private readonly HttpClient _http;
@@ -45,11 +44,18 @@ namespace Hotel.Client.Services
             }
         }
 
-        public async Task GetPayments()
+        public async Task<List<Payment>> GetPayments()
         {
-            var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get", options);
             if (result is not null)
-                Payment = result;
+                Payments = result;
+            return Payments;
         }
 
         public async Task CreatePayment(Payment Payment)

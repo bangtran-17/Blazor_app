@@ -4,6 +4,8 @@ using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 
 namespace Hotel.Client.Services
@@ -24,7 +26,7 @@ namespace Hotel.Client.Services
 		public async Task CreateGuest(Guest? Guest)
 		{
 			await _http.PostAsJsonAsync("api/Guest", Guest);
-		
+			_navigationManger.NavigateTo("admin/Guests");
 		}
 
 		public async Task DeleteGuest(int id)
@@ -33,12 +35,12 @@ namespace Hotel.Client.Services
 			_navigationManger.NavigateTo("admin/Guests");
 		}
 
-		public async Task<Guest?> SearchGuests(string searchText)
+		public async Task<List<Guest?>> SearchGuests(string searchText)
 		{
 			var result = await _http.GetAsync($"api/Guest/name/{searchText}");
 			if (result.StatusCode == HttpStatusCode.OK)
 			{
-				return await result.Content.ReadFromJsonAsync<Guest>();
+				return await result.Content.ReadFromJsonAsync<List<Guest?>>();
 			}
 			return null;
 		}
@@ -53,11 +55,18 @@ namespace Hotel.Client.Services
 			return null;
 		}
 
-		public async Task GetGuests()
-		{
-			var result = await _http.GetFromJsonAsync<List<Guest>>("api/Guest");
+		public async Task<List<Guest>> GetGuests()
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetFromJsonAsync<List<Guest>>("api/Guest", options);
 			if (result is not null)
 				Guests = result;
+			return Guests;
 		}
 
 		public async Task UpdateGuest(int id, Guest Guest)

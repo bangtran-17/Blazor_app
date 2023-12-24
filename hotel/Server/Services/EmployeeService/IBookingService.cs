@@ -6,8 +6,10 @@ namespace Hotel.Server.Services.BookingService
     {
         Task<List<Booking>> GetBookings();
         Task<Booking?> GetBookingById(int BookingId);
+
         Task<Booking> CreateBooking(Booking Booking);
         Task<Booking?> UpdateBooking(int BId, Booking booking);
         Task<bool> DeleteBooking(int BId);
+
     }
 }

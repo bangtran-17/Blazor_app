@@ -1,183 +1,31 @@
 ﻿@page "/booking"
 @using Hotel.Shared
 @using Hotel.Shared.CommonFiles
-@using Hotel.Client.ViewModel
-
+@inject IModalService model
 @inject ILocalStorageService localStorage
 @inject IRoomtypeService Rooms
 @inject IBookingService BService
 @using System;
 @using System.Globalization;
-@inject NavigationManager NavigationManager
 
-<body>
-<canvas id="canvas2"></canvas>
-<div class="t-phng2">
-    <div class="frame">
-        <div class="header-logged-in"></div>
-        <img class="ch-logo-vng-12"
-             alt=""
-             src="./public/ch-logo-vng-1@2x.png" />
-
-        <img class="logo-ko-ch-k-nn-1"
-             alt=""
-             src="./public/logo-ko-ch-k-n-1@2x.png" />
-
-        <button class="profiletab">
-            <img class="profiletab-child"
-                 alt=""
-                 src="./public/ellipse-1@2x.png" />
-
-            <div class="xin-cho-hong">Xin chào, Hoàng Gia Lộc</div>
-            <div class="qun-l-trng">Quản lý trưởng</div>
-            <img class="plant-icon" alt="" src="./public/plant@2x.png" />
-        </button>
-    </div>
-    <div class="t-phng-inner">
-        <EditForm Model="homeVM" OnSubmit="HandleSubmit">
-        <div class="text-field-parent">
-            <div class="text-field">
-                <div class="text-field1">
-                    <div class="state-layer">
-                        <div class="content">
-                            <div class="input-text">
-                                    <InputDate TValue="DateTime?" @bind-Value="@homeVM.StartDate" class=" input-text1" />
-                            </div>
-                            <div class="label-text">
-                                <div class="label-text1">Check In</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-field">
-                <div class="text-field1">
-                    <div class="state-layer">
-                        <div class="content">
-                            <div class="input-text">
-                                    <InputDate TValue="DateTime?"  @bind-Value="@homeVM.EndDate" class=" input-text1" />
-                            </div>
-                            <div class="label-text">
-                                <div class="label-text1">Check Out</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <button class="button" type="submit">
-                <div class="style-layer">
-                    <img class="search-icon" alt="" src="./public/search@2x.png" />
-                </div>
-            </button>
-        </div>
-        </EditForm>
-    </div>
-       @foreach (var room in Rooms.Roomtypes)
-    {
-
-    <div class="frame-parent">
-        <div class="hin-th-10-phng-wrapper">
-            <div class="hin-th-10-container">
-                
-                <span class="phng1">Phòng 1</span>
-            </div>
-        </div>
-        <div class="frame-wrapper1">
-            <div class="rectangle-parent2">
-                <img class="frame-inner" alt="" src="./public/rectangle-3@2x.png" />
-
-                <button class="xem-thm-wrapper" data-modal="true" data-gallery="Grand" aria-label="Open Grand image gallery">
-                    <div class="xem-thm1">Xem thêm </div>
-                </button>
-                <script type="module">
-                    import initGallery from "./js/galleryApp.js";
-                    initGallery('./data/galleries.json', {
-                        speed: 600,
-                    })
-                </script>
-                <div class="frame-group">
-                    <div class="frame-parent1">
-                        <div class="grand-atlantis-suite-parent">
-                            <b class="grand-atlantis-suite">@room.RtName</b>
-                            <div class="frame-parent2">
-                                <div class="edit-fill-parent">
-                                    <img class="edit-fill-icon"
-                                         alt=""
-                                         src="./public/edit-fill@2x.png" />
-
-                                    <div class="ni-mi-yu">
-                                       @room.RtDes
-                                    </div>
-                                </div>
-                                <div class="frame-parent3">
-                                    <div class="eye-fill-parent">
-                                        <img class="edit-fill-icon"
-                                             alt=""
-                                             src="./public/eye-fill@2x.png" />
-
-                                        <div class="tm-nhn-tuyt">
-                                            Tầm nhìn tuyệt vời về đảo và Biển Ả Rập.
-                                        </div>
-                                    </div>
-                                    <div class="home-fill-parent">
-                                        <img class="edit-fill-icon"
-                                             alt=""
-                                             src="./public/home-fill@2x.png" />
-
-                                        <div class="tm-nhn-tuyt">429 m2</div>
-                                    </div>
-                                </div>
-                                <div class="user-fill-parent">
-                                    <img class="edit-fill-icon"
-                                         alt=""
-                                         src="./public/user-fill2@2x.png" />
-
-                                    <div class="ngi-ln">
-                                        4 người lớn + 2 trẻ em dưới 14 tuổi, hoặc 5 người lớn,
-                                        hoặc 5 người lớn + 1 trẻ em dưới 14 tuổi.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ch-vi-parent">
-                            <div class="ch-vi">Chỉ với</div>
-                            <b class="vn-m">@room.RtCost VNĐ/ đêm</b>
-                        </div>
-                    </div>
-                    <div class="frame-child1"></div>
-                    <button class="button-wrapper">
-                        <div class="button1">
-                            <div class="style-layer1">
-                                <div class="button2">Xem thêm</div>
-                            </div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    }
-</div>
-	<script src="~/js/script1.js"></script>
-</body>
-@* <EditForm Model="homeVM" OnSubmit="HandleSubmit">
+<h3>BookingPage</h3>
+<EditForm Model="booking" OnSubmit="HandleSubmit">
     <div>
         <label for="ckd">Check-in date:</label>
-        <InputDate TValue="DateTime?" id="ckd" @bind-Value="@homeVM.StartDate" class="form-control input-text1" />
+        <InputDate TValue="DateTime?" id="ckd" @bind-Value="@booking.BCheckingDate" class="form-control" />
     </div>
     <div>
         <label for="lastName">Check-out date:</label>
-        <InputDate TValue="DateTime?" id="ckd" @bind-Value="@homeVM.EndDate" class="form-control input-text1" />
+        <InputDate TValue="DateTime?" id="ckd" @bind-Value="@booking.BCheckoutDate" class="form-control" />
     </div>
     <div>
         <label for="contactNumber"></label>
-        <InputNumber id="amount" @bind-Value="homeVM.NoOfNights" class="form-control input-text1" />
+        <InputNumber id="amount" @bind-Value="booking.BAmount" class="form-control" />
     </div>
-
+    @*     <button @onclick="@(()=>model.Show<BookingConfirmation>("Xác nhận"))" type="submit">Thanh toán</button> *@
     <input type="submit" value="Xác nhận" class="btn btn-success btn-block text-black" />
 </EditForm>
- *@
-@* <div class="mt-4 mx-4 px-0 px-md-5 mx-md-5">
+<div class="mt-4 mx-4 px-0 px-md-5 mx-md-5">
 
     @foreach (var room in Rooms.Roomtypes)
     {
@@ -187,7 +35,7 @@
                 <div class="col-12 col-lg-8">
                     <p class="card-title  " style="font-size:xx-large">@room.RtName</p>
                     <p class="card-text">
-                        @((MarkupString)room.RtDes) 
+                        @((MarkupString)room.RtDes)
                     </p>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -196,15 +44,15 @@
                             <span class="float-right">
                                 <h4 class="  font-weight-bold pt-4 text-black">
                                     <span style="border-bottom:1px solid #ff6a00">
-                                        USD: $@room.RtCost
+                                        USD: $@booking.BCost
                                     </span>
                                 </h4>
 
                                 <span class="float-right pt-1">Villa Size : @room.RArea sqft</span><br />
 
-                                <button class="btn btn-success btn-block mt-3" @onclick="(() => ShowRoom(room.RtId,room.RtCost))">Book @room.RtName</button>
-                                
-                            </span>3
+                                <a href="@($"booking/room-details/{room.RtId}")" class="btn btn-success btn-block mt-3">Book @room.RtName</a>
+
+                            </span>
 
                         </div>
                     </div>
@@ -219,40 +67,31 @@
 
     }
 
-</div> *@
+</div>
 
-
+<CascadingBlazoredModal></CascadingBlazoredModal>
 @code {
 
-    HomeVM homeVM { get; set; } = new HomeVM();
-    Booking booking { get; set; } = new Booking();
 
+    Booking booking { get; set; } = new Booking();
+ 
     TimeSpan? timeDifference;
     TimeSpan span;
-
     protected override async Task OnInitializedAsync()
-    { 
-
-
+    {
         try
-        { 
-
-            base.OnInitialized();
-            if (await localStorage.GetItemAsync<HomeVM>(SD.Local_InitialBooking) != null)
+        {
+            if (await localStorage.GetItemAsync<Booking>(SD.Local_InitialBooking) != null)
             {
                 //populate the new homemodel with the information from the homemodel stored in local storage
 
-                homeVM = await localStorage.GetItemAsync<HomeVM>(SD.Local_InitialBooking);
+                booking = await localStorage.GetItemAsync<Booking>(SD.Local_InitialBooking);
                
-       
-
-
-                timeDifference = homeVM.EndDate - homeVM.StartDate;
+                timeDifference = booking.BCheckoutDate - booking.BCheckingDate;
                 if (timeDifference.HasValue)
                 {
                     span = timeDifference.Value;
                 }
-                homeVM.NoOfNights = (int)span.Days;
                 await Rooms.GetRoomtypes();
             }
             else
@@ -266,30 +105,21 @@
             throw e;
         }
     }
-    public async Task ShowRoom(int Id,decimal Cost)
-
-    {
-        homeVM.Cost = Cost;
-        await localStorage.SetItemAsync(SD.Local_InitialBooking, homeVM);
-        NavigationManager.NavigateTo($"booking/roomdetail/{Id}");
-    }
 
 
     private async Task HandleSubmit()
     {
-        
-
-        foreach(var room in Rooms.Roomtypes)
+         booking.BDate = DateTime.Now;
+        foreach (var room in Rooms.Roomtypes)
         {
-            room.RtCost = room.RtCost * span.Days;
-        }
-          
+            booking.BCost = room.RtCost * span.Days;
+                }
         // update the local storage with dates
-        
+        await localStorage.SetItemAsync(SD.Local_InitialBooking, booking);
         //Retrieve from database, update with newly changed dates
 
 
-    }
- 
+        
 
+    }
 }

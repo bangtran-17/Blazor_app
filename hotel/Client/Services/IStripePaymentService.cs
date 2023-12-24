@@ -4,7 +4,7 @@ namespace Hotel.Client.Services
 {
     public interface IStripePaymentService
     {
-        public Task<string> CheckOutCompleted(StripePaymentDTO? model);
+        public Task<SuccessModel> CheckOutCompleted(StripePaymentDTO model);
 
     }
 }

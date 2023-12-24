@@ -10,6 +10,7 @@ namespace Hotel.Shared.Models
     {
         public string ProductName { get; set; }
         public long Cost { get; set; }
+        public string ImageURL { get; set; }
         public string ReturnURL { get; set; }
     }
 }

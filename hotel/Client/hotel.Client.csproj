@@ -12,29 +12,18 @@
 
   <ItemGroup>
     <Content Include="Pages\Admin\GuestsAdmin.razor.css" />
-    <Content Include="Pages\script.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Grand\Grand-Atlantis-Jacuzzi.png" />
-    <None Include="wwwroot\Grand\GrandAtlantis-Interior-LivingRoom.png" />
-    <None Include="wwwroot\Grand\GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png" />
-    <None Include="wwwroot\Grand\GrandAtlantisSuite-Interior-BedroomWithAView.png" />
-    <None Include="wwwroot\Grand\GrandAtlantisSuite-Interior-BedroomWithBalcony.png" />
-    <None Include="wwwroot\Grand\GrandAtlantisSuite-Interior-DiningRoom.png" />
-    <None Include="wwwroot\Grand\GrandAtlantisSuite-Interior-EntranceWithFishFountain.png" />
-    <None Include="wwwroot\Grand\GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png" />
-    <None Include="wwwroot\js\common.js" />
-    <None Include="wwwroot\js\StripePayment.js" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
     <PackageReference Include="Blazored.Modal" Version="7.1.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.Core" Version="2.4.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.13" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.JSInterop" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.Json" Version="7.0.14" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
     <PackageReference Include="System.Text.Json" Version="7.0.4" />

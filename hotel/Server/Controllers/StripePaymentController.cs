@@ -2,32 +2,68 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Stripe.Checkout;
-using Stripe;
 using System.Collections.Generic;
 using Hotel.Shared.Models;
-using Hotel.Server.Services.PayMent;
-using Hotel.Server.Services.Stripe;
 
 namespace Hotel.Server.Controllers
 {
-    [Route("api/[controller]" )]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class StripePaymentController : Controller
     {
         private readonly IConfiguration _configuration;
-        private readonly IStripePaymentService _stripePaymentService;
 
-        public StripePaymentController(IConfiguration configuration,IStripePaymentService stripePaymentService)
+        public StripePaymentController(IConfiguration configuration)
         {
             _configuration = configuration;
-            _stripePaymentService = stripePaymentService;
         }
 
-        [HttpPost("checkout")]
-       public ActionResult CreateCheckoutSession(StripePaymentDTO stripePayment)
+        [HttpPost]
+        public async Task<IActionResult> Create(StripePaymentDTO payment)
         {
-            var result = _stripePaymentService.CreateCheckoutSession(stripePayment);
-            return Ok(result.Url);
+            try
+            {
+                var domain = _configuration.GetValue<string>("Hotel_Client_URL");
+
+                var options = new SessionCreateOptions
+                {
+                    PaymentMethodTypes = new List<string>
+                    {
+                        "card"
+                    },
+                    LineItems = new List<SessionLineItemOptions>
+                    {
+                        new SessionLineItemOptions
+                        {
+                            PriceData = new SessionLineItemPriceDataOptions
+                            {
+                                UnitAmount=payment.Cost,
+                                Currency="aud",
+                                ProductData= new SessionLineItemPriceDataProductDataOptions
+                                {
+                                    Name = payment.ProductName
+                                }
+                            },
+                            Quantity=1
+                        }
+                    },
+                    Mode = "payment",
+                    SuccessUrl = domain + "/success-payment",
+                    CancelUrl = domain + payment.ReturnURL
+                };
+
+                var service = new SessionService();
+                Session session = await service.CreateAsync(options);
+
+                return Ok(new SuccessModel()
+                {
+                    Data = session.Id
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
