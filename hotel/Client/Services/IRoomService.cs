@@ -6,7 +6,7 @@ namespace Hotel.Client.Services
     public interface IRoomService
     {
         List<Room> Rooms { get; set; }
-        Task GetRooms();
+        Task<List<Room>> GetRooms();
         Task<Room?> GetRoomById(int id);
         Task<Room?> GetRoomByFName(string fname);
         Task CreateRoom(Room? Room);

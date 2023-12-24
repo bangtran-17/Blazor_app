@@ -9,6 +9,8 @@ public partial class Roomtype
 
     public string? RtDes { get; set; }
 
+    public string? RtDes1 { get; set; }
+
     public string? RtName { get; set; }
 
     public decimal? RtCost { get; set; }

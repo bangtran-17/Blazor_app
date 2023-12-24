@@ -727,6 +727,9 @@ namespace Hotel.Server.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("RT_DES");
 
+                    b.Property<string>("RtDes1")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("RtName")
                         .HasMaxLength(50)
                         .IsUnicode(true)
