@@ -7,9 +7,10 @@ using Newtonsoft.Json;
 
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 namespace Hotel.Client.Services
 {
-    public class PaymentService:IPaymentService
+    public class PaymentService : IPaymentService
     {
         public List<Payment?> Payments { get; set; } = new List<Payment>();
      
@@ -43,11 +44,18 @@ namespace Hotel.Client.Services
             }
         }
 
-        public async Task GetPayments()
+        public async Task<List<Payment>> GetPayments()
         {
-            var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get", options);
             if (result is not null)
                 Payments = result;
+            return Payments;
         }
 
         public async Task CreatePayment(Payment Payment)

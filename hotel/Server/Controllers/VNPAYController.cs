@@ -51,7 +51,7 @@ namespace Hotel.Server.Controllers
             await _hubContext.Clients.All.SendAsync("BroadcastMessage", response);
 
             //return Ok(response);
-            return Redirect("/payment");
+            return Redirect("/");
             //return true;
         }
     }

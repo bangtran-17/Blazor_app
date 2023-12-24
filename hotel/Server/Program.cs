@@ -15,6 +15,8 @@ using Hotel.Server.Services.VNPAY;
 using Hotel.Server.SignalR;
 using Microsoft.AspNetCore.ResponseCompression;
 using Hotel.Server.Hubs;
+using System.Text.Json.Serialization;
+using Hotel.Server.Services.Rooms;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,12 +46,21 @@ builder.Services.AddResponseCompression(opts =>
 });
 //builder.Services.AddSignalRCore();
 
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+});
+
 // Employee3
 builder.Services.AddHttpClient<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 //RoomType
 builder.Services.AddScoped<IRoomTypeService, RoomtypeService>();
+
+//Room
+builder.Services.AddHttpClient<IRoomService, RoomService>();
+builder.Services.AddScoped<IRoomService, RoomService>();
 
 //Department
 builder.Services.AddHttpClient<IDepartmentService, DepartmentService>();

@@ -6,7 +6,7 @@ namespace Hotel.Client.Services
     public interface IEmployeeService
     {
         List<Employee> Employees { get; set; }
-        Task GetEmployees();
+        Task<List<Employee>> GetEmployees();
         Task<Employee?> GetEmployeeById(int id);
         Task<List<Employee?>> SearchEmployees(string searchText);
         Task CreateEmployee(Employee Employee);

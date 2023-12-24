@@ -6,7 +6,7 @@ namespace Hotel.Client.Services
 	public interface IGuestService
 	{
 		List<Guest> Guests { get; set; }
-		Task GetGuests();
+		Task<List<Guest>> GetGuests();
 		Task<Guest?> GetGuestById(int id);
         Task<List<Guest?>> SearchGuests(string searchText);
         Task CreateGuest(Guest Guest);

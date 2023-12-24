@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Components;
 using System.Net;
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace Hotel.Client.Services
 {
@@ -39,21 +41,34 @@ namespace Hotel.Client.Services
             return null;
         }
 
-        public async Task GetDepartments()
+        public async Task<List<Department>> GetDepartments()
         {
-            var result = await _http.GetFromJsonAsync<List<Department>>("api/Department");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetFromJsonAsync<List<Department>>("api/Department", options);
             if (result is not null)
             {
                 Departments = result;
             }
+            return Departments;
         }
 
         public async Task<List<Department?>> SearchDepartments(string searchText)
         {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
             var result = await _http.GetAsync($"api/Department/search/{searchText}");
             if (result.StatusCode == HttpStatusCode.OK)
             {
-                return await result.Content.ReadFromJsonAsync<List<Department?>>();
+                return await result.Content.ReadFromJsonAsync<List<Department?>>(options);
             }
             return null;
         }
