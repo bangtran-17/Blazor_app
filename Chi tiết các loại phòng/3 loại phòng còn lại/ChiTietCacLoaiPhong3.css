@@ -1,0 +1,516 @@
+.header-logged-in1,
+.image-148-icon1 {
+  position: absolute;
+  left: 0;
+  width: 1500px;
+}
+.image-148-icon1 {
+  top: 101px;
+  height: 509px;
+  object-fit: cover;
+}
+.header-logged-in1 {
+  top: 0;
+  background-color: var(--background);
+  box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  height: 101px;
+}
+.ch-logo-vng-13,
+.logo-ko-ch-k-nn-11 {
+  position: absolute;
+  top: 16px;
+  left: 139px;
+  width: 201px;
+  height: 54px;
+  object-fit: cover;
+}
+.logo-ko-ch-k-nn-11 {
+  top: 0;
+  left: 0;
+  width: 132px;
+  height: 83px;
+}
+.ch-logo-vng-1-parent1 {
+  position: absolute;
+  top: 11px;
+  left: 580px;
+  width: 340px;
+  height: 83px;
+  cursor: pointer;
+}
+.profiletab-item {
+  position: absolute;
+  top: 7px;
+  left: 193px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+.qun-l-trng1,
+.xin-cho-hong1 {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-size: var(--text-sm-medium-size);
+  font-family: var(--font-be-vietnam-pro);
+  color: var(--black);
+  text-align: right;
+}
+.qun-l-trng1 {
+  top: 25px;
+  left: 77px;
+  font-size: var(--montserrat-medium-12-size);
+  letter-spacing: 0.02em;
+  font-family: var(--font-be-vietnam);
+  color: var(--color-goldenrod);
+}
+.plant-icon1 {
+  position: absolute;
+  top: 28px;
+  left: 170px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.profiletab1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-white1);
+  position: absolute;
+  top: 26px;
+  left: 1243px;
+  border-radius: var(--br-6xl);
+  box-shadow: 0 4px 4px rgba(218, 218, 218, 0.25);
+  width: 235px;
+  height: 50px;
+}
+.frame19,
+.frame20 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1500px;
+}
+.frame20 {
+  height: 101px;
+  overflow: hidden;
+}
+.frame19 {
+  height: 610px;
+}
+.header1 {
+  align-self: stretch;
+}
+.div7,
+.top1 {
+  display: flex;
+  flex-direction: column;
+}
+.top1 {
+  width: 750px;
+  height: 84px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.div7 {
+  position: absolute;
+  top: 31px;
+  left: calc(50% - 380.5px);
+  align-items: center;
+  justify-content: flex-start;
+}
+.ni-s-thoi1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.cho-d-bn1 {
+  margin: 0;
+}
+.cho-d-bn-container3 {
+  width: 100%;
+}
+.cho-d-bn-container2,
+.left2 {
+  display: flex;
+  align-items: center;
+}
+.cho-d-bn-container2 {
+  position: relative;
+  line-height: 20px;
+  width: 747px;
+  flex-shrink: 0;
+}
+.left2 {
+  width: 746px;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: justify;
+  font-size: var(--text-sm-medium-size);
+  color: var(--black);
+  font-family: var(--text-sm-medium);
+}
+.divider2 {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid var(--gray-200);
+  box-sizing: border-box;
+  height: 1px;
+}
+.title2 {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  width: 759px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.frame23 {
+  top: 0;
+  left: 0;
+  width: 804px;
+}
+.frame21,
+.frame22,
+.frame23 {
+  position: absolute;
+  height: 188px;
+  overflow: hidden;
+}
+.frame22 {
+  top: 0;
+  left: -14px;
+  width: 869px;
+}
+.frame21 {
+  top: 663px;
+  left: calc(50% - 344px);
+  width: 809px;
+}
+.frame18 {
+  position: relative;
+  width: 1500px;
+  height: 851px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cc-tin-nghi1,
+.tri-nghim-quyn1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cc-tin-nghi1 {
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 923px;
+}
+.tri-nghim-quyn1 {
+  line-height: 20px;
+  width: 824px;
+  flex-shrink: 0;
+}
+.left3,
+.title3 {
+  display: flex;
+  justify-content: flex-start;
+}
+.left3 {
+  width: 746px;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--text-sm-medium-size);
+  color: var(--black);
+  font-family: var(--text-sm-medium);
+}
+.title3 {
+  position: absolute;
+  top: 0;
+  left: 421px;
+  width: 797px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.frame25 {
+  position: absolute;
+  top: 694px;
+  left: -99px;
+  width: 1336px;
+  height: 88px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--text-2xl-medium-size);
+}
+.frame-child5 {
+  border-radius: var(--br-xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.frame-inner6,
+.frame-parent2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-parent2 {
+  width: 824px;
+  height: 404px;
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.frame-inner6 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 351px);
+  flex-direction: column;
+}
+.frame27 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1380px;
+  height: 420px;
+  overflow: hidden;
+}
+.imperial-club-room {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+}
+.khi-bn-t {
+  position: relative;
+  font-size: var(--text-base-regular-size);
+  line-height: 128.57%;
+  color: var(--black);
+  display: inline-block;
+  width: 411px;
+}
+.button5 {
+  position: relative;
+  font-size: var(--text-sm-medium-size);
+  font-weight: 500;
+  font-family: var(--font-be-vietnam-pro);
+  color: var(--blackish-green);
+  text-align: left;
+}
+.style-layer2 {
+  align-self: stretch;
+  border-radius: var(--br-9xs);
+  background-color: var(--primary);
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-base);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.button4,
+.imperial-club-room-parent {
+  width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.imperial-club-room-parent {
+  gap: var(--gap-3xs);
+}
+.frame-wrapper6 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.frame-inner7 {
+  position: absolute;
+  top: 0;
+  left: 443px;
+  width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button7 {
+  position: relative;
+  font-weight: 500;
+}
+.style-layer3 {
+  align-self: stretch;
+  border-radius: var(--br-9xs);
+  background-color: var(--primary);
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-base);
+  box-sizing: border-box;
+}
+.button6,
+.frame-parent3 {
+  width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button6 {
+  font-size: var(--text-sm-medium-size);
+}
+.frame-parent3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 175px;
+  gap: var(--gap-3xs);
+}
+.frame26,
+.frame28,
+.frame29,
+.frame30 {
+  position: absolute;
+  top: 0;
+  left: 875px;
+  width: 413px;
+  height: 206px;
+  overflow: hidden;
+}
+.frame26,
+.frame28,
+.frame29 {
+  top: 15px;
+  left: 113px;
+  width: 1288px;
+  height: 224px;
+}
+.frame26,
+.frame28 {
+  top: 420px;
+  left: -214px;
+  width: 1410px;
+  height: 239px;
+}
+.frame26 {
+  top: 0;
+  left: 27px;
+  width: 1414px;
+  height: 659px;
+  color: var(--blackish-green);
+}
+.tp-luyn-hng1 {
+  position: relative;
+  font-size: var(--text-base-regular-size);
+  line-height: 128.57%;
+  display: inline-block;
+  width: 411px;
+}
+.frame-inner8,
+.frame-inner9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-inner9 {
+  left: 432px;
+}
+.frame32,
+.frame33,
+.frame34 {
+  position: absolute;
+  top: 0;
+  left: 443px;
+  width: 845px;
+  height: 85px;
+  overflow: hidden;
+}
+.frame32,
+.frame33 {
+  left: 126px;
+  width: 1288px;
+}
+.frame32 {
+  top: 455px;
+  left: 0;
+  width: 1414px;
+}
+.frame-inner11,
+.frame-parent4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-parent4 {
+  flex-shrink: 0;
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.frame-inner11 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 583px);
+  flex-direction: column;
+}
+.frame31,
+.frame35 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1418px;
+  height: 420px;
+  overflow: hidden;
+}
+.frame31 {
+  top: 807px;
+  width: 1500px;
+  height: 540px;
+  color: var(--black);
+}
+.frame24 {
+  position: relative;
+  width: 1500px;
+  height: 1388px;
+  text-align: left;
+  font-size: var(--font-size-7xl);
+}
+.chi-tiet-cac-loai-phong-3 {
+  position: relative;
+  background-color: var(--color-white1);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-32xl);
+  text-align: center;
+  font-size: var(--text-2xl-medium-size);
+  color: var(--color-saddlebrown);
+  font-family: var(--font-be-vietnam-pro);
+}
