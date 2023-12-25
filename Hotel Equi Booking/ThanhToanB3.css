@@ -43,7 +43,7 @@
 }
 .navigation-header2 {
   top: 2px;
-  background-color: var(--color-oldlace);
+  background-color: var(--background);
   height: 80px;
 }
 .frame23 {
@@ -73,6 +73,7 @@
   left: 61px;
   width: 290px;
   height: 60px;
+  object-fit: cover;
 }
 .t-phng-thnh {
   position: absolute;
@@ -141,30 +142,29 @@
   height: 502px;
   overflow: hidden;
 }
-.frame25,
-.t-phng-b3 {
-  position: relative;
-  overflow: hidden;
-}
 .frame25 {
+  position: relative;
   width: 412px;
   height: 696px;
+  overflow: hidden;
   flex-shrink: 0;
   margin-top: -606px;
   font-size: var(--font-size-17xl);
   color: var(--color-darkslateblue);
 }
-.t-phng-b3 {
+.thanh-ton-b3-xong-kanh {
+  position: relative;
   background-color: var(--color-white1);
   width: 100%;
   height: 900px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
   font-size: var(--font-size-lg);
-  color: var(--color-darkgray-100);
+  color: var(--color-darkgray-200);
   font-family: var(--font-be-vietnam-pro);
 }
 

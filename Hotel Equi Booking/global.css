@@ -34,6 +34,7 @@ body {
   --font-size-36xl: 55px;
   --font-size-8xl: 27px;
   --font-size-lg: 18px;
+  --font-size-17xl: 36px;
   --text-sm-medium-size: 14px;
   --font-size-3xs: 10px;
   --font-size-3xl: 22px;
@@ -44,6 +45,7 @@ body {
   --color-white1: #fff;
   --background: #fff6ea;
   --black: #000;
+  --color-gray-300: #898989;
   --color-gray-400: #79747e;
   --color-text: #252829;
   --color-gray-500: #1c1b1f;
@@ -55,10 +57,15 @@ body {
   --color-antiquewhite: #ffedd8;
   --primary: #e5d3c2;
   --color-sandybrown: #d8ad5d;
-  --status-error: #da1e28;
+  --color-darkgray-100: #b3b3b3;
+  --color-darkgray-200: #b0b0b0;
   --color-darkgray: #9f9f9f;
-  --gray-600: #4b5563;
+  --color-whitesmoke: #f5f6f8;
+  --color-darkslateblue: #152c5b;
   --gray-200: #e5e7eb;
+  --color-gainsboro-100: #e5e5e5;
+  --status-error: #da1e28;
+  --gray-600: #4b5563;
   --gray-500: #6b7280;
   --gray-300: #d1d5db;
   --color-goldenrod: #ebc351;
@@ -69,6 +76,7 @@ body {
   --gap-xs: 12px;
   --gap-mini: 15px;
   --gap-5xs: 8px;
+  --gap-31xl: 50px;
   --gap-5xl: 24px;
   --gap-base: 16px;
   --gap-13xl: 32px;
