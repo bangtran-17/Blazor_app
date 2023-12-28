@@ -179,6 +179,7 @@
 
                     var state = await auth.GetAuthenticationStateAsync();
                     user = state.User.Identity.Name;
+
                     await RandomRoom();
 
                     // roomtype = await hotelRoomService.GetRoomtypeById(Id.Value);

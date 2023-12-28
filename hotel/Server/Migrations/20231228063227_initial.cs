@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Hotel.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -128,11 +128,12 @@ namespace Hotel.Server.Migrations
                 {
                     RT_ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RT_DES = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RT_NAME = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    RT_DES = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValueSql: "(N'')"),
+                    RtDes1 = table.Column<string>(type: "nvarchar(max)", nullable: true, defaultValueSql: "(N'')"),
+                    RT_NAME = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValueSql: "(N'')"),
                     RT_Cost = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    RT_SmokeFriendly = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    RT_SmokeFriendly = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true, defaultValueSql: "(N'')"),
+                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValueSql: "(N'')"),
                     R_Area = table.Column<decimal>(type: "decimal(18,2)", nullable: true)
                 },
                 constraints: table =>
@@ -227,15 +228,15 @@ namespace Hotel.Server.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AspNetUserRole", x => new { x.UserId, x.RoleId });
+                    table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
                     table.ForeignKey(
-                        name: "FK_AspNetUserRole_AspNetRoles_RoleId",
+                        name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_AspNetUserRole_AspNetUsers_UserId",
+                        name: "FK_AspNetUserRoles_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -316,6 +317,45 @@ namespace Hotel.Server.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RoomImg",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    RoomId = table.Column<int>(type: "int", nullable: true),
+                    ImgURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK__RoomImg__3214EC076EFE77A3", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK__RoomImg__RoomId__160F4887",
+                        column: x => x.RoomId,
+                        principalTable: "ROOMTYPE",
+                        principalColumn: "RT_ID");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SALARY",
+                columns: table => new
+                {
+                    Salary_ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    E_ID = table.Column<int>(type: "int", nullable: true),
+                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Salary_Date = table.Column<DateTime>(type: "date", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK__SALARY__D64E0E24600A4D58", x => x.Salary_ID);
+                    table.ForeignKey(
+                        name: "FK__SALARY__E_ID__04E4BC85",
+                        column: x => x.E_ID,
+                        principalTable: "EMPLOYEE",
+                        principalColumn: "E_ID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "BOOKING",
                 columns: table => new
                 {
@@ -330,7 +370,10 @@ namespace Hotel.Server.Migrations
                     E_ID = table.Column<int>(type: "int", nullable: true),
                     G_ID = table.Column<int>(type: "int", nullable: true),
                     D_ID = table.Column<int>(type: "int", nullable: true),
-                    B_Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
+                    B_Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Rid = table.Column<int>(type: "int", nullable: true),
+                    B_Cost = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    StripeSessionId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -355,27 +398,11 @@ namespace Hotel.Server.Migrations
                         column: x => x.H_ID,
                         principalTable: "HOTEL",
                         principalColumn: "H_ID");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SALARY",
-                columns: table => new
-                {
-                    Salary_ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    E_ID = table.Column<int>(type: "int", nullable: true),
-                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    Salary_Date = table.Column<DateTime>(type: "date", nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__SALARY__D64E0E24600A4D58", x => x.Salary_ID);
                     table.ForeignKey(
-                        name: "FK__SALARY__E_ID__04E4BC85",
-                        column: x => x.E_ID,
-                        principalTable: "EMPLOYEE",
-                        principalColumn: "E_ID");
+                        name: "FK__BOOKING__Rid__01142BA1",
+                        column: x => x.Rid,
+                        principalTable: "ROOM",
+                        principalColumn: "R_ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -415,6 +442,7 @@ namespace Hotel.Server.Migrations
                     P_Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     P_Type = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     P_DatCoc = table.Column<DateTime>(type: "date", nullable: true),
+                    PaidDate = table.Column<DateTime>(type: "datetime", nullable: true),
                     P_Amout = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     B_ID = table.Column<int>(type: "int", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
@@ -427,28 +455,6 @@ namespace Hotel.Server.Migrations
                         column: x => x.B_ID,
                         principalTable: "BOOKING",
                         principalColumn: "B_ID");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ROOMBOOKED",
-                columns: table => new
-                {
-                    RId = table.Column<int>(type: "int", nullable: false),
-                    BId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__ROOMBOOK__AAA740774ECA924A", x => new { x.RId, x.BId });
-                    table.ForeignKey(
-                        name: "FK__ROOMBOOKED__B_ID__797309D9",
-                        column: x => x.BId,
-                        principalTable: "BOOKING",
-                        principalColumn: "B_ID");
-                    table.ForeignKey(
-                        name: "FK__ROOMBOOKED__R_ID__787EE5A0",
-                        column: x => x.RId,
-                        principalTable: "ROOM",
-                        principalColumn: "R_ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -534,6 +540,11 @@ namespace Hotel.Server.Migrations
                 column: "H_ID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BOOKING_Rid",
+                table: "BOOKING",
+                column: "Rid");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_EMPLOYEE_DE_ID",
                 table: "EMPLOYEE",
                 column: "DE_ID");
@@ -564,9 +575,9 @@ namespace Hotel.Server.Migrations
                 column: "RT_ID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ROOMBOOKED_BId",
-                table: "ROOMBOOKED",
-                column: "BId");
+                name: "IX_RoomImg_RoomId",
+                table: "RoomImg",
+                column: "RoomId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SALARY_E_ID",
@@ -604,7 +615,7 @@ namespace Hotel.Server.Migrations
                 name: "PAYMENT");
 
             migrationBuilder.DropTable(
-                name: "ROOMBOOKED");
+                name: "RoomImg");
 
             migrationBuilder.DropTable(
                 name: "SALARY");
@@ -619,16 +630,10 @@ namespace Hotel.Server.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "ROOM");
-
-            migrationBuilder.DropTable(
                 name: "BOOKING");
 
             migrationBuilder.DropTable(
                 name: "SERVICES");
-
-            migrationBuilder.DropTable(
-                name: "ROOMTYPE");
 
             migrationBuilder.DropTable(
                 name: "DISCOUNT");
@@ -640,10 +645,16 @@ namespace Hotel.Server.Migrations
                 name: "GUEST");
 
             migrationBuilder.DropTable(
+                name: "ROOM");
+
+            migrationBuilder.DropTable(
                 name: "DEPARTMENT");
 
             migrationBuilder.DropTable(
                 name: "HOTEL");
+
+            migrationBuilder.DropTable(
+                name: "ROOMTYPE");
         }
     }
 }

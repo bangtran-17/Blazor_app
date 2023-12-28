@@ -168,7 +168,7 @@ app.UseEndpoints(endpoints =>
 using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    var roles = new[] { "admin","employee", "member" };
+    var roles = new[] { "admin","employee", "guest" };
     foreach(var role in roles)
     {
         if(!await roleManager.RoleExistsAsync(role))

@@ -216,14 +216,14 @@
       "netstandard.dll": "sha256-urq+e2ZQXxmOWMRxTR92529HnUVu6+kyVnfF6SoLad8=",
       "System.Private.CoreLib.dll": "sha256-ixnF\/wVKLHZM1N0lfJufpZ41EC2LvvyiSqdW43h3Xew=",
       "Hotel.Shared.dll": "sha256-2aesHhj7uE\/SWPRJfpEcIAEiPglWwgXsbKJh\/Ioav7E=",
-      "Hotel.Client.dll": "sha256-GJBfq+eFlXf\/ivO\/kA5y3E5AAhh0MqxgqITjjoGPAS8="
+      "Hotel.Client.dll": "sha256-2y4UYT5GxV73NWt04qwY8SB5EF\/ypefIZpLMlZ1eBVk="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "Hotel.Shared.pdb": "sha256-x0hYJzPoFUPQPnUQt0ailQlf\/7EzNG2KWJUgppAkHA0=",
-      "Hotel.Client.pdb": "sha256-cA6Qp1C+EMsmfrnEl+qbBYJSrD4u3ZLfw9xyoFV2wCg="
+      "Hotel.Client.pdb": "sha256-MTFGQ4ohYKVfI8Ufb\/DWXvGhI9UuNvHHph6qYvmdgyU="
     },
     "runtime": {
       "dotnet.7.0.12.qv6dtk3h05.js": "sha256-cPJgWy8SjMaYFeimGkYy23ls+rDZVmoC\/eMoHpqRc+4=",
