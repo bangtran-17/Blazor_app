@@ -1,0 +1,206 @@
+.cho-mng-ch-1,
+.frame2 {
+  position: absolute;
+  top: 0;
+  width: 897px;
+}
+.cho-mng-ch-1 {
+  left: calc(50% - 448.5px);
+  height: 162px;
+  object-fit: cover;
+}
+.frame2 {
+  left: 0;
+  height: 1036px;
+  overflow: hidden;
+}
+.frame3,
+.ng-k-admin-1 {
+  position: absolute;
+  width: 680px;
+}
+.ng-k-admin-1 {
+  top: 0;
+  left: calc(50% - 340px);
+  height: 166px;
+  object-fit: cover;
+}
+.frame3 {
+  top: 122px;
+  left: 105px;
+  height: 792px;
+  overflow: hidden;
+}
+.tn-ti-khon {
+  position: relative;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+.username-child {
+  border: 2px solid var(--dark-blue-1-8);
+  outline: 0;
+  background-color: var(--color-white1);
+  align-self: stretch;
+  border-radius: var(--br-61xl);
+  box-sizing: border-box;
+  height: 91px;
+}
+.username,
+.username-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.username {
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  width: 640px;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.username-item {
+  border: 2px solid var(--dark-blue-1-8);
+  outline: 0;
+  font-family: var(--font-be-vietnam-pro);
+  font-size: var(--text-2xl-medium-size);
+  background-color: var(--color-white1);
+  align-self: stretch;
+  border-radius: var(--br-61xl);
+  flex-direction: row;
+  padding: var(--padding-5xl) var(--padding-13xl);
+  color: #c8d3f9;
+}
+.username1 {
+  position: absolute;
+  top: 167px;
+  left: 0;
+  width: 640px;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.password,
+.password-child,
+.password1,
+.username1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.password-child {
+  border: 2px solid var(--dark-blue-1-8);
+  outline: 0;
+  background-color: var(--color-white1);
+  align-self: stretch;
+  border-radius: var(--br-61xl);
+  box-sizing: border-box;
+  height: 80px;
+  justify-content: space-between;
+  padding: var(--padding-5xl) var(--padding-13xl);
+}
+.password,
+.password1 {
+  position: absolute;
+  top: 487px;
+  left: 0;
+  width: 640px;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.password1 {
+  top: 326px;
+}
+.input-field {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 360px);
+  right: 0;
+  left: 0;
+  height: 299px;
+}
+.ng-k1 {
+  position: absolute;
+  top: 22.5px;
+  left: 244.5px;
+  font-size: var(--font-size-9xl);
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  font-family: var(--font-be-vietnam-pro);
+  color: var(--color-white1);
+  text-align: left;
+}
+.register,
+.sign-in {
+  position: absolute;
+  left: 0;
+  width: 640px;
+}
+.sign-in {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #8699da;
+  top: calc(50% + 280px);
+  border-radius: var(--br-61xl);
+  box-shadow: 0 4px 12px rgba(200, 211, 249, 0.6) inset,
+    4px 8px 12px rgba(78, 99, 141, 0.06);
+  height: 80px;
+  overflow: hidden;
+}
+.register {
+  top: 258px;
+  height: 720px;
+}
+.frame4 {
+  top: 29px;
+  left: 128px;
+  width: 640px;
+  height: 978px;
+}
+.frame,
+.frame-icon,
+.frame1,
+.frame4 {
+  position: absolute;
+  overflow: hidden;
+}
+.frame1 {
+  top: 445.5px;
+  left: 0;
+  width: 897px;
+  height: 1036px;
+}
+.frame,
+.frame-icon {
+  height: 1927px;
+}
+.frame-icon {
+  top: 0;
+  left: 883px;
+  width: 1121.2px;
+  object-fit: cover;
+}
+.frame {
+  top: -409px;
+  left: 505px;
+  width: 2004.2px;
+}
+.dang-ky-admin-child {
+  position: absolute;
+  top: -193px;
+  left: -546px;
+  width: 1121.2px;
+  height: 949.5px;
+  object-fit: cover;
+}
+.dang-ky-admin {
+  position: relative;
+  background-color: var(--color-white1);
+  width: 100%;
+  height: 1084px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-9xl);
+  color: var(--black-2-5);
+  font-family: var(--font-be-vietnam-pro);
+}
