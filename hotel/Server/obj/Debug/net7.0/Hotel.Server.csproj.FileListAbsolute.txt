@@ -605,3 +605,12 @@ D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\scopedcss\bu
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\Hotel.Server.csproj.CopyComplete
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\Hotel.Server.genruntimeconfig.cache
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\obj\Debug\net7.0\ref\Hotel.Server.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll

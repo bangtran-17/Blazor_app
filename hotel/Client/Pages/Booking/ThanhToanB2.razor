@@ -1,0 +1,274 @@
+﻿@page "/booking/roomdetail1"
+@page "/booking/roomdetail1/{Id:int}"
+
+
+
+@using Hotel.Shared.Models
+@using Hotel.Shared.CommonFiles
+@using Hotel.Client.ViewModel
+@using Hotel.Client.Utility
+@using Microsoft.AspNetCore.SignalR.Client
+@inject IHubClient HubClient
+@inject IJSRuntime JSRuntime
+@inject IVnPayService VnPayService
+@inject ILocalStorageService localStorage
+@inject IRoomtypeService hotelRoomService
+@inject IStripePaymentService stripePaymentService
+@inject IBookingService roomOrderDetailsService
+@inject IRoomService roomService
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider auth
+@inject IGuestService GuestService
+
+
+
+<body>
+    <canvas id="canvas2"></canvas>
+    <div class="thanh-ton-b2-xong-kanh">
+        <div class="frame15">
+            <div class="frame16">
+                <div class="navigation-header1">
+                    <div class="navigation-header-inner"></div>
+                </div>
+                <div class="ch-logo-vng-1-parent1">
+                    <img class="ch-logo-vng-13"
+                         alt=""
+                         src="./public/thanhtoan/ch-logo-vng-1@2x.png" />
+
+                    <img class="logo-ko-ch-k-n-13"
+                         alt=""
+                         src="./public/thanhtoan/logo-ko-ch-k-n-1@2x.png" />
+                </div>
+            </div>
+            <div class="frame17">
+                <div class="stepper1">
+                    <img class="stepper-item" alt="" src="./public/thanhtoan/vector-14@2x.png" />
+
+                    <img class="item-icon" alt="" src="./public/thanhtoan/item@2x.png" />
+
+                    <div class="item5">
+                        <div class="item-child3"></div>
+                        <div class="item-child4"></div>
+                        <div class="div9">2</div>
+                    </div>
+                    <div class="item6">
+                        <div class="item-child5"></div>
+                        <div class="item-child6"></div>
+                        <div class="div10">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frame18">
+            <div class="title1">
+                <div class="khch-hng-vui1">
+                    Khách hàng vui lòng thanh toán theo số tiền bên dưới !
+                </div>
+                <div class="thanh-ton">Thanh toán</div>
+            </div>
+            <div class="frame19">
+                <div class="frame20">
+                  
+                   
+                    <div class="tin-t-phng-container">
+                        <span>Tiền đặt phòng:</span>
+                        <span class="span"> @HotelBooking.orderDetails.BCost VNĐ</span>
+                    </div>
+                  
+                    <img class="frame-child1" alt="" src="./public/thanhtoan/vector-13@2x.png" />
+                    <button @onclick="() => Medthod(Vnpay)">
+                      
+                    <img class="image-128-icon"
+                         alt=""
+							 src="./public/thanhtoan/image-128@2x.png" />
+					</button>
+                    <button @onclick="() => Medthod(Stripe)">
+                    <img class="image-129-icon"
+                         alt=""
+                         src="./public/thanhtoan/image-129@2x.png" />
+                    </button>
+                    <div class="item7">
+                        <div class="vn-trn-1-container1">
+                            <span class="span">@roomtype.RtCost VNĐ</span>
+                            <span class="trn1"> trên </span>
+                            <span class="span">1 đêm</span>
+                        </div>
+                        <div class="phng-swimsuite-group">
+                            <div class="phng-swimsuite1">Phòng @roomtype.RtName</div>
+                            <div class="signature-suites3">Signature Suites</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frame21">
+            <button class="btn-secondary1" id="btnSecondary" >
+                <div class="bg2"></div>
+                <div class="cancel1">Quay lại</div>
+            </button>
+			<button class="btn-primary1" id="btnPrimary" @onclick="(() => MakePayment())">
+                <div class="bg3"></div>
+                <div class="continue-to-book1" >Tiếp tục</div>
+            </button>
+        </div>
+    </div>
+
+  
+    <script src="script.js"></script>
+</body>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    HotelRoomBookingViewModel HotelBooking = new HotelRoomBookingViewModel();
+    HomeVM homeVM { get; set; } = new HomeVM();
+    string? user;
+    RoomImg? roomimg { get; set; } = new RoomImg();
+    Roomtype roomtype { get; set; } = new Roomtype();
+    Guest? guest { get; set; } = new Guest();
+    List<Room> roomSet { get; set; } = new List<Room>();
+    Room roomChosen { get; set; } = new Room();
+    Hotel1? hotel = null;
+    private decimal? NoOfNights { get; set; } = 1;
+    Feedback feedback { get; set; } = new Feedback();
+    string Vnpay = "vnpay";
+    string Stripe = "stripe";
+    string payMedthod;
+    private HubConnection? hubConnection;
+
+    Payment payment = new Payment()
+        {
+            // Require
+            PAmout = 20000,
+            BId = 1
+        };
+    PaymentResponseModel? PaymentResponse;
+
+    async void MakePayment()
+    {
+        if (payMedthod == "vnpay")
+        {
+            payment.PAmout = HotelBooking.orderDetails.BCost/100;
+           
+            string paymentUrl = await VnPayService.CreatePaymentUrl(payment);
+
+            // Sử dụng JavaScript để mở URL trong một tab mới
+            await JSRuntime.InvokeVoidAsync("open", paymentUrl, "_blank");
+        }
+        else
+        {
+            var paymentDTO = new StripePaymentDTO()
+                {
+                    Cost = Convert.ToInt32(HotelBooking.orderDetails.BCost / 100),
+                    ProductName = roomtype.RtName,
+                    ReturnURL = "/booking/roomdetail/" + Id
+                };
+            var result = await stripePaymentService.CheckOutCompleted(paymentDTO);
+            NavigationManager.NavigateTo(result);
+        }
+    }
+    // ---------------------------------------
+    private string paymentStatus = "Waiting for payment...";
+
+    
+    protected override async Task OnInitializedAsync()
+    {
+        
+            await Task.Delay(5000);
+ hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/paymentHub"))
+            .Build();
+        // hubConnection.
+        hubConnection.On<PaymentResponseModel>("BroadcastMessage", (PaymentResponseModel) =>
+        {
+            PaymentResponse = PaymentResponseModel;
+            if (PaymentResponse.VnPayResponseCode == "00")
+            {
+
+                NavigationManager.NavigateTo("/payment-success");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/payment-fail");
+            }
+            // NavigationManager.NavigateTo("/payment");
+            InvokeAsync(StateHasChanged);
+        });
+
+        await hubConnection.StartAsync();
+
+            if (Id != null)
+            {
+                //check if the local storage is not empty (in reality it never will be)
+                if (await localStorage.GetItemAsync<Booking>(SD.Local_RoomOrderDetails) != null)
+                {
+                    HotelBooking.orderDetails = await localStorage.GetItemAsync<Booking>(SD.Local_RoomOrderDetails);
+                }
+                else
+                {
+                    // await jsRuntime.ToastrError("Please select a check in date");
+                }
+            }
+            await localStorage.SetItemAsync(SD.Local_RoomOrderDetails, HotelBooking.orderDetails);
+        
+        
+
+    }
+
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            
+            var resultRT = await hotelRoomService.GetRoomtypeById((int)Id);
+
+            if (resultRT is not null)
+            {
+                // roomimg = result;
+                roomtype = resultRT;
+            }
+            else
+                NavigationManager.NavigateTo("/booking");
+        }
+    }
+
+    private async Task Medthod(string medthod)
+    {
+        if (medthod == "vnpay")
+        {
+            payMedthod = "vnpay";
+        }
+        else
+        {
+            payMedthod = "stripe";
+        }
+    }
+ 
+
+
+  
+    // private async Task<bool> HandleValidation()
+    // {
+    //     if (string.IsNullOrEmpty(HotelBooking.guest.GFirstName))
+    //     {
+    //         await jsRuntime.ToastrError("Name cannot be empty");
+    //         return false;
+    //     }
+    //     if (string.IsNullOrEmpty(HotelBooking.guest.GSdt))
+    //     {
+    //         await jsRuntime.ToastrError("Phone cannot be empty");
+    //         return false;
+    //     }
+
+    //     if (string.IsNullOrEmpty(HotelBooking.guest.GEmail))
+    //     {
+    //         await jsRuntime.ToastrError("Email cannot be empty");
+    //         return false;
+    //     }
+    //     return true;
+
+    // }
+}  

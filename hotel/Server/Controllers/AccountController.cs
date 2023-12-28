@@ -22,7 +22,7 @@ namespace Hotel.Server.Controllers
             var newUser = new IdentityUser { UserName = model.UserName, Email = model.Email };
                 
             var result = await _userManager.CreateAsync(newUser, model.Password!);
-
+            await _userManager.AddToRoleAsync(newUser, "admin");
             if (!result.Succeeded)
             {
                 var errors = result.Errors.Select(x => x.Description);

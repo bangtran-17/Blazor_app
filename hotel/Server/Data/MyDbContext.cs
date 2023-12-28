@@ -93,13 +93,13 @@ public partial class MyDbContext : DbContext
 
             entity.HasMany(d => d.Roles).WithMany(p => p.Users)
                 .UsingEntity<Dictionary<string, object>>(
-                    "AspNetUserRole",
+                    "AspNetUserRoles",
                     r => r.HasOne<AspNetRole>().WithMany().HasForeignKey("RoleId"),
                     l => l.HasOne<AspNetUser>().WithMany().HasForeignKey("UserId"),
                     j =>
                     {
                         j.HasKey("UserId", "RoleId");
-                        j.ToTable("AspNetUserRole");
+                        j.ToTable("AspNetUserRoles");
                         j.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
                     });
         });

@@ -16,90 +16,138 @@
 @inject NavigationManager NavigationManager
 @inject AuthenticationStateProvider auth
 @inject IGuestService GuestService
+<body>
+    <canvas id="canvas2"></canvas>
+    <div class="thanh-ton-b1-xong-kanh">
+        <EditForm Model="HotelBooking" style="width:1520px" OnValidSubmit="HandleCheckout">
+        <div class="frame">
+            <div class="frame1">
+                <div class="navigation-header">
+                    <div class="navigation-header-child"></div>
+                    <div class="navigation-header-item"></div>
+                    <div class="ch-logo-vng-1-container">
+                        <img class="ch-logo-vng-12"
+                             alt=""
+                             src="./public/ch-logo-vng-1@2x.png" />
 
-
-<div class="mt-4 mx-4 px-0 px-md-5 mx-md-5">
-    <div class="row p-2 my-3 " style="border-radius:20px; ">
-        <div class="col-12 col-lg-7 p-4">
-            <div class="row px-2 text-primary border-bottom">
-                <div class="col-8 py-1"><p style="font-size:x-large;margin:0px;">Selected Room</p></div>
-                <div class="col-4 p-0 float-right">
-                    <a href="booking" class="btn btn-secondary btn-block" style="margin-left: 75px !important;">Return to Room Selection</a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div id="" class="carousel slide mb-4 m-md-3 m-0 pt-3 pt-md-0" data-ride="carousel">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        </div>
+                        <img class="logo-ko-ch-k-n-12"
+                             alt=""
+                             src="./public/logo-ko-ch-k-n-1@2x.png" />
                     </div>
                 </div>
-
             </div>
-            <div class="row p-2">
-                <div class="col-12">
-                    <p class="card-title" style="font-size:xx-large;">@roomtype.RtName</p>
-                    <p class="card-text" style="font-size:large">
-                        @((MarkupString)@roomtype.RtDes)
-                    </p>
-                </div>
+            <div class="frame2">
+                <div class="stepper">
+                    <img class="stepper-child" alt="" src="./public/vector-14@2x.png" />
 
+                    <div class="item1">
+                        <div class="item-child"></div>
+                        <div class="item-item"></div>
+                        <div class="div6">1</div>
+                    </div>
+                    <div class="item2">
+                        <div class="item-inner"></div>
+                        <div class="ellipse-div"></div>
+                        <div class="div7">2</div>
+                    </div>
+                    <div class="item3">
+                        <div class="item-inner"></div>
+                        <div class="ellipse-div"></div>
+                        <div class="div7">3</div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="col-12 col-lg-5 p-4 2 mt-4 mt-md-0">
-            <div class="row  text-primary border-bottom">
-                <div class="col-7 "><p style="font-size:x-large;margin:0px;">Room Information</p></div>
+        <div class="frame3" style="width:auto">
+            <div class="title">
+                <div class="frame4">
+                    <div class="khch-hng-vui">
+                        Khách hàng vui lòng điền đầy đủ thông tin
+                    </div>
+                </div>
+                <div class="thng-tin-t">THÔNG TIN ĐẶT PHÒNG</div>
             </div>
-            <div>
-                <h4 class="font-weight-bold mt-2 ml-2 text-black">
-                    @roomtype.RtName
-                </h4>
+            <div class="frame5">
+                <div class="frame6">
+                    <div class="frame7">
+                        <div class="item4">
+                            <div class="vn-trn-1-container">
+                                <span class="vn">@roomtype.RtCost VNĐ</span>
+                                <span class="trn"> trên </span>
+                                <span class="vn">1 đêm</span>
+                            </div>
+                            <div class="phng-swimsuite-parent">
+                                <div class="phng-swimsuite">Phòng @roomtype.RtName</div>
+                                <div class="frame8">
+                                    <div class="signature-suites2">Signature Suites</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frame9">
+                        <div class="frame10">
+                            <div class="frame11">
+                                <div class="input1">
+                                    <div class="h">Họ</div>
+                                    <InputText @bind-Value="HotelBooking.guest.GFirstName" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
 
-                <span class="ml-2 pt-1">Villa Size : @roomtype.RArea sqft</span><br />
+                                </div>
+                                <div class="input2">
+                                    <div class="h">Tên</div>
+                                    <InputText @bind-Value="HotelBooking.guest.GLastName" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
 
+                                </div>
+                                <div class="input3">
+                                    <div class="h">Email</div>
+                                    <InputText @bind-Value="HotelBooking.guest.GEmail" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
 
-                <span class="ml-2">Cost for @HotelBooking.homeVM.NoOfNights nights stay: $@HotelBooking.homeVM.Cost</span>
+                                </div>
+                                <div class="input4">
+                                    <div class="h">Số điện thoại</div>
+                                    <InputText @bind-Value="HotelBooking.guest.GSdt" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
 
+                                </div>
+                              
+                                <div class="input7">
+                                    <div class="h">Ngày Check-in</div>
+                                   
+                                    <InputDate TValue="DateTime?" @bind-Value="HotelBooking.homeVM.StartDate" disabled="disabled" class="input-child" />
 
+                                </div>
+                                <div class="input8">
+                                    <div class="h">Ngày Check-out</div>
+                                    <InputDate TValue="DateTime?" @bind-Value="HotelBooking.homeVM.EndDate" disabled="disabled" class="input-child" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <img class="frame-inner" alt="" src="./public/vector-13@2x.png" />
+                    </div>
+                </div>
             </div>
-            <EditForm Model="HotelBooking" class="container" OnValidSubmit="HandleCheckout">
-
-                <div class="row px-2 text-success border-bottom"></div>
-                <div class="form-group pt-2">
-                    <label class=" ">FirstName</label>
-                    <InputText @bind-Value="HotelBooking.guest.GFirstName" type="text" class="form-control" style="border: 1px solid rgb(154, 169, 222);" />
-                    <label class=" ">LastName</label>
-                    <InputText @bind-Value="HotelBooking.guest.GLastName" type="text" class="form-control" style="border: 1px solid rgb(154, 169, 222);" />
-                </div>
-                <div class="form-group pt-2">
-                    <label class=" ">Phone</label>
-                    <InputText @bind-Value="HotelBooking.guest.GSdt" type="text" class="form-control" style="border: 1px solid rgb(154, 169, 222);" />
-                </div>
-                <div class="form-group">
-                    <label class=" ">Email</label>
-                    <InputText @bind-Value="HotelBooking.guest.GEmail" type="text" class="form-control" style="border: 1px solid rgb(154, 169, 222);" />
-                </div>
-                <div class="form-group">
-                    <label class=" ">Check in Date</label>
-                    <InputDate TValue="DateTime?" @bind-Value="HotelBooking.homeVM.StartDate" disabled class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label class=" ">Check out Date</label>
-                    <InputDate TValue="DateTime?" @bind-Value="HotelBooking.homeVM.EndDate" disabled="disabled" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label class=" ">Length of stay</label> <br />
-                    <span>@HotelBooking.orderDetails.BAmount nights</span>
-                </div>
-                <div class="form-group mt-1">
-                    <button type="submit" class="btn btn-success form-control">Checkout Now</button>
-                </div>
-            </EditForm>
         </div>
+        <div class="frame12">
+            <div class="frame13">
+                <button class="btn-secondary">
+                    <div class="bg"></div>
+                    <div class="cancel">Hủy</div>
+                </button>
+            </div>
+            <div class="frame14">
+                <button class="btn-secondary" id="btnPrimary" type="submit">
+                    <div class="bg1"></div>
+                    <div class="continue-to-book">Tiếp tục</div>
+                </button>
+            </div>
+        </div>
+        </EditForm>
     </div>
-</div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+
 
 @code {
     [Parameter]
@@ -133,7 +181,7 @@
                     user = state.User.Identity.Name;
                     await RandomRoom();
 
-                    roomtype = await hotelRoomService.GetRoomtypeById(Id.Value);
+                    // roomtype = await hotelRoomService.GetRoomtypeById(Id.Value);
 
 
                     HotelBooking.orderDetails.BStayDuration = (int)HotelBooking.homeVM.NoOfNights;
@@ -142,9 +190,10 @@
                     HotelBooking.orderDetails.BAmount = HotelBooking.homeVM.NoOfNights;
                     HotelBooking.orderDetails.BCost = HotelBooking.homeVM.Cost;
                     HotelBooking.orderDetails.Rid = roomChosen.RId;
+
                     HotelBooking.orderDetails.BDate = DateTime.Now;
                     HotelBooking.orderDetails.StripeSessionId = "1";
-                    await roomOrderDetailsService.CreateBooking(HotelBooking.orderDetails);
+                    
                 }
 
 
@@ -153,7 +202,7 @@
                     // await jsRuntime.ToastrError("Please select a check in date");
                 }
             }
-            await localStorage.SetItemAsync(SD.Local_RoomOrderDetails, HotelBooking.orderDetails);
+          
         }
         catch (Exception e)
         {
@@ -196,20 +245,13 @@
 
             //Accesing the stripePaymentService
             //await success
-            var paymentDTO = new StripePaymentDTO()
-                {
-                    Cost = Convert.ToInt32(HotelBooking.homeVM.Cost / 100),
-                    ProductName = roomtype.RtName,
-                    ReturnURL = "/booking/roomdetail/" + Id
-                };
-
-            // await GuestService.CreateGuest(HotelBooking.guest);
-
-
-
-            var result = await stripePaymentService.CheckOutCompleted(paymentDTO);
-
-            NavigationManager.NavigateTo(result);
+          
+            
+            await GuestService.CreateGuest(HotelBooking.guest);
+           HotelBooking.orderDetails.GId = await getGid();
+            await roomOrderDetailsService.CreateBooking(HotelBooking.orderDetails);
+            await localStorage.SetItemAsync(SD.Local_RoomOrderDetails, HotelBooking.orderDetails);
+            NavigationManager.NavigateTo($"booking/roomdetail1/{Id}");
 
         }
         catch (Exception e)
@@ -217,8 +259,21 @@
             // await jsRuntime.ToastrError(e.Message);
         }
     }
+    public async Task<int> getGid()
+    {
+        int max = 0;
+        await GuestService.GetGuests();
+        foreach (var guest in GuestService.Guests)
+        {
+            if (guest.GId > max)
+            {
+                max = guest.GId;
 
-
+            }
+        }
+        return max;
+    }
+    
     public async Task RandomRoom()
     {
 

@@ -23,13 +23,13 @@ namespace Hotel.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginModel login)
         {
-            var result = await _signInManager.PasswordSignInAsync(login.Email!, login.Password!, false, false);
+            var result = await _signInManager.PasswordSignInAsync(login.UserName!, login.Password!, false, false);
 
             if (!result.Succeeded) return BadRequest(new LoginResult { Successful = false, Error = "Username and password are invalid." });
 
             var claims = new[]
             {
-            new Claim(ClaimTypes.Name, login.Email!)
+            new Claim(ClaimTypes.Name, login.UserName!)
         };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]!));

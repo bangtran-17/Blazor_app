@@ -26,7 +26,7 @@ namespace Hotel.Client.Services
 		public async Task CreateGuest(Guest? Guest)
 		{
 			await _http.PostAsJsonAsync("api/Guest", Guest);
-			_navigationManger.NavigateTo("admin/Guests");
+			
 		}
 
 		public async Task DeleteGuest(int id)

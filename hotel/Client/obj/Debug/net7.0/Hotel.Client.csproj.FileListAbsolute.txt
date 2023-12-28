@@ -880,7 +880,6 @@ D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\Hotel.Client.dll
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\refint\Hotel.Client.dll
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\Hotel.Client.pdb
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\ref\Hotel.Client.dll
-D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\nDeIdgL+.gz
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\BookingPage.razor.rz.scp.css
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\Hotel.Client.csproj.AssemblyReference.cache
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\Hotel.Client.GeneratedMSBuildEditorConfig.editorconfig
@@ -1804,3 +1803,50 @@ D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\d
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\v5xmy37558.gz
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\Hotel.Client.csproj.CopyComplete
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\ref\Hotel.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Connections.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Connections.Common.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Client.Core.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Common.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Features.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Connections.Common.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Common.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Client.Core.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Client.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Connections.Abstractions.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Connections.Client.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Features.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.SignalR.Protocols.Json.dll.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\U2YwptmM.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\V0FnK7HI.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\CUqpXKwL.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\JBQ1joky.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\gt28ulkR.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\etHoUOaO.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\YBVYarxk.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\WbSX4PAo.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\build-gz\H29wAAOM.gz
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\DepartmentAdmin.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\DepartmentsAdmin.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\NhanViensAdmin.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\PaymentsAdmin.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\LocPaymentFail.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\LocPaymentSuccess.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\chiTietPhg\ChiTietPhg.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\Roomdetail.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\ThanhToanB2.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GuestRoom.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\ImperialSuite.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\SignatureSuite.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\Suite.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GioiThieu.razor.rz.scp.css

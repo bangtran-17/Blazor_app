@@ -85,7 +85,7 @@ body[b-3bc39ipq7b] {
   overflow: hidden;
   flex-shrink: 0;
 }
-.input-text1[b-3bc39ipq7b] {
+[b-3bc39ipq7b] .input-text1 {
   border: 0;
   outline: 0;
   font-family: var(--font-be-vietnam-pro);
@@ -94,7 +94,6 @@ body[b-3bc39ipq7b] {
   position: relative;
   color: var(--color-gray-500);
   text-align: left;
- 
 }
 
 .input-text[b-3bc39ipq7b] {
@@ -306,10 +305,13 @@ body[b-3bc39ipq7b] {
   flex-direction: row;
   justify-content: flex-start;
 }
+.frame-parent3[b-3bc39ipq7b]{
+    padding-top:10px;
+}
 .eye-fill-parent[b-3bc39ipq7b] {
-  flex-shrink: 0;
-  align-items: center;
-  gap: var(--gap-9xs);
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--gap-9xs);
 }
 .frame-parent3[b-3bc39ipq7b],
 .home-fill-parent[b-3bc39ipq7b] {
@@ -401,11 +403,12 @@ body[b-3bc39ipq7b] {
   color: var(--blackish-green);
   text-align: left;
 }
-.style-layer1[b-3bc39ipq7b] {
+.style-layer[b-3bc39ipq7b] {
   align-self: stretch;
   border-radius: var(--br-9xs);
   background-color: var(--mint-green);
   height: 48px;
+  width:80px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -475,7 +478,7 @@ body[b-3bc39ipq7b] {
   position: relative;
   background-color: var(--color-white1);
   width: 100%;
-  height: 783px;
+  height: 100%;
   overflow: hidden;
   align-items: center;
   gap: 39px;

@@ -85,7 +85,7 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-.input-text1 {
+::deep .input-text1 {
   border: 0;
   outline: 0;
   font-family: var(--font-be-vietnam-pro);
@@ -94,7 +94,6 @@
   position: relative;
   color: var(--color-gray-500);
   text-align: left;
- 
 }
 
 .input-text {
@@ -306,10 +305,13 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+.frame-parent3{
+    padding-top:10px;
+}
 .eye-fill-parent {
-  flex-shrink: 0;
-  align-items: center;
-  gap: var(--gap-9xs);
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--gap-9xs);
 }
 .frame-parent3,
 .home-fill-parent {
@@ -401,11 +403,12 @@
   color: var(--blackish-green);
   text-align: left;
 }
-.style-layer1 {
+.style-layer {
   align-self: stretch;
   border-radius: var(--br-9xs);
   background-color: var(--mint-green);
   height: 48px;
+  width:80px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -475,7 +478,7 @@
   position: relative;
   background-color: var(--color-white1);
   width: 100%;
-  height: 783px;
+  height: 100%;
   overflow: hidden;
   align-items: center;
   gap: 39px;

@@ -25,7 +25,7 @@ namespace Hotel.Server.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AspNetUserRole", b =>
+            modelBuilder.Entity("AspNetUserRoles", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -37,7 +37,7 @@ namespace Hotel.Server.Migrations
 
                     b.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
 
-                    b.ToTable("AspNetUserRole", (string)null);
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Shared.Models.AspNetRole", b =>
@@ -815,7 +815,7 @@ namespace Hotel.Server.Migrations
                     b.ToTable("SERVICESBOOKED", (string)null);
                 });
 
-            modelBuilder.Entity("AspNetUserRole", b =>
+            modelBuilder.Entity("AspNetUserRoles", b =>
                 {
                     b.HasOne("Hotel.Shared.Models.AspNetRole", null)
                         .WithMany()

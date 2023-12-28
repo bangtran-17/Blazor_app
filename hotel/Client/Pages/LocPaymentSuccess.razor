@@ -1,5 +1,11 @@
 ﻿@page "/payment-success"
 
+@page "/success-payment"
+@using Hotel.Shared.Models
+@using Hotel.Shared.CommonFiles
+@inject ILocalStorageService localStorage
+@inject IPaymentService roomOrderDetailsService
+@inject IBookingService bookingService
 @inject NavigationManager NavigationManager
 
 <PageTitle>Thanh toán thành công!</PageTitle>
@@ -70,5 +76,52 @@
 @code{
     void NavigateHome(){
         NavigationManager.NavigateTo("/");
+    }
+    private bool IsPaymentComplete = false;
+    private int OrderId;
+    private Payment Paid { get; set; } = new Payment();
+    private DateTime? Checkin;
+    private DateTime? Checkout;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var orderDetails = await localStorage.GetItemAsync<Hotel.Shared.Models.Booking>(SD.Local_RoomOrderDetails);
+        OrderId = await getBid();
+        Paid.PAmout = orderDetails.BCost;
+        Paid.PDatCoc = DateTime.Now;
+        Paid.Status = "Paid";
+        Paid.PType = "Bank";
+        Paid.BId = OrderId;
+        Paid.PaidDate = DateTime.Now;
+
+
+
+        Checkin = orderDetails.BCheckoutDate;
+        Checkout = orderDetails.BCheckoutDate;
+        await roomOrderDetailsService.CreatePayment(Paid);
+        // var FinalRoomOrderDetails = await roomOrderDetailsService.UpdatePayment()
+        // if (FinalRoomOrderDetails.BStatus == SD.Status_Booked)
+        // {
+        //     await localStorage.RemoveItemAsync(SD.Local_RoomOrderDetails);
+        //     await localStorage.RemoveItemAsync(SD.Local_InitialBooking);
+
+        //     IsPaymentComplete = true;
+        // }
+    }
+
+
+    public async Task<int> getBid()
+    {
+        int max = 0;
+        await bookingService.GetBookings();
+        foreach (var booking in bookingService.Bookings)
+        {
+            if (booking.BId > max)
+            {
+                max = booking.BId;
+
+            }
+        }
+        return max;
     }
 }

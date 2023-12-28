@@ -1,0 +1,580 @@
+﻿.navigation-header-child,
+.navigation-header-item {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: var(--background);
+    width: 1532px;
+    height: 80px;
+}
+
+.navigation-header-item {
+    top: 85.5px;
+    background-color: var(--color-saddlebrown);
+    width: 1500px;
+    height: 1px;
+}
+
+.ch-logo-vng-12,
+.logo-ko-ch-k-n-12 {
+    position: absolute;
+    top: 15.1px;
+    left: 126.8px;
+    width: 190.2px;
+    height: 51.1px;
+    object-fit: cover;
+}
+
+.logo-ko-ch-k-n-12 {
+    top: 0;
+    left: 0;
+    width: 124.9px;
+    height: 78.5px;
+}
+
+.ch-logo-vng-1-container {
+    position: absolute;
+    top: 0;
+    left: 562px;
+    width: 317px;
+    height: 78.5px;
+}
+
+.navigation-header {
+    align-self: stretch;
+    position: relative;
+    height: 87px;
+}
+
+.frame1 {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.stepper-child {
+    position: absolute;
+    top: 30px;
+    left: 31px;
+    max-height: 100%;
+    width: 222px;
+    object-fit: cover;
+}
+
+.item-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--color-white1);
+    border: 1px solid var(--color-gainsboro-100);
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+}
+
+.item-item {
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: var(--color-gainsboro-100);
+    width: 50px;
+    height: 50px;
+}
+
+.div6,
+.item-item,
+.item1 {
+    position: absolute;
+}
+
+.div6 {
+    top: 12px;
+    left: 26px;
+    font-weight: 500;
+}
+
+.item1 {
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.ellipse-div,
+.item-inner {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.item-inner {
+    top: 5px;
+    left: 5px;
+    border: 1px solid var(--color-gainsboro-100);
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+.ellipse-div {
+    top: 0;
+    left: 0;
+    background-color: var(--color-gainsboro-100);
+    width: 50px;
+    height: 50px;
+}
+
+.div7 {
+    position: absolute;
+    top: 7px;
+    left: 18px;
+    font-weight: 300;
+}
+
+.item2 {
+    top: 5px;
+    left: 115px;
+    width: 50px;
+    height: 50px;
+}
+
+.item2,
+.item3,
+.stepper {
+    position: absolute;
+}
+
+.item3 {
+    top: 5px;
+    left: 225px;
+    width: 50px;
+    height: 50px;
+}
+
+.stepper {
+    top: 0;
+    left: calc(50% - 137px);
+    width: 275px;
+    height: 60px;
+}
+
+.frame2 {
+    align-self: stretch;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.frame {
+    width: 1532px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-31xl);
+}
+
+.khch-hng-vui {
+    align-self: stretch;
+    position: relative;
+    font-weight: 300;
+}
+
+.frame4 {
+    position: absolute;
+    top: 58px;
+    left: 30px;
+    width: 372px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thng-tin-t,
+.title {
+    position: absolute;
+    top: 0;
+}
+
+.thng-tin-t {
+    left: calc(50% - 266px);
+    font-size: var(--font-size-17xl);
+    font-weight: 600;
+    color: var(--color-darkslateblue);
+    display: inline-block;
+    width: 532px;
+}
+
+.title {
+    left: calc(50% - 216px);
+    width: 432px;
+    height: 82px;
+}
+
+.vn {
+    font-weight: 500;
+}
+
+.trn {
+    font-weight: 300;
+    color: var(--color-darkgray-200);
+}
+
+.phng-swimsuite,
+.vn-trn-1-container {
+    position: absolute;
+    display: inline-block;
+}
+
+.vn-trn-1-container {
+    top: 13px;
+    left: 240px;
+    line-height: 170%;
+    width: 208px;
+}
+
+.phng-swimsuite {
+    top: 0;
+    left: 0;
+    width: 222px;
+}
+
+.signature-suites2 {
+    position: relative;
+    font-weight: 300;
+}
+
+.frame8 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 222px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: var(--font-size-mini);
+    color: var(--color-darkgray-200);
+}
+
+.phng-swimsuite-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 169px;
+    height: 49px;
+    text-align: left;
+    font-size: var(--font-size-xl);
+}
+
+.frame7,
+.item4 {
+    position: absolute;
+    top: 49px;
+    left: 0;
+    width: 448px;
+    height: 49px;
+}
+
+.frame7 {
+    top: 0;
+    height: 98px;
+    overflow: hidden;
+}
+
+.h,
+::deep .input-child {
+    align-self: stretch;
+    position: relative;
+}
+
+.h {
+    line-height: 170%;
+}
+
+::deep .input-child {
+    border: 0;
+    outline: 0;
+    background-color: var(--color-whitesmoke);
+    border-radius: var(--br-9xs);
+    height: 45px;
+}
+
+.input1 {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+}
+
+.input1,
+.input2,
+.input3 {
+    position: absolute;
+    left: 0;
+    width: 320px;
+}
+
+.input2 {
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+}
+
+.input3 {
+    top: 200px;
+}
+
+.input3,
+.input4,
+::deep .input7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+}
+
+.input4 {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 320px;
+}
+
+::deep .input7 {
+    top: 398px;
+}
+
+.frame10,
+.frame11,
+::deep .input7,
+::deep .input8 {
+    position: absolute;
+    left: 0;
+    width: 320px;
+}
+
+::deep .input8 {
+    top: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+}
+
+.frame10,
+.frame11 {
+    top: 30px;
+    height: 636px;
+    overflow: hidden;
+}
+
+.frame10 {
+    top: 0;
+    left: 80px;
+    height: 610px;
+    width:600px;
+}
+
+.frame-inner {
+    left: calc(50% - 200px);
+    max-width: 100%;
+    height: 432px;
+    object-fit: cover;
+}
+
+.frame-inner,
+.frame6,
+.frame9 {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+.frame9 {
+    left: 558px;
+    width: 400px;
+    height: 671px;
+    text-align: left;
+}
+
+.frame6 {
+    left: 0;
+    width: 2000px;
+    height: 688px;
+    margin-left:181px;
+}
+
+.frame3,
+.frame5 {
+    width: 1116px;
+    overflow: hidden;
+}
+
+.frame5 {
+    position: absolute;
+    top: 132px;
+    width:2000px;
+    left: 0;
+    height: 652px;
+    text-align: right;
+    font-size: var(--text-base-regular-size);
+    color: var(--color-darkslateblue);
+}
+
+.frame3 {
+    position: relative;
+    height: 784px;
+    flex-shrink: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-darkgray-200);
+    font-family: var(--font-be-vietnam-pro);
+}
+
+.bg,
+.cancel {
+    position: absolute;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-whitesmoke);
+}
+
+.cancel {
+    width: 73.8%;
+    top: 18%;
+    left: 13.33%;
+    font-size: var(--font-size-lg);
+    line-height: 170%;
+    font-family: var(--font-be-vietnam-pro);
+    color: var(--color-darkgray-100);
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-secondary {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 0;
+    width: 300px;
+    height: 50px;
+}
+
+.bg1,
+.btn-secondary,
+.frame13 {
+    position: absolute;
+    left: 0;
+}
+
+.frame13 {
+    top: 70px;
+    width: 320px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.bg1 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-saddlebrown);
+    box-shadow: 0 8px 15px rgba(50, 82, 223, 0.3);
+}
+
+.continue-to-book {
+    position: absolute;
+    width: 73.8%;
+    top: 18%;
+    left: 13.33%;
+    font-size: var(--font-size-lg);
+    line-height: 170%;
+    font-weight: 500;
+    font-family: var(--font-be-vietnam-pro);
+    color: var(--color-white1);
+    text-align: center;
+    display: inline-block;
+}
+
+.frame12,
+.frame14 {
+    width: 320px;
+    overflow: hidden;
+  
+}
+
+.frame14 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+.frame12 {
+    position: relative;
+    height: 120px;
+    flex-shrink: 0;
+    margin-left:610px;
+}
+
+.thanh-ton-b1-xong-kanh {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-white1);
+    width: 100%;
+    height: 1230px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-31xl);
+    text-align: center;
+    font-size: var(--text-2xl-medium-size);
+    color: var(--color-gray-300);
+    font-family: var(--font-poppins);
+}
+
+canvas#canvas2 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.canvas-wrap {
+    background: url(https://dl.dropboxusercontent.com/u/3465596/stark-wolf.png) no-repeat;
+}

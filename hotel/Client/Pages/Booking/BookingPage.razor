@@ -41,7 +41,7 @@
                     <div class="state-layer">
                         <div class="content">
                             <div class="input-text">
-                                    <InputDate TValue="DateTime?" @bind-Value="@homeVM.StartDate" class=" input-text1" />
+                                    <InputDate TValue="DateTime?" @bind-Value="@homeVM.StartDate" class="input-text1" />
                             </div>
                             <div class="label-text">
                                 <div class="label-text1">Check In</div>
@@ -55,7 +55,7 @@
                     <div class="state-layer">
                         <div class="content">
                             <div class="input-text">
-                                    <InputDate TValue="DateTime?"  @bind-Value="@homeVM.EndDate" class=" input-text1" />
+                                    <InputDate TValue="DateTime?"  @bind-Value="@homeVM.EndDate" class="input-text1" />
                             </div>
                             <div class="label-text">
                                 <div class="label-text1">Check Out</div>
@@ -66,20 +66,24 @@
             </div>
                 <button class="button" type="submit">
                 <div class="style-layer">
-                    <img class="search-icon" alt="" src="./public/search@2x.png" />
+                 @*    <img class="search-icon" alt="" src="./public/search@2x.png" /> *@
+                            <input type="submit" value="Xác nhận" class="btn btn-block text-black" />
                 </div>
             </button>
         </div>
         </EditForm>
     </div>
-       @foreach (var room in Rooms.Roomtypes)
+        @{
+            int index = 1;
+        }
+        @foreach (var room in lstRoomtype)
     {
-
+    
     <div class="frame-parent">
         <div class="hin-th-10-phng-wrapper">
             <div class="hin-th-10-container">
                 
-                <span class="phng1">Phòng 1</span>
+                <span class="phng1">Phòng @index</span>
             </div>
         </div>
         <div class="frame-wrapper1">
@@ -124,7 +128,7 @@
                                              alt=""
                                              src="./public/home-fill@2x.png" />
 
-                                        <div class="tm-nhn-tuyt">429 m2</div>
+                                        <div class="tm-nhn-tuyt">@room.RArea m2</div>
                                     </div>
                                 </div>
                                 <div class="user-fill-parent">
@@ -140,23 +144,25 @@
                             </div>
                         </div>
                         <div class="ch-vi-parent">
-                            <div class="ch-vi">Chỉ với</div>
-                            <b class="vn-m">@room.RtCost VNĐ/ đêm</b>
+                          
+                            <b class="vn-m">@room.RtCost VNĐ</b>
                         </div>
                     </div>
                     <div class="frame-child1"></div>
                     <button class="button-wrapper">
                         <div class="button1">
                             <div class="style-layer1">
-                                <div class="button2">Xem thêm</div>
+                              
+                                        <button class="button2" @onclick="(() => ShowRoom(room.RtId,room.RtCost))">Xem thêm</button>
                             </div>
                         </div>
                     </button>
                 </div>
             </div>
         </div>
-    </div>
-    }
+            </div>
+            index++;
+        }
 </div>
 	<script src="~/js/script1.js"></script>
 </body>
@@ -227,6 +233,8 @@
     HomeVM homeVM { get; set; } = new HomeVM();
     Booking booking { get; set; } = new Booking();
 
+    List<Roomtype> lstRoomtype = new List<Roomtype>();
+
     TimeSpan? timeDifference;
     TimeSpan span;
 
@@ -243,17 +251,16 @@
                 //populate the new homemodel with the information from the homemodel stored in local storage
 
                 homeVM = await localStorage.GetItemAsync<HomeVM>(SD.Local_InitialBooking);
-               
-       
-
 
                 timeDifference = homeVM.EndDate - homeVM.StartDate;
                 if (timeDifference.HasValue)
                 {
                     span = timeDifference.Value;
                 }
-                homeVM.NoOfNights = (int)span.Days;
+                homeVM.NoOfNights = (int)span.Days+1;
                 await Rooms.GetRoomtypes();
+                lstRoomtype = Rooms.Roomtypes;
+
             }
             else
             {
@@ -266,23 +273,28 @@
             throw e;
         }
     }
-    public async Task ShowRoom(int Id,decimal Cost)
+    public async Task ShowRoom(int Id,decimal? Cost)
 
     {
         homeVM.Cost = Cost;
         await localStorage.SetItemAsync(SD.Local_InitialBooking, homeVM);
-        NavigationManager.NavigateTo($"booking/roomdetail/{Id}");
+        NavigationManager.NavigateTo($"more/{Id}");
     }
-
+        
 
     private async Task HandleSubmit()
     {
-        
-
-        foreach(var room in Rooms.Roomtypes)
+        int ij = 0;
+        for(int i = 0; i < lstRoomtype.Count(); i++)
         {
-            room.RtCost = room.RtCost * span.Days;
+            lstRoomtype[i].RtCost = Rooms.Roomtypes[i].RtCost * span.Days;
         }
+        // InvokeAsync(StateHasChanged());
+        // foreach (var room in lstRoomtype)
+        // {
+        //     room.RtCost = Rooms.Roomtypes[i].RtCost * span.Days;
+        //     i++;
+        // }
           
         // update the local storage with dates
         
