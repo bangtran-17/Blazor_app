@@ -1,0 +1,675 @@
+﻿@page "/more"
+@page "/more/{Id:int}"
+
+@using Hotel.Shared.Models
+@using Hotel.Shared.CommonFiles
+@using Hotel.Client.ViewModel
+@using Hotel.Client.Utility
+
+@inject IJSRuntime jsRuntime
+@inject ILocalStorageService localStorage
+@inject IRoomtypeService hotelRoomService
+@inject IStripePaymentService stripePaymentService
+@inject IBookingService roomOrderDetailsService
+@inject IRoomService roomService
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider auth
+@inject IGuestService GuestService
+
+<body>
+    <canvas id="canvas2"></canvas>
+    <div class="chi-tit-phng">
+        <div class="frame">
+            <div class="frame1">
+                <div class="frame2">
+                    <div class="ch-logo-vng-1-container" id="groupContainer">
+                        <img class="ch-logo-vng-12"
+                             alt=""
+                             src="./public/ChiTietPhg/ch-logo-vng-12@x.png" />
+
+                        <img class="logo-ko-ch-k-n-12"
+                             alt=""
+                             src="./public/ChiTietPhg/logo-ko-ch-k-n-1@2x.png" />
+                    </div>
+                </div>
+                <button class="profiletab">
+                    <div class="xin-cho-hong">Xin chào, Hoàng Gia Lộc</div>
+                    <div class="qun-l-trng">Quản lý trưởng</div>
+                    <img class="plant-icon" alt="" src="./public/ChiTietPhg/plant@2x.png" />
+
+                    <div class="frame4"></div>
+                    <img class="profiletab-child"
+                         alt=""
+                         src="./public/ChiTietPhg/ellipse-1@2x.png" />
+                </button>
+            </div>
+            <div class="frame-parent">
+                <button class="trang-ch-group">
+                    <div class="trang-ch2">Trang chủ</div>
+                    <img class="dashiconsarrow-up-alt2"
+                         alt=""
+                         src="./public/ChiTietPhg/dashiconsarrowupalt2@2x.png" />
+                </button>
+                <button class="suites-parent">
+                    <div class="suites3">Suites</div>
+                    <img class="dashiconsarrow-up-alt2"
+                         alt=""
+                         src="./public/ChiTietPhg/dashiconsarrowupalt21@2x.png" />
+                </button>
+                <div class="line-parent1">
+                    <div class="frame-inner"></div>
+                    <div class="regal-suite">@roomtype.RtName</div>
+                </div>
+            </div>
+        </div>
+        <div class="frame5">
+            <div class="frame6">
+                <div class="frame7">
+                    <div class="image-grid">
+                        <img class="image-icon" alt="" src="./public/ChiTietPhg/image@2x.png" />
+
+                        <div class="rows">
+                            <div class="row">
+                                <img class="image-icon" alt="" src="./public/ChiTietPhg/image1@2x.png" />
+
+                                <img class="image-icon" alt="" src="./public/ChiTietPhg/image2@2x.png" />
+                            </div>
+                            <div class="row">
+                                <img class="image-icon" alt="" src="./public/ChiTietPhg/image3@2x.png" />
+
+                                <div class="image">
+                                    <div class="button">
+                                        <div class="button-base">
+                                            <img class="icon2" alt="" src="./public/ChiTietPhg/icon@2x.png" />
+
+                                            <div class="text">Tất cả hình ảnh</div>
+                                            <img class="icon3" alt="" src="./public/ChiTietPhg/icon1@2x.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frame8">
+                        <div class="frame9"></div>
+                        <div class="top">
+                            <div class="frame10">
+                                <div class="header">
+                                    <div class="title">
+                                        <div class="iu-cn-bit">@roomtype.RtName</div>
+                                        <div class="left">
+                                            <div class="ngi-ln">
+                                                2 Người lớn + 2 trẻ em dưới 14 tuổi
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                        </div>
+                        <div class="frame11">
+                            <div class="frame12">
+                                <div class="details">
+                                    <div class="airbnb-data-detail">
+                                        <img class="icon4" alt="" src="./public/ChiTietPhg/icon2@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Quang cảnh</div>
+                                            <div class="subtitle">
+                                                Tầm nhìn tuyệt vời về Khách sạn và đường chân trời
+                                                Dubai hoặc Biển Arabian.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="airbnb-data-detail">
+                                        <img class="icon4" alt="" src="./public/ChiTietPhg/icon@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Diện tích</div>
+                                            <div class="subtitle">
+                                                <span>@roomtype.RArea m²</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="airbnb-data-detail">
+                                        <img class="icon4" alt="" src="./public/ChiTietPhg/icon2@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Dịch vụ</div>
+                                            <div class="subtitle">
+                                                Bạn có thể thoải mái tận hưởng tất cả dịch vụ của
+                                                Khách sạn.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="description">
+                                        <div class="cn-h-regal-container">
+                                            <span class="cn-h-regal-container1">
+                                               @roomtype.RtDes1
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frame13">
+                                    <div class="tin-nghi">
+                                        <div class="tin-nghi-cung">Tiện nghi cung cấp</div>
+                                        <div class="tin-nghi1">
+                                            <div class="ban-cng">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-134@2x.png" />
+
+                                                <div class="ban-cng1">Ban công</div>
+                                            </div>
+                                            <div class="tv">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-140@2x.png" />
+
+                                                <div class="tv1">TV</div>
+                                            </div>
+                                            <div class="bn-i">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-146@2x.png" />
+
+                                                <div class="bn-i1">Bàn ủi</div>
+                                            </div>
+                                            <div class="my-sy">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-145@2x.png" />
+
+                                                <div class="my-sy1">Máy sấy</div>
+                                            </div>
+                                            <div class="wifi">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-143@2x.png" />
+
+                                                <div class="wifi1">Wifi</div>
+                                            </div>
+                                            <div class="minibar">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-142@2x.png" />
+
+                                                <div class="minibar1">Minibar</div>
+                                            </div>
+                                            <div class="buffet">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-135@2x.png" />
+
+                                                <div class="buffet-sng">Buffet sáng</div>
+                                            </div>
+                                            <div class="phng-tm-ring">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-137@2x.png" />
+
+                                                <div class="phng-tm-ring1">Phòng tắm riêng</div>
+                                            </div>
+                                            <div class="my-pha-cf">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-139@2x.png" />
+
+                                                <div class="my-pha-cafe">Máy pha Cafe</div>
+                                            </div>
+                                            <div class="sofa">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-138@2x.png" />
+
+                                                <div class="wifi1">Sofa</div>
+                                            </div>
+                                            <div class="ging">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-144@2x.png" />
+
+                                                <div class="ging-c-king">Giường cỡ King</div>
+                                            </div>
+                                            <div class="vi-tm">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-141@2x.png" />
+
+                                                <div class="vi-tm1">Vòi tắm</div>
+                                            </div>
+                                            <div class="phc-v-phng">
+                                                <img class="image-134-icon"
+                                                     alt=""
+                                                     src="./public/ChiTietPhg/image-147@2x.png" />
+
+                                                <div class="phc-v-phng1">Phục vụ phòng</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frame14">
+                                        <div class="booking-box">
+                                            <div class="header1">
+                                                <div class="price">
+                                                    <div class="vn">@roomtype.RtCost VNĐ</div>
+                                                    <div class="div6">/</div>
+                                                    <div class="m1">đêm</div>
+                                                </div>
+											</div>
+                                            <EditForm Model="HotelBooking" OnValidSubmit="HandleSubmit">
+                                            <div class="details1">
+                                                
+                                                <div class="row2">
+                                                    <div class="attribute">
+                                                        <div class="attribute1">CHECK-IN</div>
+                                                            <InputDate TValue="DateTime?" @bind-Value="HotelBooking.homeVM.StartDate" disabled="disabled" class="value" />
+                                                    </div>
+                                                    <div class="attribute2">
+                                                        <div class="attribute1">CHECKOUT</div>
+                                                            <InputDate TValue="DateTime?" @bind-Value="HotelBooking.homeVM.EndDate" disabled="disabled" class="value" />
+
+                                                    </div>
+													</div>
+												
+                                            </div>
+                                            <div class="button1">
+                                                    <button type="submit" class="button-base1">
+                                                    <img class="icon3"
+                                                         alt=""
+                                                         src="./public/ChiTietPhg/icon31@2x.png" />
+
+                                                    <div class="text1">Đặt phòng</div>
+                                                    <img class="icon3"
+                                                         alt=""
+                                                         src="./public/ChiTietPhg/icon1@2x.png" />
+                                                </button>
+                                            </div>
+                                            </EditForm>
+                                            <div class="divider"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dch-v2">
+                    <div class="dch-v-ca1">Dịch vụ của Khách sạn</div>
+                    <img class="divider-icon" alt="" src="./public/ChiTietPhg/divider@2x.png" />
+
+                    <div class="wrapper1">
+                        <div class="box-featured">
+                            <img class="box-featured-child"
+                                 alt=""
+                                 src="./public/ChiTietPhg/Lan bien.png" />
+
+                            <div class="title-subtitle3">
+                                <div class="ni-quy-khch">Lặn biển</div>
+                                <div class="subtitle3">
+                                    Lặn có bình khí, lặn có ống hay thậm chí đi bộ dưới nước
+                                    trong Hồ Đại sứ - nơi cư trú của 65,000 sinh vật biển.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-featured">
+                            <img class="box-featured-child"
+                                 alt=""
+                                 src="./public/ChiTietPhg/rectangle-3@2x.png" />
+
+                            <div class="title-subtitle3">
+                                <div class="ni-quy-khch">Spa thư giãn</div>
+                                <div class="subtitle3">
+                                    Thư giãn với các phương pháp trị liệu toàn diện cho cơ thể
+                                    và tâm hồn của bạn.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-featured">
+                            <img class="box-featured-child"
+                                 alt=""
+                                 src="./public/ChiTietPhg/rectangle-31@2x.png" />
+
+                            <div class="title-subtitle3">
+                                <div class="ni-quy-khch">Nhà hàng</div>
+                                <div class="subtitle3">
+                                    Chọn lựa giữa các đầu bếp nổi tiếng và trải nghiệm ẩm thực
+                                    đặc sắc tại các nhà hàng khắp khu khách sạn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frame15">
+                <div class="div7">
+                    <div class="top1">
+                        <div class="header">
+                            <div class="title">
+                                <div class="tham-quan-phng">
+                                    Tham quan phòng với góc nhìn 360<sup>0</sup>
+                                </div>
+                                <div class="left1">
+                                    <div class="bn-c-thc-container">
+                                        <span>
+                                            Bạn có thắc mắc ở trong Căn hộ độc đáo của chúng tôi
+                                            tuyệt vời như thế nào không? Trải nghiệm một kỳ nghỉ tại
+                                            Atlantis, Equivalent bằng cách đi bộ qua các chuyến tham
+                                            quan ảo 360<sup>o</sup> Phòng của chúng tôi.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <iframe class="inner"
+                            src="https://geckodigital.co/vt/Atlantis/?ss=0&startactions=lookat(7.15%2C36.61%2C120%2C0%2C0)%3B&fbclid=IwAR1AQZOPsiANVo66WI8mBwagrRuAZmFon5ir-ATKiIAVujLvu9UlOiMsd7c">
+                    </iframe>
+                </div>
+                <div class="frame16">
+                    <div class="reviews">
+                        <div class="left2">
+                            <div class="price">
+                                <img class="icon4" alt="" src="./public/ChiTietPhg/star@2x.png" />
+
+                                <div class="div8">5.0</div>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="row3">
+                                <div class="airbnb-comment">
+                                    <div class="user">
+                                        <img class="avatar-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/avatar@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Jose</div>
+                                            <div class="subtitle">Tháng 12, 2021</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        Dịch vụ khách sạn rất tuyệt và Nhân viên thân thiện.
+                                    </div>
+                                </div>
+                                <div class="airbnb-comment">
+                                    <div class="user">
+                                        <img class="avatar-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/avatar1@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Luke</div>
+                                            <div class="subtitle">Tháng 1, 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        1 nơi tuyệt vời để nghỉ dưỡng, dịch vụ cung cấp xứng đáng
+                                        5 sao!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row3">
+                                <div class="airbnb-comment">
+                                    <div class="user">
+                                        <img class="avatar-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/avatar2@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Shayna</div>
+                                            <div class="subtitle">Tháng 2, 2022</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        Khu vực tuyệt vời, dễ dàng tiếp cận các địa điểm vui chơi,
+                                        căn hộ thoải mái với một chiếc giường siêu thoải mái. Chủ
+                                        nhà tuyệt vời, hỗ trợ và phản hồi nhanh chóng. Chiếc
+                                        giường King tuyệt vời.
+                                    </div>
+                                    <div class="icon-text1">
+                                        <div class="text2">Show more</div>
+                                        <img class="chevron-right-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/chevronright@2x.png" />
+                                    </div>
+                                </div>
+                                <div class="airbnb-comment">
+                                    <div class="user">
+                                        <img class="avatar-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/avatar3@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Bang</div>
+                                            <div class="subtitle">Tháng 3, 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        Chúng tôi sẽ không bao giờ quên khách sạn này, và chúng
+                                        tôi sẽ quay lại rất sớm. Chúng tôi xin cảm ơn tất cả các
+                                        nhân viên. Vì tất cả họ đều tuyệt vời. Các món ăn, jazuczi
+                                        và vị trí là tuyệt vời. Bạn sẽ không thất vọng với khách
+                                        sạn này.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row3">
+                                <div class="airbnb-comment">
+                                    <div class="user">
+                                        <img class="avatar-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/avatar4@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Vladko</div>
+                                            <div class="subtitle">Tháng 7, 2022</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        Đây là một nơi tuyệt vời. Có đủ mọi thứ mà người ta cần
+                                        cho một kỳ nghỉ dài hạn. Nơi sạch sẽ và được tổ chức cẩn
+                                        thận. Nhân viên chào đón tuyệt vời với giá phải chăng.
+                                    </div>
+                                </div>
+                                <div class="airbnb-comment">
+                                    <div class="user">
+                                        <img class="avatar-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/avatar5@2x.png" />
+
+                                        <div class="title-subtitle">
+                                            <div class="ni-quy-khch">Jennifer</div>
+                                            <div class="subtitle">Tháng 11, 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        Một địa điểm đẹp và đắt giá. Trải nghiệm thật sự rất tuyệt
+                                        vời, sẽ giới thiệu với bạn bè về thiên đường nơi đây.
+                                    </div>
+                                    <div class="icon-text1">
+                                        <div class="text2">Show more</div>
+                                        <img class="chevron-right-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/chevronright@2x.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button2">
+                            <div class="button-base">
+                                <img class="icon3" alt="" src="./public/ChiTietPhg/icon4@2x.png" />
+
+                                <div class="text4">Show all 12 reviews</div>
+                                <img class="icon3" alt="" src="./public/ChiTietPhg/icon5@2x.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="things-to-know">
+                        <div class="divider"></div>
+                        <div class="iu-cn-bit">Điều cần biết</div>
+                        <div class="columns">
+                            <div class="airbnb-comment">
+                                <div class="ni-quy-khch">Nội quy khách sạn</div>
+                                <div class="list">
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/clock@2x.png" />
+
+                                        <div class="label">Check-in: sau 3:00 PM</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/clock@2x.png" />
+
+                                        <div class="text6">Checkout: trước 12:00 AM</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/doorenter@2x.png" />
+
+                                        <div class="label">Self check-in with lockbox</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/shoppingcart@2x.png" />
+
+                                        <div class="label">
+                                            Không phù hợp với trẻ em (dưới 2 tuổi)
+                                        </div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/fire@2x.png" />
+
+                                        <div class="label">Không hút thuốc</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/bone@2x.png" />
+
+                                        <div class="label">Không mang theo thú cưng</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/party@2x.png" />
+
+                                        <div class="label">Không tổ chức parties & events</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="airbnb-comment">
+                                <div class="ni-quy-khch">Sức khỏe & Cảnh báo</div>
+                                <div class="list">
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/sparkles2@2x.png" />
+
+                                        <div class="text12">
+                                            Cam kết thực hiện quy định của khách sạn.
+                                        </div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/wind@2x.png" />
+
+                                        <div class="label">Cảnh báo carbon monoxide</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/washer@2x.png" />
+
+                                        <div class="label">Cảnh báo khói</div>
+                                    </div>
+                                    <div class="icon-text3">
+                                        <img class="clock-icon"
+                                             alt=""
+                                             src="./public/ChiTietPhg/creditcard@2x.png" />
+
+                                        <div class="label">
+                                            Tiền sửa chữa - nếu bạn làm hỏng đồ vật trong căn hộ,
+                                            bạn có thể bị tính phí lên đến 8.000.000 VNĐ.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="airbnb-comment">
+                                <div class="ni-quy-khch">Chính sách hủy phòng</div>
+                                <div class="hon-tr-70">
+                                    Hoàn trả 70% phí hủy phòng khi hủy trước 1 tuần. Sau thời
+                                    gian quy định sẽ không được hủy.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var groupContainer = document.getElementById("groupContainer");
+        if (groupContainer) {
+            groupContainer.addEventListener("click", function (e) {
+                window.location.href = "./LandingPage.html";
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+
+    HotelRoomBookingViewModel HotelBooking = new HotelRoomBookingViewModel();
+    Roomtype roomtype { get; set; } = new Roomtype();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (await localStorage.GetItemAsync<HomeVM>(SD.Local_InitialBooking) != null)
+        {
+            HotelBooking.homeVM = await localStorage.GetItemAsync<HomeVM>(SD.Local_InitialBooking);
+        }
+
+    }
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            // var result = await roomImgService.GetRoomImgById((int)Id);
+            var resultRT = await hotelRoomService.GetRoomtypeById((int)Id);
+
+            // var result = await EmployeeService.GetEmployeeByFName(Fname);
+            if (resultRT is not null)
+            {
+                // roomimg = result;
+                roomtype = resultRT;
+            }
+            else
+                NavigationManager.NavigateTo("/booking");
+}
+    }
+
+    private async Task HandleSubmit()
+    {  
+        NavigationManager.NavigateTo($"booking/roomdetail/{Id}");
+            
+    }
+}

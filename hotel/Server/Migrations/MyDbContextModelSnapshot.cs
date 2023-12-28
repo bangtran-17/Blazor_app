@@ -22,7 +22,7 @@ namespace Hotel.Server.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AspNetUserRole", b =>
+            modelBuilder.Entity("AspNetUserRoles", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -34,7 +34,7 @@ namespace Hotel.Server.Migrations
 
                     b.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
 
-                    b.ToTable("AspNetUserRole", (string)null);
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.Shared.Models.AspNetRole", b =>
@@ -283,8 +283,6 @@ namespace Hotel.Server.Migrations
                     b.HasKey("BId")
                         .HasName("PK__BOOKING__4B26EFE62E59BE7A");
 
-                    b.HasIndex("Rid");
-
                     b.HasIndex(new[] { "DId" }, "IX_BOOKING_D_ID");
 
                     b.HasIndex(new[] { "EId" }, "IX_BOOKING_E_ID");
@@ -308,7 +306,6 @@ namespace Hotel.Server.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DeId"));
 
                     b.Property<string>("DeDescription")
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("DE_Description");
 
@@ -432,9 +429,9 @@ namespace Hotel.Server.Migrations
                     b.HasKey("EId")
                         .HasName("PK__EMPLOYEE__D730AF543A07B3C3");
 
-                    b.HasIndex(new[] { "DeId" }, "IX_EMPLOYEE_DE_ID");
+                    b.HasIndex("DeId");
 
-                    b.HasIndex(new[] { "HId" }, "IX_EMPLOYEE_H_ID");
+                    b.HasIndex("HId");
 
                     b.ToTable("EMPLOYEE", (string)null);
                 });
@@ -457,7 +454,6 @@ namespace Hotel.Server.Migrations
                         .HasColumnName("F_Date");
 
                     b.Property<string>("FDescription")
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("F_Description");
 
@@ -471,7 +467,6 @@ namespace Hotel.Server.Migrations
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("FId")
@@ -637,17 +632,17 @@ namespace Hotel.Server.Migrations
                         .HasColumnName("P_Type");
 
                     b.Property<DateTime?>("PaidDate")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime")
+                        .HasColumnName("PaidDate");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("PId")
                         .HasName("PK__PAYMENT__A3420A77DE9AEC7C");
 
-                    b.HasIndex(new[] { "BId" }, "IX_PAYMENT_B_ID");
+                    b.HasIndex("BId");
 
                     b.ToTable("PAYMENT", (string)null);
                 });
@@ -725,32 +720,36 @@ namespace Hotel.Server.Migrations
                         .HasColumnName("RT_Cost");
 
                     b.Property<string>("RtDes")
-                        .IsUnicode(true)
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("RT_DES");
+                        .HasColumnName("RT_DES")
+                        .HasDefaultValueSql("(N'')");
 
                     b.Property<string>("RtDes1")
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("RtDes1")
+                        .HasDefaultValueSql("(N'')");
 
                     b.Property<string>("RtName")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("RT_NAME");
+                        .HasColumnName("RT_NAME")
+                        .HasDefaultValueSql("(N'')");
 
                     b.Property<string>("RtSmokeFriendly")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(10)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(10)")
-                        .HasColumnName("RT_SmokeFriendly");
+                        .HasColumnName("RT_SmokeFriendly")
+                        .HasDefaultValueSql("(N'')");
 
                     b.Property<string>("Status")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValueSql("(N'')");
 
                     b.HasKey("RtId")
                         .HasName("PK__ROOMTYPE__4056367E2D56CACE");
@@ -781,7 +780,6 @@ namespace Hotel.Server.Migrations
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("SalaryId")
@@ -806,7 +804,6 @@ namespace Hotel.Server.Migrations
                         .HasColumnName("S_Cost");
 
                     b.Property<string>("SDescription")
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("S_Description");
 
@@ -818,7 +815,6 @@ namespace Hotel.Server.Migrations
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("SId")
@@ -839,7 +835,6 @@ namespace Hotel.Server.Migrations
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
-                        .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("SId", "BId")
@@ -850,7 +845,7 @@ namespace Hotel.Server.Migrations
                     b.ToTable("SERVICESBOOKED", (string)null);
                 });
 
-            modelBuilder.Entity("AspNetUserRole", b =>
+            modelBuilder.Entity("AspNetUserRoles", b =>
                 {
                     b.HasOne("Hotel.Shared.Models.AspNetRole", null)
                         .WithMany()

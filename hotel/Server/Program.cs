@@ -19,6 +19,7 @@ using Hotel.Server.SignalR;
 using Microsoft.AspNetCore.ResponseCompression;
 using Hotel.Server.Hubs;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -27,6 +28,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<MyDbContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+  
 // VNPAY
 builder.Services.AddCors(options =>
 {
@@ -92,6 +94,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 });
 builder.Services.AddDefaultIdentity<IdentityUser>()
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
@@ -162,5 +165,19 @@ app.UseEndpoints(endpoints =>
     // Other endpoints...
 });
 
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var roles = new[] { "admin","employee", "member" };
+    foreach(var role in roles)
+    {
+        if(!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
 
-app.Run();
+}
+
+
+    app.Run();

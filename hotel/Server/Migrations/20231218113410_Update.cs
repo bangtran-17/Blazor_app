@@ -219,7 +219,7 @@ namespace Hotel.Server.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AspNetUserRole",
+                name: "AspNetUserRoles",
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -503,7 +503,7 @@ namespace Hotel.Server.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserRoles_RoleId",
-                table: "AspNetUserRole",
+                table: "AspNetUserRoles",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
@@ -602,7 +602,7 @@ namespace Hotel.Server.Migrations
                 name: "AspNetUserLogins");
 
             migrationBuilder.DropTable(
-                name: "AspNetUserRole");
+                name: "AspNetUserRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
