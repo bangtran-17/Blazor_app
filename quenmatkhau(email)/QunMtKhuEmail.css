@@ -1,0 +1,159 @@
+.login-page-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 1024px;
+  object-fit: cover;
+}
+.vui-lng-nhp {
+  position: relative;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+.input-field,
+.username,
+.username-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.username-child {
+  border: 2px solid var(--dark-blue-1-8);
+  outline: 0;
+  font-family: var(--font-be-vietnam-pro);
+  font-size: 24px;
+  background-color: var(--white);
+  align-self: stretch;
+  border-radius: var(--br-61xl);
+  flex-direction: row;
+  padding: var(--padding-5xl) var(--padding-13xl);
+  color: #c8d3f9;
+}
+.input-field,
+.username {
+  flex-direction: column;
+}
+.username {
+  width: 640px;
+  gap: 16px;
+}
+.input-field {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 124px);
+  right: 0;
+  left: 0;
+}
+.hy {
+  position: relative;
+  font-size: var(--font-size-9xl);
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  font-family: var(--font-be-vietnam-pro);
+  color: #4b4f56;
+  text-align: center;
+}
+.sign-in {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xl) var(--padding-13xl);
+  background-color: #e4e6eb;
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 0;
+  border-radius: var(--br-61xl);
+  box-shadow: 0 4px 12px rgba(200, 211, 249, 0.6) inset,
+    4px 8px 12px rgba(78, 99, 141, 0.06);
+  width: 169px;
+  height: 80px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.tip-tc {
+  position: relative;
+  font-size: var(--font-size-9xl);
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  font-family: var(--font-be-vietnam-pro);
+  color: var(--white);
+  text-align: center;
+}
+.sign-in-parent,
+.sign-in1 {
+  position: absolute;
+  height: 80px;
+}
+.sign-in1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xl) var(--padding-13xl);
+  background-color: #8699da;
+  top: calc(50% - 40px);
+  left: 192px;
+  border-radius: var(--br-61xl);
+  box-shadow: 0 4px 12px rgba(200, 211, 249, 0.6) inset,
+    4px 8px 12px rgba(78, 99, 141, 0.06);
+  width: 232px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.sign-in-parent {
+  top: calc(50% + 44px);
+  left: 216px;
+  width: 424px;
+}
+.input-field-parent {
+  position: absolute;
+  width: calc(100% - 1350px);
+  top: calc(50% - 35px);
+  right: 191px;
+  left: 1159px;
+  height: 248px;
+}
+.qun-mt-khu-email-child {
+  position: absolute;
+  top: -301px;
+  left: 1257px;
+  width: 1121.2px;
+  height: 1040.5px;
+  object-fit: cover;
+}
+.iconfont-awesome-freesolidh {
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  width: 51px;
+  height: 51px;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+}
+.cho-mng-ch-1 {
+  position: absolute;
+  top: 103px;
+  left: 1096px;
+  width: 897px;
+  height: 162px;
+  object-fit: cover;
+}
+.qun-mt-khu-email {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-9xl);
+  color: #444b59;
+  font-family: var(--font-be-vietnam-pro);
+}
