@@ -18,7 +18,7 @@ namespace Hotel.Server.Controllers
             _repository = repository;
         }
         [HttpGet]
-        public async Task<List<Payment?>> Get()
+        public async Task<List<Payment>> Get()
         {
             return await _repository.GetPayments();
         }

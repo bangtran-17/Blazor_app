@@ -38,7 +38,7 @@ namespace Hotel.Server.Services.PayMent
         }
 
 
-        public async Task<List<Payment?>> GetPayments()
+        public async Task<List<Payment>> GetPayments()
     {
         return await _context.Payments.ToListAsync();
     }

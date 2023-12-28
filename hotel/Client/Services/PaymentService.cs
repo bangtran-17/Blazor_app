@@ -14,7 +14,7 @@ namespace Hotel.Client.Services
 {
     public class PaymentService:IPaymentService
     {
-        public List<Payment?> Payments { get; set; } = new List<Payment>();
+        public List<Payment> Payments { get; set; } = new List<Payment>();
      
 
         private readonly HttpClient _http;
@@ -48,7 +48,13 @@ namespace Hotel.Client.Services
 
         public async Task<List<Payment>> GetPayments()
         {
-            var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get");
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetFromJsonAsync<List<Payment>>("api/Payment/get", options);
             if (result is not null)
                 Payments = result;
             return result;
