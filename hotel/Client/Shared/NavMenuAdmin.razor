@@ -26,13 +26,13 @@
             </a>
         </li>
         <li>
-            <a href="/admin" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" @onclick="SetGuestsPage">
+            <a href="/admin/rooms" class="nav-link @(currentPage == "rooms" ? "active" : "text-black")" @onclick="SetRoomsPage">
                 <i class="fa-solid fa-door-open fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ PHÒNG</span>
             </a>
         </li>
         <li>
-            <a href="/admin" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" @onclick="SetGuestsPage">
+            <a href="/admin/bookings" class="nav-link @(currentPage == "bookings" ? "active" : "text-black")" @onclick="SetBookingsPage">
                 <i class="fa-solid fa-pen fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ ĐẶT PHÒNG</span>
             </a>
@@ -88,5 +88,13 @@
     void SetDepartmentsPage()
     {
         SetCurrentPage("departments");
+    }
+    void SetRoomsPage()
+    {
+        SetCurrentPage("rooms");
+    }
+    void SetBookingsPage()
+    {
+        SetCurrentPage("bookings");
     }
 }

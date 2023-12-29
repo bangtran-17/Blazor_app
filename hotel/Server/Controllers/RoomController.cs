@@ -33,6 +33,18 @@ namespace Hotel.Server.Controllers
             return await _RoomService.GetRoomByFName(searchText);
         }
 
+        [HttpGet("searchName/{Rname}")]
+        public async Task<Room?> GetRoomByRName(string Rname)
+        {
+            return await _RoomService.GetRoomByRName(Rname);
+        }
+
+        [HttpGet("searchRoomType/{RtId}")]
+        public async Task<List<Room>> GetRoomByRoomTypeId(int RtId)
+        {
+            return await _RoomService.GetRoomByRoomTypeId(RtId);
+        }
+
         [HttpPost]
         public async Task<Room?> CreateRoom(Room? Room)
         {

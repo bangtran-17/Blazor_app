@@ -25,11 +25,7 @@ namespace Hotel.Client.Services
             _navigationManger.NavigateTo("admin/Departments");
         }
 
-        public async Task DeleteDepartment(int id)
-        {
-            var result = await _http.DeleteAsync($"api/Department/{id}");
-            _navigationManger.NavigateTo("admin/Departments");
-        }
+
 
         public async Task<Department?> GetDepartmentById(int id)
         {
@@ -60,7 +56,7 @@ namespace Hotel.Client.Services
         public async Task<List<Department?>> SearchDepartments(string searchText)
         {
             var options = new JsonSerializerOptions()
-        {
+            {
                 ReferenceHandler = ReferenceHandler.Preserve,
                 PropertyNameCaseInsensitive = true
             };
@@ -77,6 +73,11 @@ namespace Hotel.Client.Services
         {
             await _http.PutAsJsonAsync($"api/Department/{id}", Employee);
             _navigationManger.NavigateTo("admin/departments");
+        }
+        public async Task DeleteDepartment(int id)
+        {
+            var result = await _http.DeleteAsync($"api/Department/{id}");
+            _navigationManger.NavigateTo("admin/Departments");
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using System.Net;
+﻿using System.Net;
 using Hotel.Server.Data;
 
 using Hotel.Shared.Models;
@@ -54,27 +53,28 @@ namespace Hotel.Server.Services.Rooms
                         EF.Functions.Like(e.Status, $"%{fname}%") ||
                         EF.Functions.Like(e.Rt.RtName, $"%{fname}%")||
                         EF.Functions.Like(e.RtId.ToString(), $"%{fname}%")
-
                         )
-                    
                     .ToListAsync();
             return dbRoom;
         }
-        //public async Task<List<Room>> SearchRooms(string searchText)
-        //{
-        //    var result = await _context.Rooms
-        //        .Where(e =>
-        //            EF.Functions.Like(e.EFirstName, $"%{searchText}%") ||
-        //            EF.Functions.Like(e.ELastName, $"%{searchText}%") ||
-        //            EF.Functions.Like(e.EDesignation, $"%{searchText}%") ||
-        //            EF.Functions.Like(e.EContactNumber, $"%{searchText}%") ||
-        //            EF.Functions.Like(e.EEmail, $"%{searchText}%") ||
-        //            EF.Functions.Like(e.EAddress, $"%{searchText}%"))
-        //        .ToListAsync();
+        public async Task<Room?> GetRoomByRName(string Rname)
+        {
+            // Sử dụng LINQ để truy vấn Room theo Rname
+            var room = await _context.Rooms
+                .Where(r => r.RNumber == Rname)
+                .FirstOrDefaultAsync();
 
-        //    return result;
-        //}
+            return room;
+        }
+        public async Task<List<Room>> GetRoomByRoomTypeId(int RtId)
+        {
+            // Sử dụng LINQ để truy vấn Room theo Rname
+            var room = await _context.Rooms
+                .Where(r => r.RtId == RtId)
+                .ToListAsync();
 
+            return room;
+        }
 
         public async Task<List<Room>> GetRooms()
         {
@@ -87,10 +87,10 @@ namespace Hotel.Server.Services.Rooms
             if (dbRoom != null)
             {
                 dbRoom.RId = Room.RId;
-                dbRoom.RAvailable = Room.RAvailable;
-                dbRoom.Rt.RtName = Room.Rt.RtName;
-                dbRoom.Status = Room.Status;
                 dbRoom.RNumber = Room.RNumber;
+                dbRoom.RtId = Room.RtId;
+                dbRoom.RAvailable = Room.RAvailable;
+                dbRoom.Status = Room.Status;
            
 
 

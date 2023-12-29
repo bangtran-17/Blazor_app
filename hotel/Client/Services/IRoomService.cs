@@ -9,6 +9,8 @@ namespace Hotel.Client.Services
         Task<List<Room>> GetRooms();
         Task<Room?> GetRoomById(int id);
         Task<List<Room>> GetRoomByFName(string fname);
+        Task<Room?> GetRoomByRName(string Rname);
+        Task<List<Room>> GetRoomByRoomTypeId(int RtId);
         Task CreateRoom(Room? Room);
         Task UpdateRoom(int id, Room Room);
         Task DeleteRoom(int id);

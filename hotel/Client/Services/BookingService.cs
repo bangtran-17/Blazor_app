@@ -25,30 +25,6 @@ namespace Hotel.Client.Services
         }
 
         public List<Booking> Bookings { get; set; } = new List<Booking>();
-    
-
-
-        public async Task CreateBooking(Booking Booking)
-        {
-           await _http.PostAsJsonAsync("api/Booking", Booking);
-
-        }
-         
-        public async Task DeleteBooking(int id)
-        {
-            var result = await _http.DeleteAsync($"api/Booking/{id}");
-
-        }
-
-        public async Task<Booking?> GetBookingById(int id)
-        {
-            var result = await _http.GetAsync($"api/Booking/{id}");
-            if (result.StatusCode == HttpStatusCode.OK)
-            {
-                return await result.Content.ReadFromJsonAsync<Booking>();
-            }
-            return null;
-        }
 
         public async Task<List<Booking>> GetBookings()
         {
@@ -63,6 +39,38 @@ namespace Hotel.Client.Services
             return Bookings;
         }
 
+        public async Task<Booking?> GetBookingById(int id)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Booking/{id}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<Booking>(options);
+            }
+            return null;
+        }
+
+        public async Task<List<Booking>> SearchBookings(string searchText)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Booking/search/{searchText}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<List<Booking?>>(options);
+            }
+            return null;
+        }
+
         public async Task<int?> GetCostById(int id)
         {
 
@@ -73,12 +81,22 @@ namespace Hotel.Client.Services
             }
             return null;
         }
+        public async Task CreateBooking(Booking Booking)
+        {
+            await _http.PostAsJsonAsync("api/Booking", Booking);
+
+        }
 
         public async Task UpdateBooking(int id, Booking Booking)
         {
             await _http.PutAsJsonAsync($"api/Booking/{id}", Booking);
+            
 
         }
-       
+        public async Task DeleteBooking(int id)
+        {
+            var result = await _http.DeleteAsync($"api/Booking/{id}");
+            _navigationManger.NavigateTo("admin/bookings");
+        }
     }
 }

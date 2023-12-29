@@ -65,6 +65,38 @@ namespace Hotel.Client.Services
             return null;
         }
 
+        public async Task<Room?> GetRoomByRName(string Rname)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Room/searchName/{Rname}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<Room>(options);
+            }
+            return null;
+        }
+
+        public async Task<List<Room>> GetRoomByRoomTypeId(int RtId)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Room/searchRoomType/{RtId}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<List<Room>>(options);
+            }
+            return null;
+        }
+
         public async Task<List<Room>> GetRooms()
         {
             var options = new JsonSerializerOptions()

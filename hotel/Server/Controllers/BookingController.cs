@@ -29,12 +29,21 @@ namespace Hotel.Server.Controllers
             return await _BookingService.GetBookings();
            
         }
+        [HttpGet("search/{searchText}")]
+        public async Task<List<Booking>> SearchBookings(string searchText)
+        {
+            return await _BookingService.SearchBookings(searchText);
+        }
         [HttpPost]
         public async Task<Booking?> CreateBooking(Booking booking)
         {
             return await _BookingService.CreateBooking(booking);
         }
-
+        [HttpPut("{id}")]
+        public async Task<Booking?> UpdateBooking(int id, Booking Booking)
+        {
+            return await _BookingService.UpdateBooking(id, Booking);
+        }
         [HttpDelete("{id}")]
         public async Task<bool> DeleteBooking(int id)
         {

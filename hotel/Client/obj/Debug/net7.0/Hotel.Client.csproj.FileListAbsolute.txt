@@ -1850,3 +1850,13 @@ D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTi
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\SignatureSuite.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\Suite.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GioiThieu.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\Roomdetail.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\ThanhToanB2.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GioiThieu.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GuestRoom.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\ImperialSuite.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\SignatureSuite.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\Suite.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\chiTietPhg\ChiTietPhg.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\RoomsAdmin.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\BookingsAdmin.razor.rz.scp.css

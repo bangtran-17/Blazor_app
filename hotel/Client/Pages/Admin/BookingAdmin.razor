@@ -1,0 +1,231 @@
+﻿@page "/admin/booking"
+@page "/admin/booking/{id:int}"
+
+@using Hotel.Shared
+
+@inject IBookingService BookingService
+@inject IRoomService RoomService
+@inject IRoomtypeService RoomtypeService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản Lý Nhân Viên</PageTitle>
+
+<button class="btn btn-primary" @onclick="NavigateBack">Quay lại</button>
+
+@if (Id is null)
+{
+    <PageTitle>Create a new Booking</PageTitle>
+    <h3>Create a new Booking</h3>
+    <br />
+}
+else
+{
+    <PageTitle>Edit Booking @booking.BId</PageTitle>
+    <h3>Edit Booking @booking.BId</h3>
+    <br />
+
+}
+
+<EditForm Model="booking" OnSubmit="HandleSubmit" >
+    <div>
+        <label for="BDate">THỜI GIAN</label>
+        <InputDate id="BDate" @bind-Value="booking.BDate" class="form-control" />
+    </div>
+    <div>
+        <label for="BCheckingDate">Ngày Check-in</label>
+        <InputDate id="BCheckingDate" @bind-Value="booking.BCheckingDate" @onfocusout="CalculateBCost" class="form-control" />
+    </div>
+    <div>
+        <label for="BCheckoutDate">Ngày Check-out</label>
+        <InputDate id="BCheckoutDate" @bind-Value="booking.BCheckoutDate" @onfocusout="CalculateBCost" class="form-control" />
+    </div>
+    <div>
+        <label for="BAmount">Số người ở</label>
+        <InputNumber id="BAmount" @bind-Value="booking.BAmount" class="form-control" />
+    </div>
+@*     <div>
+        <label for="description">Mã nhân viên đặt phòng</label>
+        <InputNumber id="lastName" @bind-Value="booking.DeDescription" class="form-control" />
+    </div> *@
+    <div>
+        <label for="GId">Mã khách hàng</label>
+        <InputNumber id="GId" @bind-Value="booking.GId" class="form-control" />
+    </div>
+    <div>
+        <label for="Rid">Mã loại phòng</label>
+        <InputSelect @bind-Value=RtId class="form-control" @onfocusout="FindRoom">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </InputSelect>
+    </div>
+    <div>
+        <label for="Rid">Mã phòng</label>
+        <InputSelect @bind-Value=RNumber class="form-control" @onfocusout="CalculateBCost">
+            @foreach(var roomNumber in roomNumbers)
+            {
+                <option value="@roomNumber">@roomNumber</option>
+            }
+        </InputSelect>
+        @* <InputText id="Rid" @bind-Value="RNumber" @onfocusout="CalculateBCost" class="form-control" /> *@
+    </div>
+    <div>
+        <label for="BCost">Số tiền phòng</label>
+        <InputNumber id="BCost" @bind-Value="booking.BCost" class="form-control"/>
+    </div>
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="alert alert-danger">
+            @error
+        </div>
+    }
+    <button type="submit" class="btn btn-primary">@btnText</button>
+
+    <button class="btn btn-danger" @onclick="DeleteBooking">Delete</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    [ParameterAttribute]
+    public string? Fname { get; set; }
+
+    private string RNumber;
+    private int RtId;
+    private List<string> roomNumbers = new List<string>();
+    private string error = string.Empty;
+
+
+    string btnText = string.Empty;
+
+    Booking? booking = new Booking { };
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Lưu" : "Cập nhật";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await BookingService.GetBookingById((int)Id);
+            // var result = await BookingService.GetBookingByFName(Fname);
+            if (result is not null)
+            {
+                booking = result;
+                if(booking.Rid != null)
+                {
+                    var room = await RoomService.GetRoomById(booking.Rid ?? -1);
+                    RNumber = room.RNumber;
+                }
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/admin/booking");
+            }
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        var room = await RoomService.GetRoomByRName(RNumber);
+        if(room == null)
+        {
+            error = "Phòng không tồn tại. Vui lòng kiểm tra lại.";
+        }
+        else
+        {
+            if(room.RAvailable == "No")
+            {
+                error = "Phòng không còn trống. Vui lòng chọn phòng khác!";
+            }
+            else
+            {
+                room.RAvailable = "No";
+                booking.Rid = room.RId;
+                if (Id is null)
+                {
+                    booking.BDate = DateTime.Now;
+                    await BookingService.CreateBooking(booking);
+                    await RoomService.UpdateRoom(room.RId, room);
+                    NavigationManager.NavigateTo("admin/bookings");
+                }
+                else
+                {
+                    await BookingService.UpdateBooking((int)Id, booking);
+                    await RoomService.UpdateRoom(room.RId, room);
+                    NavigationManager.NavigateTo("admin/bookings");
+                }
+            }
+        }
+
+    }
+
+    async Task DeleteBooking()
+    {
+        await BookingService.DeleteBooking(booking.BId);
+        NavigationManager.NavigateTo("admin/bookings");
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/admin/bookings");
+    }
+
+    async Task FindRoom()
+    {
+        roomNumbers.Clear();
+        var result = await RoomService.GetRoomByRoomTypeId(RtId);
+        if(result != null)
+        {
+            foreach(var index in result)
+            {
+                if(index.RAvailable == "Yes")
+                {
+                 roomNumbers.Add(index.RNumber);
+                }
+            }
+            StateHasChanged();
+        }
+        StateHasChanged();
+    }
+
+    async Task CalculateBCost()
+    {
+        if (booking.BCheckoutDate != null &&
+            booking.BCheckingDate != null)
+        {
+            // Thực hiện tính toán BCost dựa trên BCheckingDate và BCheckoutDate
+            // Ví dụ: giả sử BCost được tính bằng số ngày ở nhân với giá mỗi ngày
+            // Thực hiện tính toán thực tế của bạn tại đây
+
+            // Lấy sự khác nhau giữa BCheckoutDate và BCheckingDate
+            TimeSpan? duration = booking.BCheckoutDate - booking.BCheckingDate;
+            Console.WriteLine(duration.Value.Days);
+            decimal? costPerDay = 0;
+            // Giả sử giá mỗi ngày là 100, bạn có thể thay đổi theo yêu cầu thực tế
+            var room = await RoomService.GetRoomByRName(RNumber);
+            if (room != null)
+            {
+                var roomtype = await RoomtypeService.GetRoomtypeById(room.RtId ?? 0);
+                if (roomtype != null)
+                {
+                    costPerDay = roomtype.RtCost;
+                }
+            }
+            Console.WriteLine(costPerDay);
+            if (duration != null)
+            {
+                // Tính BCost
+                booking.BCost = (decimal)duration.Value.Days * costPerDay;
+                StateHasChanged();
+            }
+        }        
+    }
+    
+
+}
+
+
