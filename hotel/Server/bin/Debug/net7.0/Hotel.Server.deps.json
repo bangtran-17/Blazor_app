@@ -29,6 +29,7 @@
           "Swashbuckle.AspNetCore": "6.5.0",
           "Swashbuckle.AspNetCore.Swagger": "6.5.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.5.0",
+          "Syncfusion.Blazor.Charts": "24.1.43",
           "System.IdentityModel.Tokens.Jwt": "7.0.3"
         },
         "runtime": {
@@ -811,7 +812,7 @@
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
         }
       },
-      "Microsoft.AspNetCore.Http/2.2.0": {
+      "Microsoft.AspNetCore.Http/2.2.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.WebUtilities": "2.2.0",
@@ -830,7 +831,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authorization.Policy": "2.2.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
-          "Microsoft.AspNetCore.Http": "2.2.0",
+          "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Connections.Common": "7.0.14",
           "Microsoft.AspNetCore.Routing": "2.2.0",
           "Microsoft.AspNetCore.WebSockets": "2.2.0",
@@ -2326,6 +2327,81 @@
           }
         }
       },
+      "Syncfusion.Blazor.Charts/24.1.43": {
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "24.1.43",
+          "Syncfusion.Blazor.Data": "24.1.43",
+          "Syncfusion.Blazor.DataVizCommon": "24.1.43",
+          "Syncfusion.ExcelExport.Net.Core": "24.1.43",
+          "Syncfusion.PdfExport.Net.Core": "24.1.43"
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.Charts.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
+      "Syncfusion.Blazor.Core/24.1.43": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.13",
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Syncfusion.Licensing": "24.1.43",
+          "System.Text.Json": "7.0.4"
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.Core.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
+      "Syncfusion.Blazor.Data/24.1.43": {
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "24.1.43"
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.Data.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
+      "Syncfusion.Blazor.DataVizCommon/24.1.43": {
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "24.1.43"
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.DataVizCommon.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
+      "Syncfusion.ExcelExport.Net.Core/24.1.43": {
+        "runtime": {
+          "lib/net7.0/Syncfusion.ExcelExport.Net.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/24.1.43": {
+        "runtime": {
+          "lib/net7.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
+      "Syncfusion.PdfExport.Net.Core/24.1.43": {
+        "runtime": {
+          "lib/net7.0/Syncfusion.PdfExport.Net.dll": {
+            "assemblyVersion": "24.1.43.0",
+            "fileVersion": "24.1.43.0"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -3118,6 +3194,7 @@
           "Microsoft.AspNetCore.SignalR.Common": "7.0.14",
           "Microsoft.AspNetCore.SignalR.Protocols.Json": "7.0.14",
           "Newtonsoft.Json": "13.0.3",
+          "Syncfusion.Blazor.Charts": "24.1.43",
           "System.IdentityModel.Tokens.Jwt": "7.0.3",
           "System.Text.Json": "7.0.4"
         },
@@ -3645,12 +3722,12 @@
       "path": "microsoft.aspnetcore.hosting.server.abstractions/2.2.0",
       "hashPath": "microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http/2.2.0": {
+    "Microsoft.AspNetCore.Http/2.2.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YogBSMotWPAS/X5967pZ+yyWPQkThxhmzAwyCHCSSldzYBkW5W5d6oPfBaPqQOnSHYTpSOSOkpZoAce0vwb6+A==",
-      "path": "microsoft.aspnetcore.http/2.2.0",
-      "hashPath": "microsoft.aspnetcore.http.2.2.0.nupkg.sha512"
+      "sha512": "sha512-BAibpoItxI5puk7YJbIGj95arZueM8B8M5xT1fXBn3hb3L2G3ucrZcYXv1gXdaroLbntUs8qeV8iuBrpjQsrKw==",
+      "path": "microsoft.aspnetcore.http/2.2.2",
+      "hashPath": "microsoft.aspnetcore.http.2.2.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
       "type": "package",
@@ -4554,6 +4631,55 @@
       "sha512": "sha512-OvbvxX+wL8skxTBttcBsVxdh73Fag4xwqEU2edh4JMn7Ws/xJHnY/JB1e9RoCb6XpDxUF3hD9A0Z1lEUx40Pfw==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.5.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    },
+    "Syncfusion.Blazor.Charts/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Yk3418JFz6acqir1J++IiVzxMc4QxWgVTXlWJMfGUBWSQRs7iKoBmW2tIHe94k1WjmPp6JcUlhWKb7Ild5vsQ==",
+      "path": "syncfusion.blazor.charts/24.1.43",
+      "hashPath": "syncfusion.blazor.charts.24.1.43.nupkg.sha512"
+    },
+    "Syncfusion.Blazor.Core/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e6zJE2XxGjXFBbjebdUqKCsmO/77dHCvCUQ3yVU/vf2z79IaddiYJPzCyeNG522ErTR3SvOLzWax58DKDzD6tQ==",
+      "path": "syncfusion.blazor.core/24.1.43",
+      "hashPath": "syncfusion.blazor.core.24.1.43.nupkg.sha512"
+    },
+    "Syncfusion.Blazor.Data/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wStbBWCxJhQUFOEwzLZHyM+eOjv3UMPw1sLnCHtv3YBx3FoqXLmUX0aZ6ELqwDn2vgAmekz/Ndba28VN3mU2cg==",
+      "path": "syncfusion.blazor.data/24.1.43",
+      "hashPath": "syncfusion.blazor.data.24.1.43.nupkg.sha512"
+    },
+    "Syncfusion.Blazor.DataVizCommon/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7HsPxU4ShM9iSMo7l0DARyVBRH/yq/yErFhbO0kGYtNwcI1/iXVejL/d1FHab2sYbS9e/o/04vOW6LiSn3Qxlw==",
+      "path": "syncfusion.blazor.datavizcommon/24.1.43",
+      "hashPath": "syncfusion.blazor.datavizcommon.24.1.43.nupkg.sha512"
+    },
+    "Syncfusion.ExcelExport.Net.Core/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vakgUJkveBGMWg8lOsBSM5SETHddSt/iRYHQ3mk020OdESZb3lfxvFSGFTvTCy7NvbIUiPLx4u5OxwRo/gg46g==",
+      "path": "syncfusion.excelexport.net.core/24.1.43",
+      "hashPath": "syncfusion.excelexport.net.core.24.1.43.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MHm8cNWJoiGi3DFgZBEEPFVqJb8TpidetRVrWgl+qYgjI0CfRz+vYJw+s0AUgytxf6sb9PCoENpFPOCigum2dQ==",
+      "path": "syncfusion.licensing/24.1.43",
+      "hashPath": "syncfusion.licensing.24.1.43.nupkg.sha512"
+    },
+    "Syncfusion.PdfExport.Net.Core/24.1.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-93d54qAdWiIPl0s3J5/In4U//cPoMu2owFGeCm/wgMhgU4AdmImt4icnw7gX4+MQPqLRPLcn2d9YRGKzNoiJyA==",
+      "path": "syncfusion.pdfexport.net.core/24.1.43",
+      "hashPath": "syncfusion.pdfexport.net.core.24.1.43.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

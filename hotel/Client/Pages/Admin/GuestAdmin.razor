@@ -1,6 +1,8 @@
 ﻿@page "/admin/guest"
 @page "/admin/guest/{id:int}"
 
+@attribute [Authorize(Roles = "admin, employee")]
+
 @using Hotel.Shared
 
 @inject IGuestService GuestService

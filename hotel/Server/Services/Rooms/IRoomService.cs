@@ -1,5 +1,4 @@
-﻿
-using Hotel.Shared.Models;
+﻿using Hotel.Shared.Models;
 namespace Hotel.Server.Services.Rooms
 {
     public interface IRoomService

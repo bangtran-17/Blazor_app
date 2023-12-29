@@ -5,8 +5,8 @@ namespace Hotel.Client.Services
     public interface IAuthService
     {
         Task<RegisterResult> Register(RegisterModel registerModel);
+        Task<RegisterResult> RegisterEmployee(RegisterModel registerModel);
         Task<LoginResult> Login(LoginModel loginModel);
         Task Logout();
     }
 }
-

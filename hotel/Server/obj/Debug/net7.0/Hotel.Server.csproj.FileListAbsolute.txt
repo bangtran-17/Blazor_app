@@ -614,3 +614,10 @@ D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Charts.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Core.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Data.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.DataVizCommon.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.ExcelExport.Net.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Licensing.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.PdfExport.Net.dll

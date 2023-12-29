@@ -26,6 +26,8 @@ public partial class Employee
 
     public int? HId { get; set; }
 
+    public string? EAccount { get; set; }
+
     public string? Status { get; set; }
 
     public virtual ICollection<Booking> Bookings { get; } = new List<Booking>();

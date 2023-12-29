@@ -92,6 +92,7 @@ namespace Hotel.Server.Services.EmployeeService
                 dbEmployee.EAddress = Employee.EAddress;
                 dbEmployee.DeId = Employee.DeId;
                 dbEmployee.HId = Employee.HId;
+                dbEmployee.EAccount = Employee.EAccount;
                 dbEmployee.Status = Employee.Status;
 
                 await _context.SaveChangesAsync();

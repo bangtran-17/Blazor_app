@@ -99,6 +99,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Syncfusion.Blazor.Charts": {
+              "target": "Package",
+              "version": "[24.1.43, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[7.0.3, )"
@@ -259,6 +263,10 @@
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "Syncfusion.Blazor.Charts": {
+              "target": "Package",
+              "version": "[24.1.43, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

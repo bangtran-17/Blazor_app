@@ -46,10 +46,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Admin/NhanVienAdmin.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmhhblZpZW5BZG1pbi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Admin/RoomAdmin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9vbUFkbWluLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,10 +110,6 @@ build_metadata.AdditionalFiles.CssScope = b-10jmqm4e4q
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cR3Vlc3RzQWRtaW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-58upsmxqdb
 
-[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Admin/NhanViensAdmin.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmhhblZpZW5zQWRtaW4ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-zx7eqovkst
-
 [D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Admin/PaymentsAdmin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGF5bWVudHNBZG1pbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-9vgar254e8
@@ -130,8 +122,8 @@ build_metadata.AdditionalFiles.CssScope = b-47enhynmbg
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xCb29raW5nUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-3bc39ipq7b
 
-[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Booking/RoomDetail.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xSb29tRGV0YWlsLnJhem9y
+[D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Booking/Roomdetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xSb29tZGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ulj1lihn67
 
 [D:/Visual Studio Code/HK 5/Blazor_app/hotel/Client/Pages/Booking/ThanhToanB2.razor]

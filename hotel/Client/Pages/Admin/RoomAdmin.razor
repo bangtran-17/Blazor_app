@@ -1,6 +1,8 @@
 ﻿@page "/admin/room"
 @page "/admin/room/{id:int}"
 
+@attribute [Authorize(Roles = "admin, employee")]
+
 @using Hotel.Shared
 
 @inject IRoomService RoomService

@@ -21,11 +21,5 @@ namespace Hotel.Client.Services
         //Task CreatePayment(Payment Paymment,int Bid);
 
         //Task UpdatePayment(int id, Payment payment);
-
-
-
-
-
-
     }
 }

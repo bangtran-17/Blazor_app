@@ -26,13 +26,11 @@ namespace Hotel.Client.Services
         public async Task CreateEmployee(Employee Employee)
         {
             await _http.PostAsJsonAsync("api/Employee", Employee);
-            _navigationManger.NavigateTo("admin/Employees");
         }
 
         public async Task DeleteEmployee(int id)
         {
             var result = await _http.DeleteAsync($"api/Employee/{id}");
-            _navigationManger.NavigateTo("admin/employees");
         }
 
         public async Task<List<Employee?>> SearchEmployees(string searchText)
@@ -73,7 +71,6 @@ namespace Hotel.Client.Services
         public async Task UpdateEmployee(int id, Employee Employee)
         {
             await _http.PutAsJsonAsync($"api/Employee/{id}", Employee);
-            _navigationManger.NavigateTo("admin/employees");
         }
     }
 }

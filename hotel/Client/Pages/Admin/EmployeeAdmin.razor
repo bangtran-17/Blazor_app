@@ -2,10 +2,13 @@
 @page "/admin/employee/{id:int}"
 @* @page "/admin/employee/{fname}" *@
 
+@attribute [Authorize(Roles = "admin")]
+
 @using Hotel.Shared
 
 @inject IEmployeeService EmployeeService
 @inject IDepartmentService DepartmentService
+@inject IAuthService AuthService
 @inject NavigationManager NavigationManager
 
 <PageTitle>Quản Lý Nhân Viên</PageTitle>
@@ -55,6 +58,21 @@ else
         <label for="address">Địa chỉ</label>
         <InputText id="address" @bind-Value="employee.EAddress" class="form-control" />
     </div>
+    <div class="form-group mt-2">
+        <label for="name" class="-dark font-bold">Tên tài khoản:</label><br>
+        <InputText type="text" name="name" id="name" class="form-control input" @bind-Value="RegisterModel.UserName" />
+        <ValidationMessage For="@(() => RegisterModel.UserName)" @bind-Value="RegisterModel.UserName" />
+    </div>
+    <div class="form-group mt-2">
+        <label for="password" class="text-dark font-bold">Password:</label><br>
+        <InputText type="password" name="password" id="password" class="form-control focus:shadow-outline input" @bind-Value="RegisterModel.Password" />
+        <ValidationMessage For="@(() => RegisterModel.Password)" />
+    </div>
+    <div class="form-group mt-2">
+        <label for="confirm-password" class="text-dark font-bold">Confirm Password:</label><br>
+        <InputText type="password" name="password_confirmation" id="confirm-password" class="form-control input" @bind-Value="RegisterModel.ConfirmPassword" />
+        <ValidationMessage For="@(() => RegisterModel.ConfirmPassword)" />
+    </div>
 
     <button type="submit" class="btn btn-primary">@btnText</button>
 
@@ -68,6 +86,8 @@ else
     [ParameterAttribute]
     public string? Fname { get; set; }
     private string departmentName;
+
+    private RegisterModel RegisterModel = new RegisterModel();
 
 
     string btnText = string.Empty;
@@ -97,7 +117,7 @@ else
                     departmentName = department.DeName;
                 }
             }
-            
+
             else
                 NavigationManager.NavigateTo("/admin/employee");
         }
@@ -106,6 +126,7 @@ else
     async Task DeleteEmployee()
     {
         await EmployeeService.DeleteEmployee(employee.EId);
+        NavigationManager.NavigateTo("admin/Employees");
     }
 
     void NavigateBack()
@@ -150,11 +171,17 @@ else
         {
             if (Id is null)
             {
+                RegisterModel.Email = employee.EEmail;
+                employee.EAccount = RegisterModel.UserName;
+                await AuthService.RegisterEmployee(RegisterModel);
                 await EmployeeService.CreateEmployee(employee);
+
+                NavigationManager.NavigateTo("admin/Employees");
             }
             else
             {
                 await EmployeeService.UpdateEmployee((int)Id, employee);
+                NavigationManager.NavigateTo("admin/Employees");
             }
             return true;
         }

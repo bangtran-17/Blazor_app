@@ -30,6 +30,13 @@ namespace Hotel.Client.Services
                 return new RegisterResult { Successful = true, Errors = null };
             return new RegisterResult { Successful = false, Errors = new List<string> { "Error occured" } };
         }
+        public async Task<RegisterResult> RegisterEmployee(RegisterModel registerModel)
+        {
+            var result = await _httpClient.PostAsJsonAsync("api/Account/employee", registerModel);
+            if (!result.IsSuccessStatusCode)
+                return new RegisterResult { Successful = true, Errors = null };
+            return new RegisterResult { Successful = false, Errors = new List<string> { "Error occured" } };
+        }
         public async Task<LoginResult> Login(LoginModel loginModel)
         {
             var loginAsJson = JsonSerializer.Serialize(loginModel);
@@ -54,6 +61,5 @@ namespace Hotel.Client.Services
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedout();
             _httpClient.DefaultRequestHeaders.Authorization = null;
         }
-
     }
 }

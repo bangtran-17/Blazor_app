@@ -1,5 +1,7 @@
 ﻿@page "/admin/payments"
 
+@attribute [Authorize(Roles = "admin, employee")]
+
 @using Hotel.Shared
 
 @inject IPaymentService PaymentService

@@ -1,5 +1,7 @@
 ﻿@page "/admin"
 
+@attribute [Authorize(Roles = "admin, employee")]
+
 <h3>Đây là trang chủ Admin</h3>
 
 @* <SearchComponent SearchWord="@st"></SearchComponent> *@

@@ -1,5 +1,7 @@
 ﻿@page "/admin/bookings"
 
+@attribute [Authorize(Roles = "admin, employee")]
+
 @using Hotel.Shared
 @using Hotel.Client.ViewModel
 
