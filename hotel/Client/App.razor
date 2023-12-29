@@ -6,6 +6,7 @@
     <Found Context="routeData">
         @if (IsAdminRoute(routeData))
         {
+
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(HomePageLayout)" />
         }
         else

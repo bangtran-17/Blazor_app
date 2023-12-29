@@ -1,4 +1,6 @@
-﻿<div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-pink col-3" style="height: 100vh">
+﻿@inject NavigationManager NavigationManager
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-pink col-3" style="height: 100vh">
     <a href=""></a>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
@@ -26,13 +28,13 @@
             </a>
         </li>
         <li>
-            <a href="/admin" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" @onclick="SetGuestsPage">
+            <a href="/admin/rooms" class="nav-link @(currentPage == "rooms" ? "active" : "text-black")" @onclick="SetRoomsPage">
                 <i class="fa-solid fa-door-open fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ PHÒNG</span>
             </a>
         </li>
         <li>
-            <a href="/admin" class="nav-link @(currentPage == "guests" ? "active" : "text-black")" @onclick="SetGuestsPage">
+            <a href="/admin/bookings" class="nav-link @(currentPage == "bookings" ? "active" : "text-black")" @onclick="SetBookingsPage">
                 <i class="fa-solid fa-pen fa-sm me-2" style="color: #000000"></i>
                 <span>QUẢN LÝ ĐẶT PHÒNG</span>
             </a>
@@ -44,7 +46,7 @@
             </a>
         </li>
         <li>
-            <button class="btn-dx d-flex flex-shrink-0">
+            <button class="btn-dx d-flex flex-shrink-0" @onclick=LogOut>
                 <div>ĐĂNG XUẤT</div>
                 <div class="icon-dx">
                     <i class="fa-solid fa-right-to-bracket" style="color: #000000;"></i>
@@ -88,5 +90,16 @@
     void SetDepartmentsPage()
     {
         SetCurrentPage("departments");
+    }
+    void SetRoomsPage()
+    {
+        SetCurrentPage("rooms");
+    }
+    void SetBookingsPage()
+    {
+        SetCurrentPage("bookings");
+    }
+    void LogOut(){
+        NavigationManager.NavigateTo("/logout");
     }
 }

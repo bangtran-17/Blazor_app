@@ -1,470 +1,471 @@
 {
   "Files": [
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Pages\\LocPaymentFail.razor.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Pages\\LocPaymentFail.razor.js",
       "PackagePath": "staticwebassets\\Pages\\LocPaymentFail.razor.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\obj\\Debug\\net7.0\\build-gz\\akKjKhaw.gz",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\obj\\Debug\\net7.0\\compressed\\sdjadcr4aw.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Hotel.Client.styles.css",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Hotel.Client.styles.css",
       "PackagePath": "staticwebassets\\Hotel.Client.styles.css"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\Grand-Atlantis-Jacuzzi.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\Grand-Atlantis-Jacuzzi.png",
       "PackagePath": "staticwebassets\\Grand\\Grand-Atlantis-Jacuzzi.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantis-Interior-LivingRoom.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantis-Interior-LivingRoom.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantis-Interior-LivingRoom.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-BathroomWithTheBalconyAttached.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BedroomWithAView.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BedroomWithAView.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-BedroomWithAView.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BedroomWithBalcony.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-BedroomWithBalcony.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-BedroomWithBalcony.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-DiningRoom.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-DiningRoom.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-DiningRoom.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-EntranceWithFishFountain.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-EntranceWithFishFountain.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-EntranceWithFishFountain.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\Grand\\GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png",
       "PackagePath": "staticwebassets\\Grand\\GrandAtlantisSuite-Interior-GrandAtlantisSuiteBalcony.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\app.css",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\app.min.css",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\app.min.css",
       "PackagePath": "staticwebassets\\css\\app.min.css"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\global.css",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\global.css",
       "PackagePath": "staticwebassets\\css\\global.css"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\data\\galleries.json",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\data\\galleries.json",
       "PackagePath": "staticwebassets\\data\\galleries.json"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\favicon.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\faviconn.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\faviconn.png",
       "PackagePath": "staticwebassets\\faviconn.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\icon-192.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\img\\Liquid.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\img\\Liquid.png",
       "PackagePath": "staticwebassets\\img\\Liquid.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\img\\Logo_Horizontal.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\img\\Logo_Horizontal.png",
       "PackagePath": "staticwebassets\\img\\Logo_Horizontal.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\img\\User.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\img\\User.png",
       "PackagePath": "staticwebassets\\img\\User.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\img\\Webite  Hotel (1).zip",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\img\\Webite  Hotel (1).zip",
       "PackagePath": "staticwebassets\\img\\Webite  Hotel (1).zip"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\img\\register.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\img\\register.png",
       "PackagePath": "staticwebassets\\img\\register.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\img\\welcome.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\img\\welcome.png",
       "PackagePath": "staticwebassets\\img\\welcome.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\index.html",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\StripePayment.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\js\\StripePayment.js",
       "PackagePath": "staticwebassets\\js\\StripePayment.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\common.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\js\\common.js",
       "PackagePath": "staticwebassets\\js\\common.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\createModal.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\js\\createModal.js",
       "PackagePath": "staticwebassets\\js\\createModal.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\galleryApp.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\js\\galleryApp.js",
       "PackagePath": "staticwebassets\\js\\galleryApp.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\js\\script1.js",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\js\\script1.js",
       "PackagePath": "staticwebassets\\js\\script1.js"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\-icon-chevron-down.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\-icon-chevron-down.svg",
       "PackagePath": "staticwebassets\\public\\-icon-chevron-down.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\-icon-chevron-down1.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\-icon-chevron-down1.svg",
       "PackagePath": "staticwebassets\\public\\-icon-chevron-down1.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\1.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\1.svg",
       "PackagePath": "staticwebassets\\public\\1.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\Lan bien.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\Lan bien.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\Lan bien.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar1@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\avatar1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar2@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\avatar2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar3@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\avatar3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar4@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar4@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\avatar4@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar5@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar5@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\avatar5@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\avatar@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\avatar@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\bone@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\bone@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\bone@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\ch-logo-vng-12@x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\ch-logo-vng-12@x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\ch-logo-vng-12@x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\chevronright@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\chevronright@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\chevronright@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\clock@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\clock@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\clock@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\creditcard@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\creditcard@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\creditcard@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\dashiconsarrowupalt21@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\dashiconsarrowupalt21@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\dashiconsarrowupalt21@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\dashiconsarrowupalt2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\dashiconsarrowupalt2@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\dashiconsarrowupalt2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\divider@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\divider@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\divider@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\doorenter@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\doorenter@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\doorenter@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\ellipse-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\ellipse-1@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\ellipse-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\favicon.ico",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\favicon.ico",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\favicon.ico"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\fire@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\fire@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\fire@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon1@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\icon1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon2@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\icon2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon3@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\icon3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon4@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon4@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\icon4@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon5@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon5@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\icon5@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\icon@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\icon@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-134@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-134@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-134@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-135@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-135@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-135@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-137@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-137@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-137@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-138@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-138@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-138@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-139@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-139@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-139@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-140@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-140@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-140@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-141@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-141@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-141@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-142@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-142@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-142@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-143@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-143@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-143@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-144@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-144@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-144@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-145@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-145@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-145@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-146@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-146@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-146@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-147@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image-147@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image-147@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image1@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image2@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image3@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image4@3x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image4@3x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image4@3x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\image@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\image@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\logo-ko-ch-k-n-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\logo-ko-ch-k-n-1@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\logo-ko-ch-k-n-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\party@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\party@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\party@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\plant@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\plant@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\plant@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\rectangle-31@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\rectangle-31@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\rectangle-31@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\rectangle-3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\rectangle-3@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\rectangle-3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\shoppingcart@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\shoppingcart@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\shoppingcart@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\sparkles2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\sparkles2@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\sparkles2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\star@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\star@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\star@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\washer@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\washer@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\washer@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\wind@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ChiTietPhg\\wind@2x.png",
       "PackagePath": "staticwebassets\\public\\ChiTietPhg\\wind@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\Hotel-2.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\Hotel-2.png",
       "PackagePath": "staticwebassets\\public\\Hotel-2.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\Hotel-3.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\Hotel-3.png",
       "PackagePath": "staticwebassets\\public\\Hotel-3.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\Hotel-4.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\Hotel-4.png",
       "PackagePath": "staticwebassets\\public\\Hotel-4.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\ch-logo-vng-11@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\ch-logo-vng-11@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentFail\\ch-logo-vng-11@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\group-1-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\group-1-1@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentFail\\group-1-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\icons@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\icons@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentFail\\icons@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\item@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\item@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentFail\\item@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\logo-ko-ch-k-n-11@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\logo-ko-ch-k-n-11@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentFail\\logo-ko-ch-k-n-11@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\vector-14@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentFail\\vector-14@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentFail\\vector-14@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\ch-logo-vng-11@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\ch-logo-vng-11@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentSuccess\\ch-logo-vng-11@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\group-1-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\group-1-1@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentSuccess\\group-1-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\logo-ko-ch-k-n-11@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\logo-ko-ch-k-n-11@2x.png",
       "PackagePath": "staticwebassets\\public\\LocPaymentSuccess\\logo-ko-ch-k-n-11@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\stepper.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\LocPaymentSuccess\\stepper.svg",
       "PackagePath": "staticwebassets\\public\\LocPaymentSuccess\\stepper.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\appointment@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\appointment@2x.png",
       "PackagePath": "staticwebassets\\public\\appointment@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\atlantis_hotel at the palm dubai _ an in depth look inside.mp4",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\atlantis_hotel at the palm dubai _ an in depth look inside.mp4",
       "PackagePath": "staticwebassets\\public\\atlantis_hotel at the palm dubai _ an in depth look inside.mp4"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\background.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\background.svg",
       "PackagePath": "staticwebassets\\public\\background.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ch-logo-vng-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ch-logo-vng-1@2x.png",
       "PackagePath": "staticwebassets\\public\\ch-logo-vng-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\chevron-right.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\chevron-right.svg",
       "PackagePath": "staticwebassets\\public\\chevron-right.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\doimk\\cho-mng-ch-1@2x.png",
       "PackagePath": "staticwebassets\\public\\doimk\\cho-mng-ch-1@2x.png"
     },
@@ -482,217 +483,221 @@
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\edit-fill@2x.png",
+=======
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\edit-fill@2x.png",
+>>>>>>> 37f9eb9c51e7d02af637cbadab57a3a3ad2dd80a
       "PackagePath": "staticwebassets\\public\\edit-fill@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ellipse-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\ellipse-1@2x.png",
       "PackagePath": "staticwebassets\\public\\ellipse-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\export-fill.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\export-fill.svg",
       "PackagePath": "staticwebassets\\public\\export-fill.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\export-fill1.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\export-fill1.svg",
       "PackagePath": "staticwebassets\\public\\export-fill1.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\eye-fill@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\eye-fill@2x.png",
       "PackagePath": "staticwebassets\\public\\eye-fill@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\facebook-black.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\facebook-black.svg",
       "PackagePath": "staticwebassets\\public\\facebook-black.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\favicon.ico",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\favicon.ico",
       "PackagePath": "staticwebassets\\public\\favicon.ico"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\aaronhuberg7se2s4lab4unsplash-3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\aaronhuberg7se2s4lab4unsplash-3@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\aaronhuberg7se2s4lab4unsplash-3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\awaken_spa.mp4",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\awaken_spa.mp4",
       "PackagePath": "staticwebassets\\public\\gioithieu\\awaken_spa.mp4"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\ch-logo-vng-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\ch-logo-vng-1@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\ch-logo-vng-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\davidbocah2avc2mh66qunsplash-2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\davidbocah2avc2mh66qunsplash-2@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\davidbocah2avc2mh66qunsplash-2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\ellipse-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\ellipse-1@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\ellipse-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\favicon.ico",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\favicon.ico",
       "PackagePath": "staticwebassets\\public\\gioithieu\\favicon.ico"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-359@3x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-359@3x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\frame-359@3x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-74@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-74@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\frame-74@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-751@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-751@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\frame-751@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-75@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-75@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\frame-75@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-761@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-761@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\frame-761@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-76@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\frame-76@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\frame-76@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\francescatosolini21xbudin8aounsplash@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\francescatosolini21xbudin8aounsplash@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\francescatosolini21xbudin8aounsplash@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\group-240@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\group-240@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\group-240@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\iandooley-jr5txknsounsplash@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\iandooley-jr5txknsounsplash@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\iandooley-jr5txknsounsplash@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-148@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-148@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\image-148@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-3@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\image-3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-4@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-4@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\image-4@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-5@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-5@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\image-5@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-6@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-6@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\image-6@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-7@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\image-7@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\image-7@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\jarekceborskijn7uvecdf6uunsplash@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\jarekceborskijn7uvecdf6uunsplash@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\jarekceborskijn7uvecdf6uunsplash@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\karisheamfj9g64wxqunsplash@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\karisheamfj9g64wxqunsplash@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\karisheamfj9g64wxqunsplash@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\logo-ko-ch-k-n-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\logo-ko-ch-k-n-1@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\logo-ko-ch-k-n-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\mask-group1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\mask-group1@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\mask-group1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\mask-group2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\mask-group2@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\mask-group2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\mask-group@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\mask-group@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\mask-group@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\plant@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\plant@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\plant@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\polygon-13@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\polygon-13@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\polygon-13@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\polygon-14@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\gioithieu\\polygon-14@2x.png",
       "PackagePath": "staticwebassets\\public\\gioithieu\\polygon-14@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-12999.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-12999.svg",
       "PackagePath": "staticwebassets\\public\\group-12999.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-13013.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-13013.svg",
       "PackagePath": "staticwebassets\\public\\group-13013.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-130131.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-130131.svg",
       "PackagePath": "staticwebassets\\public\\group-130131.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-13038.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\group-13038.svg",
       "PackagePath": "staticwebassets\\public\\group-13038.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\home-fill@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\home-fill@2x.png",
       "PackagePath": "staticwebassets\\public\\home-fill@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\iconsdocumentsversion2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\iconsdocumentsversion2@2x.png",
       "PackagePath": "staticwebassets\\public\\iconsdocumentsversion2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-115@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-115@2x.png",
       "PackagePath": "staticwebassets\\public\\image-115@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-116@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-116@2x.png",
       "PackagePath": "staticwebassets\\public\\image-116@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-1201@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-1201@2x.png",
       "PackagePath": "staticwebassets\\public\\image-1201@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-120@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-120@2x.png",
       "PackagePath": "staticwebassets\\public\\image-120@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-123@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-123@2x.png",
       "PackagePath": "staticwebassets\\public\\image-123@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-124@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-124@2x.png",
       "PackagePath": "staticwebassets\\public\\image-124@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-125@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-125@2x.png",
       "PackagePath": "staticwebassets\\public\\image-125@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-1261@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-1261@2x.png",
       "PackagePath": "staticwebassets\\public\\image-1261@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-126@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-126@2x.png",
       "PackagePath": "staticwebassets\\public\\image-126@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-23@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-23@2x.png",
       "PackagePath": "staticwebassets\\public\\image-23@2x.png"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\images\\Logo.png",
       "PackagePath": "staticwebassets\\public\\images\\Logo.png"
     },
@@ -710,126 +715,129 @@
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\instagram.svg",
+=======
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\instagram.svg",
+>>>>>>> 37f9eb9c51e7d02af637cbadab57a3a3ad2dd80a
       "PackagePath": "staticwebassets\\public\\instagram.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\logo-ko-ch-k-n-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\logo-ko-ch-k-n-1@2x.png",
       "PackagePath": "staticwebassets\\public\\logo-ko-ch-k-n-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\mask-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\mask-1@2x.png",
       "PackagePath": "staticwebassets\\public\\mask-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\north.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\north.svg",
       "PackagePath": "staticwebassets\\public\\north.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\palatinolinotype_bold.ttf",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\palatinolinotype_bold.ttf",
       "PackagePath": "staticwebassets\\public\\palatinolinotype_bold.ttf"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\palatinolinotype_roman.ttf",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\palatinolinotype_roman.ttf",
       "PackagePath": "staticwebassets\\public\\palatinolinotype_roman.ttf"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\phone-black.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\phone-black.svg",
       "PackagePath": "staticwebassets\\public\\phone-black.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\plant@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\plant@2x.png",
       "PackagePath": "staticwebassets\\public\\plant@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\rectangle-11@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\rectangle-11@2x.png",
       "PackagePath": "staticwebassets\\public\\rectangle-11@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\rectangle-3@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\rectangle-3@2x.png",
       "PackagePath": "staticwebassets\\public\\rectangle-3@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\search@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\search@2x.png",
       "PackagePath": "staticwebassets\\public\\search@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\star-1.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\star-1.svg",
       "PackagePath": "staticwebassets\\public\\star-1.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\ch-logo-vng-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\ch-logo-vng-1@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\ch-logo-vng-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\favicon.ico",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\favicon.ico",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\favicon.ico"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\group-1-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\group-1-1@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\group-1-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\icons@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\icons@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\icons@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\image-128@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\image-128@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\image-128@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\image-129@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\image-129@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\image-129@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\item@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\item@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\item@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\logo-ko-ch-k-n-1@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\logo-ko-ch-k-n-1@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\logo-ko-ch-k-n-1@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\stepper@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\stepper@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\stepper@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\vector-13@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\vector-13@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\vector-13@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\vector-14@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\thanhtoan\\vector-14@2x.png",
       "PackagePath": "staticwebassets\\public\\thanhtoan\\vector-14@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\user-fill.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\user-fill.svg",
       "PackagePath": "staticwebassets\\public\\user-fill.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\user-fill2@2x.png",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\user-fill2@2x.png",
       "PackagePath": "staticwebassets\\public\\user-fill2@2x.png"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector-3.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector-3.svg",
       "PackagePath": "staticwebassets\\public\\vector-3.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector-4.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector-4.svg",
       "PackagePath": "staticwebassets\\public\\vector-4.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector.svg",
       "PackagePath": "staticwebassets\\public\\vector.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector1.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector1.svg",
       "PackagePath": "staticwebassets\\public\\vector1.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector2.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\vector2.svg",
       "PackagePath": "staticwebassets\\public\\vector2.svg"
     },
     {
-      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\youtube-black.svg",
+      "Id": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\wwwroot\\public\\youtube-black.svg",
       "PackagePath": "staticwebassets\\public\\youtube-black.svg"
     },
     {

@@ -32,7 +32,6 @@ namespace Hotel.Client.Services
 		public async Task DeleteGuest(int id)
 		{
 			var result = await _http.DeleteAsync($"api/Guest/{id}");
-			_navigationManger.NavigateTo("admin/Guests");
 		}
 
 		public async Task<List<Guest?>> SearchGuests(string searchText)
@@ -72,7 +71,6 @@ namespace Hotel.Client.Services
 		public async Task UpdateGuest(int id, Guest Guest)
 		{
 			await _http.PutAsJsonAsync($"api/Guest/{id}", Guest);
-			_navigationManger.NavigateTo("admin/Guests");
 		}
 
         public async Task<Guest> SearchGuestByName(string? name)

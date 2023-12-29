@@ -1564,7 +1564,6 @@ D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\staticwebass
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\DepartmentAdmin.razor.rz.scp.css
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\DepartmentsAdmin.razor.rz.scp.css
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\EmployeesAdmin.razor.rz.scp.css
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\NhanViensAdmin.razor.rz.scp.css
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\PaymentsAdmin.razor.rz.scp.css
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\BookingPage.razor.rz.scp.css
 D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\EmployeeView.razor.rz.scp.css
@@ -1850,6 +1849,7 @@ D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTi
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\SignatureSuite.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\Suite.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GioiThieu.razor.rz.scp.css
+<<<<<<< HEAD
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChangePassword.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ForgetPassword.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\SuccessRegister.razor.rz.scp.css
@@ -1857,3 +1857,67 @@ D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Succe
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\profile\TaiKhoan.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\profile\History.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\profile\Password.razor.rz.scp.css
+=======
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\Roomdetail.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Booking\ThanhToanB2.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GioiThieu.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GuestRoom.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\ImperialSuite.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\SignatureSuite.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\Suite.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\chiTietPhg\ChiTietPhg.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\RoomsAdmin.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\Admin\BookingsAdmin.razor.rz.scp.css
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.ObjectPool.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.Core.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.Charts.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.Data.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.DataVizCommon.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.ExcelExport.Net.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Licensing.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.PdfExport.Net.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.DataVizCommon.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.ExcelExport.Net.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.ObjectPool.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.Charts.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.Data.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Licensing.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.Blazor.Core.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Syncfusion.PdfExport.Net.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Http.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.Extensions.ObjectPool.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.Blazor.Charts.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.Blazor.Core.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.Blazor.Data.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.Blazor.DataVizCommon.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.ExcelExport.Net.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.Licensing.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\bin\Debug\net7.0\Syncfusion.PdfExport.Net.dll
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\2ljizu1zf2.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\dznqg0faul.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\5u1wvx4sxt.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\ssh7d9yjs4.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\dbgoymgljo.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\347dutgtz6.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\e1natxxakm.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\kiujgs143o.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\hx4kj9bw2d.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\6qb5o9fg39.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\88uoiesh5p.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\itrpiuerjx.gz
+D:\Visual Studio Code\HK 5\Blazor_app\hotel\Client\obj\Debug\net7.0\compressed\sbbfxml452.gz
+>>>>>>> 37f9eb9c51e7d02af637cbadab57a3a3ad2dd80a

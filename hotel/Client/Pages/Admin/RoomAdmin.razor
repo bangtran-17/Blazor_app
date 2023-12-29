@@ -1,0 +1,119 @@
+﻿@page "/admin/room"
+@page "/admin/room/{id:int}"
+
+@attribute [Authorize(Roles = "admin, employee")]
+
+@using Hotel.Shared
+
+@inject IRoomService RoomService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản Lý Nhân Viên</PageTitle>
+
+<button class="btn btn-primary" @onclick="NavigateBack">Quay lại</button>
+
+@if (Id is null)
+{
+    <PageTitle>Create a new Room</PageTitle>
+    <h3>Create a new Room</h3>
+    <br />
+}
+else
+{
+    <PageTitle>Edit Room @room.RNumber</PageTitle>
+    <h3>Edit Room @room.RNumber</h3>
+    <br />
+
+}
+
+<EditForm Model="room" OnSubmit="HandleSubmit">
+    <div>
+        <label for="RNumber">MÃ PHÒNG</label>
+        <InputText id="RNumber" @bind-Value="room.RNumber" class="form-control" />
+    </div>
+    <div>
+        <label for="RtId">MÃ LOẠI PHÒNG</label>
+        @* <InputNumber id="RtId" @bind-Value="room.RtId" class="form-control" /> *@
+        <InputSelect @bind-Value=room.RtId class="form-control">
+            @for(int i = 1; i <= 10; i++)
+            {
+
+                <option value="@i">@i</option>
+            }
+        </InputSelect>
+    </div>
+    <div>
+        <label for="RAvailable">TRẠNG THÁI PHÒNG</label>
+        @* <InputText id="RAvailable" @bind-Value="room.RAvailable" class="form-control" /> *@
+        <InputSelect @bind-Value=room.RAvailable class="form-control">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </InputSelect>
+    </div>
+
+    <button type="submit" class="btn btn-primary">@btnText</button>
+
+    <button class="btn btn-danger" @onclick="DeleteRoom">Delete</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    [ParameterAttribute]
+    public string? Fname { get; set; }
+
+    string btnText = string.Empty;
+
+    Room? room = new Room { };
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Lưu" : "Cập nhật";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await RoomService.GetRoomById((int)Id);
+            // var result = await RoomService.GetRoomByFName(Fname);
+            if (result is not null)
+                room = result;
+            else
+                NavigationManager.NavigateTo("/admin/room");
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id is null)
+        {
+            await RoomService.CreateRoom(room);
+        }
+        else
+        {
+            await RoomService.UpdateRoom((int)Id, room);
+        }
+    }
+
+    async Task DeleteRoom()
+    {
+        await RoomService.DeleteRoom(room.RId);
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/admin/rooms");
+    }
+
+    public string search { get; set; }
+
+    private string displayValue;
+
+    private void HandleInputChange(ChangeEventArgs e)
+    {
+        // Thực hiện các xử lý hoặc biến đổi giá trị tùy theo nhu cầu
+        displayValue = $"You entered: {e.Value}";
+    }
+
+}

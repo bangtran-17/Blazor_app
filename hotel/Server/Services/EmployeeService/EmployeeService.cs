@@ -85,9 +85,15 @@ namespace Hotel.Server.Services.EmployeeService
                 dbEmployee.EId = Employee.EId;
                 dbEmployee.EFirstName = Employee.EFirstName;
                 dbEmployee.ELastName = Employee.ELastName;
+                dbEmployee.EDesignation = Employee.EDesignation;
                 dbEmployee.EContactNumber = Employee.EContactNumber;
                 dbEmployee.EEmail = Employee.EEmail;
+                dbEmployee.EJoinDate = Employee.EJoinDate;
                 dbEmployee.EAddress = Employee.EAddress;
+                dbEmployee.DeId = Employee.DeId;
+                dbEmployee.HId = Employee.HId;
+                dbEmployee.EAccount = Employee.EAccount;
+                dbEmployee.Status = Employee.Status;
 
                 await _context.SaveChangesAsync();
             }

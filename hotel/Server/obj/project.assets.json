@@ -1007,7 +1007,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http/2.2.0": {
+      "Microsoft.AspNetCore.Http/2.2.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
@@ -3443,6 +3443,130 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Syncfusion.Blazor.Charts/24.1.43": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "24.1.43",
+          "Syncfusion.Blazor.Data": "24.1.43",
+          "Syncfusion.Blazor.DataVizCommon": "24.1.43",
+          "Syncfusion.ExcelExport.Net.Core": "24.1.43",
+          "Syncfusion.PdfExport.Net.Core": "24.1.43"
+        },
+        "compile": {
+          "lib/net7.0/Syncfusion.Blazor.Charts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.Charts.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Syncfusion.Blazor.Charts.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Syncfusion.Blazor.Charts.props": {}
+        }
+      },
+      "Syncfusion.Blazor.Core/24.1.43": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.0",
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Syncfusion.Licensing": "24.1.43",
+          "System.Text.Json": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Syncfusion.Blazor.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Syncfusion.Blazor.Core.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Syncfusion.Blazor.Core.props": {}
+        }
+      },
+      "Syncfusion.Blazor.Data/24.1.43": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "24.1.43"
+        },
+        "compile": {
+          "lib/net7.0/Syncfusion.Blazor.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Syncfusion.Blazor.Data.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Syncfusion.Blazor.Data.props": {}
+        }
+      },
+      "Syncfusion.Blazor.DataVizCommon/24.1.43": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "24.1.43"
+        },
+        "compile": {
+          "lib/net7.0/Syncfusion.Blazor.DataVizCommon.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Blazor.DataVizCommon.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.ExcelExport.Net.Core/24.1.43": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Syncfusion.ExcelExport.Net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.ExcelExport.Net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/24.1.43": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.PdfExport.Net.Core/24.1.43": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Syncfusion.PdfExport.Net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Syncfusion.PdfExport.Net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5048,6 +5172,7 @@
           "Microsoft.AspNetCore.SignalR.Common": "7.0.14",
           "Microsoft.AspNetCore.SignalR.Protocols.Json": "7.0.14",
           "Newtonsoft.Json": "13.0.3",
+          "Syncfusion.Blazor.Charts": "24.1.43",
           "System.IdentityModel.Tokens.Jwt": "7.0.3",
           "System.Text.Json": "7.0.4"
         },
@@ -6251,16 +6376,16 @@
         "microsoft.aspnetcore.hosting.server.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http/2.2.0": {
-      "sha512": "YogBSMotWPAS/X5967pZ+yyWPQkThxhmzAwyCHCSSldzYBkW5W5d6oPfBaPqQOnSHYTpSOSOkpZoAce0vwb6+A==",
+    "Microsoft.AspNetCore.Http/2.2.2": {
+      "sha512": "BAibpoItxI5puk7YJbIGj95arZueM8B8M5xT1fXBn3hb3L2G3ucrZcYXv1gXdaroLbntUs8qeV8iuBrpjQsrKw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http/2.2.0",
+      "path": "microsoft.aspnetcore.http/2.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
-        "microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
         "microsoft.aspnetcore.http.nuspec"
       ]
     },
@@ -10065,6 +10190,176 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
+      ]
+    },
+    "Syncfusion.Blazor.Charts/24.1.43": {
+      "sha512": "3Yk3418JFz6acqir1J++IiVzxMc4QxWgVTXlWJMfGUBWSQRs7iKoBmW2tIHe94k1WjmPp6JcUlhWKb7Ild5vsQ==",
+      "type": "package",
+      "path": "syncfusion.blazor.charts/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Syncfusion.Blazor.Charts.props",
+        "buildMultiTargeting/Syncfusion.Blazor.Charts.props",
+        "buildTransitive/Syncfusion.Blazor.Charts.props",
+        "lib/net6.0/Syncfusion.Blazor.Charts.dll",
+        "lib/net6.0/Syncfusion.Blazor.Charts.xml",
+        "lib/net7.0/Syncfusion.Blazor.Charts.dll",
+        "lib/net7.0/Syncfusion.Blazor.Charts.xml",
+        "lib/net8.0/Syncfusion.Blazor.Charts.dll",
+        "lib/net8.0/Syncfusion.Blazor.Charts.xml",
+        "staticwebassets/scripts/sf-accumulation-chart.min.js",
+        "staticwebassets/scripts/sf-chart.min.js",
+        "syncfusion.blazor.charts.24.1.43.nupkg.sha512",
+        "syncfusion.blazor.charts.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Blazor.Core/24.1.43": {
+      "sha512": "e6zJE2XxGjXFBbjebdUqKCsmO/77dHCvCUQ3yVU/vf2z79IaddiYJPzCyeNG522ErTR3SvOLzWax58DKDzD6tQ==",
+      "type": "package",
+      "path": "syncfusion.blazor.core/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Syncfusion.Blazor.Core.props",
+        "buildMultiTargeting/Syncfusion.Blazor.Core.props",
+        "buildTransitive/Syncfusion.Blazor.Core.props",
+        "lib/net6.0/Syncfusion.Blazor.Core.dll",
+        "lib/net6.0/Syncfusion.Blazor.Core.xml",
+        "lib/net7.0/Syncfusion.Blazor.Core.dll",
+        "lib/net7.0/Syncfusion.Blazor.Core.xml",
+        "lib/net8.0/Syncfusion.Blazor.Core.dll",
+        "lib/net8.0/Syncfusion.Blazor.Core.xml",
+        "staticwebassets/scripts/compression.min.js",
+        "staticwebassets/scripts/excelexport.min.js",
+        "staticwebassets/scripts/fileutils.min.js",
+        "staticwebassets/scripts/pdfexport.min.js",
+        "staticwebassets/scripts/popup.min.js",
+        "staticwebassets/scripts/popupsbase.min.js",
+        "staticwebassets/scripts/sf-svg-export.min.js",
+        "staticwebassets/scripts/svgbase.min.js",
+        "staticwebassets/scripts/syncfusion-blazor-base.min.js",
+        "staticwebassets/scripts/syncfusion-blazor-extended.min.js",
+        "staticwebassets/scripts/syncfusion-blazor.min.js",
+        "syncfusion.blazor.core.24.1.43.nupkg.sha512",
+        "syncfusion.blazor.core.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Blazor.Data/24.1.43": {
+      "sha512": "wStbBWCxJhQUFOEwzLZHyM+eOjv3UMPw1sLnCHtv3YBx3FoqXLmUX0aZ6ELqwDn2vgAmekz/Ndba28VN3mU2cg==",
+      "type": "package",
+      "path": "syncfusion.blazor.data/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Syncfusion.Blazor.Data.props",
+        "buildMultiTargeting/Syncfusion.Blazor.Data.props",
+        "buildTransitive/Syncfusion.Blazor.Data.props",
+        "lib/net6.0/Syncfusion.Blazor.Data.dll",
+        "lib/net6.0/Syncfusion.Blazor.Data.xml",
+        "lib/net7.0/Syncfusion.Blazor.Data.dll",
+        "lib/net7.0/Syncfusion.Blazor.Data.xml",
+        "lib/net8.0/Syncfusion.Blazor.Data.dll",
+        "lib/net8.0/Syncfusion.Blazor.Data.xml",
+        "staticwebassets/scripts/data.min.js",
+        "syncfusion.blazor.data.24.1.43.nupkg.sha512",
+        "syncfusion.blazor.data.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Blazor.DataVizCommon/24.1.43": {
+      "sha512": "7HsPxU4ShM9iSMo7l0DARyVBRH/yq/yErFhbO0kGYtNwcI1/iXVejL/d1FHab2sYbS9e/o/04vOW6LiSn3Qxlw==",
+      "type": "package",
+      "path": "syncfusion.blazor.datavizcommon/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net6.0/Syncfusion.Blazor.DataVizCommon.dll",
+        "lib/net6.0/Syncfusion.Blazor.DataVizCommon.xml",
+        "lib/net7.0/Syncfusion.Blazor.DataVizCommon.dll",
+        "lib/net7.0/Syncfusion.Blazor.DataVizCommon.xml",
+        "lib/net8.0/Syncfusion.Blazor.DataVizCommon.dll",
+        "lib/net8.0/Syncfusion.Blazor.DataVizCommon.xml",
+        "syncfusion.blazor.datavizcommon.24.1.43.nupkg.sha512",
+        "syncfusion.blazor.datavizcommon.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.ExcelExport.Net.Core/24.1.43": {
+      "sha512": "vakgUJkveBGMWg8lOsBSM5SETHddSt/iRYHQ3mk020OdESZb3lfxvFSGFTvTCy7NvbIUiPLx4u5OxwRo/gg46g==",
+      "type": "package",
+      "path": "syncfusion.excelexport.net.core/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net6.0/Syncfusion.ExcelExport.Net.dll",
+        "lib/net6.0/Syncfusion.ExcelExport.Net.xml",
+        "lib/net7.0/Syncfusion.ExcelExport.Net.dll",
+        "lib/net7.0/Syncfusion.ExcelExport.Net.xml",
+        "lib/net8.0/Syncfusion.ExcelExport.Net.dll",
+        "lib/net8.0/Syncfusion.ExcelExport.Net.xml",
+        "lib/netstandard2.0/Syncfusion.ExcelExport.Net.dll",
+        "lib/netstandard2.0/Syncfusion.ExcelExport.Net.xml",
+        "syncfusion.excelexport.net.core.24.1.43.nupkg.sha512",
+        "syncfusion.excelexport.net.core.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Licensing/24.1.43": {
+      "sha512": "MHm8cNWJoiGi3DFgZBEEPFVqJb8TpidetRVrWgl+qYgjI0CfRz+vYJw+s0AUgytxf6sb9PCoENpFPOCigum2dQ==",
+      "type": "package",
+      "path": "syncfusion.licensing/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/net7.0/Syncfusion.Licensing.dll",
+        "lib/net8.0/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.24.1.43.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.PdfExport.Net.Core/24.1.43": {
+      "sha512": "93d54qAdWiIPl0s3J5/In4U//cPoMu2owFGeCm/wgMhgU4AdmImt4icnw7gX4+MQPqLRPLcn2d9YRGKzNoiJyA==",
+      "type": "package",
+      "path": "syncfusion.pdfexport.net.core/24.1.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net6.0/Syncfusion.PdfExport.Net.dll",
+        "lib/net6.0/Syncfusion.PdfExport.Net.xml",
+        "lib/net7.0/Syncfusion.PdfExport.Net.dll",
+        "lib/net7.0/Syncfusion.PdfExport.Net.xml",
+        "lib/netstandard2.0/Syncfusion.PdfExport.Net.dll",
+        "lib/netstandard2.0/Syncfusion.PdfExport.Net.xml",
+        "syncfusion.pdfexport.net.core.24.1.43.nupkg.sha512",
+        "syncfusion.pdfexport.net.core.nuspec",
+        "syncfusion_logo.png"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -14113,23 +14408,24 @@
       "Swashbuckle.AspNetCore >= 6.5.0",
       "Swashbuckle.AspNetCore.Swagger >= 6.5.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.5.0",
+      "Syncfusion.Blazor.Charts >= 24.1.43",
       "System.IdentityModel.Tokens.Jwt >= 7.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "C:\\Users\\Locc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
+      "projectUniqueName": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
       "projectName": "Hotel.Server",
-      "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Server\\obj\\",
+      "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\Hotel.Server.csproj",
+      "packagesPath": "C:\\Users\\Locc\\.nuget\\packages\\",
+      "outputPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Locc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -14143,11 +14439,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
-              "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj"
+            "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj": {
+              "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Client\\Hotel.Client.csproj"
             },
-            "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
-              "projectPath": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
+            "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj": {
+              "projectPath": "D:\\Visual Studio Code\\HK 5\\Blazor_app\\hotel\\Shared\\Hotel.Shared.csproj"
             }
           }
         }
@@ -14252,6 +14548,10 @@
             "target": "Package",
             "version": "[6.5.0, )"
           },
+          "Syncfusion.Blazor.Charts": {
+            "target": "Package",
+            "version": "[24.1.43, )"
+          },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
             "version": "[7.0.3, )"
@@ -14276,7 +14576,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

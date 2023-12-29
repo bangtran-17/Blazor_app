@@ -1,0 +1,164 @@
+﻿@page "/admin/bookings"
+
+@attribute [Authorize(Roles = "admin, employee")]
+
+@using Hotel.Shared
+@using Hotel.Client.ViewModel
+
+@inject IBookingService BookingService
+@inject IRoomService RoomService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Quản lý phòng ban</PageTitle>
+
+
+<div class="row container">
+    <input @oninput="SearchBookings" type="text" class="tim col-6 mt-4 ml-4" placeholder="Tìm kiếm">
+
+    <div class="col-6 row mt-4">
+        <div class="sua col-4 d-inline-block w-2"></div>
+        <button class="w-20" @onclick="NavigateBack">Quay lại</button>
+        <div class="them col-4 d-inline-block w-2"></div>
+        <button class="w-20" @onclick="AddBooking">Thêm</button>
+        <div class="xoa col-4 d-inline-block w-2"></div>
+        <button class="w-20">Xóa</button>
+    </div>
+</div>
+<!-------------------------------------------------------------------->
+@* <div class="row container">
+    <div class="sort mt-4 ml-4">
+        <div class="ngay col-3 d-inline-block w-2"></div>
+        <span class="w-21">Hôm nay</span>
+
+        <div class="thang col-3 d-inline-block w-2"></div>
+        <span class="w-21">Trong tuần</span>
+
+        <div class="nam col-3 d-inline-block w-2"></div>
+        <span class="w-21">Trong tháng</span>
+
+        <div class="select-input col-3 d-inline-block w-2"></div>
+        <span class="w-21">Loại khách<i class="fa-solid fa-angle-down"></i></span>
+        <span><input class="chn-ngy" type="date" /></span>
+    </div>
+</div> *@
+<!---------------------------------------------------------------------------------->
+<div class="row container d-flex flex-column flex-shrink-0 col-9">
+    @* <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> *@
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:20%;">MÃ ĐẶT PHÒNG</th>
+            <th style="width:20%;">SỐ TIỀN</th>
+            <th style="width:20%;">THỜI GIAN</th>
+            <th style="width:20%;">MÃ PHÒNG</th>
+            <th style="width:20%;"></th>
+        </tr>
+        @{
+            var bookingsToDisplay = BookingsSearched.Any() ? BookingsSearched : BookingService.Bookings;
+            var pageSize = 10;
+            // var currentPage = 1;
+
+            if (currentPage > 1)
+            {
+                bookingsToDisplay = bookingsToDisplay
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+            }
+            else
+            {
+                bookingsToDisplay = bookingsToDisplay
+                .Take(pageSize)
+                .ToList();
+            }
+
+        }
+        
+        @foreach (var booking in bookingsToDisplay)
+        {
+            <tr>
+                <td>@booking.BId</td>
+                <td>@booking.BCost</td>
+                <td>@booking.BDate</td>
+                @* <td>@booking.Rid</td> *@
+                @{
+                    bool flag = false;
+                    @foreach (var room in RoomService.Rooms)
+                    {
+                        if (room.RId == booking.Rid)
+                        {
+                            <td>@room.RNumber</td>
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if(flag == false)
+                    {
+                        <td></td>
+                    }
+                }
+                <td>
+                    <button class="btn btn-primary" @onclick="(() => ShowBooking(booking.BId))">Click</button>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<!----------------------------------------------------------------------------------->
+<div>
+    <button @onclick="(() => ChangePage(-1))" disabled="@(currentPage == 1)">Previous</button>
+    <span>Page @currentPage</span>
+    @* <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= bookingsToDisplay.Count)">Next</button> *@
+    <button @onclick="(() => ChangePage(1))" disabled="@(currentPage * pageSize >= Math.Max(BookingService.Bookings.Count,BookingsSearched.Count))">Next</button>
+</div>
+
+@code {
+    List<Booking> BookingsSearched = new List<Booking>();
+
+    private int currentPage = 1;
+    private string RNumber;
+
+    // don't need to wait until everythings is rendered
+    protected override async Task OnInitializedAsync()
+    {
+        await BookingService.GetBookings();
+        await RoomService.GetRooms();
+    }
+    void ShowBooking(int id)
+    {
+        NavigationManager.NavigateTo($"admin/booking/{id}");
+    }
+
+    void AddBooking()
+    {
+
+        NavigationManager.NavigateTo("admin/booking");
+    }
+
+    void NavigateBack()
+    {
+        NavigationManager.NavigateTo("admin");
+    }
+
+    async Task SearchBookings(ChangeEventArgs e)
+    {
+        // displayValue = $"You entered: {e.Value}";
+
+        if (string.IsNullOrWhiteSpace(e.Value.ToString()))
+        {
+            BookingsSearched.Clear(); // Clear the search results if the input is empty
+        }
+        else
+        {
+            BookingsSearched = await BookingService.SearchBookings(e.Value.ToString());
+        }
+
+        StateHasChanged(); // Ensure the UI is updated
+    }
+
+    void ChangePage(int change)
+    {
+        currentPage += change;
+        StateHasChanged();
+    }
+}

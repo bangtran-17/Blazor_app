@@ -1,6 +1,8 @@
 ﻿@page "/admin/department"
 @page "/admin/department/{id:int}"
 
+@attribute [Authorize(Roles = "admin")]
+
 @using Hotel.Shared
 
 @inject IDepartmentService DepartmentService
@@ -21,7 +23,6 @@ else
     <PageTitle>Edit Department @department.DeName</PageTitle>
     <h3>Edit Department @department.DeName</h3>
     <br />
-
 }
 
 <EditForm Model="department" OnSubmit="HandleSubmit">

@@ -1,21 +1,21 @@
-*[b-zx7eqovkst],
-[b-zx7eqovkst]::after,
-[b-zx7eqovkst]::before {
+﻿*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-*[b-zx7eqovkst] {
+* {
     font-family: "Be Vietnam Pro";
 }
 
-header[b-zx7eqovkst] {
+header {
     background-color: #FFF6EA;
     text-align: start;
 }
 
-.chip[b-zx7eqovkst] {
+.chip {
     display: inline-block;
     padding: 0 25px;
     height: 50px;
@@ -25,7 +25,7 @@ header[b-zx7eqovkst] {
     background-color: #f1f1f1;
 }
 
-    .chip img[b-zx7eqovkst] {
+    .chip img {
         float: left;
         margin: 0 10px 0 -25px;
         height: 50px;
@@ -33,20 +33,20 @@ header[b-zx7eqovkst] {
         border-radius: 50%;
     }
 
-element.style[b-zx7eqovkst] {
+element.style {
     width: 280px;
 }
 
-/*div {
+div {
     display: block;
-}*/
+}
 
-    div.container[b-zx7eqovkst] {
+    div.container {
         text-align: center;
     }
 
 /*--------------------main-----------------*/
-body[b-zx7eqovkst] {
+body {
     margin: 0;
     /* font-family: var(--bs-font-sans-serif); */
     font-size: 1rem;
@@ -59,7 +59,7 @@ body[b-zx7eqovkst] {
 }
 
 /*-----------------------------------------------------------------------------*/
-main[b-zx7eqovkst] {
+main {
     display: flex;
     flex-wrap: nowrap;
     /* height: 100vh; */
@@ -71,17 +71,17 @@ main[b-zx7eqovkst] {
     /*cuộn dọc*/
 }
 
-main[b-zx7eqovkst] {
+main {
     display: block;
 }
 
 /*--------------------------------------------------------------------------------------*/
 
-.bg-pink[b-zx7eqovkst] {
+.bg-pink {
     background-color: #E5D3C2 !important;
 }
 
-.text-black[b-zx7eqovkst] {
+.text-black {
     color: #000000 !important;
     /* padding-left: 5px;  
     padding-right: 5px; */
@@ -91,24 +91,24 @@ main[b-zx7eqovkst] {
     padding: 1rem!important;
 } */
 
-.flex-shrink-0[b-zx7eqovkst] {
+.flex-shrink-0 {
     flex-shrink: 0 !important;
 }
 
-.flex-column[b-zx7eqovkst] {
+.flex-column {
     flex-direction: column !important;
 }
 
-.d-flex[b-zx7eqovkst] {
+.d-flex {
     display: flex !important;
 }
 
 /*--------------------------------------*/
-.mb-auto[b-zx7eqovkst] {
+.mb-auto {
     margin-bottom: auto !important;
 }
 
-.nav[b-zx7eqovkst] {
+.nav {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -116,19 +116,19 @@ main[b-zx7eqovkst] {
     list-style: none;
 }
 
-dl[b-zx7eqovkst],
-ol[b-zx7eqovkst],
-ul[b-zx7eqovkst] {
+dl,
+ol,
+ul {
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
-ol[b-zx7eqovkst],
-ul[b-zx7eqovkst] {
+ol,
+ul {
     padding-left: 2rem;
 }
 
-ul[b-zx7eqovkst] {
+ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -140,24 +140,24 @@ ul[b-zx7eqovkst] {
 
 /*--------------------------------------------------------------------*/
 
-li[b-zx7eqovkst] {
+li {
     display: list-item;
     text-align: left;
 }
 
-.nav-pills .nav-link.active[b-zx7eqovkst],
-.nav-pills .show > .nav-link[b-zx7eqovkst] {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
     color: #fff;
     background-color: #583101;
 }
 
-.nav-pills .nav-link[b-zx7eqovkst] {
+.nav-pills .nav-link {
     background: 0 0;
     border: 0;
     border-radius: 0.25rem;
 }
 
-.nav-link[b-zx7eqovkst] {
+.nav-link {
     display: block;
     padding: 0.5rem 1rem;
     color: #0d6efd;
@@ -165,13 +165,13 @@ li[b-zx7eqovkst] {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
-a[b-zx7eqovkst] {
+a {
     color: #0d6efd;
     text-decoration: none;
     /* margin: 14.5px; */
 }
 
-    a:-webkit-any-link[b-zx7eqovkst] {
+    a:-webkit-any-link {
         /* color: -webkit-link; */
         cursor: pointer;
         text-decoration: none;
@@ -179,22 +179,22 @@ a[b-zx7eqovkst] {
 
 /*----------------------------------------------------------------------------------------*/
 
-.bi[b-zx7eqovkst] {
+.bi {
     vertical-align: -0.125em;
     pointer-events: none;
     fill: currentColor;
 }
 
-.me-2[b-zx7eqovkst] {
+.me-2 {
     margin-right: 0.5rem !important;
 }
 
-img[b-zx7eqovkst],
-svg[b-zx7eqovkst] {
+img,
+svg {
     vertical-align: middle;
 }
 
-    svg:not(:root)[b-zx7eqovkst] {
+    svg:not(:root) {
         overflow-clip-margin: content-box;
         overflow: hidden;
     }
@@ -216,7 +216,7 @@ svg[b-zx7eqovkst] {
 } */
 
 /*---------------------------------------------------------------------------*/
-.btn-dx[b-zx7eqovkst] {
+.btn-dx {
     display: flex;
     padding: 10%;
     padding-left: 10%;
@@ -228,27 +228,27 @@ svg[b-zx7eqovkst] {
     margin-left: 15%;
 }
 
-.icon-dx[b-zx7eqovkst] {
+.icon-dx {
     margin-left: 10px;
 }
 
 /*-------------------------------------------------------------------------------*/
 
-element.style[b-zx7eqovkst] {
+element.style {
     position: absolute;
     inset: auto auto 0px 0px;
     margin: 0px;
     transform: translate(0px, -34px);
 }
 
-.shadow[b-zx7eqovkst] {
+.shadow {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
 /*----------------------------------------------------------------------------------*/
 /* :root {} */
 
-.b-example-divider[b-zx7eqovkst] {
+.b-example-divider {
     flex-shrink: 0;
     width: 1.5rem;
     height: 100vh;
@@ -259,11 +259,11 @@ element.style[b-zx7eqovkst] {
 }
 
 /*----------------------------------------------------------------------------------*/
-.Methods[b-zx7eqovkst] {
+.Methods {
     margin-left: 300px;
 }
 
-.tim[b-zx7eqovkst] {
+.tim {
     width: 40%;
     overflow: auto;
     border: 2px solid black;
@@ -273,17 +273,17 @@ element.style[b-zx7eqovkst] {
     box-shadow: 5px 5px #888888;
 }
 
-button[b-zx7eqovkst] {
+button {
     border: 2px solid black;
     box-shadow: 10px grey;
     height: 52px;
 }
 
-i[b-zx7eqovkst]::before {
+i::before {
     font-size: 20px;
 }
 
-.w-20[b-zx7eqovkst] {
+.w-20 {
     border-radius: 10px;
     background: #E5D3C2;
     box-shadow: 0px 4px 6px 0px rgba(163, 161, 255, 0.16);
@@ -293,7 +293,7 @@ i[b-zx7eqovkst]::before {
 
 
 /*---------------------------------------------------------------------------*/
-#myInput[b-zx7eqovkst] {
+#myInput {
     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
@@ -304,30 +304,30 @@ i[b-zx7eqovkst]::before {
     margin-bottom: 12px; /* Add some space below the input */
 }
 
-#myTable[b-zx7eqovkst] {
+#myTable {
     border-collapse: collapse; /* Collapse borders */
     width: 100%; /* Full-width */
     border: 1px solid #ddd; /* Add a grey border */
     font-size: 18px; /* Increase font-size */
 }
 
-    #myTable th[b-zx7eqovkst], #myTable td[b-zx7eqovkst] {
+    #myTable th, #myTable td {
         text-align: left; /* Left-align text */
         padding: 12px; /* Add padding */
     }
 
-    #myTable tr[b-zx7eqovkst] {
+    #myTable tr {
         /* Add a bottom border to all table rows */
         border-bottom: 1px solid #ddd;
     }
 
-        #myTable tr.header[b-zx7eqovkst], #myTable tr:hover[b-zx7eqovkst] {
+        #myTable tr.header, #myTable tr:hover {
             /* Add a grey background color to the table header and on hover */
             background-color: #f1f1f1;
         }
 
 /*-----------------------------------------------------------------------*/
-.pagination a[b-zx7eqovkst] {
+.pagination a {
     color: black;
     float: left;
     padding: 8px 16px;
@@ -336,12 +336,12 @@ i[b-zx7eqovkst]::before {
 }
 
     /* Style the active/current link */
-    .pagination a.active[b-zx7eqovkst] {
+    .pagination a.active {
         background-color: dodgerblue;
         color: white;
     }
 
     /* Add a grey background color on mouse-over */
-    .pagination a:hover:not(.active)[b-zx7eqovkst] {
+    .pagination a:hover:not(.active) {
         background-color: #ddd;
     }

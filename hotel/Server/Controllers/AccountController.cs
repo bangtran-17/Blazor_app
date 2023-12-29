@@ -44,6 +44,25 @@ namespace Hotel.Server.Controllers
                 return Ok(new RegisterResult { Successful = false, Errors = errors });
 
             }
+
+            return Ok(new RegisterResult { Successful = true });
+        }
+
+        [HttpPost("employee")]
+        public async Task<IActionResult> RegisterEmployee([FromBody] RegisterModel model)
+        {
+            var newUser = new IdentityUser { UserName = model.UserName, Email = model.Email };
+
+            var result = await _userManager.CreateAsync(newUser, model.Password!);
+            await _userManager.AddToRoleAsync(newUser, "employee");
+            //await _userManager.AddToRoleAsync(newUser, "employee");
+            if (!result.Succeeded)
+            {
+                var errors = result.Errors.Select(x => x.Description);
+
+                return Ok(new RegisterResult { Successful = false, Errors = errors });
+
+            }
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
             var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { token, email = newUser.Email }, HttpContext.Request.Scheme);
 

@@ -378,6 +378,9 @@ namespace Hotel.Server.Migrations
                         .HasColumnType("int")
                         .HasColumnName("DE_ID");
 
+                    b.Property<string>("EAccount")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("EAddress")
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(max)")

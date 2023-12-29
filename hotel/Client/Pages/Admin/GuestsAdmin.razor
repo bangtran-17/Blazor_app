@@ -1,5 +1,7 @@
 ﻿@page "/admin/guests"
 
+@attribute [Authorize(Roles = "admin, employee")]
+
 @inject IGuestService GuestService
 @inject NavigationManager NavigationManager
 
