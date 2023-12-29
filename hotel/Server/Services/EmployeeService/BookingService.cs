@@ -46,6 +46,7 @@ namespace Hotel.Server.Services.BookingService
 
             return dbBookings;
         }
+       
         public async Task<Booking?> UpdateBooking(int BId, Booking booking)
         {
             Console.WriteLine("server: ",booking.BDate);
@@ -81,19 +82,12 @@ namespace Hotel.Server.Services.BookingService
                 return false;
             }
 
-        public async Task<List<Booking>> SearchBookings(string searchText)
-        {
-            var dbBookings = await _context.Bookings
-                .Where(d =>
-                    EF.Functions.Like(d.BId.ToString(), $"%{searchText}%") ||
-                    EF.Functions.Like(d.BDate.ToString(), $"%{searchText}%") ||
-                    EF.Functions.Like(d.BAmount.ToString(), $"%{searchText}%") ||
-                    EF.Functions.Like(d.Rid.ToString(), $"%{searchText}%") ||
-                    EF.Functions.Like(d.BCost.ToString(), $"%{searchText}%"))
-                .ToListAsync();
+            _context.Remove(dbBooking);
+            await _context.SaveChangesAsync();
 
-            return dbBookings;
+            return true;
         }
+       
         public async Task<List<Booking>> SearchBookingsByGid(int gid)
         {
             var dbBookings = await _context.Bookings

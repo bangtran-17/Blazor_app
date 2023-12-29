@@ -614,18 +614,15 @@ D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll
-<<<<<<< HEAD
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\MailKit.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\MimeKit.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
-=======
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Charts.dll
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Core.dll
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Data.dll
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.DataVizCommon.dll
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.ExcelExport.Net.dll
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Licensing.dll
-D:\Visual Studio Code\HK 5\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.PdfExport.Net.dll
->>>>>>> 37f9eb9c51e7d02af637cbadab57a3a3ad2dd80a
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Charts.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Core.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.Data.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Blazor.DataVizCommon.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.ExcelExport.Net.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.Licensing.dll
+D:\bang\Đồ án\Blazor_app\hotel\Server\bin\Debug\net7.0\Syncfusion.PdfExport.Net.dll
