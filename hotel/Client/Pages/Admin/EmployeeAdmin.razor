@@ -89,7 +89,15 @@ else
             var result = await EmployeeService.GetEmployeeById((int)Id);
             // var result = await EmployeeService.GetEmployeeByFName(Fname);
             if (result is not null)
+            {
                 employee = result;
+                if(employee.DeId != null)
+                {
+                    var department = await DepartmentService.GetDepartmentById(employee.DeId ?? -1);
+                    departmentName = department.DeName;
+                }
+            }
+            
             else
                 NavigationManager.NavigateTo("/admin/employee");
         }

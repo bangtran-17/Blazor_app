@@ -3,6 +3,7 @@
 @using Hotel.Shared
 
 @inject IEmployeeService EmployeeService
+@inject IDepartmentService DepartmentService
 @inject NavigationManager NavigationManager
 
 <PageTitle>Quản lý nhân viên</PageTitle>
@@ -108,11 +109,13 @@
     List<Employee> EmployeesSearched = new List<Employee>();
 
     private int currentPage = 1;
+    private string departmentName;
 
     // don't need to wait until everythings is rendered
     protected override async Task OnInitializedAsync()
     {
         await EmployeeService.GetEmployees();
+        await DepartmentService.GetDepartments();
     }
     void ShowEmployee(int id)
     {

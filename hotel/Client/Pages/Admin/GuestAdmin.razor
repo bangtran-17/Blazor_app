@@ -30,10 +30,6 @@ else
         <InputText id="firstName" @bind-Value="guest.GFirstName" class="form-control" />
     </div>
     <div>
-        <label for="lastName">Last Name</label>
-        <InputText id="lastName" @bind-Value="guest.GLastName" class="form-control" />
-    </div>
-    <div>
         <label for="contactNumber">Số điện thoại</label>
         <InputText id="contactNumber" @bind-Value="guest.GSdt" class="form-control" />
     </div>
@@ -43,7 +39,7 @@ else
     </div>
     <div>
         <label for="identityNumber">CCCD</label>
-        <InputText id="email" @bind-Value="guest.GEmail" class="form-control" />
+        <InputText id="email" @bind-Value="guest.GCccd" class="form-control" />
     </div>
 
     <button type="submit" class="btn btn-primary">@btnText</button>
@@ -86,16 +82,19 @@ else
         if (Id is null)
         {
             await GuestService.CreateGuest(guest);
+            NavigationManager.NavigateTo("admin/Guests");
         }
         else
         {
             await GuestService.UpdateGuest((int)Id, guest);
+            NavigationManager.NavigateTo("admin/Guests");
         }
     }
 
     async Task DeleteGuest()
     {
         await GuestService.DeleteGuest(guest.GId);
+        NavigationManager.NavigateTo("admin/Guests");
     }
 
     void NavigateBack()
