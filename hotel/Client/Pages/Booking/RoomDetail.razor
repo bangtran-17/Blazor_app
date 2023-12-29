@@ -97,11 +97,17 @@
                                     <InputText @bind-Value="HotelBooking.guest.GLastName" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
 
                                 </div>
-                                <div class="input3">
-                                    <div class="h">Email</div>
-                                    <InputText @bind-Value="HotelBooking.guest.GEmail" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
-
-                                </div>
+                                <AuthorizeView Context="inner_context">
+                                    <Authorized >
+                               
+                               </Authorized>
+										<NotAuthorized>
+											<div class="input3">
+												<div class="h">Email</div>
+												<InputText @bind-Value="HotelBooking.guest.GEmail" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
+											</div>
+                                   </NotAuthorized>
+                                </AuthorizeView>
                                 <div class="input4">
                                     <div class="h">Số điện thoại</div>
                                     <InputText @bind-Value="HotelBooking.guest.GSdt" type="text" class="input-child" style="border: 1px solid rgb(154, 169, 222);" />
@@ -178,7 +184,13 @@
                     HotelBooking.homeVM = await localStorage.GetItemAsync<HomeVM>(SD.Local_InitialBooking);
 
                     var state = await auth.GetAuthenticationStateAsync();
-                    user = state.User.Identity.Name;
+                    if (state.User.Identity.IsAuthenticated)
+                    {
+                        user = state.User.Identity.Name;
+                        HotelBooking.guest.GAccount = user;
+
+                    }
+
                     await RandomRoom();
 
                     // roomtype = await hotelRoomService.GetRoomtypeById(Id.Value);
@@ -193,7 +205,7 @@
 
                     HotelBooking.orderDetails.BDate = DateTime.Now;
                     HotelBooking.orderDetails.StripeSessionId = "1";
-                    
+
                 }
 
 
@@ -202,7 +214,7 @@
                     // await jsRuntime.ToastrError("Please select a check in date");
                 }
             }
-          
+
         }
         catch (Exception e)
         {
@@ -234,22 +246,31 @@
 
     private async Task HandleCheckout()
     {
-        // if (!await HandleValidation())
-        // {
-        //     return;
-        // }
 
         try
         {
-
-
-            //Accesing the stripePaymentService
-            //await success
+            if(await GuestService.SearchGuestByName(user)!=null)
+            {
+                guest = await GuestService.SearchGuestByName(user);
+                guest.GFirstName = HotelBooking.guest.GFirstName;
+                guest.GLastName = HotelBooking.guest.GLastName;
+                guest.GSdt = HotelBooking.guest.GSdt;
+                guest.GEmail = guest.GEmail;
+                guest.GAccount = HotelBooking.guest.GAccount;
+                await GuestService.UpdateGuest(guest.GId, guest);
+                HotelBooking.orderDetails.GId = guest.GId;
+            }
+            else{ 
+                guest.GEmail = HotelBooking.guest.GEmail;
+              await GuestService.CreateGuest(HotelBooking.guest);  
+              HotelBooking.orderDetails.GId = await getGid();
+                }
           
-            
-            await GuestService.CreateGuest(HotelBooking.guest);
-           HotelBooking.orderDetails.GId = await getGid();
             await roomOrderDetailsService.CreateBooking(HotelBooking.orderDetails);
+
+            roomChosen.RAvailable = "No";
+
+            await roomService.UpdateRoom(roomChosen.RId, roomChosen);
             await localStorage.SetItemAsync(SD.Local_RoomOrderDetails, HotelBooking.orderDetails);
             NavigationManager.NavigateTo($"booking/roomdetail1/{Id}");
 
@@ -277,10 +298,10 @@
     public async Task RandomRoom()
     {
 
-        roomSet = await roomService.GetRoomByFName(Id.ToString());
+      roomSet = await roomService.GetRoomByFName(Id.ToString());
         foreach (var room in roomSet)
         {
-            if (room.RAvailable == "yes")
+            if (room.RAvailable == "Yes")
             {
                 roomChosen = room;
                 roomChosen.Bookings = null;

@@ -34,7 +34,16 @@ namespace Hotel.Server.Controllers
         {
             return await _GuestService.SearchGuests(searchText);
         }
-
+        [HttpGet("search1/{searchText}")]
+        public async Task<Guest?> SearchGuest(string searchText)
+        {
+            return await _GuestService.GetGuestByName(searchText);
+        }
+        [HttpGet("search2/{searchText}")]
+        public async Task<Guest?> SearchGues(string searchText)
+        {
+            return await _GuestService.GetGuestByEmail(searchText);
+        }
         [HttpPost]
         public async Task<Guest?> CreateGuest(Guest? Guest)
         {

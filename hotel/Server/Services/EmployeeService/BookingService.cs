@@ -85,6 +85,26 @@ namespace Hotel.Server.Services.BookingService
             return await _context.Bookings.ToListAsync();
         }
 
-       
+        public async Task<List<Booking>> SearchBookings(string searchText)
+        {
+            var dbBookings = await _context.Bookings
+                .Where(d =>
+                    EF.Functions.Like(d.BId.ToString(), $"%{searchText}%") ||
+                    EF.Functions.Like(d.BDate.ToString(), $"%{searchText}%") ||
+                    EF.Functions.Like(d.BAmount.ToString(), $"%{searchText}%") ||
+                    EF.Functions.Like(d.Rid.ToString(), $"%{searchText}%") ||
+                    EF.Functions.Like(d.BCost.ToString(), $"%{searchText}%"))
+                .ToListAsync();
+
+            return dbBookings;
+        }
+        public async Task<List<Booking>> SearchBookingsByGid(int gid)
+        {
+            var dbBookings = await _context.Bookings
+                .Where(d =>d.GId == gid)
+                .ToListAsync();
+
+            return dbBookings;
+        }
     }
 }

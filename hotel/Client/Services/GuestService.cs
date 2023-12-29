@@ -37,7 +37,7 @@ namespace Hotel.Client.Services
 
 		public async Task<List<Guest?>> SearchGuests(string searchText)
 		{
-			var result = await _http.GetAsync($"api/Guest/name/{searchText}");
+			var result = await _http.GetAsync($"api/Guest/search/{searchText}");
 			if (result.StatusCode == HttpStatusCode.OK)
 			{
 				return await result.Content.ReadFromJsonAsync<List<Guest?>>();
@@ -74,5 +74,30 @@ namespace Hotel.Client.Services
 			await _http.PutAsJsonAsync($"api/Guest/{id}", Guest);
 			_navigationManger.NavigateTo("admin/Guests");
 		}
-	}
+
+        public async Task<Guest> SearchGuestByName(string? name)
+        {
+            var result = await _http.GetAsync($"api/Guest/search1/{name}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<Guest?>();
+            }
+            return null;
+        }
+        public async Task<Guest> SearchGuestByEmail(string? email)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Guest/search2/{email}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<Guest>(options);
+            }
+            return null;
+        }
+    }
 }

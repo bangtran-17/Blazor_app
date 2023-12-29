@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/AdminRegister.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5SZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Admin/Customers.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3VzdG9tZXJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,13 +112,17 @@ build_metadata.AdditionalFiles.CssScope = b-9vgar254e8
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xCb29raW5nUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-3bc39ipq7b
 
-[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/Roomdetail.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xSb29tZGV0YWlsLnJhem9y
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/RoomDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xSb29tRGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ulj1lihn67
 
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Booking/ThanhToanB2.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1xUaGFuaFRvYW5CMi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-qho05hb32a
+
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/ChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-d72wsrlz12
 
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/ChiTietCacLoaiPhong/GioiThieu.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hpVGlldENhY0xvYWlQaG9uZ1xHaW9pVGhpZXUucmF6b3I=
@@ -144,6 +152,10 @@ build_metadata.AdditionalFiles.CssScope = b-7gbq5h1248
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVWaWV3LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-j1dbnszufy
 
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/ForgetPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ2V0UGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xw5svi4jv8
+
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rgesfdydqm
@@ -160,9 +172,29 @@ build_metadata.AdditionalFiles.CssScope = b-zefpjy6t9a
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-sjnbt5uccj
 
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/profile/History.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJvZmlsZVxIaXN0b3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-50klbfyul6
+
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/profile/Password.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJvZmlsZVxQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-avkb66hl28
+
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/profile/TaiKhoan.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJvZmlsZVxUYWlLaG9hbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1afol1k3zv
+
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rtg0jerfj1
+
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/SuccessRegister.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VjY2Vzc1JlZ2lzdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8kcifvbcle
+
+[D:/bang/Đồ án/Blazor_app/hotel/Client/Pages/SuccessReset.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VjY2Vzc1Jlc2V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-w1f2t1x9c8
 
 [D:/bang/Đồ án/Blazor_app/hotel/Client/Shared/AuthLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEF1dGhMYXlvdXQucmF6b3I=

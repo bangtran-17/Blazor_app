@@ -55,6 +55,7 @@
     private async Task HandleRegistration()
     {
         guest.GAccount = RegisterModel.UserName;
+        guest.GEmail=RegisterModel.Email;
         ShowErrors = false;
 
         var result = await AuthService.Register(RegisterModel);

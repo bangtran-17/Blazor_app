@@ -11,5 +11,7 @@ namespace Hotel.Server.Services.BookingService
         Task<Booking?> UpdateBooking(int BId, Booking booking);
         Task<bool> DeleteBooking(int BId);
 
+        Task<List<Booking>> SearchBookings(string searchText);
+        Task<List<Booking>> SearchBookingsByGid(int gid);
     }
 }

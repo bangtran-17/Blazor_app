@@ -88,7 +88,7 @@ namespace Hotel.Server.Services.Rooms
             {
                 dbRoom.RId = Room.RId;
                 dbRoom.RAvailable = Room.RAvailable;
-                dbRoom.Rt.RtName = Room.Rt.RtName;
+     
                 dbRoom.Status = Room.Status;
                 dbRoom.RNumber = Room.RNumber;
            

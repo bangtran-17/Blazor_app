@@ -465,6 +465,22 @@
       "PackagePath": "staticwebassets\\public\\chevron-right.svg"
     },
     {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\doimk\\cho-mng-ch-1@2x.png",
+      "PackagePath": "staticwebassets\\public\\doimk\\cho-mng-ch-1@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\doimk\\group-13058@2x.png",
+      "PackagePath": "staticwebassets\\public\\doimk\\group-13058@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\doimk\\iconfont-awesome-freesolidhhome@2x.png",
+      "PackagePath": "staticwebassets\\public\\doimk\\iconfont-awesome-freesolidhhome@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\doimk\\login-page-1@2x.png",
+      "PackagePath": "staticwebassets\\public\\doimk\\login-page-1@2x.png"
+    },
+    {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\edit-fill@2x.png",
       "PackagePath": "staticwebassets\\public\\edit-fill@2x.png"
     },
@@ -675,6 +691,22 @@
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\image-23@2x.png",
       "PackagePath": "staticwebassets\\public\\image-23@2x.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\public\\images\\Logo.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\images\\User1.jpg",
+      "PackagePath": "staticwebassets\\public\\images\\User1.jpg"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\images\\backgrounđatphong.png",
+      "PackagePath": "staticwebassets\\public\\images\\backgrounđatphong.png"
+    },
+    {
+      "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\images\\closebutton.png",
+      "PackagePath": "staticwebassets\\public\\images\\closebutton.png"
     },
     {
       "Id": "D:\\bang\\Đồ án\\Blazor_app\\hotel\\Client\\wwwroot\\public\\instagram.svg",

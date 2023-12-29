@@ -14,6 +14,8 @@ namespace Hotel.Client.Services
         Task CreateBooking(Booking Booking);
         Task UpdateBooking(int id, Booking Booking);
         Task DeleteBooking(int id);
+        Task<List<Booking>> SearchBookings(string searchText);
+        Task<List<Booking>> SearchBookingsByGid(int gid);
         //Task<Booking> PaymentSuccessful(Booking details);
 
         //Task GetPayments();

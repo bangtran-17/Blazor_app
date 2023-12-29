@@ -6,6 +6,10 @@ using Blazored.LocalStorage;
 using Hotel.Shared.Models;
 using Microsoft.AspNetCore.Components.Authorization;
 using Hotel.Client.Utility;
+using System.Reflection;
+using static System.Net.WebRequestMethods;
+using System.Net;
+using System.Text.Json.Serialization;
 
 namespace Hotel.Client.Services
 {
@@ -54,6 +58,29 @@ namespace Hotel.Client.Services
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedout();
             _httpClient.DefaultRequestHeaders.Authorization = null;
         }
+        public async Task<string> ForgotPassword(string email)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+            var result = await _httpClient.GetAsync($"api/Account/forgot-password/{email}");
+           
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStringAsync();
+            }
+            return null;
 
-    }
+        }
+      public async  Task ResetPassword(ResetPasswordRequest request, string email)
+        {
+            await _httpClient.PostAsJsonAsync($"api/Account/reset-password/{email}", request);
+        }
+		public async Task ResetPassword1(ResetPasswordRequest request, string email)
+		{
+			await _httpClient.PostAsJsonAsync($"api/Account/reset-password1/{email}", request);
+		}
+	}
 }

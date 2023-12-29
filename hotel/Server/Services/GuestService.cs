@@ -76,5 +76,23 @@ namespace Hotel.Server.Services
 
             return dbGuest;
         }
+        public async Task<Guest?> GetGuestByName(string name)
+        {
+            // Sử dụng LINQ để truy vấn Room theo Rname
+            var guest = await _context.Guests
+                .Where(r => r.GAccount == name)
+                .FirstOrDefaultAsync();
+
+            return guest;
+        }
+        public async Task<Guest?> GetGuestByEmail(string email)
+        {
+            // Sử dụng LINQ để truy vấn Room theo Rname
+            var guest = await _context.Guests
+                .Where(r => r.GEmail == email)
+                .FirstOrDefaultAsync();
+
+            return guest;
+        }
     }
 }

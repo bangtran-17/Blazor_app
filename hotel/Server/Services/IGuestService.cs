@@ -10,5 +10,7 @@ namespace Hotel.Server.Services
         Task<Guest> CreateGuest(Guest Guest);
         Task<Guest?> UpdateGuest(int GuestId, Guest Guest);
         Task<bool> DeleteGuest(int GuestId);
+        Task<Guest?> GetGuestByName(string name);
+        Task<Guest?> GetGuestByEmail(string email);
     }
 }

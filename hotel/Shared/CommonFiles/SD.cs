@@ -20,7 +20,10 @@ namespace Hotel.Shared.CommonFiles
             public const string Status_NoShow = "NoShow";
             public const string Status_Cancelled = "Cancelled";
             public const string Local_RoomOrderDetails = "RoomOrderDetails";
-        }
+        public const string F_token = "F_token";
+        public const string F_email = "F_email";
+        public const string C_email = "C_email";
+    }
     }
 
 

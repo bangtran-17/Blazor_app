@@ -4,6 +4,52 @@ body {
 }
 
 :root {
+    /*change password*/
+    --font-poppins: Poppins;
+    --font-be-vietnam-pro: "Be Vietnam Pro";
+    --font-be-vietnam: "Be Vietnam";
+    /* font sizes */
+    --font-size-base: 16px;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-xl: 20px;
+    --font-size-9xl: 28px;
+    --font-size-mini: 15px;
+    --font-size-lg: 18px;
+    /* Colors */
+    --white: #fff;
+    --color-saddlebrown: #583101;
+    --color-antiquewhite: #e5d3c2;
+    --color-darksalmon: #eea886;
+    --color-darkslateblue-100: #152c5b;
+    --color-darkslateblue: #15133c;
+    --color-oldlace: #fff6ea;
+    --color-black: #000;
+    --color-goldenrod: #ebc351;
+    --color-cornflowerblue-100: #8699da;
+    --dark-blue-1-8: #789ade;
+    --black-2-5: #444b59;
+    --color-gainsboro: #e4e6eb;
+    --color-dimgray: #4b4f56;
+    --color-gray: #7f868a;
+    --color-darkgray: #b0b0b0;
+    /* Gaps */
+    --gap-base: 16px;
+    /* Paddings */
+    --padding-112xl: 131px;
+    --padding-mid: 17px;
+    --padding-5xl: 24px;
+    --padding-13xl: 32px;
+    --padding-smi: 13px;
+    --padding-4xl: 23px;
+    --padding-4xs: 9px;
+    --padding-11xl-9: 30.9px;
+    /* Border radiuses */
+    --br-xl: 20px;
+    --br-21xl: 40px;
+    --br-3xs: 10px;
+    --br-6xl: 25px;
+    --br-61xl: 80px;
     /*gioi thieu */
     --font-palatino-linotype: "Palatino Linotype";
     --font-be-vietnam-pro: "Be Vietnam Pro";
@@ -123,8 +169,8 @@ body {
     --font-size-xl: 20px;
     --montserrat-medium-12-size: 12px;
     --text-base-regular-size: 16px;
-    --font-size-mid: 17px;.0    0
-    --font-size-mini: 15px;
+    --font-size-mid: 17px;
+    .0 0 --font-size-mini: 15px;
     --text-2xl-medium-size: 24px;
     --font-size-13xl: 32px;
     --font-size-21xl: 40px;

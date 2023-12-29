@@ -1,0 +1,145 @@
+﻿@page "/history"
+@using Hotel.Client.ViewModel;
+@using Hotel.Shared.Models;
+@using Hotel.Shared.CommonFiles;
+
+
+@inject IGuestService guestService
+@inject AuthenticationStateProvider auth
+@inject NavigationManager navigation
+@inject ILocalStorageService localStorage
+@inject IBookingService bookingService
+@inject IRoomtypeService roomtypeService
+@inject IRoomService roomservice
+<div class="wrapper rounded">
+    <nav class="navbar navbar-expand-lg navbar-dark dark d-lg-flex align-items-lg-start">
+        <a class="navbar-brand" href="#">
+			Lịch sử đặt phòng
+            <p class=" pl-1"></p>
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="fa fa-bell-o font-weight-bold"></span>
+                        <span class="notify">Notifications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><span class="fa fa-search"></span></a>
+                    <input type="search" class="dark" placeholder="Search" />
+                </li>
+            </ul>
+        </div>
+    </nav>
+  
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <ul class="nav nav-tabs w-75">
+            <li class="nav-item">
+                <a class="nav-link active" href="#history">History</a>
+            </li>
+         
+        </ul>
+       
+    </div>
+    <div class="table-responsive mt-3">
+        <table class="table table-dark table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">RoomType</th>
+                    <th scope="col">Mode</th>
+                    <th scope="col">Date</th>
+                    <th scope="col" class="text-right">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var brtype in bookingRoomtype)
+                {
+                <tr>
+                    <td scope="row">
+                            <span class="fa fa-briefcase mr-1"></span> @brtype.roomtype.RtName
+                    </td>
+                    <td><span class="fa fa-cc-mastercard"></span></td>
+                        <td class="">@brtype.booking.BDate</td>
+                    <td class="d-flex justify-content-end align-items-center">
+                        <span class="fa fa-long-arrow-up mr-1"></span> @brtype.booking.BCost
+                    </td>
+                </tr>
+                }
+              
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between align-items-center results">
+        <span class="pl-md-3">Showing<b class="text-white"> 1-7 0f 200 </b> trasactions</span>
+        <div class="pt-3">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@code {
+    string? user;
+    Guest guest = new Guest();
+    List<Booking> BookingsSearched = new List<Booking>();
+    List<Roomtype> Roomtypes = new List<Roomtype>();
+    List<BookingRoomtype> bookingRoomtype = new List<BookingRoomtype>();
+    protected override async Task OnInitializedAsync()
+    {
+       
+        var state = await auth.GetAuthenticationStateAsync();
+        if (state.User != null)
+        {
+            user = state.User.Identity.Name;
+
+        }
+        guest = await guestService.SearchGuestByName(user);
+        BookingsSearched = await bookingService.SearchBookingsByGid(guest.GId);
+        await GetRoomtypes();
+
+        // Console.WriteLine(guest);
+    }
+
+    private async Task GetRoomtypes()
+    {
+        foreach(var bookingsearched in BookingsSearched)
+        {
+            BookingRoomtype bookingroomtype = new BookingRoomtype();
+            bookingroomtype.booking = bookingsearched;
+            Room room = new Room();
+            room = await roomservice.GetRoomById(bookingsearched.Rid ?? 0);
+            Roomtype roomtype = new Roomtype();
+            roomtype = await roomtypeService.GetRoomtypeById(room.RtId ?? 0);
+            bookingroomtype.roomtype = roomtype;
+            bookingRoomtype.Add(bookingroomtype);
+        }
+    }
+
+
+}
+
+
+
+

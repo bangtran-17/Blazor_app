@@ -1,0 +1,121 @@
+﻿@page "/taikhoan"
+
+@using Hotel.Shared.Models;
+@using Hotel.Shared.CommonFiles;
+@inject IGuestService guestService
+@inject AuthenticationStateProvider auth
+@inject NavigationManager navigation
+@inject ILocalStorageService localStorage
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                             class="rounded-circle img-fluid" style="width: 150px;margin-left: 150PX;">
+                        <h5 class="my-3">@user</h5>
+                       
+                        <div class="d-flex justify-content-center mb-2">
+                            <button type="button" class="btn btn-outline-primary ms-1" @onclick="ResetPassword">Đổi mật khẩu</button>
+                            <button type="button" class="btn btn-outline-primary ms-1" @onclick="HistoryDisplay">Lịch sử</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <EditForm Model="guest" class="card-body"  OnSubmit="HandleSubmit">
+                        <div class="row">
+                            <div class="col-sm-2" style="width: 28.666667%;">
+                                <p class="">First Name</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <InputText typeof="text" class="form-control " @bind-Value="guest.GFirstName" />
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-2" style="width: 28.666667%;">
+                                <p class="">Last Name</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <InputText typeof="text" class="form-control " @bind-Value="guest.GLastName"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-2" style="width: 28.666667%;">
+                                <p class="">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <InputText typeof="email" class="form-control" @bind-Value="guest.GEmail" />
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-2" style="width: 28.666667%;">
+                                <p class="">Phone</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <InputText  class="form-control" @bind-Value="guest.GSdt" />
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-2" style="width: 28.666667%;">
+                                <p class="">Căn cước công dân</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <InputText typeof="text" class="form-control" @bind-Value="guest.GCccd" />
+                            </div>
+                        </div>
+                    </EditForm>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    string? user;
+    Guest guest  = new Guest();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var state = await auth.GetAuthenticationStateAsync(); 
+        if(state.User!=null){
+            user = state.User.Identity.Name;
+         
+        }
+        guest = await guestService.SearchGuestByName(user);
+        // Console.WriteLine(guest);
+
+    }
+    public async Task HandleSubmit()
+    {
+        Console.WriteLine(guest);
+    }
+    public async Task ResetPassword()
+    {
+        await localStorage.SetItemAsync(SD.C_email,guest.GEmail);
+        navigation.NavigateTo("/profilepassword");
+    }
+    public async Task HistoryDisplay()
+    {
+        navigation.NavigateTo("/history");
+    }
+}

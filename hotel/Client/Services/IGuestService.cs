@@ -12,6 +12,8 @@ namespace Hotel.Client.Services
         Task CreateGuest(Guest Guest);
 		Task UpdateGuest(int id, Guest Guest);
 		Task DeleteGuest(int id);
+		Task<Guest> SearchGuestByName(string? name);
+        Task<Guest> SearchGuestByEmail(string? email);
 
-	}
+    }
 }

@@ -18,8 +18,8 @@ using Hotel.Server.Services.VNPAY;
 using Hotel.Server.SignalR;
 using Microsoft.AspNetCore.ResponseCompression;
 using Hotel.Server.Hubs;
-
-
+using Hotel.Server.Services.Email;
+using Blazored.LocalStorage;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -88,6 +88,11 @@ builder.Services.AddScoped<IRoomImgService, RoomImgService>();
 //StripePayment
 builder.Services.AddHttpClient<IStripePaymentService, StripePaymentService>();
 builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
+
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+
+builder.Services.AddBlazoredLocalStorage();
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {

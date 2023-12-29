@@ -46,8 +46,16 @@ namespace Hotel.Server.Controllers
         {
             return await _BookingService.GetBookingById(id);
         }
-
-
+        [HttpGet("search/{searchText}")]
+        public async Task<List<Booking>> SearchBookings(string searchText)
+        {
+            return await _BookingService.SearchBookings(searchText);
+        }
+        [HttpGet("searchGid/{Gid}")]
+        public async Task<List<Booking>> SearchBookingsByGid(int gid)
+        {
+            return await _BookingService.SearchBookingsByGid(gid);
+        }
         //[HttpGet("payment/{id}")]
         //public  int? GetCostById(int id)
         //{

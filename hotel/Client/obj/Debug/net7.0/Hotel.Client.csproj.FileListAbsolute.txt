@@ -1850,3 +1850,10 @@ D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTi
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\SignatureSuite.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\Suite.razor.rz.scp.css
 D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChiTietCacLoaiPhong\GioiThieu.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ChangePassword.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\ForgetPassword.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\SuccessRegister.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\SuccessReset.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\profile\TaiKhoan.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\profile\History.razor.rz.scp.css
+D:\bang\Đồ án\Blazor_app\hotel\Client\obj\Debug\net7.0\scopedcss\Pages\profile\Password.razor.rz.scp.css

@@ -1,0 +1,201 @@
+﻿.navigation-header-item {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    background-color: var(--color-saddlebrown);
+    width: 1500px;
+    height: 1px;
+}
+
+.ch-logo-vng-13,
+.logo-ko-ch-k-n-13 {
+    position: absolute;
+    top: 15.1px;
+    left: 126.8px;
+    width: 190.2px;
+    height: 51.1px;
+    object-fit: cover;
+}
+
+.logo-ko-ch-k-n-13 {
+    top: 0;
+    left: 0;
+    width: 124.9px;
+    height: 78.5px;
+}
+
+.ch-logo-vng-1-parent1,
+.frame8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 317px;
+    height: 78.5px;
+}
+
+.frame8 {
+    top: -2px;
+    left: 561px;
+    width: 378px;
+    overflow: hidden;
+}
+
+.frame7,
+.navigation-header1 {
+    position: absolute;
+    left: 0;
+    width: 1500px;
+}
+
+.navigation-header1 {
+    top: 2px;
+    background-color: var(--background);
+    height: 80px;
+}
+
+.frame7 {
+    top: 0;
+    height: 82px;
+    overflow: hidden;
+}
+
+.mi-bn-tip {
+    margin: 0;
+}
+
+.chc-mng-qu-container {
+    position: absolute;
+    top: 686px;
+    left: calc(50% - 207px);
+    font-weight: 300;
+    display: inline-block;
+    width: 445px;
+    height: 52px;
+}
+
+.frame6 {
+    position: relative;
+    width: 1500px;
+    height: 738px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.stepper-icon1 {
+    position: absolute;
+    top: 0;
+    left: 211px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.i-mt-khu {
+    position: absolute;
+    top: 110px;
+    left: calc(50% - 230px);
+    font-weight: 600;
+}
+
+.bg1,
+.frame10 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.frame10 {
+    width: 482px;
+    height: 156px;
+    overflow: hidden;
+}
+
+.bg1 {
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-saddlebrown);
+    box-shadow: 0 8px 15px rgba(50, 82, 223, 0.3);
+}
+
+.back-to-home1 {
+    position: absolute;
+    width: 73.81%;
+    top: 18%;
+    left: 13.33%;
+    font-size: var(--font-size-lg);
+    line-height: 170%;
+    font-weight: 500;
+    font-family: var(--font-be-vietnam-pro);
+    color: var(--color-white1);
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary1 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 438px;
+    left: calc(50% - 104.5px);
+    width: 210px;
+    height: 50px;
+}
+
+.group-1-11 {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 180.5px);
+    width: 362px;
+    height: 330px;
+    object-fit: cover;
+}
+
+.frame-frame,
+.frame11 {
+    position: absolute;
+    width: 427px;
+    height: 502px;
+}
+
+.frame11 {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.frame-frame {
+    top: 194px;
+    left: 25px;
+}
+
+.frame9 {
+    position: relative;
+    width: 482px;
+    height: 696px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: -606px;
+    font-size: var(--font-size-17xl);
+    color: var(--color-darkslateblue);
+}
+
+.doi-mat-khau-thanh-cong {
+    position: relative;
+    background-color: var(--color-white1);
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-darkgray-200);
+    font-family: var(--font-be-vietnam-pro);
+}

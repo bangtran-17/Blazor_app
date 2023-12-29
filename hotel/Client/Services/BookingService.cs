@@ -79,6 +79,35 @@ namespace Hotel.Client.Services
             await _http.PutAsJsonAsync($"api/Booking/{id}", Booking);
 
         }
-       
+        public async Task<List<Booking>> SearchBookings(string searchText)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Booking/search/{searchText}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<List<Booking?>>(options);
+            }
+            return null;
+        }
+        public async Task<List<Booking>> SearchBookingsByGid(int gid)
+        {
+            var options = new JsonSerializerOptions()
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                PropertyNameCaseInsensitive = true
+            };
+
+            var result = await _http.GetAsync($"api/Booking/searchGid/{gid}");
+            if (result.StatusCode == HttpStatusCode.OK)
+            {
+                return await result.Content.ReadFromJsonAsync<List<Booking?>>(options);
+            }
+            return null;
+        }
     }
 }
